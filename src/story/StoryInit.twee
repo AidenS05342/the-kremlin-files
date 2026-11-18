@@ -1,0 +1,2 @@
+:: StoryInit
+<<run Object.assign(State.variables, setup.newGame())>>
