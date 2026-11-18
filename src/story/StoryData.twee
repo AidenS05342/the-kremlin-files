@@ -1,0 +1,11 @@
+:: StoryTitle
+The Kremlin Files
+
+
+:: StoryData
+{
+  "ifid": "C9E94DF2-E150-485B-8B83-B726627425FB",
+  "format": "SugarCube",
+  "format-version": "2.30.0",
+  "start": "Start"
+}
