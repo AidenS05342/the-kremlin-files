@@ -118,3 +118,25 @@ test('unknown query is notfound', () => {
     assert.ok(r.lines.includes('ЗАПИСЬ НЕ НАЙДЕНА'));
   });
 });
+
+// ---- Interface helpers (Task 6) ----
+test('stateOfMind follows the strongest pull', () => {
+  const v = setup.newGame();
+  assert.match(setup.stateOfMind(v), /head down/);
+  v.pulls.survival = 2; v.pulls.reform = 1;
+  assert.match(setup.stateOfMind(v), /family/);
+  v.pulls.loyalty = 3;
+  assert.match(setup.stateOfMind(v), /Party will hold/);
+  v.pulls.reform = 5;
+  assert.match(setup.stateOfMind(v), /people outside/);
+});
+
+test('sortedGlossary sorts encountered words by Russian form', () => {
+  const v = setup.newGame();
+  v.glossary = ['tank', 'arkhiv', 'da'];
+  assert.deepEqual([...setup.sortedGlossary(v)], ['arkhiv', 'da', 'tank']);
+});
+
+test('plainTitle strips markup from note titles', () => {
+  assert.equal(setup.plainTitle('swan-lake'), 'Swan Lake on television');
+});

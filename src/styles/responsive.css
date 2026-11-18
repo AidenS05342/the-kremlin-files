@@ -1,0 +1,21 @@
+/* ===== Narrow screens: panels stack below the passage ===== */
+@media (max-width: 900px) {
+	#desk {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas: "header" "main" "instruments" "tray" "bar";
+		grid-template-rows: auto;
+		gap: 0;
+	}
+	#desk-header { padding: 8px 12px; flex-wrap: wrap; }
+	.org-en { display: none; }
+	#passages { padding: 16px 12px 24px; }
+	#tray, #instruments { padding: 12px 16px; }
+	#instruments { flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; }
+	.phone-svg { width: 96px; }
+}
+@media (max-width: 480px) {
+	html, body { font-size: 16px; }
+	.calendar { font-size: 13px; }
+	.clock { font-size: 16px; }
+	.org-ru { font-size: 14px; letter-spacing: 0.08em; }
+}

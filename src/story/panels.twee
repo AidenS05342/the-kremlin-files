@@ -1,0 +1,33 @@
+:: PanelCalendar [panel nobr]
+<div class="calendar" aria-label="Date"><span class="cal-month">$date</span></div>
+<div class="org"><span class="org-ru">ЦК КПСС · Общий отдел</span><span class="org-en">CPSU Central Committee · General Department</span></div>
+<div class="clock" aria-label="Time">$time</div>
+
+
+:: PanelTray [panel nobr]
+<h2 class="panel-title"><span lang="ru">Входящие</span> In-tray</h2>
+<<if $tray.length is 0>><p class="panel-empty">Empty.</p><<else>><ul class="tray-list"><<for _id range $tray>><<capture _id>><li class="tray-item" @data-class="setup.documents[_id].classification"><<link setup.documents[_id].title setup.documents[_id].passage>><</link>><<if $docs[_id] and $docs[_id].seen>><span class="tray-seen">read</span><</if>></li><</capture>><</for>></ul><</if>>
+<h2 class="panel-title"><span lang="ru">Ящик стола</span> Desk drawer</h2>
+<<if $kept.length is 0>><p class="panel-empty">Nothing kept.</p><<else>><ul class="tray-list kept"><<for _id range $kept>><<capture _id>><li class="tray-item" @data-class="setup.documents[_id].classification"><<link setup.documents[_id].title setup.documents[_id].passage>><</link>><<if $docs[_id] and $docs[_id].copied>><span class="tray-seen">carbon copy</span><</if>></li><</capture>><</for>></ul><</if>>
+
+
+:: PanelPhone [panel nobr]
+<div @class="'phone' + ($phone ? ' ringing' : '')">
+<svg class="phone-svg" viewBox="0 0 120 90" aria-hidden="true"><path class="ph-handset" d="M10 22c0-8 16-14 50-14s50 6 50 14l-4 10c-1 3-4 4-7 3l-14-4c-3-1-4-3-4-6v-5c-14-3-28-3-42 0v5c0 3-1 5-4 6l-14 4c-3 1-6 0-7-3z"/><path class="ph-body" d="M24 44c4-6 14-8 36-8s32 2 36 8l14 34c1 4-1 7-5 7H15c-4 0-6-3-5-7z"/><circle class="ph-dial" cx="60" cy="62" r="17"/><circle class="ph-hub" cx="60" cy="62" r="6"/></svg>
+<<if $phone>><p class="phone-label">☎ <<print $phone.from>></p><<link "Answer the phone" $phone.passage>><</link>><<else>><p class="phone-label"><span lang="ru">Вертушка</span> · silent</p><</if>>
+</div>
+<div class="terminal-card">
+<div class="term-screen" aria-hidden="true"><span>ЕС-1841</span><span class="term-cursor">█</span></div>
+[[Registry terminal|Terminal]]
+</div>
+
+
+:: PanelBar [panel nobr]
+<ul class="bar-list">
+<li>[[Notebook|Notebook]]</li>
+<li>[[Dictionary|Dictionary]]</li>
+<li>[[Historical notes|NotesIndex]]</li>
+<li><<link "Save / Load">><<run UI.saves()>><</link>></li>
+<li>[[About|About]]</li>
+<li>[[Bibliography|Bibliography]]</li>
+</ul>

@@ -1,0 +1,8 @@
+:: StoryInterface
+<div id="desk">
+	<header id="desk-header" data-passage="PanelCalendar"></header>
+	<aside id="tray" aria-label="In-tray and kept files" data-passage="PanelTray"></aside>
+	<main id="passages" aria-live="polite"></main>
+	<aside id="instruments" aria-label="Telephone and registry terminal" data-passage="PanelPhone"></aside>
+	<nav id="desk-bar" aria-label="Desk drawer" data-passage="PanelBar"></nav>
+</div>

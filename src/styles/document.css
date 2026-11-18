@@ -1,0 +1,126 @@
+/* ===== Paper: documents, notebook, side sheets ===== */
+.doc, .sheet {
+	position: relative;
+	background:
+		radial-gradient(ellipse at 20% 10%, rgba(255,255,255,0.35), transparent 60%),
+		linear-gradient(var(--paper), var(--paper-shade));
+	color: var(--ink);
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 40px 48px 36px;
+	box-shadow: 0 1px 0 var(--paper-edge), 0 12px 30px rgba(0,0,0,0.55);
+	font-family: var(--serif);
+}
+.doc { font-family: var(--mono); font-size: 15.5px; line-height: 1.6; }
+.doc::before {
+	/* paper clip */
+	content: '';
+	position: absolute;
+	top: -14px;
+	left: 46px;
+	width: 16px;
+	height: 44px;
+	border: 3px solid #8b8b8b;
+	border-radius: 9px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.sheet h1, .doc h1 {
+	font: 700 22px var(--narrow);
+	letter-spacing: 0.08em;
+	margin: 0 0 0.8em;
+	color: var(--ink);
+}
+.sheet a, .sheet .link-internal, .doc a, .doc .link-internal { color: var(--red); }
+
+.doc-header {
+	text-align: center;
+	font-family: var(--narrow);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--ink);
+	padding-bottom: 10px;
+	margin-bottom: 18px;
+}
+.doc-header .doc-org { display: block; font-weight: 700; font-size: 18px; }
+.doc-header .doc-sub { display: block; font-size: 14px; color: var(--ink-soft); }
+.doc-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 4px 20px;
+	font-size: 13.5px;
+	color: var(--ink-soft);
+	margin-bottom: 18px;
+}
+.doc-title { text-align: center; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 14px; }
+.doc p { margin: 0 0 0.9em; }
+.doc-translation {
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 14.5px;
+	color: var(--ink-soft);
+	border-left: 2px solid var(--paper-edge);
+	padding-left: 10px;
+}
+.doc-sign { margin-top: 22px; text-align: right; }
+.doc-footer { margin-top: 28px; padding-top: 14px; border-top: 1px dashed var(--paper-edge); font-family: var(--serif); }
+
+.stamp {
+	position: absolute;
+	font: 700 20px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	padding: 4px 12px;
+	border: 3px double currentColor;
+	border-radius: 4px;
+	transform: rotate(-8deg);
+	mix-blend-mode: multiply;
+	pointer-events: none;
+	opacity: 0.88;
+}
+.stamp--red { color: var(--red-ink); top: 26px; right: 30px; }
+.stamp--violet { color: var(--violet-ink); bottom: 70px; right: 60px; transform: rotate(6deg); font-size: 16px; }
+.stamp--date { color: var(--violet-ink); font-size: 14px; border-radius: 50%; padding: 14px 10px; border-width: 2px; border-style: solid; }
+
+.margin-note {
+	font-family: var(--hand);
+	font-size: 21px;
+	line-height: 1.2;
+	color: #2f4a8a;
+	transform: rotate(-2deg);
+	margin: 6px 0 14px 20px;
+}
+
+.routing-slip {
+	background: #f6efe0;
+	border: 1px solid var(--paper-edge);
+	padding: 12px 14px;
+	margin: 0 0 16px;
+	font-size: 14px;
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.08);
+}
+.routing-slip table { width: 100%; border-collapse: collapse; }
+.routing-slip th, .routing-slip td { border: 1px solid #b9a77f; padding: 4px 6px; text-align: left; vertical-align: top; }
+.routing-slip th { font-family: var(--narrow); letter-spacing: 0.06em; font-weight: 700; background: rgba(0,0,0,0.04); }
+
+.redacted { background: var(--ink); color: transparent; user-select: none; padding: 0 2px; }
+
+/* Notebook & dictionary */
+.notebook { background: repeating-linear-gradient(var(--paper) 0 27px, #c8d3de 27px 28px); font-family: var(--serif); }
+.state-of-mind { font-style: italic; color: var(--ink-soft); }
+.clue-list li { margin-bottom: 0.5em; }
+.clue-key { display: block; font-size: 14px; color: var(--ink-soft); }
+.clue-key code { font-family: var(--mono); color: var(--red); }
+.dict { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+.dict dt { font-weight: 700; }
+.dict dd { margin: 0; }
+.notes-list { padding-left: 1.2em; }
+.note-date-inline { color: var(--ink-soft); font-size: 14px; }
+
+@media (max-width: 600px) {
+	.doc, .sheet { padding: 30px 18px 24px; }
+	.stamp { font-size: 15px; }
+	.stamp--red { top: 10px; right: 8px; }
+	.dict { grid-template-columns: 1fr; }
+	.dict dd { margin-bottom: 8px; }
+}

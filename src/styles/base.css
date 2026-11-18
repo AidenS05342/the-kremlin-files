@@ -1,0 +1,200 @@
+/* ===== The Kremlin Files — base tokens and resets ===== */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Marck+Script&display=swap');
+
+:root {
+	--wood-dark: #1d130c;
+	--wood: #3b2516;
+	--wood-light: #5a3a22;
+	--felt: #22362b;
+	--felt-light: #2e4638;
+	--paper: #f1e8d2;
+	--paper-shade: #e2d5b4;
+	--paper-edge: #c9b88f;
+	--ink: #1d1914;
+	--ink-soft: #4a4034;
+	--pencil: #5b5246;
+	--red: #a3201a;
+	--red-ink: rgba(163, 32, 26, 0.86);
+	--violet-ink: rgba(70, 52, 140, 0.85);
+	--brass: #c6a368;
+	--brass-dim: #8e7346;
+	--cream: #efe4c8;
+	--phosphor: #8cffa6;
+	--phosphor-dim: #3f9a58;
+	--term-bg: #06120a;
+	--focus: #f2c14e;
+	--serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+	--narrow: 'PT Sans Narrow', 'Arial Narrow', Arial, sans-serif;
+	--mono: 'PT Mono', 'Courier New', monospace;
+	--hand: 'Marck Script', 'Segoe Script', cursive;
+}
+
+html, body {
+	background: var(--wood-dark);
+	color: var(--cream);
+	font-family: var(--serif);
+	font-size: 17px;
+	line-height: 1.55;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background:
+		repeating-linear-gradient(92deg, rgba(0,0,0,0.12) 0 2px, transparent 2px 9px),
+		radial-gradient(ellipse at 50% 30%, var(--wood-light), var(--wood) 55%, var(--wood-dark));
+	min-height: 100vh;
+}
+
+/* SugarCube defaults we replace */
+#story { margin: 0; }
+#passages { padding: 0; }
+.passage { font-size: 1rem; }
+
+a, .link-internal, button {
+	font: inherit;
+}
+
+:focus-visible {
+	outline: 3px solid var(--focus);
+	outline-offset: 2px;
+}
+
+[lang="ru"] { font-feature-settings: normal; }
+
+/* Russian vocabulary with tooltip */
+.ru {
+	border-bottom: 1px dotted currentColor;
+	cursor: help;
+	position: relative;
+	white-space: nowrap;
+}
+.ru::after {
+	content: attr(data-tip);
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 6px);
+	transform: translateX(-50%);
+	background: #14100b;
+	color: var(--cream);
+	font: 14px/1.35 var(--narrow);
+	letter-spacing: 0.02em;
+	padding: 5px 9px;
+	border-radius: 3px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+	white-space: normal;
+	width: max-content;
+	max-width: 260px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+	z-index: 50;
+}
+.ru:hover::after, .ru:focus::after, .ru:focus-visible::after { opacity: 1; }
+
+/* Historical-note stamp */
+.note-stamp, .stamp-inline {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--red);
+	color: var(--red);
+	background: rgba(255, 245, 230, 0.6);
+	font: 700 11px/1.1 var(--narrow);
+	letter-spacing: 0.08em;
+	padding: 3px 7px 2px;
+	transform: rotate(-2deg);
+	cursor: pointer;
+	vertical-align: middle;
+	margin: 0 4px;
+	border-radius: 2px;
+}
+.note-stamp small { font-weight: 400; font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; }
+.note-stamp:hover { background: rgba(163, 32, 26, 0.08); }
+.stamp-inline { display: inline-block; cursor: default; }
+
+/* Clue phrases */
+.clue {
+	background: none;
+	border: 0;
+	border-bottom: 2px dashed var(--red);
+	color: inherit;
+	padding: 0 1px;
+	cursor: pointer;
+}
+.clue:hover { background: rgba(163, 32, 26, 0.08); }
+.clue.marked {
+	border-bottom: 3px solid var(--red);
+	background: linear-gradient(transparent 55%, rgba(163, 32, 26, 0.16) 55%);
+}
+.clue.marked::after { content: ' ✓'; color: var(--red); font-size: 0.8em; }
+
+/* Toast */
+.toast {
+	position: fixed;
+	left: 50%;
+	bottom: 24px;
+	transform: translateX(-50%);
+	background: var(--paper);
+	color: var(--ink);
+	border: 2px solid var(--red);
+	font: 700 15px var(--narrow);
+	letter-spacing: 0.05em;
+	padding: 8px 16px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+	z-index: 100;
+	transition: opacity 0.5s;
+}
+.toast--out { opacity: 0; }
+
+/* Return link */
+.return-link {
+	display: inline-block;
+	margin-top: 1.5em;
+	background: none;
+	border: 1px solid var(--ink-soft);
+	color: var(--ink);
+	padding: 6px 14px;
+	cursor: pointer;
+	font-family: var(--narrow);
+	font-size: 16px;
+	letter-spacing: 0.03em;
+}
+.return-link:hover { background: rgba(0,0,0,0.06); }
+
+/* Dialog (historical notes, saves) */
+#ui-overlay.open { background: rgba(10, 6, 2, 0.75); }
+#ui-dialog {
+	background: var(--paper);
+	color: var(--ink);
+	border: 0;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+	max-width: 640px;
+}
+#ui-dialog-titlebar {
+	background: var(--paper-shade);
+	border-bottom: 2px solid var(--red);
+}
+#ui-dialog-title {
+	color: var(--red);
+	font: 700 17px var(--narrow);
+	letter-spacing: 0.06em;
+	text-transform: none;
+}
+#ui-dialog-close { color: var(--ink); }
+#ui-dialog-body { color: var(--ink); font-family: var(--serif); }
+#ui-dialog-body h3 { font: 700 13px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
+.note-date { font: 700 14px var(--narrow); color: var(--red); letter-spacing: 0.05em; margin-top: 0; }
+.note-sources { padding-left: 1.2em; font-size: 15px; }
+.note-sources li { margin-bottom: 0.4em; }
+.note-flag { font: italic 14px var(--serif); color: var(--ink-soft); border-left: 3px solid var(--brass-dim); padding-left: 0.6em; }
+#ui-dialog-body button, #ui-dialog-body .link-internal { color: var(--ink); }
+#ui-dialog .saves button, #ui-dialog-body button {
+	background: var(--paper-shade);
+	border: 1px solid var(--ink-soft);
+	color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation: none !important; transition: none !important; }
+}

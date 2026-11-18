@@ -1,2 +1,15 @@
-:: Start [title]
-The Kremlin Files
+:: Start [title nobr]
+<div class="title-screen">
+<div class="title-star" aria-hidden="true"></div>
+<p class="title-kicker"><span lang="ru">Совершенно секретно</span> · Top secret</p>
+<h1 class="title-main"><span class="title-ru" lang="ru">Кремлёвские досье</span><span class="title-en">The Kremlin Files</span></h1>
+<p class="title-sub">Moscow · August 1991 · An interactive political mystery</p>
+<div class="title-actions">
+<<link "New game">><<run Object.assign(State.variables, setup.newGame())>><<goto "Prologue_Bulletin">><</link>>
+<<if Save.autosave.ok() and Save.autosave.has()>><<link "Continue">><<run Save.autosave.load()>><</link>><</if>>
+[[About this project|About]]
+[[Bibliography|Bibliography]]
+</div>
+<p class="fiction-notice">Andrei Volkov, his colleagues, and the files he investigates are fictional. The events of August 1991 are real: anything stamped <span class="stamp-inline">ИСТОРИЧЕСКАЯ СПРАВКА</span> opens a historical note with its sources.</p>
+<p class="title-credit">A Digital Humanities project · University of Tennessee · Prototype, November 2026</p>
+</div>

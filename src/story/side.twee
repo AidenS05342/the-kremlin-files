@@ -1,0 +1,25 @@
+:: Notebook [side nobr]
+<div class="sheet notebook">
+<h1><span lang="ru">Блокнот</span> · Notebook</h1>
+<p class="state-of-mind"><<print setup.stateOfMind(State.variables)>></p>
+<<if $clues.length is 0>><p>No notes yet. Click underlined key phrases in documents to record them here.</p><<else>><ol class="clue-list"><<for _c range $clues>><li><<print setup.clues[_c].label>> <span class="clue-key">registry key: <code><<print setup.clues[_c].registryKey>></code></span></li><</for>></ol><</if>>
+<<returnlink>>
+</div>
+
+
+:: Dictionary [side nobr]
+<div class="sheet dictionary">
+<h1><span lang="ru">Словарь</span> · Dictionary</h1>
+<p>Russian words you have met so far. Hover or tap any dotted word in the game to see its meaning.</p>
+<<if $glossary.length is 0>><p>No words yet.</p><<else>><dl class="dict"><<for _g range setup.sortedGlossary(State.variables)>><dt lang="ru"><<print setup.glossary[_g].ru>></dt><dd><em><<print setup.glossary[_g].translit>></em> — <<print setup.glossary[_g].en>></dd><</for>></dl><</if>>
+<<returnlink>>
+</div>
+
+
+:: NotesIndex [side nobr]
+<div class="sheet notes-index">
+<h1><span lang="ru">Исторические справки</span> · Historical notes</h1>
+<p>Notes you have opened. Everything marked with the red stamp is documented history; everything else in the game is fiction.</p>
+<<if $notesSeen.length is 0>><p>No notes opened yet.</p><<else>><ul class="notes-list"><<for _n range $notesSeen>><<capture _n>><li><<link setup.plainTitle(_n)>><<run setup.openNote(_n)>><</link>> <span class="note-date-inline"><<print setup.notes[_n].date>></span></li><</capture>><</for>></ul><</if>>
+<<returnlink>>
+</div>

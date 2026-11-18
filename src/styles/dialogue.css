@@ -1,0 +1,152 @@
+/* ===== Scenes, conversations, phone calls ===== */
+.scene {
+	max-width: 700px;
+	margin: 0 auto;
+	color: var(--cream);
+	font-size: 1.04rem;
+}
+.scene p { margin: 0 0 1em; }
+.scene .lead {
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--brass);
+	margin-bottom: 1.2em;
+}
+.scene a, .scene .link-internal { color: #f3cf86; }
+.scene em { color: #f6ead0; }
+
+.speaker {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	background: rgba(0,0,0,0.28);
+	border-left: 4px solid var(--brass);
+	padding: 10px 14px;
+	margin: 0 0 18px;
+}
+.speaker-portrait {
+	flex: none;
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #c9b993;
+	border: 3px solid var(--brass-dim);
+	position: relative;
+	overflow: hidden;
+	filter: sepia(0.4);
+}
+.speaker-portrait::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 11px;
+	width: 22px;
+	height: 24px;
+	transform: translateX(-50%);
+	background: #3a2c1e;
+	border-radius: 50% 50% 46% 46%;
+}
+.speaker-portrait::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	width: 50px;
+	height: 30px;
+	transform: translateX(-50%);
+	background: #3a2c1e;
+	border-radius: 50% 50% 0 0;
+}
+.speaker[data-who="belova"] .speaker-portrait::before { width: 26px; height: 28px; border-radius: 50% 50% 40% 40%; }
+.speaker[data-who="zaitsev"] .speaker-portrait { background: #b9b2a0; }
+.speaker[data-who="markova"] .speaker-portrait { background: #c3a98c; }
+.speaker-name { font: 700 17px var(--narrow); letter-spacing: 0.05em; color: var(--cream); display: block; }
+.speaker-role { font: 14px var(--narrow); color: #c8bb9c; letter-spacing: 0.03em; }
+
+.say { margin: 0 0 0.9em; }
+.say::before { content: '— '; color: var(--brass); }
+
+.choices {
+	margin: 1.6em 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.choices br { display: none; }
+.choices a, .choices .link-internal {
+	display: block;
+	background: linear-gradient(#f4ecd9, #e6d9ba);
+	color: var(--ink);
+	text-decoration: none;
+	padding: 11px 16px 11px 40px;
+	border-left: 6px solid var(--red);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+	position: relative;
+	font-family: var(--serif);
+	line-height: 1.4;
+	transition: transform 0.12s;
+}
+.choices a::before, .choices .link-internal::before {
+	content: '▸';
+	position: absolute;
+	left: 16px;
+	color: var(--red);
+}
+.choices a:hover, .choices .link-internal:hover { transform: translateX(4px); }
+.choice-hint { display: block; font: 13px var(--narrow); color: var(--ink-soft); letter-spacing: 0.04em; margin-top: 2px; }
+
+.continue { margin-top: 1.6em; }
+.continue a, .continue .link-internal {
+	font: 700 16px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #f3cf86;
+}
+
+/* Phone calls */
+.call {
+	background: rgba(0,0,0,0.35);
+	border: 1px solid var(--brass-dim);
+	padding: 18px 22px;
+}
+.call-header {
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--red);
+	background: var(--paper);
+	display: inline-block;
+	padding: 2px 10px;
+	margin-bottom: 14px;
+}
+.call .say { font-family: var(--mono); font-size: 15.5px; }
+
+/* Branch in development / ending cards */
+.stub-card, .ending-card {
+	max-width: 640px;
+	margin: 0 auto;
+	background: var(--paper);
+	color: var(--ink);
+	padding: 36px 40px;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+	border-top: 10px solid var(--red);
+}
+.stub-card h1, .ending-card h1 { font: 700 26px var(--narrow); letter-spacing: 0.08em; margin: 0 0 4px; }
+.stub-card .ru-name, .ending-card .ru-name { display: block; font: 700 18px var(--narrow); color: var(--red); letter-spacing: 0.1em; }
+.stub-flag {
+	display: inline-block;
+	border: 2px dashed var(--ink-soft);
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 4px 10px;
+	margin: 12px 0;
+}
+.stub-card a, .stub-card .link-internal, .ending-card a, .ending-card .link-internal, .stub-card button { color: var(--red); }
+.concept-box { border-left: 4px solid var(--red); background: rgba(0,0,0,0.04); padding: 10px 14px; margin: 18px 0; }
+.concept-box h2 { font: 700 14px var(--narrow); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 6px; }
+
+@media (max-width: 600px) {
+	.stub-card, .ending-card { padding: 26px 18px; }
+}
