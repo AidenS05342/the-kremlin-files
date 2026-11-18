@@ -65,3 +65,56 @@ test('resolveEnding', () => {
   delete v.flags.finalDecision;
   assert.equal(setup.resolveEnding(v), 'loyalist');
 });
+
+// ---- Registry search (Task 3) ----
+function withRegistry(entries, fn) {
+  const saved = setup.registry;
+  setup.registry = entries;
+  try { fn(); } finally { setup.registry = saved; }
+}
+const R7S = { id: 'r-7s', keys: ['7/с'], requiresClues: ['packet-7s', 'reg-date-14'], docId: 'd4',
+  foundLines: ['НАЙДЕНО'], restrictedLines: ['ДОСТУП ОГРАНИЧЕН', 'ACCESS RESTRICTED'] };
+const RZ = { id: 'r-z', keys: ['архив'], unlockTrust: { who: 'zaitsev', min: 1 }, requiresClues: ['nope'],
+  foundLines: ['OK'], restrictedLines: ['ДОСТУП ОГРАНИЧЕН'] };
+
+test('normalizeQuery maps look-alikes only in Cyrillic or numeric tokens', () => {
+  assert.equal(setup.normalizeQuery('  ПАКЕТ  7/c '), 'пакет 7/с');
+  assert.equal(setup.normalizeQuery('Union Treaty'), 'union treaty');
+});
+
+test('search finds with clues (Latin look-alike query)', () => {
+  withRegistry([R7S, RZ], () => {
+    const v = setup.newGame();
+    v.clues = ['packet-7s', 'reg-date-14'];
+    const r = setup.searchRegistry('7/c', v);
+    assert.equal(r.status, 'found');
+    assert.equal(r.docId, 'd4');
+  });
+});
+
+test('search restricted without all clues', () => {
+  withRegistry([R7S, RZ], () => {
+    const v = setup.newGame();
+    v.clues = ['packet-7s'];
+    const r = setup.searchRegistry('7/С', v);
+    assert.equal(r.status, 'restricted');
+    assert.ok(r.lines.includes('ДОСТУП ОГРАНИЧЕН'));
+    assert.equal(r.docId, undefined);
+  });
+});
+
+test('trust unlock grants access', () => {
+  withRegistry([R7S, RZ], () => {
+    const v = setup.newGame();
+    v.trust.zaitsev = 1;
+    assert.equal(setup.searchRegistry('Архив', v).status, 'found');
+  });
+});
+
+test('unknown query is notfound', () => {
+  withRegistry([R7S, RZ], () => {
+    const r = setup.searchRegistry('kremlin', setup.newGame());
+    assert.equal(r.status, 'notfound');
+    assert.ok(r.lines.includes('ЗАПИСЬ НЕ НАЙДЕНА'));
+  });
+});
