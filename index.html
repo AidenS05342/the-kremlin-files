@@ -100,7 +100,342 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C9E94DF2-E150-485B-8B83-B726627425FB// --><tw-storydata name="The Kremlin Files" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C9E94DF2-E150-485B-8B83-B726627425FB" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/*
+	<!-- UUID://C9E94DF2-E150-485B-8B83-B726627425FB// --><tw-storydata name="The Kremlin Files" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C9E94DF2-E150-485B-8B83-B726627425FB" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">/* twine-user-script #1: "clues.js" */
+/* Key phrases the player can mark in documents. registryKey is typed into the terminal. */
+(function () {
+	'use strict';
+	setup.clues = {
+		'packet-7s':       { label: 'Packet 7/С — routed outside the registry', registryKey: '7/С' },
+		'by-hand':         { label: 'Delivered нарочным (by courier)', registryKey: 'нарочным' },
+		'reg-date-14':     { label: 'Registration date 14.08.91 — five days before the coup', registryKey: '14.08.91' },
+		'cipher-telegram': { label: 'Cipher telegram to regional committees', registryKey: 'шифротелеграмма' },
+		'union-treaty':    { label: 'Union Treaty — signing set for 20 August', registryKey: 'союзный договор' },
+		'aide-number':     { label: 'A phone number for an aide at the White House', registryKey: '205-41-07' }
+	};
+}());
+/* twine-user-script #2: "documents.js" */
+/* Documents the player can hold. All are fictional unless a note says otherwise. */
+(function () {
+	'use strict';
+	setup.documents = {
+		d1: { title: 'Circular on the draft Party Programme', ru: 'Циркуляр', classification: 'routine', passage: 'D1_Circular', date: '09.08.91' },
+		d2: { title: 'Routing slip — Packet 7/С', ru: 'Сопроводительный лист', classification: 'secret', passage: 'D2_RoutingSlip', date: '12.08.91' },
+		d3: { title: 'Draft cipher telegram to regional committees', ru: 'Шифротелеграмма (проект)', classification: 'top-secret', passage: 'D3_Telegram', date: '14.08.91' },
+		d4: { title: 'Packet 7/С — List of measures', ru: 'Перечень мероприятий', classification: 'top-secret', passage: 'D4_List', date: '14.08.91' },
+		d5: { title: 'Transcript of an intercepted call', ru: 'Стенограмма', classification: 'secret', passage: 'D5_Intercept', date: '20.08.91' }
+	};
+}());
+/* twine-user-script #3: "glossary.js" */
+/* Beginner Russian vocabulary. Used by the <<ru "id">> macro and the Dictionary. */
+(function () {
+	'use strict';
+	setup.glossary = {
+		'sekretno':          { ru: 'секретно', translit: 'sekretno', en: 'secret' },
+		'sov-sekretno':      { ru: 'совершенно секретно', translit: 'sovershenno sekretno', en: 'top secret' },
+		'tsk-kpss':          { ru: 'ЦК КПСС', translit: 'Tse-Ka Ka-Pe-Es-Es', en: 'Central Committee of the Communist Party of the Soviet Union' },
+		'obshchy-otdel':     { ru: 'Общий отдел', translit: 'Obshchiy otdel', en: 'General Department' },
+		'tovarishch':        { ru: 'товарищ', translit: 'tovarishch', en: 'comrade' },
+		'referent':          { ru: 'референт', translit: 'referent', en: 'senior aide; analyst' },
+		'arkhiv':            { ru: 'архив', translit: 'arkhiv', en: 'archive' },
+		'kartoteka':         { ru: 'картотека', translit: 'kartoteka', en: 'card index' },
+		'dokument':          { ru: 'документ', translit: 'dokument', en: 'document' },
+		'papka':             { ru: 'папка', translit: 'papka', en: 'folder' },
+		'vertushka':         { ru: 'вертушка', translit: 'vertushka', en: 'government phone line (lit. “the turntable”)' },
+		'gazeta':            { ru: 'газета', translit: 'gazeta', en: 'newspaper' },
+		'srochno':           { ru: 'срочно', translit: 'srochno', en: 'urgent' },
+		'vkhodyashchie':     { ru: 'входящие', translit: 'vkhodyashchiye', en: 'incoming (in-tray)' },
+		'da':                { ru: 'да', translit: 'da', en: 'yes' },
+		'net':               { ru: 'нет', translit: 'net', en: 'no' },
+		'spasibo':           { ru: 'спасибо', translit: 'spasibo', en: 'thank you' },
+		'zdravstvuyte':      { ru: 'здравствуйте', translit: 'zdravstvuyte', en: 'hello (formal)' },
+		'do-svidaniya':      { ru: 'до свидания', translit: 'do svidaniya', en: 'goodbye' },
+		'avgust':            { ru: 'август', translit: 'avgust', en: 'August' },
+		'ponedelnik':        { ru: 'понедельник', translit: 'ponedelnik', en: 'Monday' },
+		'chp':               { ru: 'чрезвычайное положение', translit: 'chrezvychaynoye polozheniye', en: 'state of emergency' },
+		'dostup-ogranichen': { ru: 'доступ ограничен', translit: 'dostup ogranichen', en: 'access restricted' },
+		'zapis-ne-naidena':  { ru: 'запись не найдена', translit: 'zapis ne naydena', en: 'record not found' },
+		'putch':             { ru: 'путч', translit: 'putch', en: 'putsch, coup' },
+		'bely-dom':          { ru: 'Белый дом', translit: 'Bely dom', en: 'the White House (Russian parliament building)' },
+		'tank':              { ru: 'танк', translit: 'tank', en: 'tank' },
+		'prikaz':            { ru: 'приказ', translit: 'prikaz', en: 'order, directive' },
+		'narochnym':         { ru: 'нарочным', translit: 'narochnym', en: 'by courier (outside normal channels)' },
+		'shifrotelegramma':  { ru: 'шифротелеграмма', translit: 'shifrotelegramma', en: 'cipher telegram' },
+		'pechat':            { ru: 'печать', translit: 'pechat', en: 'seal, stamp; also “the press”' },
+		'obkom':             { ru: 'обком', translit: 'obkom', en: 'regional Party committee' },
+		'kopiya':            { ru: 'копия', translit: 'kopiya', en: 'copy' },
+		'chay':              { ru: 'чай', translit: 'chay', en: 'tea' },
+		'dacha':             { ru: 'дача', translit: 'dacha', en: 'country house' },
+		'zakryto':           { ru: 'закрыто', translit: 'zakryto', en: 'closed' }
+	};
+}());
+/* twine-user-script #4: "notes.js" */
+/*
+ * Historical notes (ИСТОРИЧЕСКАЯ СПРАВКА). Each note states only well-documented
+ * facts and cites keys in setup.sources. Page-level citations have not yet been
+ * checked; the note dialog says so until `pagesChecked` is set to true.
+ * `reconstruction: true` marks a note explaining an in-game invention instead.
+ */
+(function () {
+	'use strict';
+	setup.notes = {
+		'union-treaty': {
+			title: 'The New Union Treaty', date: 'August 1991',
+			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser “Union of Sovereign States,” transferring substantial powers to the republics. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
+			sources: ['plokhy2014', 'dunlop1993']
+		},
+		'gorbachev-foros': {
+			title: 'Gorbachev at Foros', date: '18–21 August 1991',
+			body: 'On 18 August a delegation from Moscow visited Gorbachev at his holiday dacha at Foros, in Crimea, and demanded that he endorse emergency rule. He refused. His communications were cut and he was kept isolated there until the coup collapsed on 21 August.',
+			sources: ['plokhy2014', 'brown1996']
+		},
+		'gkchp-announcement': {
+			title: 'The State Committee on the State of Emergency (ГКЧП)', date: '19 August 1991',
+			body: 'Early on 19 August, Soviet state media announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them “for health reasons,” and that a State Committee on the State of Emergency had been formed. Its members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country.',
+			sources: ['gkchpAppeal1991', 'dunlop1993']
+		},
+		'swan-lake': {
+			title: '<em>Swan Lake</em> on television', date: '19 August 1991',
+			body: 'On the morning of the coup, Soviet state television replaced its normal programming with Tchaikovsky’s ballet <em>Swan Lake</em>, broadcast repeatedly between official announcements. For many Soviet citizens the ballet became the defining image of those days.',
+			sources: ['remnick1993', 'plokhy2014']
+		},
+		'yeltsin-tank': {
+			title: 'Yeltsin on the tank', date: '19 August 1991',
+			body: 'Boris Yeltsin, elected President of the Russian republic (RSFSR) two months earlier, climbed onto a tank outside the Russian parliament building — the “White House” — and read an appeal “To the Citizens of Russia.” It called the committee’s actions an unconstitutional coup and called for a general strike.',
+			sources: ['yeltsinAppeal1991', 'dunlop1993']
+		},
+		'press-suspended': {
+			title: 'Newspapers suspended', date: '19 August 1991',
+			body: 'The emergency committee allowed only a short list of loyal central newspapers to appear and suspended the rest, including the reformist weekly <em>Moscow News</em>. Journalists from several banned papers responded by producing a jointly published underground paper, <em>Obshchaya gazeta</em> (“Common Newspaper”).',
+			sources: ['dunlop1993', 'remnick1993']
+		},
+		'secretariat-telegram': {
+			title: 'The Party apparatus and the coup', date: '19 August 1991',
+			body: 'Documents made public after the coup indicate that on 19 August the Central Committee Secretariat sent coded telegrams to regional Party committees urging them to support the emergency measures. These documents were later used to argue that the Party apparatus, not only individual leaders, had been complicit. The draft telegram in this game is fictional; it is modeled on that real episode.',
+			sources: ['dunlop1993', 'nsarchive']
+		},
+		'white-house-defense': {
+			title: 'Defending the White House', date: '19–21 August 1991',
+			body: 'Tens of thousands of Muscovites gathered around the Russian parliament building, building barricades from trolleybuses, construction materials, and anything else at hand. The emergency committee declared a curfew in Moscow on 20 August.',
+			sources: ['plokhy2014', 'remnick1993']
+		},
+		'three-deaths': {
+			title: 'Three deaths on the Garden Ring', date: 'Night of 20–21 August 1991',
+			body: 'In the early hours of 21 August, three young men — Dmitry Komar, Vladimir Usov, and Ilya Krichevsky — were killed in a confrontation with armored vehicles in an underpass on the Garden Ring near the White House. They were the only fatalities in Moscow during the coup and were posthumously named Heroes of the Soviet Union.',
+			sources: ['plokhy2014', 'remnick1993']
+		},
+		'coup-collapse': {
+			title: 'The coup collapses', date: '21–22 August 1991',
+			body: 'On 21 August the military began withdrawing troops from Moscow and the committee’s resolve collapsed. Gorbachev returned to Moscow in the early hours of 22 August, and several committee members were arrested.',
+			sources: ['plokhy2014', 'brown1996']
+		},
+		'cpsu-suspended': {
+			title: 'The Communist Party suspended', date: '23 August 1991',
+			body: 'On 23 August Yeltsin signed a decree suspending the activity of the Communist Party on the territory of the Russian republic. In November 1991 a further decree banned it in Russia.',
+			sources: ['dunlop1993', 'plokhy2014']
+		},
+		'old-square-sealed': {
+			title: 'Old Square sealed', date: '23 August 1991',
+			body: 'On 23 August the Central Committee buildings on Staraya Ploshchad (Old Square) were sealed on the orders of the Moscow city authorities and staff were told to leave, while crowds gathered outside. Contemporary accounts describe Party officials trying to remove or destroy documents before the doors were shut.',
+			sources: ['remnick1993', 'dunlop1993']
+		},
+		'gorbachev-resignation': {
+			title: 'The end of the USSR', date: 'August–December 1991',
+			body: 'On 24 August Gorbachev resigned as General Secretary and called on the Central Committee to dissolve itself. On 8 December the leaders of Russia, Ukraine, and Belarus declared that the USSR had ceased to exist and founded the Commonwealth of Independent States. On 25 December Gorbachev resigned as Soviet president in a televised address, and the Soviet flag was lowered over the Kremlin that evening.',
+			sources: ['gorbachevResignation1991', 'belovezha1991', 'brown1996']
+		},
+		'nomenklatura': {
+			title: 'From nomenklatura to new elite', date: '1990s',
+			body: 'The nomenklatura was the Soviet system of appointments to leading posts, and the class of officials who held them. Sociologists Olga Kryshtanovskaya and Stephen White found that a large share of post-Soviet Russia’s political and business elite had come from the old nomenklatura. Their research is a key source for the idea of regime change without elite turnover.',
+			sources: ['kryshtanovskaya1996', 'solnick1998']
+		},
+		'office-computers': {
+			title: 'The registry terminal', date: 'Late 1980s',
+			reconstruction: true,
+			body: 'The registry terminal in this game is a reconstruction, not a documented object. Soviet IBM-compatible personal computers such as the ЕС-1841 (ES-1841) were produced in the late 1980s for state institutions, but whether this particular department used one for its registry is not established. Paper card indexes (картотеки) remained the authoritative record in Soviet offices. This note will be revised if research shows otherwise.'
+		}
+	};
+}());
+/* twine-user-script #5: "registry-records.js" */
+/*
+ * Registry terminal records. Searching a key prints the record; access depends on
+ * the player's clues (requiresClues) or a colleague's trust (unlockTrust).
+ * Record numbers and routing are fictional.
+ */
+(function () {
+	'use strict';
+	setup.registry = [
+		{
+			id: 'r-7s',
+			keys: ['7/с', 'пакет 7/с', 'packet 7/с'],
+			requiresClues: ['packet-7s', 'reg-date-14'],
+			docId: 'd4',
+			foundLines: [
+				'ПАКЕТ 7/С · РЕГ. № 0417/с',
+				'ЗАРЕГИСТРИРОВАН: 14.08.91 · НАРОЧНЫМ',
+				'СОДЕРЖАНИЕ: ПЕРЕЧЕНЬ МЕРОПРИЯТИЙ',
+				'(contents: list of measures)',
+				'МЕСТО ХРАНЕНИЯ: КАРТОТЕКА, ЯЩИК 12',
+				'КОПИЯ ВЫДАНА В ЛОТОК / copy sent to your tray'
+			],
+			restrictedLines: [
+				'ПАКЕТ 7/С',
+				'ДОСТУП ОГРАНИЧЕН',
+				'ACCESS RESTRICTED — registration date required'
+			]
+		},
+		{
+			id: 'r-telegram',
+			keys: ['шифротелеграмма', 'cipher telegram', 'telegram'],
+			docId: 'd3',
+			foundLines: [
+				'ШИФРОТЕЛЕГРАММА · ПРОЕКТ',
+				'АДРЕСАТ: ОБКОМЫ, КРАЙКОМЫ (regional Party committees)',
+				'СТАТУС: ОЖИДАЕТ ОТПРАВКИ / awaiting dispatch',
+				'КОПИЯ ВЫДАНА В ЛОТОК / copy sent to your tray'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-union',
+			keys: ['союзный договор', 'union treaty'],
+			foundLines: [
+				'ДОГОВОР О СОЮЗЕ СУВЕРЕННЫХ ГОСУДАРСТВ · ПРОЕКТ',
+				'(Treaty of the Union of Sovereign States · draft)',
+				'ПОДПИСАНИЕ: 20.08.91',
+				'ДОКУМЕНТ НЕ ВЫДАЁТСЯ / not issued to this terminal'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-by-hand',
+			keys: ['нарочным', 'by hand', 'by courier'],
+			foundLines: [
+				'НАРОЧНЫМ = доставка курьером, минуя регистрацию',
+				'(by courier — delivered outside the registry)',
+				'ЗА АВГУСТ 1991: 1 ЗАПИСЬ → ПАКЕТ 7/С'
+			],
+			restrictedLines: []
+		}
+	];
+}());
+/* twine-user-script #6: "sources.js" */
+/*
+ * Bibliography (Chicago notes-bibliography style). `verified: false` means the
+ * entry has not yet been checked against a library catalog or publisher record;
+ * the Bibliography passage marks those entries visibly.
+ */
+(function () {
+	'use strict';
+	setup.sources = {
+		/* ---- Scholarly ---- */
+		plokhy2014: {
+			type: 'scholarly', verified: false,
+			chicago: 'Plokhy, Serhii. <em>The Last Empire: The Final Days of the Soviet Union.</em> New York: Basic Books, 2014.'
+		},
+		kotkin2001: {
+			type: 'scholarly', verified: false,
+			chicago: 'Kotkin, Stephen. <em>Armageddon Averted: The Soviet Collapse, 1970–2000.</em> Oxford: Oxford University Press, 2001.'
+		},
+		brown1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Brown, Archie. <em>The Gorbachev Factor.</em> Oxford: Oxford University Press, 1996.'
+		},
+		dunlop1993: {
+			type: 'scholarly', verified: false,
+			chicago: 'Dunlop, John B. <em>The Rise of Russia and the Fall of the Soviet Empire.</em> Princeton, NJ: Princeton University Press, 1993.'
+		},
+		solnick1998: {
+			type: 'scholarly', verified: false,
+			chicago: 'Solnick, Steven L. <em>Stealing the State: Control and Collapse in Soviet Institutions.</em> Cambridge, MA: Harvard University Press, 1998.'
+		},
+		beissinger2002: {
+			type: 'scholarly', verified: false,
+			chicago: 'Beissinger, Mark R. <em>Nationalist Mobilization and the Collapse of the Soviet State.</em> Cambridge: Cambridge University Press, 2002.'
+		},
+		linzstepan1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Linz, Juan J., and Alfred Stepan. <em>Problems of Democratic Transition and Consolidation: Southern Europe, South America, and Post-Communist Europe.</em> Baltimore: Johns Hopkins University Press, 1996.'
+		},
+		kryshtanovskaya1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Kryshtanovskaya, Olga, and Stephen White. “From Soviet <em>Nomenklatura</em> to Russian Elite.” <em>Europe-Asia Studies</em> 48, no. 5 (1996).'
+		},
+		remnick1993: {
+			type: 'scholarly', verified: false,
+			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993.'
+		},
+
+		/* ---- Primary ---- */
+		gkchpAppeal1991: {
+			type: 'primary', verified: false,
+			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, 18–19 August 1991. Published in <em>Pravda</em> and broadcast by Soviet state media, 19 August 1991.'
+		},
+		yeltsinAppeal1991: {
+			type: 'primary', verified: false,
+			chicago: 'Yeltsin, Boris, Ivan Silayev, and Ruslan Khasbulatov. “To the Citizens of Russia” [К гражданам России]. Moscow, 19 August 1991.'
+		},
+		belovezha1991: {
+			type: 'primary', verified: false,
+			chicago: 'Agreement on the Establishment of the Commonwealth of Independent States [Belovezha Accords]. Viskuli, Belarus, 8 December 1991.'
+		},
+		gorbachevResignation1991: {
+			type: 'primary', verified: false,
+			chicago: 'Gorbachev, Mikhail. Televised address announcing his resignation as President of the USSR. Moscow, 25 December 1991.'
+		},
+		nsarchive: {
+			type: 'primary', verified: false,
+			chicago: 'National Security Archive, George Washington University. Electronic Briefing Books on the August 1991 coup and the end of the Soviet Union. https://nsarchive.gwu.edu.'
+		}
+	};
+}());
+/* twine-user-script #7: "registry.js" */
+/*
+ * Registry terminal search. Node-safe: references only `setup`.
+ * Data lives in setup.registry (src/scripts/data/registry.js).
+ */
+(function () {
+	'use strict';
+
+	// Latin letters that look identical to Cyrillic ones on a 1991 keyboard layout.
+	var LOOKALIKE = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', k: 'к', m: 'м', t: 'т', b: 'в', h: 'н', y: 'у' };
+	var NEEDS_MAP = /[0-9Ѐ-ӿ]/;
+
+	function mapToken(token) {
+		if (!NEEDS_MAP.test(token)) { return token; }
+		return token.replace(/[a-z]/g, function (ch) { return LOOKALIKE[ch] || ch; });
+	}
+
+	setup.normalizeQuery = function (q) {
+		return String(q || '').trim().toLowerCase().split(/\s+/).map(mapToken).join(' ');
+	};
+
+	function hasAccess(entry, v) {
+		var clues = entry.requiresClues || [];
+		var allClues = clues.every(function (id) { return v.clues.indexOf(id) !== -1; });
+		if (allClues) { return true; }
+		var t = entry.unlockTrust;
+		return !!(t && v.trust[t.who] >= t.min);
+	}
+
+	setup.searchRegistry = function (query, v) {
+		var q = setup.normalizeQuery(query);
+		var entries = setup.registry || [];
+		for (var i = 0; i < entries.length; i++) {
+			var e = entries[i];
+			var match = e.keys.some(function (k) { return setup.normalizeQuery(k) === q; });
+			if (!match) { continue; }
+			if (hasAccess(e, v)) {
+				var found = { status: 'found', lines: e.foundLines.slice() };
+				if (e.docId) { found.docId = e.docId; }
+				return found;
+			}
+			return { status: 'restricted', lines: e.restrictedLines.slice() };
+		}
+		return { status: 'notfound', lines: ['ЗАПИСЬ НЕ НАЙДЕНА', 'RECORD NOT FOUND'] };
+	};
+}());
+/* twine-user-script #8: "state.js" */
+/*
  * Game-state rules. Node-safe: references only the global `setup` at load time.
  * Every helper takes SugarCube's variables object (State.variables) as `v`.
  */
@@ -181,6 +516,131 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 			default: return 'loyalist';
 		}
 	};
+}());
+/* twine-user-script #9: "config.js" */
+/* SugarCube configuration and passage bookkeeping (browser only). */
+(function () {
+	'use strict';
+
+	/* One history state: the browser Back button cannot undo a decision. */
+	Config.history.maxStates = 1;
+	Config.history.controls = false;
+	Config.saves.autosave = true;
+	Config.saves.slots = 6;
+
+	$(document).on(':passagestart', function (ev) {
+		var v = State.variables;
+		var tags = ev.passage.tags;
+		if (tags.indexOf('scene') !== -1) {
+			v.returnTo = ev.passage.title;
+		}
+		if (tags.indexOf('document') !== -1) {
+			Object.keys(setup.documents).forEach(function (id) {
+				if (setup.documents[id].passage === ev.passage.title) {
+					setup.setDoc(v, id, 'seen');
+				}
+			});
+		}
+	});
+
+	/* Expose passage tags to CSS for full-screen passages (title, bulletin, academic). */
+	$(document).on(':passagerender', function (ev) {
+		$('html').attr('data-kind', ev.passage.tags.join(' '));
+	});
+}());
+/* twine-user-script #10: "macros.js" */
+/* Custom macros: <<ru>>, <<note>>, <<clue>>…<</clue>>, <<returnlink>> (browser only). */
+(function () {
+	'use strict';
+
+	function pushOnce(list, id) {
+		if (list.indexOf(id) === -1) { list.push(id); }
+	}
+
+	function toast(text) {
+		var el = $('<div class="toast" role="status"></div>').text(text).appendTo('body');
+		setTimeout(function () { el.addClass('toast--out'); }, 1800);
+		setTimeout(function () { el.remove(); }, 2400);
+	}
+	setup.toast = toast;
+
+	/* <<ru "id" ["display text"]>> — Russian term with tooltip; records it in the Dictionary. */
+	Macro.add('ru', {
+		handler: function () {
+			var id = this.args[0];
+			var g = setup.glossary[id];
+			if (!g) { return this.error('unknown glossary id "' + id + '"'); }
+			pushOnce(State.variables.glossary, id);
+			var tip = g.ru + ' · ' + g.translit + ' · ' + g.en;
+			$('<span class="ru" tabindex="0"></span>')
+				.attr({ 'data-tip': tip, 'aria-label': (this.args[1] || g.ru) + ' (' + g.translit + ': ' + g.en + ')' })
+				.text(this.args[1] || g.ru)
+				.appendTo(this.output);
+		}
+	});
+
+	/* <<note "id">> — historical-note stamp; opens the note with its citations. */
+	setup.openNote = function (id) {
+		var n = setup.notes[id];
+		pushOnce(State.variables.notesSeen, id);
+		var html = '<p class="note-date">' + n.date + '</p><p>' + n.body + '</p>';
+		if (n.reconstruction) {
+			html += '<p class="note-flag">Reconstruction — not a documented historical object.</p>';
+		} else {
+			html += '<h3>Sources</h3><ul class="note-sources">' + n.sources.map(function (key) {
+				return '<li>' + setup.sources[key].chicago + '</li>';
+			}).join('') + '</ul>';
+			if (!n.pagesChecked) {
+				html += '<p class="note-flag">Page-level citations pending verification.</p>';
+			}
+		}
+		Dialog.setup('ИСТОРИЧЕСКАЯ СПРАВКА · ' + n.title, 'note-dialog');
+		Dialog.append(html);
+		Dialog.open();
+	};
+
+	Macro.add('note', {
+		handler: function () {
+			var id = this.args[0];
+			if (!setup.notes[id]) { return this.error('unknown note id "' + id + '"'); }
+			$('<button type="button" class="note-stamp"></button>')
+				.attr('title', 'Historical note: ' + $('<span>').html(setup.notes[id].title).text())
+				.html('<span lang="ru">ИСТОРИЧЕСКАЯ СПРАВКА</span><small>historical note</small>')
+				.on('click', function () { setup.openNote(id); })
+				.appendTo(this.output);
+		}
+	});
+
+	/* <<clue "id">>text<</clue>> — a key phrase the player can mark into the notebook. */
+	Macro.add('clue', {
+		tags: null,
+		handler: function () {
+			var id = this.args[0];
+			if (!setup.clues[id]) { return this.error('unknown clue id "' + id + '"'); }
+			var btn = $('<button type="button" class="clue"></button>')
+				.attr('aria-label', 'Mark clue: ' + setup.clues[id].label)
+				.wiki(this.payload[0].contents)
+				.appendTo(this.output);
+			if (State.variables.clues.indexOf(id) !== -1) { btn.addClass('marked').attr('aria-pressed', 'true'); }
+			btn.on('click', function () {
+				if (setup.markClue(State.variables, id)) {
+					toast('Записано · Recorded in notebook');
+				}
+				btn.addClass('marked').attr('aria-pressed', 'true');
+			});
+		}
+	});
+
+	/* <<returnlink ["label"]>> — back to the last main-line scene. */
+	Macro.add('returnlink', {
+		handler: function () {
+			var target = State.variables.returnTo || 'Start';
+			$('<button type="button" class="return-link"></button>')
+				.text(this.args[0] || '← Return to desk')
+				.on('click', function () { Engine.play(target); })
+				.appendTo(this.output);
+		}
+	});
 }());
 </script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;run Object.assign(State.variables, setup.newGame())&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Start" tags="title" position="225,100" size="100,100">The Kremlin Files</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
