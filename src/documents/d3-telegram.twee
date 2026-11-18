@@ -1,0 +1,23 @@
+:: D3_Telegram [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sov-sekretno" "СОВ. СЕКРЕТНО">></span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Секретариат</span><span class="doc-sub"><<clue "cipher-telegram">><<ru "shifrotelegramma" "Шифротелеграмма">><</clue>> · проект (draft)</span></div>
+<div class="doc-meta"><span>To: first secretaries of republican Central Committees, kraikoms and <<ru "obkom" "obkoms">></span><span>Copies: 1</span></div>
+<p class="doc-title">On measures in connection with the state of emergency</p>
+
+In connection with the introduction of a <<ru "chp">> in certain areas of the USSR, Party committees are to take measures to support the State Committee on the State of Emergency.
+
+Ensure that Communists in the soviets, the economy and the law-enforcement bodies assist in maintaining order. Do not permit meetings, strikes or the distribution of unauthorised publications. Report on the situation in your region by 18:00 Moscow time daily.
+
+<p class="doc-sign">Secretariat of the Central Committee</p>
+
+<div class="routing-slip"><table>
+<tr><th>Рег. № · reg. no.</th><td>0417/с</td></tr>
+<tr><th>Дата регистрации · registered</th><td><<clue "reg-date-14">>14.08.91<</clue>></td></tr>
+<tr><th>К пакету · filed with</th><td><<clue "packet-7s">>№ 7/С<</clue>></td></tr>
+</table></div>
+<p class="margin-note">Отправить 19.08 в 07:00. — Р.</p>
+<p class="doc-translation">Handwritten: “Send 19.08 at 07:00. — R.” This draft was registered on 14 August, five days before the State Committee announced itself.</p>
+<div class="doc-footer"><em>Fictional document created for this game</em>, modeled on a real episode: <<note "secretariat-telegram">></div>
+<<returnlink>>
+</div>

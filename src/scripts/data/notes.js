@@ -19,7 +19,7 @@
 		},
 		'gkchp-announcement': {
 			title: 'The State Committee on the State of Emergency (ГКЧП)', date: '19 August 1991',
-			body: 'Early on 19 August, Soviet state media announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them “for health reasons,” and that a State Committee on the State of Emergency had been formed. Its members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country.',
+			body: 'Early on 19 August, Soviet state media announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them “for health reasons,” and that a State Committee on the State of Emergency had been formed. Its members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country, and armored units were ordered into Moscow that morning.',
 			sources: ['gkchpAppeal1991', 'dunlop1993']
 		},
 		'swan-lake': {

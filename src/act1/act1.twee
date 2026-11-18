@@ -1,0 +1,147 @@
+:: Act1_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>РАДИО · 06:00</span><span>ДЕЙСТВИЕ I · ACT I</span></div>
+<div class="bulletin-date"><<ru "ponedelnik" "ПОНЕДЕЛЬНИК">>, 19 АВГУСТА 1991</div>
+
+The radio wakes you, not the alarm. An announcer reads slowly, as if from a document he has never seen before: Vice President Yanayev has assumed the duties of the President, "in connection with Mikhail Sergeyevich Gorbachev's inability, for health reasons, to perform his duties." <<note "gorbachev-foros">>
+
+A State Committee on the State of Emergency (<<ru "chp" "ГКЧП">>) has been formed. A state of emergency is declared in certain areas for six months. <<note "gkchp-announcement">>
+
+Your wife turns on the television. There is no news. There is <em>Swan Lake</em>. <<note "swan-lake">>
+
+You put on your best suit and go to work. It does not occur to you not to.
+
+<div class="continue"><<link "Staraya Ploshchad →">><<set $time to "09:30">><<goto "A1_Briefing">><</link>></div>
+</div>
+
+
+:: A1_Briefing [scene conversation]
+<<if not $flags.a1Init>><<set $flags.a1Init to true>><<run State.variables.tray.indexOf("d3") === -1 && State.variables.tray.push("d3")>><</if>>
+<div class="scene-body">
+<p class="lead">Sector meeting room · 09:30</p>
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector · twenty-six years in the apparatus</span></div></div>
+
+Every chair is full, though half the department was on holiday on Friday. No one is talking. Through the window you hear a sound you have never heard on Staraya Ploshchad: the grinding of tracks on asphalt, somewhere toward the Kremlin.
+
+Rudin stands. He looks rested, almost happy.
+
+<p class="say">Comrades. The State Committee has acted to save the country from chaos. It is our duty to support it. Today our sector will process outgoing <<ru "shifrotelegramma" "cipher telegrams">> to the regional Party committees, the <<ru "obkom" "obkoms">>. <<ru "srochno" "Urgently">>. Volkov, the draft is in your tray. Check it, register it, and send it down to the cipher room.</p>
+
+His eyes rest on you for a moment longer than on anyone else.
+
+<div class="choices"><<link "“Understood, Gennady Ivanovich. It will be done at once.” (comply eagerly)">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 2)>><<set $flags.a1Brief to "eager">><<set $time to "10:15">><<goto "A1_Desk">><</link>>
+<<link "Nod, and say nothing. (comply quietly)">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.a1Brief to "quiet">><<set $time to "10:15">><<goto "A1_Desk">><</link>>
+<<link "“On what legal basis, Gennady Ivanovich? The President hasn't signed anything.” (ask)">><<run setup.adjustTrust(State.variables, "rudin", -1); setup.addPull(State.variables, "reform", 1); setup.addExposure(State.variables, 1)>><<set $flags.a1Brief to "questioned">><<set $time to "10:15">><<goto "A1_Desk">><</link>></div>
+</div>
+
+
+:: A1_Desk [scene]
+<div class="scene-body">
+<p class="lead">Room 412 · 19 August</p>
+
+<<if $flags.a1Brief is "questioned">>Nobody in the meeting room looked at you as you left. Rudin said only, "We will discuss the law another time, Andrei Nikolaevich." <</if>>Your colleagues move through the corridor in pairs, speaking quietly. Somebody has closed every window on the floor.
+
+<<if not ($docs.d3 and $docs.d3.seen)>>Rudin's draft telegram is waiting in your tray.
+
+<div class="choices">[[Read the draft telegram|D3_Telegram]]</div><<elseif not ($docs.d4 and $docs.d4.seen)>>The registration stamp on the draft is still in front of you: 14 August. Five days before anyone in this building "learned" of the emergency. The draft was filed with Packet 7/С, the packet that was never supposed to be registered.
+
+You need to know what else is in Packet 7/С. You can try the registry with what you know, which is the packet number and the date. <<if $trust.zaitsev gte 1 and not $flags.zaitsevPulled>>Or you could ask Zaitsev, who knows where every card in this building is kept.<</if>>
+
+<div class="choices">[[Search the registry terminal|Terminal]]<<if $trust.zaitsev gte 1 and not $flags.zaitsevPulled>>
+<<link "Go down to the archive and ask Zaitsev to pull the card">><<goto "A1_Zaitsev">><</link>><</if>><<if $tray.includes("d4")>>
+[[Open Packet 7/С|D4_List]]<</if>></div><<else>>You sit with the list in front of you for a long time. Then, at 13:40, the city line rings. Not the internal phone: the outside line, which almost never rings.
+<<set $time to "13:40">><<set $phone to {passage: "A1_Call_Belova", from: "City line · outside call"}>>
+<div class="choices">[[Answer the phone|A1_Call_Belova]]</div><</if>>
+</div>
+
+
+:: A1_Zaitsev [scene conversation]
+<<set $flags.zaitsevPulled to true>><<run State.variables.tray.indexOf("d4") === -1 && State.variables.tray.push("d4")>>
+<div class="scene-body">
+<p class="lead">The archive · 11:50</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+Zaitsev listens without interrupting. Then he takes a ring of keys from his drawer, unlocks a cabinet you have never seen open, and walks his fingers along the cards like a pianist.
+
+<p class="say">Box twelve. Restricted.</p>
+
+He pulls out a thin grey <<ru "papka">> and puts it in your hands. He does not let go of it at once.
+
+<p class="say">I did not give you this, Andrei Nikolaevich. In 1953 I did not see anything either. That is why I am sixty-one years old.</p>
+
+<div class="choices"><<link "“Спасибо, Pyotr Fomich.” (thank him)">><<run setup.adjustTrust(State.variables, "zaitsev", 1)>><<goto "A1_Desk">><</link>>
+<<link "“Whatever happens, your name stays out of it. I promise.”">><<run setup.adjustTrust(State.variables, "zaitsev", 1); setup.addPull(State.variables, "survival", 1)>><<set $flags.promisedZaitsev to true>><<goto "A1_Desk">><</link>></div>
+</div>
+
+
+:: A1_Call_Belova [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 13:41</span>
+<div class="speaker" data-who="belova"><div class="speaker-portrait"></div><div><span class="speaker-name">Irina Sergeyevna Belova</span><span class="speaker-role">Calling from a pay phone</span></div></div>
+
+Traffic noise, and under it something like a crowd.
+
+<p class="say">Andrei? It's Irina. I'm at the <<ru "bely-dom">>. There are thousands of people here, building barricades out of trolleybuses. Yeltsin came out an hour ago and climbed onto a <<ru "tank">>. He read an appeal: he called it a <<ru "putch">>, a coup, and said it's illegal. <<note "yeltsin-tank">></p>
+
+<p class="say">What's happening inside? Everyone here is asking whether the Party planned this. Did it?</p>
+
+You look at the list on your desk.
+
+<div class="choices"><<link "Tell her about the draft dated 14 August.">><<run setup.adjustTrust(State.variables, "belova", 2); setup.addPull(State.variables, "reform", 2); setup.addExposure(State.variables, 1)>><<set $flags.toldBelova to true>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>>
+<<link "“I don't know anything, Irina. Be careful.” (say nothing)">><<run setup.addPull(State.variables, "survival", 1)>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>>
+<<link "Hang up, and report the call to Rudin.">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 1); setup.adjustTrust(State.variables, "belova", -2)>><<set $flags.reportedBelova to true>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>></div>
+</div></div>
+
+
+:: A1_Markova_Ring [scene]
+<<set $time to "16:20">><<set $phone to {passage: "A1_Call_Markova", from: "City line · unknown caller"}>>
+<div class="scene-body">
+<p class="lead">Room 412 · 16:20</p>
+
+The afternoon crawls. The cipher room has sent up the confirmation: the telegrams have gone out to every region of the country. At twenty past four the city line rings again. A woman's voice you don't know asks for "Andrei Nikolaevich, Irina's friend."
+
+<div class="choices">[[Answer the phone|A1_Call_Markova]]</div>
+</div>
+
+
+:: A1_Call_Markova [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 16:21</span>
+<div class="speaker" data-who="markova"><div class="speaker-portrait"></div><div><span class="speaker-name">Lena Markova</span><span class="speaker-role">Journalist, <em>Moscow News</em></span></div></div>
+
+<p class="say"><<ru "zdravstvuyte">>. My name is Lena Markova. I work, or worked until this morning, for <em>Moscow News</em>. The Committee has shut us down, along with most of the papers in the city. We're printing anyway. <<note "press-suspended">></p>
+
+<p class="say">Irina says you are an honest man in a dishonest building. If there is paper that shows this was planned in advance, people need to see it. Not today. But soon.</p>
+
+<div class="choices"><<link "“I'll meet you. Not this week. I'll call.” (agree)">><<run setup.adjustTrust(State.variables, "markova", 1); setup.addExposure(State.variables, 1)>><<set $flags.markovaContact to true>><<goto "A1_Evening">><</link>>
+<<link "“You have the wrong number.” (refuse)">><<run setup.addPull(State.variables, "survival", 1)>><<goto "A1_Evening">><</link>></div>
+</div></div>
+
+
+:: A1_Evening [scene]
+<<set $time to "21:05">>
+<div class="scene-body">
+<p class="lead">Room 412 · 21:05</p>
+
+The building is half empty. Outside, the evening has the strange quiet of a city that is waiting for something. Packet 7/С is on your desk: the list, the draft, the date. In the morning it will have to be somewhere. (A carbon <<ru "kopiya">> would take ten minutes on the typewriter.)
+
+By the rules in the circular, it should go back to the registry. By the rules of this building, it should go back to Rudin. By the rules of survival, it should go somewhere nobody else knows about.
+
+<div class="choices"><<link "File it back in the registry, as procedure requires.">><<run setup.addPull(State.variables, "loyalty", 1); setup.setDoc(State.variables, "d4", "held", false); State.variables.tray.delete("d4")>><<set $flags.a1Decision to "filed">><<goto "A1_End">><</link>>
+<<link "Lock it in your desk drawer.">><<run setup.addPull(State.variables, "survival", 1); setup.setDoc(State.variables, "d4", "held"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.a1Decision to "kept">><<goto "A1_End">><</link>>
+<<link "Type a carbon copy first, then file the original.">><<run setup.addPull(State.variables, "reform", 1); setup.addPull(State.variables, "survival", 1); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "copied"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.a1Decision to "copied">><<goto "A1_End">><</link>></div>
+</div>
+
+
+:: A1_End [scene]
+<div class="scene-body">
+<p class="lead">Kutuzovsky Prospekt · 23:40</p>
+
+<<if $flags.a1Decision is "filed">>You filed it. The card is back in box twelve, where anyone with a key can find it, or make it disappear.<<elseif $flags.a1Decision is "kept">>The drawer locks with a small, final click. You put the key on the same ring as your apartment key.<<else>>The carbon copy is folded inside your jacket. The original is back in box twelve. You feel the copy all the way home, like a stone.<</if>>
+
+On the way home your trolleybus is diverted. Two streets away, people are carrying something heavy in the dark: paving stones, a door, a bench. Tomorrow is Tuesday.
+
+<div class="continue"><<link "Tuesday, 20 August →">><<set $act to "act2">><<set $date to "20 АВГ 1991">><<set $time to "08:00">><<goto "Act2_Bulletin">><</link>></div>
+</div>
