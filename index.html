@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://C9E94DF2-E150-485B-8B83-B726627425FB// --><tw-storydata name="The Kremlin Files" startnode="14" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C9E94DF2-E150-485B-8B83-B726627425FB" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "academic.css" */
+	<!-- UUID://C9E94DF2-E150-485B-8B83-B726627425FB// --><tw-storydata name="The Kremlin Files" startnode="24" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="C9E94DF2-E150-485B-8B83-B726627425FB" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* twine-user-stylesheet #1: "academic.css" */
 /* ===== About, Bibliography, Credits ===== */
 .academic-page {
 	max-width: 760px;
@@ -778,6 +778,8 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 @media (max-width: 600px) {
 	.stub-card, .ending-card { padding: 26px 18px; }
 }
+
+.scene-body p:empty, .doc p:empty, .bulletin-sheet p:empty { display: none; }
 /* twine-user-stylesheet #6: "document.css" */
 /* ===== Paper: documents, notebook, side sheets ===== */
 .doc, .sheet {
@@ -1029,7 +1031,7 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 (function () {
 	'use strict';
 	setup.documents = {
-		d1: { title: 'Circular on the draft Party Programme', ru: 'Циркуляр', classification: 'routine', passage: 'D1_Circular', date: '09.08.91' },
+		d1: { title: 'Circular on summer registration rules', ru: 'Циркуляр', classification: 'routine', passage: 'D1_Circular', date: '09.08.91' },
 		d2: { title: 'Routing slip — Packet 7/С', ru: 'Сопроводительный лист', classification: 'secret', passage: 'D2_RoutingSlip', date: '12.08.91' },
 		d3: { title: 'Draft cipher telegram to regional committees', ru: 'Шифротелеграмма (проект)', classification: 'top-secret', passage: 'D3_Telegram', date: '14.08.91' },
 		d4: { title: 'Packet 7/С — List of measures', ru: 'Перечень мероприятий', classification: 'top-secret', passage: 'D4_List', date: '14.08.91' },
@@ -1659,50 +1661,189 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 		input.trigger('focus');
 	});
 }());
-</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;run Object.assign(State.variables, setup.newGame())&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryInterface" tags="" position="225,100" size="100,100">&lt;div id=&quot;desk&quot;&gt;
+</script><tw-passagedata pid="1" name="D1_Circular" tags="document" position="100,100" size="100,100">&lt;div class=&quot;doc&quot;&gt;
+&lt;span class=&quot;stamp stamp--violet&quot;&gt;ВХ. № 3311 · 12.08.91&lt;/span&gt;
+&lt;div class=&quot;doc-header&quot;&gt;&lt;span class=&quot;doc-org&quot;&gt;ЦК КПСС · Общий отдел&lt;/span&gt;&lt;span class=&quot;doc-sub&quot;&gt;Circular · for internal use&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;doc-meta&quot;&gt;&lt;span&gt;№ 112-ц&lt;/span&gt;&lt;span&gt;09.08.1991&lt;/span&gt;&lt;span&gt;Copy 14 of 40&lt;/span&gt;&lt;/div&gt;
+&lt;p class=&quot;doc-title&quot;&gt;On the procedure for registering correspondence during the summer leave period&lt;/p&gt;
+
+1. During the leave period (August), all incoming correspondence is to be registered on the day of receipt without exception.
+
+2. Documents marked &lt;&lt;ru &quot;sekretno&quot; &quot;СЕКРЕТНО&quot;&gt;&gt; are to be entered in the restricted section of the &lt;&lt;ru &quot;kartoteka&quot;&gt;&gt; and issued against signature only.
+
+3. Deliveries &lt;&lt;ru &quot;narochnym&quot;&gt;&gt; (by courier) are to be registered in the general manner, and the courier&#39;s name recorded.
+
+4. Heads of sectors will ensure that the duty officer&#39;s telephone is answered at all times.
+
+&lt;p class=&quot;doc-sign&quot;&gt;Head of the General Department&lt;br&gt;(signature)&lt;/p&gt;
+&lt;div class=&quot;doc-footer&quot;&gt;&lt;em&gt;Fictional document created for this game.&lt;/em&gt; Point 3 matters: under the rules, nothing delivered by courier may bypass the registry.&lt;/div&gt;
+&lt;&lt;returnlink&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="D2_RoutingSlip" tags="document" position="225,100" size="100,100">&lt;div class=&quot;doc&quot;&gt;
+&lt;span class=&quot;stamp stamp--red&quot;&gt;&lt;&lt;ru &quot;sekretno&quot; &quot;СЕКРЕТНО&quot;&gt;&gt;&lt;/span&gt;
+&lt;div class=&quot;doc-header&quot;&gt;&lt;span class=&quot;doc-org&quot;&gt;ЦК КПСС · Общий отдел&lt;/span&gt;&lt;span class=&quot;doc-sub&quot;&gt;Сопроводительный лист · routing slip&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;routing-slip&quot;&gt;&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Пакет · packet&lt;/th&gt;&lt;td&gt;&lt;&lt;clue &quot;packet-7s&quot;&gt;&gt;№ 7/С&lt;&lt;/clue&gt;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Отправитель · sender&lt;/th&gt;&lt;td&gt;&lt;span class=&quot;redacted&quot;&gt;████████████&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Получатель · recipient&lt;/th&gt;&lt;td&gt;т. Рудину Г. И. — лично (personally)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Доставка · delivery&lt;/th&gt;&lt;td&gt;&lt;&lt;clue &quot;by-hand&quot;&gt;&gt;&lt;&lt;ru &quot;narochnym&quot;&gt;&gt;&lt;&lt;/clue&gt;&gt; · 12.08.91 · 08:50&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Рег. № · reg. no.&lt;/th&gt;&lt;td&gt;— &lt;em&gt;none&lt;/em&gt; —&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th&gt;Указание · instruction&lt;/th&gt;&lt;td&gt;НЕ РЕГИСТРИРОВАТЬ. ВСКРЫТЬ ЛИЧНО.&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;&lt;/div&gt;
+&lt;p class=&quot;doc-translation&quot;&gt;“Do not register. To be opened personally.”&lt;/p&gt;
+&lt;p class=&quot;doc-sign&quot;&gt;Received: &lt;span class=&quot;margin-note&quot;&gt;Г. Рудин&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;doc-footer&quot;&gt;&lt;em&gt;Fictional document created for this game.&lt;/em&gt; Click the underlined phrases to record them in your notebook.&lt;/div&gt;
+&lt;&lt;returnlink&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Prologue_Bulletin" tags="bulletin" position="350,100" size="100,100">&lt;div class=&quot;bulletin-sheet&quot;&gt;
+&lt;div class=&quot;bulletin-head&quot;&gt;&lt;span&gt;ТАСС · ТЕЛЕТАЙП&lt;/span&gt;&lt;span&gt;ПРОЛОГ · PROLOGUE&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;bulletin-date&quot;&gt;12 &lt;&lt;ru &quot;avgust&quot; &quot;АВГУСТА&quot;&gt;&gt; 1991&lt;/div&gt;
+
+MOSCOW. Monday. A hot, quiet week in the capital. President Gorbachev is on holiday in Crimea. &lt;&lt;note &quot;gorbachev-foros&quot;&gt;&gt;
+
+In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow&#39;s grip on the fifteen republics. Some in the leadership call it reform. Others call it the end of the state. &lt;&lt;note &quot;union-treaty&quot;&gt;&gt;
+
+At the Central Committee building on Staraya Ploshchad, the summer staff work through the in-trays as they always have.
+
+&lt;div class=&quot;continue&quot;&gt;&lt;&lt;link &quot;Go to work →&quot;&gt;&gt;&lt;&lt;set $act to &quot;prologue&quot;&gt;&gt;&lt;&lt;set $date to &quot;12 АВГ 1991&quot;&gt;&gt;&lt;&lt;set $time to &quot;09:00&quot;&gt;&gt;&lt;&lt;goto &quot;P_Desk&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="P_Desk" tags="scene" position="475,100" size="100,100">&lt;&lt;if not $flags.pDeskInit&gt;&gt;&lt;&lt;set $flags.pDeskInit to true&gt;&gt;&lt;&lt;set $tray to [&quot;d1&quot;, &quot;d2&quot;]&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;Staraya Ploshchad · Entrance 5 · Room 412 · 09:00&lt;/p&gt;
+
+You are Andrei Nikolaevich Volkov, thirty-eight, a &lt;&lt;ru &quot;referent&quot;&gt;&gt; in the &lt;&lt;ru &quot;obshchy-otdel&quot;&gt;&gt; of the &lt;&lt;ru &quot;tsk-kpss&quot;&gt;&gt;. Your department is where Party paper goes to be counted: every letter, report and decree is logged, numbered and routed. Nothing moves through this building without passing a desk like yours.
+
+The window is open onto the courtyard. A fan turns slowly. The &lt;&lt;ru &quot;vertushka&quot;&gt;&gt; on your desk, the government line, is silent. Half the department is on holiday.
+
+Two items are waiting in your &lt;&lt;ru &quot;vkhodyashchie&quot;&gt;&gt;. Open them from the tray on the left of the desk. On a small screen, the tray is further down the page.
+
+&lt;&lt;if $docs.d2 and $docs.d2.seen&gt;&gt;One of them has been bothering you since you read it. The registry belongs to the archive, and the archive belongs to Pyotr Fomich Zaitsev.
+
+&lt;div class=&quot;choices&quot;&gt;&lt;&lt;link &quot;Take the routing slip down to the archive&quot;&gt;&gt;&lt;&lt;set $time to &quot;11:20&quot;&gt;&gt;&lt;&lt;goto &quot;P_Archive&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;choices&quot;&gt;[[Open the circular|D1_Circular]]
+[[Open the routing slip|D2_RoutingSlip]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="P_Archive" tags="scene conversation" position="600,100" size="100,100">&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;The archive · basement level · 11:20&lt;/p&gt;
+&lt;div class=&quot;speaker&quot; data-who=&quot;zaitsev&quot;&gt;&lt;div class=&quot;speaker-portrait&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;speaker-name&quot;&gt;Pyotr Fomich Zaitsev&lt;/span&gt;&lt;span class=&quot;speaker-role&quot;&gt;Archivist · sixty-one · has outlasted every General Secretary since Khrushchev&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+The &lt;&lt;ru &quot;arkhiv&quot;&gt;&gt; smells of dust and machine oil. Zaitsev takes the routing slip without looking up, then looks up very slowly.
+
+&lt;p class=&quot;say&quot;&gt;Пакет семь-эс. By courier. &quot;Do not register.&quot; Signed for by Comrade Rudin personally.&lt;/p&gt;
+
+He turns the slip over, as if something might be written on the back.
+
+&lt;p class=&quot;say&quot;&gt;Andrei Nikolaevich, in thirty years I have seen this instruction perhaps four times. Each time, a month later, a great many people were looking for new jobs.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;&lt;&lt;link &quot;“You&#39;ve noticed it too, then, Pyotr Fomich?” (ask gently)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;zaitsev&quot;, 1); setup.addPull(State.variables, &quot;survival&quot;, 1)&gt;&gt;&lt;&lt;set $flags.pArchive to &quot;tactful&quot;&gt;&gt;&lt;&lt;goto &quot;P_Terminal_Hint&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“Who sent it? You must know where it came from.” (press him)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;zaitsev&quot;, -1); setup.addPull(State.variables, &quot;reform&quot;, 1)&gt;&gt;&lt;&lt;set $flags.pArchive to &quot;pressed&quot;&gt;&gt;&lt;&lt;goto &quot;P_Terminal_Hint&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“Forget I showed you.” (drop it)&quot;&gt;&gt;&lt;&lt;run setup.addPull(State.variables, &quot;survival&quot;, 1)&gt;&gt;&lt;&lt;set $flags.pArchive to &quot;dropped&quot;&gt;&gt;&lt;&lt;goto &quot;P_Terminal_Hint&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="P_Terminal_Hint" tags="scene conversation" position="725,100" size="100,100">&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;The archive · 11:35&lt;/p&gt;
+&lt;div class=&quot;speaker&quot; data-who=&quot;zaitsev&quot;&gt;&lt;div class=&quot;speaker-portrait&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;speaker-name&quot;&gt;Pyotr Fomich Zaitsev&lt;/span&gt;&lt;span class=&quot;speaker-role&quot;&gt;Archivist&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;&lt;if $flags.pArchive is &quot;tactful&quot;&gt;&gt;Zaitsev almost smiles.
+
+&lt;p class=&quot;say&quot;&gt;Noticed? I notice everything. That is why I am still here.&lt;/p&gt;&lt;&lt;elseif $flags.pArchive is &quot;pressed&quot;&gt;&gt;His face closes like a drawer.
+
+&lt;p class=&quot;say&quot;&gt;I know where the tea is kept, Andrei Nikolaevich. That is all I know.&lt;/p&gt;&lt;&lt;else&gt;&gt;He hands the slip back.
+
+&lt;p class=&quot;say&quot;&gt;Wise. Very wise.&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+
+He nods toward the grey cabinet in the corner: the new registry computer, which the department received last year and which almost no one trusts.
+
+&lt;p class=&quot;say&quot;&gt;If it was ever entered anywhere, the machine will say so. Or it will say that you are not allowed to know. Either answer is an answer.&lt;/p&gt;
+
+The terminal is on the right of your desk. Try searching for the packet number from the slip, or skip it for now.
+
+&lt;div class=&quot;choices&quot;&gt;[[Use the registry terminal|Terminal]]
+&lt;&lt;link &quot;Go up to the canteen for lunch&quot;&gt;&gt;&lt;&lt;set $time to &quot;13:10&quot;&gt;&gt;&lt;&lt;goto &quot;P_Corridor&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="P_Corridor" tags="scene conversation" position="850,100" size="100,100">&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;Canteen, fourth floor · 13:10&lt;/p&gt;
+&lt;div class=&quot;speaker&quot; data-who=&quot;belova&quot;&gt;&lt;div class=&quot;speaker-portrait&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;speaker-name&quot;&gt;Irina Sergeyevna Belova&lt;/span&gt;&lt;span class=&quot;speaker-role&quot;&gt;Instructor, General Department · reads every newspaper in Moscow&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+Irina Belova sets down her tray across from yours. Cabbage soup, black bread, a glass of &lt;&lt;ru &quot;chay&quot;&gt;&gt;.
+
+&lt;p class=&quot;say&quot;&gt;Have you read the treaty text? The republics will collect their own taxes. Ukraine will practically be a separate country. And still they say it saves the Union.&lt;/p&gt;
+
+She lowers her voice.
+
+&lt;p class=&quot;say&quot;&gt;Some people upstairs say it will never be signed. They say it as if they already know.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;&lt;&lt;link &quot;“Maybe it&#39;s time the republics had their say.” (agree)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;belova&quot;, 1); setup.addPull(State.variables, &quot;reform&quot;, 1)&gt;&gt;&lt;&lt;goto &quot;P_Late&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“I just log the paperwork, Irina Sergeyevna.” (deflect)&quot;&gt;&gt;&lt;&lt;run setup.addPull(State.variables, &quot;survival&quot;, 1)&gt;&gt;&lt;&lt;goto &quot;P_Late&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“Be careful who hears you talking like that.” (warn her)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;belova&quot;, -1); setup.addPull(State.variables, &quot;loyalty&quot;, 1)&gt;&gt;&lt;&lt;goto &quot;P_Late&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="P_Late" tags="scene" position="975,100" size="100,100">&lt;&lt;set $time to &quot;18:40&quot;&gt;&gt;&lt;&lt;set $phone to {passage: &quot;P_Call_Rudin&quot;, from: &quot;Rudin · internal line&quot;}&gt;&gt;
+&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;Room 412 · 18:40&lt;/p&gt;
+
+The afternoon goes the way afternoons do: stamps, numbers, signatures. The courtyard turns gold, then grey. You are reaching for your jacket when the internal phone rings: two short rings, which means someone on this floor.
+
+&lt;div class=&quot;choices&quot;&gt;[[Answer the phone|P_Call_Rudin]]&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="P_Call_Rudin" tags="scene phone" position="1100,100" size="100,100">&lt;&lt;set $phone to null&gt;&gt;
+&lt;div class=&quot;scene-body&quot;&gt;&lt;div class=&quot;call&quot;&gt;
+&lt;span class=&quot;call-header&quot;&gt;☎ Internal line · 18:41&lt;/span&gt;
+&lt;div class=&quot;speaker&quot; data-who=&quot;rudin&quot;&gt;&lt;div class=&quot;speaker-portrait&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;speaker-name&quot;&gt;Gennady Ivanovich Rudin&lt;/span&gt;&lt;span class=&quot;speaker-role&quot;&gt;Deputy head of sector · your superior&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;say&quot;&gt;Andrei Nikolaevich. Still at your desk. Good, good, a conscientious man.&lt;/p&gt;
+
+A pause. You can hear him breathing, and somewhere behind him a door closing.
+
+&lt;p class=&quot;say&quot;&gt;A packet came through today by courier. Seven-S. Did it pass through your registry?&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;&lt;&lt;link &quot;“No, Gennady Ivanovich. I never saw it.” (lie)&quot;&gt;&gt;&lt;&lt;run setup.addExposure(State.variables, 1)&gt;&gt;&lt;&lt;set $flags.liedToRudin to true&gt;&gt;&lt;&lt;goto &quot;P_Evening&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“I saw the routing slip. Nothing more.” (admit it)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;rudin&quot;, 1); setup.addPull(State.variables, &quot;loyalty&quot;, 1)&gt;&gt;&lt;&lt;set $flags.toldRudin to true&gt;&gt;&lt;&lt;goto &quot;P_Evening&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;“What&#39;s in it, if I may ask?” (ask)&quot;&gt;&gt;&lt;&lt;run setup.adjustTrust(State.variables, &quot;rudin&quot;, -1); setup.addPull(State.variables, &quot;reform&quot;, 1); setup.addExposure(State.variables, 1)&gt;&gt;&lt;&lt;set $flags.askedRudin to true&gt;&gt;&lt;&lt;goto &quot;P_Evening&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="P_Evening" tags="scene" position="1225,100" size="100,100">&lt;div class=&quot;scene-body&quot;&gt;
+&lt;p class=&quot;lead&quot;&gt;Home · Kutuzovsky Prospekt · evening&lt;/p&gt;
+
+&lt;&lt;if $flags.liedToRudin&gt;&gt;Rudin said only &quot;Good,&quot; and hung up. You keep hearing the word on the Metro home.&lt;&lt;elseif $flags.toldRudin&gt;&gt;Rudin thanked you warmly, like an uncle, and told you to forget about it. You find that you can&#39;t.&lt;&lt;else&gt;&gt;Rudin was quiet for a long moment. Then: &quot;Curiosity, Andrei Nikolaevich, is a young man&#39;s habit.&quot; He hung up.&lt;&lt;/if&gt;&gt;
+
+At home your wife is watching the news with the sound low. Your daughter is at the &lt;&lt;ru &quot;dacha&quot;&gt;&gt; with her grandmother for the rest of August. On television a weather map of the Soviet Union, all fifteen republics, glows in the summer heat.
+
+You go to bed early. The week passes. Nothing happens, and then the weekend passes too.
+
+&lt;div class=&quot;continue&quot;&gt;&lt;&lt;link &quot;Monday, 19 August →&quot;&gt;&gt;&lt;&lt;set $act to &quot;act1&quot;&gt;&gt;&lt;&lt;set $date to &quot;19 АВГ 1991&quot;&gt;&gt;&lt;&lt;set $time to &quot;06:00&quot;&gt;&gt;&lt;&lt;goto &quot;Act1_Bulletin&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="StoryInit" tags="" position="100,225" size="100,100">&lt;&lt;run Object.assign(State.variables, setup.newGame())&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="StoryInterface" tags="" position="225,225" size="100,100">&lt;div id=&quot;desk&quot;&gt;
 	&lt;header id=&quot;desk-header&quot; data-passage=&quot;PanelCalendar&quot;&gt;&lt;/header&gt;
 	&lt;aside id=&quot;tray&quot; aria-label=&quot;In-tray and kept files&quot; data-passage=&quot;PanelTray&quot;&gt;&lt;/aside&gt;
 	&lt;main id=&quot;passages&quot; aria-live=&quot;polite&quot;&gt;&lt;/main&gt;
 	&lt;aside id=&quot;instruments&quot; aria-label=&quot;Telephone and registry terminal&quot; data-passage=&quot;PanelPhone&quot;&gt;&lt;/aside&gt;
 	&lt;nav id=&quot;desk-bar&quot; aria-label=&quot;Desk drawer&quot; data-passage=&quot;PanelBar&quot;&gt;&lt;/nav&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="PanelCalendar" tags="panel nobr" position="350,100" size="100,100">&lt;div class=&quot;calendar&quot; aria-label=&quot;Date&quot;&gt;&lt;span class=&quot;cal-month&quot;&gt;$date&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="PanelCalendar" tags="panel nobr" position="350,225" size="100,100">&lt;div class=&quot;calendar&quot; aria-label=&quot;Date&quot;&gt;&lt;span class=&quot;cal-month&quot;&gt;$date&lt;/span&gt;&lt;/div&gt;
 &lt;div class=&quot;org&quot;&gt;&lt;span class=&quot;org-ru&quot;&gt;ЦК КПСС · Общий отдел&lt;/span&gt;&lt;span class=&quot;org-en&quot;&gt;CPSU Central Committee · General Department&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;clock&quot; aria-label=&quot;Time&quot;&gt;$time&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="PanelTray" tags="panel nobr" position="475,100" size="100,100">&lt;h2 class=&quot;panel-title&quot;&gt;&lt;span lang=&quot;ru&quot;&gt;Входящие&lt;/span&gt; In-tray&lt;/h2&gt;
+&lt;div class=&quot;clock&quot; aria-label=&quot;Time&quot;&gt;$time&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="PanelTray" tags="panel nobr" position="475,225" size="100,100">&lt;h2 class=&quot;panel-title&quot;&gt;&lt;span lang=&quot;ru&quot;&gt;Входящие&lt;/span&gt; In-tray&lt;/h2&gt;
 &lt;&lt;if $tray.length is 0&gt;&gt;&lt;p class=&quot;panel-empty&quot;&gt;Empty.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;ul class=&quot;tray-list&quot;&gt;&lt;&lt;for _id range $tray&gt;&gt;&lt;&lt;capture _id&gt;&gt;&lt;li class=&quot;tray-item&quot; @data-class=&quot;setup.documents[_id].classification&quot;&gt;&lt;&lt;link setup.documents[_id].title setup.documents[_id].passage&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $docs[_id] and $docs[_id].seen&gt;&gt;&lt;span class=&quot;tray-seen&quot;&gt;read&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;&lt;&lt;/if&gt;&gt;
 &lt;h2 class=&quot;panel-title&quot;&gt;&lt;span lang=&quot;ru&quot;&gt;Ящик стола&lt;/span&gt; Desk drawer&lt;/h2&gt;
-&lt;&lt;if $kept.length is 0&gt;&gt;&lt;p class=&quot;panel-empty&quot;&gt;Nothing kept.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;ul class=&quot;tray-list kept&quot;&gt;&lt;&lt;for _id range $kept&gt;&gt;&lt;&lt;capture _id&gt;&gt;&lt;li class=&quot;tray-item&quot; @data-class=&quot;setup.documents[_id].classification&quot;&gt;&lt;&lt;link setup.documents[_id].title setup.documents[_id].passage&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $docs[_id] and $docs[_id].copied&gt;&gt;&lt;span class=&quot;tray-seen&quot;&gt;carbon copy&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="PanelPhone" tags="panel nobr" position="600,100" size="100,100">&lt;div @class=&quot;&#39;phone&#39; + ($phone ? &#39; ringing&#39; : &#39;&#39;)&quot;&gt;
+&lt;&lt;if $kept.length is 0&gt;&gt;&lt;p class=&quot;panel-empty&quot;&gt;Nothing kept.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;ul class=&quot;tray-list kept&quot;&gt;&lt;&lt;for _id range $kept&gt;&gt;&lt;&lt;capture _id&gt;&gt;&lt;li class=&quot;tray-item&quot; @data-class=&quot;setup.documents[_id].classification&quot;&gt;&lt;&lt;link setup.documents[_id].title setup.documents[_id].passage&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;if $docs[_id] and $docs[_id].copied&gt;&gt;&lt;span class=&quot;tray-seen&quot;&gt;carbon copy&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="PanelPhone" tags="panel nobr" position="600,225" size="100,100">&lt;div @class=&quot;&#39;phone&#39; + ($phone ? &#39; ringing&#39; : &#39;&#39;)&quot;&gt;
 &lt;svg class=&quot;phone-svg&quot; viewBox=&quot;0 0 120 90&quot; aria-hidden=&quot;true&quot;&gt;&lt;path class=&quot;ph-handset&quot; d=&quot;M10 22c0-8 16-14 50-14s50 6 50 14l-4 10c-1 3-4 4-7 3l-14-4c-3-1-4-3-4-6v-5c-14-3-28-3-42 0v5c0 3-1 5-4 6l-14 4c-3 1-6 0-7-3z&quot;/&gt;&lt;path class=&quot;ph-body&quot; d=&quot;M24 44c4-6 14-8 36-8s32 2 36 8l14 34c1 4-1 7-5 7H15c-4 0-6-3-5-7z&quot;/&gt;&lt;circle class=&quot;ph-dial&quot; cx=&quot;60&quot; cy=&quot;62&quot; r=&quot;17&quot;/&gt;&lt;circle class=&quot;ph-hub&quot; cx=&quot;60&quot; cy=&quot;62&quot; r=&quot;6&quot;/&gt;&lt;/svg&gt;
 &lt;&lt;if $phone&gt;&gt;&lt;p class=&quot;phone-label&quot;&gt;☎ &lt;&lt;print $phone.from&gt;&gt;&lt;/p&gt;&lt;&lt;link &quot;Answer the phone&quot; $phone.passage&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;p class=&quot;phone-label&quot;&gt;&lt;span lang=&quot;ru&quot;&gt;Вертушка&lt;/span&gt; · silent&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;terminal-card&quot;&gt;
 &lt;div class=&quot;term-screen&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;ЕС-1841&lt;/span&gt;&lt;span class=&quot;term-cursor&quot;&gt;█&lt;/span&gt;&lt;/div&gt;
 [[Registry terminal|Terminal]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="PanelBar" tags="panel nobr" position="725,100" size="100,100">&lt;ul class=&quot;bar-list&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="PanelBar" tags="panel nobr" position="725,225" size="100,100">&lt;ul class=&quot;bar-list&quot;&gt;
 &lt;li&gt;[[Notebook|Notebook]]&lt;/li&gt;
 &lt;li&gt;[[Dictionary|Dictionary]]&lt;/li&gt;
 &lt;li&gt;[[Historical notes|NotesIndex]]&lt;/li&gt;
 &lt;li&gt;&lt;&lt;link &quot;Save / Load&quot;&gt;&gt;&lt;&lt;run UI.saves()&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;li&gt;[[About|About]]&lt;/li&gt;
 &lt;li&gt;[[Bibliography|Bibliography]]&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="7" name="About" tags="academic" position="850,100" size="100,100">About This Project — written in Task 12.
-[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="8" name="Bibliography" tags="academic" position="975,100" size="100,100">Bibliography — written in Task 12.
-[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="9" name="Prologue_Bulletin" tags="bulletin" position="1100,100" size="100,100">Prologue — written in Task 9.
-[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="10" name="Notebook" tags="side nobr" position="1225,100" size="100,100">&lt;div class=&quot;sheet notebook&quot;&gt;
+&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="17" name="About" tags="academic" position="850,225" size="100,100">About This Project — written in Task 12.
+[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="18" name="Bibliography" tags="academic" position="975,225" size="100,100">Bibliography — written in Task 12.
+[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="19" name="Act1_Bulletin" tags="bulletin" position="1100,225" size="100,100">Act I — written in Task 10.
+[[Title screen|Start]]</tw-passagedata><tw-passagedata pid="20" name="Notebook" tags="side nobr" position="1225,225" size="100,100">&lt;div class=&quot;sheet notebook&quot;&gt;
 &lt;h1&gt;&lt;span lang=&quot;ru&quot;&gt;Блокнот&lt;/span&gt; · Notebook&lt;/h1&gt;
 &lt;p class=&quot;state-of-mind&quot;&gt;&lt;&lt;print setup.stateOfMind(State.variables)&gt;&gt;&lt;/p&gt;
 &lt;&lt;if $clues.length is 0&gt;&gt;&lt;p&gt;No notes yet. Click underlined key phrases in documents to record them here.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;ol class=&quot;clue-list&quot;&gt;&lt;&lt;for _c range $clues&gt;&gt;&lt;li&gt;&lt;&lt;print setup.clues[_c].label&gt;&gt; &lt;span class=&quot;clue-key&quot;&gt;registry key: &lt;code&gt;&lt;&lt;print setup.clues[_c].registryKey&gt;&gt;&lt;/code&gt;&lt;/span&gt;&lt;/li&gt;&lt;&lt;/for&gt;&gt;&lt;/ol&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;returnlink&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Dictionary" tags="side nobr" position="100,225" size="100,100">&lt;div class=&quot;sheet dictionary&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Dictionary" tags="side nobr" position="100,350" size="100,100">&lt;div class=&quot;sheet dictionary&quot;&gt;
 &lt;h1&gt;&lt;span lang=&quot;ru&quot;&gt;Словарь&lt;/span&gt; · Dictionary&lt;/h1&gt;
 &lt;p&gt;Russian words you have met so far. Hover or tap any dotted word in the game to see its meaning.&lt;/p&gt;
 &lt;&lt;if $glossary.length is 0&gt;&gt;&lt;p&gt;No words yet.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;dl class=&quot;dict&quot;&gt;&lt;&lt;for _g range setup.sortedGlossary(State.variables)&gt;&gt;&lt;dt lang=&quot;ru&quot;&gt;&lt;&lt;print setup.glossary[_g].ru&gt;&gt;&lt;/dt&gt;&lt;dd&gt;&lt;em&gt;&lt;&lt;print setup.glossary[_g].translit&gt;&gt;&lt;/em&gt; — &lt;&lt;print setup.glossary[_g].en&gt;&gt;&lt;/dd&gt;&lt;&lt;/for&gt;&gt;&lt;/dl&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;returnlink&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="NotesIndex" tags="side nobr" position="225,225" size="100,100">&lt;div class=&quot;sheet notes-index&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="NotesIndex" tags="side nobr" position="225,350" size="100,100">&lt;div class=&quot;sheet notes-index&quot;&gt;
 &lt;h1&gt;&lt;span lang=&quot;ru&quot;&gt;Исторические справки&lt;/span&gt; · Historical notes&lt;/h1&gt;
 &lt;p&gt;Notes you have opened. Everything marked with the red stamp is documented history; everything else in the game is fiction.&lt;/p&gt;
 &lt;&lt;if $notesSeen.length is 0&gt;&gt;&lt;p&gt;No notes opened yet.&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;ul class=&quot;notes-list&quot;&gt;&lt;&lt;for _n range $notesSeen&gt;&gt;&lt;&lt;capture _n&gt;&gt;&lt;li&gt;&lt;&lt;link setup.plainTitle(_n)&gt;&gt;&lt;&lt;run setup.openNote(_n)&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;span class=&quot;note-date-inline&quot;&gt;&lt;&lt;print setup.notes[_n].date&gt;&gt;&lt;/span&gt;&lt;/li&gt;&lt;&lt;/capture&gt;&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;returnlink&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Terminal" tags="terminal side nobr" position="350,225" size="100,100">&lt;div class=&quot;term-wrap&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Terminal" tags="terminal side nobr" position="350,350" size="100,100">&lt;div class=&quot;term-wrap&quot;&gt;
 &lt;div class=&quot;term-bezel&quot;&gt;&lt;div class=&quot;term-crt&quot;&gt;
 &lt;div class=&quot;term-boot&quot;&gt;ЕС-1841 · АСУ «ДЕЛОПРОИЗВОДСТВО» · ЦК КПСС&lt;br&gt;registry control system · General Department · terminal 3&lt;/div&gt;
 &lt;div class=&quot;term-help&quot;&gt;ВВЕДИТЕ: ПОИСК &amp;lt;номер | ключ&amp;gt; — enter a registration number or key&lt;/div&gt;
@@ -1715,7 +1856,7 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 &lt;&lt;returnlink&gt;&gt;
 &lt;span class=&quot;term-note&quot;&gt;&lt;&lt;note &quot;office-computers&quot;&gt;&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Start" tags="title nobr" position="475,225" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Start" tags="title nobr" position="475,350" size="100,100">&lt;div class=&quot;title-screen&quot;&gt;
 &lt;div class=&quot;title-star&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
 &lt;p class=&quot;title-kicker&quot;&gt;&lt;span lang=&quot;ru&quot;&gt;Совершенно секретно&lt;/span&gt; · Top secret&lt;/p&gt;
 &lt;h1 class=&quot;title-main&quot;&gt;&lt;span class=&quot;title-ru&quot; lang=&quot;ru&quot;&gt;Кремлёвские досье&lt;/span&gt;&lt;span class=&quot;title-en&quot;&gt;The Kremlin Files&lt;/span&gt;&lt;/h1&gt;

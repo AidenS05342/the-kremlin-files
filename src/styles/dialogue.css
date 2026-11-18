@@ -150,3 +150,5 @@
 @media (max-width: 600px) {
 	.stub-card, .ending-card { padding: 26px 18px; }
 }
+
+.scene-body p:empty, .doc p:empty, .bulletin-sheet p:empty { display: none; }

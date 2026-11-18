@@ -1,0 +1,38 @@
+:: D1_Circular [document]
+<div class="doc">
+<span class="stamp stamp--violet">ВХ. № 3311 · 12.08.91</span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Общий отдел</span><span class="doc-sub">Circular · for internal use</span></div>
+<div class="doc-meta"><span>№ 112-ц</span><span>09.08.1991</span><span>Copy 14 of 40</span></div>
+<p class="doc-title">On the procedure for registering correspondence during the summer leave period</p>
+
+1. During the leave period (August), all incoming correspondence is to be registered on the day of receipt without exception.
+
+2. Documents marked <<ru "sekretno" "СЕКРЕТНО">> are to be entered in the restricted section of the <<ru "kartoteka">> and issued against signature only.
+
+3. Deliveries <<ru "narochnym">> (by courier) are to be registered in the general manner, and the courier's name recorded.
+
+4. Heads of sectors will ensure that the duty officer's telephone is answered at all times.
+
+<p class="doc-sign">Head of the General Department<br>(signature)</p>
+<div class="doc-footer"><em>Fictional document created for this game.</em> Point 3 matters: under the rules, nothing delivered by courier may bypass the registry.</div>
+<<returnlink>>
+</div>
+
+
+:: D2_RoutingSlip [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sekretno" "СЕКРЕТНО">></span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Общий отдел</span><span class="doc-sub">Сопроводительный лист · routing slip</span></div>
+<div class="routing-slip"><table>
+<tr><th>Пакет · packet</th><td><<clue "packet-7s">>№ 7/С<</clue>></td></tr>
+<tr><th>Отправитель · sender</th><td><span class="redacted">████████████</span></td></tr>
+<tr><th>Получатель · recipient</th><td>т. Рудину Г. И. — лично (personally)</td></tr>
+<tr><th>Доставка · delivery</th><td><<clue "by-hand">><<ru "narochnym">><</clue>> · 12.08.91 · 08:50</td></tr>
+<tr><th>Рег. № · reg. no.</th><td>— <em>none</em> —</td></tr>
+<tr><th>Указание · instruction</th><td>НЕ РЕГИСТРИРОВАТЬ. ВСКРЫТЬ ЛИЧНО.</td></tr>
+</table></div>
+<p class="doc-translation">“Do not register. To be opened personally.”</p>
+<p class="doc-sign">Received: <span class="margin-note">Г. Рудин</span></p>
+<div class="doc-footer"><em>Fictional document created for this game.</em> Click the underlined phrases to record them in your notebook.</div>
+<<returnlink>>
+</div>

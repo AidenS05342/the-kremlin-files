@@ -1,0 +1,137 @@
+:: Prologue_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>ТАСС · ТЕЛЕТАЙП</span><span>ПРОЛОГ · PROLOGUE</span></div>
+<div class="bulletin-date">12 <<ru "avgust" "АВГУСТА">> 1991</div>
+
+MOSCOW. Monday. A hot, quiet week in the capital. President Gorbachev is on holiday in Crimea. <<note "gorbachev-foros">>
+
+In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the fifteen republics. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
+
+At the Central Committee building on Staraya Ploshchad, the summer staff work through the in-trays as they always have.
+
+<div class="continue"><<link "Go to work →">><<set $act to "prologue">><<set $date to "12 АВГ 1991">><<set $time to "09:00">><<goto "P_Desk">><</link>></div>
+</div>
+
+
+:: P_Desk [scene]
+<<if not $flags.pDeskInit>><<set $flags.pDeskInit to true>><<set $tray to ["d1", "d2"]>><</if>>
+<div class="scene-body">
+<p class="lead">Staraya Ploshchad · Entrance 5 · Room 412 · 09:00</p>
+
+You are Andrei Nikolaevich Volkov, thirty-eight, a <<ru "referent">> in the <<ru "obshchy-otdel">> of the <<ru "tsk-kpss">>. Your department is where Party paper goes to be counted: every letter, report and decree is logged, numbered and routed. Nothing moves through this building without passing a desk like yours.
+
+The window is open onto the courtyard. A fan turns slowly. The <<ru "vertushka">> on your desk, the government line, is silent. Half the department is on holiday.
+
+Two items are waiting in your <<ru "vkhodyashchie">>. Open them from the tray on the left of the desk. On a small screen, the tray is further down the page.
+
+<<if $docs.d2 and $docs.d2.seen>>One of them has been bothering you since you read it. The registry belongs to the archive, and the archive belongs to Pyotr Fomich Zaitsev.
+
+<div class="choices"><<link "Take the routing slip down to the archive">><<set $time to "11:20">><<goto "P_Archive">><</link>></div><<else>>
+<div class="choices">[[Open the circular|D1_Circular]]
+[[Open the routing slip|D2_RoutingSlip]]</div><</if>>
+</div>
+
+
+:: P_Archive [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · basement level · 11:20</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has outlasted every General Secretary since Khrushchev</span></div></div>
+
+The <<ru "arkhiv">> smells of dust and machine oil. Zaitsev takes the routing slip without looking up, then looks up very slowly.
+
+<p class="say">Пакет семь-эс. By courier. "Do not register." Signed for by Comrade Rudin personally.</p>
+
+He turns the slip over, as if something might be written on the back.
+
+<p class="say">Andrei Nikolaevich, in thirty years I have seen this instruction perhaps four times. Each time, a month later, a great many people were looking for new jobs.</p>
+
+<div class="choices"><<link "“You've noticed it too, then, Pyotr Fomich?” (ask gently)">><<run setup.adjustTrust(State.variables, "zaitsev", 1); setup.addPull(State.variables, "survival", 1)>><<set $flags.pArchive to "tactful">><<goto "P_Terminal_Hint">><</link>>
+<<link "“Who sent it? You must know where it came from.” (press him)">><<run setup.adjustTrust(State.variables, "zaitsev", -1); setup.addPull(State.variables, "reform", 1)>><<set $flags.pArchive to "pressed">><<goto "P_Terminal_Hint">><</link>>
+<<link "“Forget I showed you.” (drop it)">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.pArchive to "dropped">><<goto "P_Terminal_Hint">><</link>></div>
+</div>
+
+
+:: P_Terminal_Hint [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · 11:35</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+<<if $flags.pArchive is "tactful">>Zaitsev almost smiles.
+
+<p class="say">Noticed? I notice everything. That is why I am still here.</p><<elseif $flags.pArchive is "pressed">>His face closes like a drawer.
+
+<p class="say">I know where the tea is kept, Andrei Nikolaevich. That is all I know.</p><<else>>He hands the slip back.
+
+<p class="say">Wise. Very wise.</p><</if>>
+
+He nods toward the grey cabinet in the corner: the new registry computer, which the department received last year and which almost no one trusts.
+
+<p class="say">If it was ever entered anywhere, the machine will say so. Or it will say that you are not allowed to know. Either answer is an answer.</p>
+
+The terminal is on the right of your desk. Try searching for the packet number from the slip, or skip it for now.
+
+<div class="choices">[[Use the registry terminal|Terminal]]
+<<link "Go up to the canteen for lunch">><<set $time to "13:10">><<goto "P_Corridor">><</link>></div>
+</div>
+
+
+:: P_Corridor [scene conversation]
+<div class="scene-body">
+<p class="lead">Canteen, fourth floor · 13:10</p>
+<div class="speaker" data-who="belova"><div class="speaker-portrait"></div><div><span class="speaker-name">Irina Sergeyevna Belova</span><span class="speaker-role">Instructor, General Department · reads every newspaper in Moscow</span></div></div>
+
+Irina Belova sets down her tray across from yours. Cabbage soup, black bread, a glass of <<ru "chay">>.
+
+<p class="say">Have you read the treaty text? The republics will collect their own taxes. Ukraine will practically be a separate country. And still they say it saves the Union.</p>
+
+She lowers her voice.
+
+<p class="say">Some people upstairs say it will never be signed. They say it as if they already know.</p>
+
+<div class="choices"><<link "“Maybe it's time the republics had their say.” (agree)">><<run setup.adjustTrust(State.variables, "belova", 1); setup.addPull(State.variables, "reform", 1)>><<goto "P_Late">><</link>>
+<<link "“I just log the paperwork, Irina Sergeyevna.” (deflect)">><<run setup.addPull(State.variables, "survival", 1)>><<goto "P_Late">><</link>>
+<<link "“Be careful who hears you talking like that.” (warn her)">><<run setup.adjustTrust(State.variables, "belova", -1); setup.addPull(State.variables, "loyalty", 1)>><<goto "P_Late">><</link>></div>
+</div>
+
+
+:: P_Late [scene]
+<<set $time to "18:40">><<set $phone to {passage: "P_Call_Rudin", from: "Rudin · internal line"}>>
+<div class="scene-body">
+<p class="lead">Room 412 · 18:40</p>
+
+The afternoon goes the way afternoons do: stamps, numbers, signatures. The courtyard turns gold, then grey. You are reaching for your jacket when the internal phone rings: two short rings, which means someone on this floor.
+
+<div class="choices">[[Answer the phone|P_Call_Rudin]]</div>
+</div>
+
+
+:: P_Call_Rudin [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ Internal line · 18:41</span>
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector · your superior</span></div></div>
+
+<p class="say">Andrei Nikolaevich. Still at your desk. Good, good, a conscientious man.</p>
+
+A pause. You can hear him breathing, and somewhere behind him a door closing.
+
+<p class="say">A packet came through today by courier. Seven-S. Did it pass through your registry?</p>
+
+<div class="choices"><<link "“No, Gennady Ivanovich. I never saw it.” (lie)">><<run setup.addExposure(State.variables, 1)>><<set $flags.liedToRudin to true>><<goto "P_Evening">><</link>>
+<<link "“I saw the routing slip. Nothing more.” (admit it)">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 1)>><<set $flags.toldRudin to true>><<goto "P_Evening">><</link>>
+<<link "“What's in it, if I may ask?” (ask)">><<run setup.adjustTrust(State.variables, "rudin", -1); setup.addPull(State.variables, "reform", 1); setup.addExposure(State.variables, 1)>><<set $flags.askedRudin to true>><<goto "P_Evening">><</link>></div>
+</div></div>
+
+
+:: P_Evening [scene]
+<div class="scene-body">
+<p class="lead">Home · Kutuzovsky Prospekt · evening</p>
+
+<<if $flags.liedToRudin>>Rudin said only "Good," and hung up. You keep hearing the word on the Metro home.<<elseif $flags.toldRudin>>Rudin thanked you warmly, like an uncle, and told you to forget about it. You find that you can't.<<else>>Rudin was quiet for a long moment. Then: "Curiosity, Andrei Nikolaevich, is a young man's habit." He hung up.<</if>>
+
+At home your wife is watching the news with the sound low. Your daughter is at the <<ru "dacha">> with her grandmother for the rest of August. On television a weather map of the Soviet Union, all fifteen republics, glows in the summer heat.
+
+You go to bed early. The week passes. Nothing happens, and then the weekend passes too.
+
+<div class="continue"><<link "Monday, 19 August →">><<set $act to "act1">><<set $date to "19 АВГ 1991">><<set $time to "06:00">><<goto "Act1_Bulletin">><</link>></div>
+</div>
