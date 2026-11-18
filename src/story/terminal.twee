@@ -1,0 +1,15 @@
+:: Terminal [terminal side nobr]
+<div class="term-wrap">
+<div class="term-bezel"><div class="term-crt">
+<div class="term-boot">ЕС-1841 · АСУ «ДЕЛОПРОИЗВОДСТВО» · ЦК КПСС<br>registry control system · General Department · terminal 3</div>
+<div class="term-help">ВВЕДИТЕ: ПОИСК &lt;номер | ключ&gt; — enter a registration number or key</div>
+<div id="term-output" aria-live="polite"></div>
+<form id="term-form" autocomplete="off"><label for="term-input">&gt; ПОИСК</label><input id="term-input" type="text" spellcheck="false" aria-label="Registry search"><button type="submit" class="term-enter">ВВОД</button></form>
+</div></div>
+<div class="term-cards">
+<h2 class="term-cards-title"><<ru "kartoteka">> · your card index</h2>
+<<if $clues.length is 0>><p class="term-empty">No index cards yet. Mark key phrases in documents and they will appear here.</p><<else>><div class="term-chips"><<for _c range $clues>><button type="button" class="term-chip" @data-key="setup.clues[_c].registryKey"><span class="chip-key"><<print setup.clues[_c].registryKey>></span><span class="chip-label"><<print setup.clues[_c].label>></span></button><</for>></div><</if>>
+<<returnlink>>
+<span class="term-note"><<note "office-computers">></span>
+</div>
+</div>

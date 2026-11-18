@@ -1,5 +1,5 @@
 /* ===== Act bulletins (teletype) and title screen ===== */
-.bulletin {
+.bulletin-sheet {
 	max-width: 680px;
 	margin: 6vh auto 0;
 	background: #f4f0e2;
@@ -24,15 +24,15 @@
 	flex-wrap: wrap;
 }
 .bulletin-date { font: 700 30px var(--narrow); letter-spacing: 0.12em; margin: 0 0 12px; }
-.bulletin p { margin: 0 0 1em; opacity: 0; animation: type-in 0.6s forwards; }
-.bulletin p:nth-of-type(1) { animation-delay: 0.2s; }
-.bulletin p:nth-of-type(2) { animation-delay: 0.9s; }
-.bulletin p:nth-of-type(3) { animation-delay: 1.6s; }
-.bulletin p:nth-of-type(4) { animation-delay: 2.3s; }
-.bulletin p:nth-of-type(n+5) { animation-delay: 3s; }
+.bulletin-sheet p { margin: 0 0 1em; opacity: 0; animation: type-in 0.6s forwards; }
+.bulletin-sheet p:nth-of-type(1) { animation-delay: 0.2s; }
+.bulletin-sheet p:nth-of-type(2) { animation-delay: 0.9s; }
+.bulletin-sheet p:nth-of-type(3) { animation-delay: 1.6s; }
+.bulletin-sheet p:nth-of-type(4) { animation-delay: 2.3s; }
+.bulletin-sheet p:nth-of-type(n+5) { animation-delay: 3s; }
 @keyframes type-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-.bulletin .continue a, .bulletin .continue .link-internal { color: var(--red); }
-@media (prefers-reduced-motion: reduce) { .bulletin p { opacity: 1; } }
+.bulletin-sheet .continue a, .bulletin-sheet .continue .link-internal { color: var(--red); }
+@media (prefers-reduced-motion: reduce) { .bulletin-sheet p { opacity: 1; } }
 
 /* Title */
 html[data-kind~="title"] body {

@@ -1,20 +1,20 @@
 /* ===== Scenes, conversations, phone calls ===== */
-.scene {
+.scene-body {
 	max-width: 700px;
 	margin: 0 auto;
 	color: var(--cream);
 	font-size: 1.04rem;
 }
-.scene p { margin: 0 0 1em; }
-.scene .lead {
+.scene-body p { margin: 0 0 1em; }
+.scene-body .lead {
 	font: 700 14px var(--narrow);
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 	color: var(--brass);
 	margin-bottom: 1.2em;
 }
-.scene a, .scene .link-internal { color: #f3cf86; }
-.scene em { color: #f6ead0; }
+.scene-body a, .scene-body .link-internal { color: #f3cf86; }
+.scene-body em { color: #f6ead0; }
 
 .speaker {
 	display: flex;
