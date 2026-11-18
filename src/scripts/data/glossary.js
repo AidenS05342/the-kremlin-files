@@ -1,0 +1,42 @@
+/* Beginner Russian vocabulary. Used by the <<ru "id">> macro and the Dictionary. */
+(function () {
+	'use strict';
+	setup.glossary = {
+		'sekretno':          { ru: 'секретно', translit: 'sekretno', en: 'secret' },
+		'sov-sekretno':      { ru: 'совершенно секретно', translit: 'sovershenno sekretno', en: 'top secret' },
+		'tsk-kpss':          { ru: 'ЦК КПСС', translit: 'Tse-Ka Ka-Pe-Es-Es', en: 'Central Committee of the Communist Party of the Soviet Union' },
+		'obshchy-otdel':     { ru: 'Общий отдел', translit: 'Obshchiy otdel', en: 'General Department' },
+		'tovarishch':        { ru: 'товарищ', translit: 'tovarishch', en: 'comrade' },
+		'referent':          { ru: 'референт', translit: 'referent', en: 'senior aide; analyst' },
+		'arkhiv':            { ru: 'архив', translit: 'arkhiv', en: 'archive' },
+		'kartoteka':         { ru: 'картотека', translit: 'kartoteka', en: 'card index' },
+		'dokument':          { ru: 'документ', translit: 'dokument', en: 'document' },
+		'papka':             { ru: 'папка', translit: 'papka', en: 'folder' },
+		'vertushka':         { ru: 'вертушка', translit: 'vertushka', en: 'government phone line (lit. “the turntable”)' },
+		'gazeta':            { ru: 'газета', translit: 'gazeta', en: 'newspaper' },
+		'srochno':           { ru: 'срочно', translit: 'srochno', en: 'urgent' },
+		'vkhodyashchie':     { ru: 'входящие', translit: 'vkhodyashchiye', en: 'incoming (in-tray)' },
+		'da':                { ru: 'да', translit: 'da', en: 'yes' },
+		'net':               { ru: 'нет', translit: 'net', en: 'no' },
+		'spasibo':           { ru: 'спасибо', translit: 'spasibo', en: 'thank you' },
+		'zdravstvuyte':      { ru: 'здравствуйте', translit: 'zdravstvuyte', en: 'hello (formal)' },
+		'do-svidaniya':      { ru: 'до свидания', translit: 'do svidaniya', en: 'goodbye' },
+		'avgust':            { ru: 'август', translit: 'avgust', en: 'August' },
+		'ponedelnik':        { ru: 'понедельник', translit: 'ponedelnik', en: 'Monday' },
+		'chp':               { ru: 'чрезвычайное положение', translit: 'chrezvychaynoye polozheniye', en: 'state of emergency' },
+		'dostup-ogranichen': { ru: 'доступ ограничен', translit: 'dostup ogranichen', en: 'access restricted' },
+		'zapis-ne-naidena':  { ru: 'запись не найдена', translit: 'zapis ne naydena', en: 'record not found' },
+		'putch':             { ru: 'путч', translit: 'putch', en: 'putsch, coup' },
+		'bely-dom':          { ru: 'Белый дом', translit: 'Bely dom', en: 'the White House (Russian parliament building)' },
+		'tank':              { ru: 'танк', translit: 'tank', en: 'tank' },
+		'prikaz':            { ru: 'приказ', translit: 'prikaz', en: 'order, directive' },
+		'narochnym':         { ru: 'нарочным', translit: 'narochnym', en: 'by courier (outside normal channels)' },
+		'shifrotelegramma':  { ru: 'шифротелеграмма', translit: 'shifrotelegramma', en: 'cipher telegram' },
+		'pechat':            { ru: 'печать', translit: 'pechat', en: 'seal, stamp; also “the press”' },
+		'obkom':             { ru: 'обком', translit: 'obkom', en: 'regional Party committee' },
+		'kopiya':            { ru: 'копия', translit: 'kopiya', en: 'copy' },
+		'chay':              { ru: 'чай', translit: 'chay', en: 'tea' },
+		'dacha':             { ru: 'дача', translit: 'dacha', en: 'country house' },
+		'zakryto':           { ru: 'закрыто', translit: 'zakryto', en: 'closed' }
+	};
+}());
