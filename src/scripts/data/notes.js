@@ -9,7 +9,7 @@
 	setup.notes = {
 		'union-treaty': {
 			title: 'The New Union Treaty', date: 'August 1991',
-			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser “Union of Sovereign States,” transferring substantial powers to the republics. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
+			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser federation of sovereign republics, transferring substantial powers to them. Several republics, including the three Baltic states, refused to take part. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
 			sources: ['plokhy2014', 'dunlop1993']
 		},
 		'gorbachev-foros': {

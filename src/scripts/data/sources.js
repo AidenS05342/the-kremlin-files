@@ -41,13 +41,13 @@
 		},
 		remnick1993: {
 			type: 'scholarly', verified: false,
-			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993.'
+			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993. (Journalistic account.)'
 		},
 
 		/* ---- Primary ---- */
 		gkchpAppeal1991: {
 			type: 'primary', verified: false,
-			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, 18–19 August 1991. Published in <em>Pravda</em> and broadcast by Soviet state media, 19 August 1991.'
+			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, dated 18 August 1991. Broadcast by Soviet state media on 19 August 1991 and printed in the central press.'
 		},
 		yeltsinAppeal1991: {
 			type: 'primary', verified: false,

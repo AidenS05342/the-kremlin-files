@@ -46,6 +46,7 @@
 
 #passages {
 	grid-area: main;
+	overflow-x: clip;
 	padding: 28px 0 40px;
 	min-width: 0;
 }

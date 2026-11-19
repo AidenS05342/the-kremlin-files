@@ -5,7 +5,7 @@
 
 MOSCOW. Monday. A hot, quiet week in the capital. President Gorbachev is on holiday in Crimea. <<note "gorbachev-foros">>
 
-In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the fifteen republics. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
+In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the republics that have agreed to it. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
 
 At the Central Committee building on Staraya Ploshchad, the summer staff work through the in-trays as they always have.
 
@@ -35,7 +35,7 @@ Two items are waiting in your <<ru "vkhodyashchie">>. Open them from the tray on
 :: P_Archive [scene conversation]
 <div class="scene-body">
 <p class="lead">The archive · basement level · 11:20</p>
-<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has outlasted every General Secretary since Khrushchev</span></div></div>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has served under every Party leader since Khrushchev</span></div></div>
 
 The <<ru "arkhiv">> smells of dust and machine oil. Zaitsev takes the routing slip without looking up, then looks up very slowly.
 

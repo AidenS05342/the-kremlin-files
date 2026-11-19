@@ -28,6 +28,7 @@
 		{
 			id: 'r-telegram',
 			keys: ['шифротелеграмма', 'cipher telegram', 'telegram'],
+			fromAct: 'act1',
 			docId: 'd3',
 			foundLines: [
 				'ШИФРОТЕЛЕГРАММА · ПРОЕКТ',
@@ -41,10 +42,30 @@
 			id: 'r-union',
 			keys: ['союзный договор', 'union treaty'],
 			foundLines: [
-				'ДОГОВОР О СОЮЗЕ СУВЕРЕННЫХ ГОСУДАРСТВ · ПРОЕКТ',
-				'(Treaty of the Union of Sovereign States · draft)',
+				'СОЮЗНЫЙ ДОГОВОР · ПРОЕКТ',
+				'(Union Treaty · draft)',
 				'ПОДПИСАНИЕ: 20.08.91',
 				'ДОКУМЕНТ НЕ ВЫДАЁТСЯ / not issued to this terminal'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-date',
+			keys: ['14.08.91', '14.08.1991', '14 августа'],
+			fromAct: 'act1',
+			foundLines: [
+				'ЗА 14.08.91 — ОГРАНИЧЕННЫЙ РАЗДЕЛ: 2 ЗАПИСИ',
+				'0417/с → ПАКЕТ 7/С',
+				'(search the packet number to open the record)'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-phone',
+			keys: ['205-41-07', '2054107'],
+			foundLines: [
+				'НОМЕР НЕ ЗАРЕГИСТРИРОВАН В СИСТЕМЕ ЦК',
+				'(not a Central Committee number — an outside line; dial it from a city phone)'
 			],
 			restrictedLines: []
 		},

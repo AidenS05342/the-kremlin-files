@@ -9,7 +9,7 @@
 
 <h2>Historical background</h2>
 
-By 1991, Mikhail Gorbachev's reforms had loosened the Communist Party's monopoly on power. Competitive elections had brought new leaders to prominence, above all Boris Yeltsin, elected President of the Russian republic in June 1991. Several republics were pressing for independence, and Gorbachev had negotiated a new Union Treaty that would turn the USSR into a looser "Union of Sovereign States." It was due to be signed on 20 August 1991.
+By 1991, Mikhail Gorbachev's reforms had loosened the Communist Party's monopoly on power. Competitive elections had brought new leaders to prominence, above all Boris Yeltsin, elected President of the Russian republic in June 1991. Several republics were pressing for independence, and Gorbachev had negotiated a new Union Treaty that would turn the USSR into a looser federation of sovereign republics. It was due to be signed on 20 August 1991.
 
 On 19 August, the day before the signing, a group of senior officials, including the vice president, the head of the KGB, the defence minister and the interior minister, declared a State Committee on the State of Emergency. They isolated Gorbachev at his holiday home in Crimea, banned most newspapers and sent troops into Moscow. Tens of thousands of people gathered to defend the Russian parliament building, the "White House," where Yeltsin denounced the coup. Within three days it had collapsed. In its aftermath, Yeltsin suspended the Communist Party in Russia, the Central Committee's buildings were sealed, and by the end of December 1991 the Soviet Union no longer existed.
 
@@ -74,7 +74,7 @@ Twine 2 story format SugarCube 2, compiled with Tweego. Source code and developm
 
 Sources marked <span class="unverified">awaiting verification</span> have not yet been checked against a library catalogue or publisher record. Page-level citations for the historical notes are also still being verified.
 
-<h2>Scholarly sources</h2>
+<h2>Scholarly and journalistic sources</h2>
 <ul class="bib"><<for _k range setup.sourcesByType("scholarly")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
 
 <h2>Primary sources</h2>
@@ -293,7 +293,7 @@ Zaitsev has made tea for two. He has never made tea for you before.
 
 <<if $kept.includes("d4")>>Packet 7/С is in your desk drawer upstairs.<<else>>Packet 7/С is back in box twelve, a few metres from where you are sitting. Zaitsev glances at the cabinet, then at you.<</if>>
 
-<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
+<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
 <<link "Take the file to the press. Let the country see it.">><<goto "Stub_Witness">><</link>>
 <<link "Give the file to Rudin and let the Party deal with it.">><<goto "Stub_Loyalist">><</link>></div>
 </div>
@@ -361,7 +361,7 @@ At Staraya Ploshchad, someone on your floor is burning papers in an office sink.
 <div class="scene-body">
 <p class="lead">Room 412 · Friday, 23 August · 14:00</p>
 
-This morning Yeltsin signed a decree suspending the Communist Party's activity in Russia. <<note "cpsu-suspended">> By noon there was a crowd outside on Staraya Ploshchad, and by one o'clock it was a large crowd, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
+Today Yeltsin signed a decree suspending the Communist Party's activity in Russia. <<note "cpsu-suspended">> A crowd has gathered outside on Staraya Ploshchad, and it keeps growing, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
 
 Rudin comes into your office without knocking. His tie is gone. He is carrying an empty cardboard box.
 
@@ -373,7 +373,7 @@ Rudin comes into your office without knocking. His tie is gone. He is carrying a
 
 <<if $kept.includes("d4")>>Packet 7/С is in your drawer. Your briefcase is under the desk.<<else>>Packet 7/С is in box twelve, and box twelve is about to be emptied.<</if>>
 
-<div class="choices"><<link "Slip Packet 7/С into your briefcase. Shred everything else.">><<run setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.finalDecision to "kept">><<set $time to "16:30">><<goto "A3_Exit">><</link>>
+<div class="choices"><<link "Slip Packet 7/С into your briefcase. Shred everything else.">><<run setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.finalDecision to "kept">><<set $time to "16:30">><<goto "A3_Exit">><</link>>
 <<link "Feed Packet 7/С into the shredder yourself.">><<goto "Stub_Loyalist">><</link>><<if $flags.markovaContact>>
 <<link "Phone Lena Markova and tell her you are coming with the file.">><<goto "Stub_Witness">><</link>><</if>></div>
 </div>
@@ -381,9 +381,9 @@ Rudin comes into your office without knocking. His tie is gone. He is carrying a
 
 :: A3_Exit [scene]
 <div class="scene-body">
-<p class="lead">Entrance 5 · 23 August · 16:30</p>
+<p class="lead">Entrance 5 · 23 August · late afternoon</p>
 
-At half past four the order comes: everyone out. The building is to be sealed. <<note "old-square-sealed">> Staff file down the stairs with their coats over their arms. Some are carrying bags they did not arrive with. Outside, the crowd parts for you, slowly and with contempt.
+Late in the afternoon the order comes: everyone out. The building is to be sealed. <<note "old-square-sealed">> Staff file down the stairs with their coats over their arms. Some are carrying bags they did not arrive with. Outside, the crowd parts for you, slowly and with contempt.
 
 Your briefcase feels as heavy as a person. A policeman at the door looks at every face.
 
@@ -530,7 +530,7 @@ This evening you watch on television as Gorbachev resigns. Shortly afterwards th
 
 MOSCOW. Monday. A hot, quiet week in the capital. President Gorbachev is on holiday in Crimea. <<note "gorbachev-foros">>
 
-In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the fifteen republics. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
+In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the republics that have agreed to it. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
 
 At the Central Committee building on Staraya Ploshchad, the summer staff work through the in-trays as they always have.
 
@@ -560,7 +560,7 @@ Two items are waiting in your <<ru "vkhodyashchie">>. Open them from the tray on
 :: P_Archive [scene conversation]
 <div class="scene-body">
 <p class="lead">The archive · basement level · 11:20</p>
-<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has outlasted every General Secretary since Khrushchev</span></div></div>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has served under every Party leader since Khrushchev</span></div></div>
 
 The <<ru "arkhiv">> smells of dust and machine oil. Zaitsev takes the routing slip without looking up, then looks up very slowly.
 
@@ -751,7 +751,7 @@ You go to bed early. The week passes. Nothing happens, and then the weekend pass
 	setup.notes = {
 		'union-treaty': {
 			title: 'The New Union Treaty', date: 'August 1991',
-			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser “Union of Sovereign States,” transferring substantial powers to the republics. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
+			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser federation of sovereign republics, transferring substantial powers to them. Several republics, including the three Baltic states, refused to take part. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
 			sources: ['plokhy2014', 'dunlop1993']
 		},
 		'gorbachev-foros': {
@@ -860,6 +860,7 @@ You go to bed early. The week passes. Nothing happens, and then the weekend pass
 		{
 			id: 'r-telegram',
 			keys: ['шифротелеграмма', 'cipher telegram', 'telegram'],
+			fromAct: 'act1',
 			docId: 'd3',
 			foundLines: [
 				'ШИФРОТЕЛЕГРАММА · ПРОЕКТ',
@@ -873,10 +874,30 @@ You go to bed early. The week passes. Nothing happens, and then the weekend pass
 			id: 'r-union',
 			keys: ['союзный договор', 'union treaty'],
 			foundLines: [
-				'ДОГОВОР О СОЮЗЕ СУВЕРЕННЫХ ГОСУДАРСТВ · ПРОЕКТ',
-				'(Treaty of the Union of Sovereign States · draft)',
+				'СОЮЗНЫЙ ДОГОВОР · ПРОЕКТ',
+				'(Union Treaty · draft)',
 				'ПОДПИСАНИЕ: 20.08.91',
 				'ДОКУМЕНТ НЕ ВЫДАЁТСЯ / not issued to this terminal'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-date',
+			keys: ['14.08.91', '14.08.1991', '14 августа'],
+			fromAct: 'act1',
+			foundLines: [
+				'ЗА 14.08.91 — ОГРАНИЧЕННЫЙ РАЗДЕЛ: 2 ЗАПИСИ',
+				'0417/с → ПАКЕТ 7/С',
+				'(search the packet number to open the record)'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-phone',
+			keys: ['205-41-07', '2054107'],
+			foundLines: [
+				'НОМЕР НЕ ЗАРЕГИСТРИРОВАН В СИСТЕМЕ ЦК',
+				'(not a Central Committee number — an outside line; dial it from a city phone)'
 			],
 			restrictedLines: []
 		},
@@ -939,13 +960,13 @@ You go to bed early. The week passes. Nothing happens, and then the weekend pass
 		},
 		remnick1993: {
 			type: 'scholarly', verified: false,
-			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993.'
+			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993. (Journalistic account.)'
 		},
 
 		/* ---- Primary ---- */
 		gkchpAppeal1991: {
 			type: 'primary', verified: false,
-			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, 18–19 August 1991. Published in <em>Pravda</em> and broadcast by Soviet state media, 19 August 1991.'
+			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, dated 18 August 1991. Broadcast by Soviet state media on 19 August 1991 and printed in the central press.'
 		},
 		yeltsinAppeal1991: {
 			type: 'primary', verified: false,
@@ -1037,13 +1058,21 @@ You go to bed early. The week passes. Nothing happens, and then the weekend pass
 		return !!(t && v.trust[t.who] >= t.min);
 	}
 
+	var ACTS = ['prologue', 'act1', 'act2', 'act3', 'epilogue'];
+
+	/* A record with `fromAct` is not registered yet before that act. */
+	function existsYet(entry, v) {
+		if (!entry.fromAct || !v.act) { return true; }
+		return ACTS.indexOf(v.act) >= ACTS.indexOf(entry.fromAct);
+	}
+
 	setup.searchRegistry = function (query, v) {
 		var q = setup.normalizeQuery(query);
 		var entries = setup.registry || [];
 		for (var i = 0; i < entries.length; i++) {
 			var e = entries[i];
 			var match = e.keys.some(function (k) { return setup.normalizeQuery(k) === q; });
-			if (!match) { continue; }
+			if (!match || !existsYet(e, v)) { continue; }
 			if (hasAccess(e, v)) {
 				var found = { status: 'found', lines: e.foundLines.slice() };
 				if (e.docId) { found.docId = e.docId; }
@@ -1918,6 +1947,7 @@ html[data-kind~="title"] body {
 
 #passages {
 	grid-area: main;
+	overflow-x: clip;
 	padding: 28px 0 40px;
 	min-width: 0;
 }

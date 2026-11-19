@@ -26,7 +26,7 @@ Zaitsev has made tea for two. He has never made tea for you before.
 
 <<if $kept.includes("d4")>>Packet 7/С is in your desk drawer upstairs.<<else>>Packet 7/С is back in box twelve, a few metres from where you are sitting. Zaitsev glances at the cabinet, then at you.<</if>>
 
-<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
+<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
 <<link "Take the file to the press. Let the country see it.">><<goto "Stub_Witness">><</link>>
 <<link "Give the file to Rudin and let the Party deal with it.">><<goto "Stub_Loyalist">><</link>></div>
 </div>

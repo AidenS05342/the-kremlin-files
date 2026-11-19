@@ -26,13 +26,21 @@
 		return !!(t && v.trust[t.who] >= t.min);
 	}
 
+	var ACTS = ['prologue', 'act1', 'act2', 'act3', 'epilogue'];
+
+	/* A record with `fromAct` is not registered yet before that act. */
+	function existsYet(entry, v) {
+		if (!entry.fromAct || !v.act) { return true; }
+		return ACTS.indexOf(v.act) >= ACTS.indexOf(entry.fromAct);
+	}
+
 	setup.searchRegistry = function (query, v) {
 		var q = setup.normalizeQuery(query);
 		var entries = setup.registry || [];
 		for (var i = 0; i < entries.length; i++) {
 			var e = entries[i];
 			var match = e.keys.some(function (k) { return setup.normalizeQuery(k) === q; });
-			if (!match) { continue; }
+			if (!match || !existsYet(e, v)) { continue; }
 			if (hasAccess(e, v)) {
 				var found = { status: 'found', lines: e.foundLines.slice() };
 				if (e.docId) { found.docId = e.docId; }

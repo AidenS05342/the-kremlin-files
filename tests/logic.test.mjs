@@ -150,3 +150,20 @@ test('sourcesByType groups and sorts sources alphabetically by citation', () => 
   const texts = scholarly.map((k) => setup.sources[k].chicago.replace(/<[^>]+>/g, ''));
   assert.deepEqual(texts, [...texts].sort((a, b) => a.localeCompare(b)));
 });
+
+// ---- Final review fixes ----
+test('records registered later in the story do not exist yet in the Prologue', () => {
+  const v = setup.newGame();
+  v.act = 'prologue';
+  assert.equal(setup.searchRegistry('telegram', v).status, 'notfound');
+  assert.equal(setup.searchRegistry('шифротелеграмма', v).status, 'notfound');
+  v.act = 'act1';
+  assert.equal(setup.searchRegistry('telegram', v).status, 'found');
+});
+
+test('in the Prologue, Packet 7/С is restricted and the date clue cannot be found', () => {
+  const v = setup.newGame();
+  v.clues = ['packet-7s', 'by-hand'];
+  assert.equal(setup.searchRegistry('7/С', v).status, 'restricted');
+  assert.equal(setup.searchRegistry('telegram', v).status, 'notfound');
+});
