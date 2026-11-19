@@ -63,7 +63,10 @@
   - every historical note says **"page-level citations pending verification"**;
   - details the AI was not confident of were removed, such as a journal page range and the exact minute the Soviet flag was lowered.
 - The in-game registry terminal is labelled in-game as a **reconstruction**. Soviet ES-1841 computers existed, but their use in this specific office is not documented.
-- **Action for the student:** before submitting, check each bibliography entry against the UT Libraries catalogue, confirm each historical note against the cited source, then set `verified: true` and `pagesChecked: true` in `src/scripts/data/sources.js` and `notes.js`.
+- **Bibliography verification (19 November 2026).** At the student's request, the AI checked every bibliography entry by web search against library catalogue records, publisher listings and the National Security Archive's own pages. The check covered author, title, publisher or venue, and year.
+  - All 14 entries were confirmed and marked `verified: true`.
+  - Corrections and additions: the page range and DOI for Kryshtanovskaya & White (711–33); series names for Solnick and Beissinger; the specific National Security Archive briefing book (No. 357, ed. Savranskaya, 2011); the samizdat reprint of Yeltsin's appeal; and the removal of an unconfirmed claim about where the emergency committee's appeal was printed.
+- **Still open:** the *page-level* support for each historical note (`pagesChecked` in `notes.js`) has not been checked against the books themselves. The student should confirm these at the library before treating the notes as fully cited.
 - All characters, documents and conversations are fictional and are labelled as such in the game.
 
 ## 6. Decisions the AI made on the student's behalf

@@ -3,7 +3,7 @@
 <h1>Bibliography</h1>
 <p class="subtitle">Preliminary · Chicago notes-bibliography style</p>
 
-Sources marked <span class="unverified">awaiting verification</span> have not yet been checked against a library catalogue or publisher record. Page-level citations for the historical notes are also still being verified.
+Each entry's author, title, publisher and year have been checked against library catalogue, publisher or archive records (November 2026). Any entry marked <span class="unverified">awaiting verification</span> has not yet been checked. Page-level citations for the historical notes are still being verified against the books themselves.
 
 <h2>Scholarly and journalistic sources</h2>
 <ul class="bib"><<for _k range setup.sourcesByType("scholarly")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
