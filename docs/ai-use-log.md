@@ -35,6 +35,8 @@
 7. **Resumed session.** The student asked the AI to review the project state, finish Task 11, complete Task 12, prepare for GitHub Pages without publishing, and produce this log.
 8. **Final review.** A separate AI reviewer instance reviewed the whole project. It found no critical problems, plus one logic bug: a terminal search in the Prologue could skip ahead to an Act I document. It also flagged several historical phrasings that overstated or could not verify facts: the Union Treaty's name, how many republics the treaty covered, the publication date of the emergency committee's appeal, and times of day. All were fixed, and the logic bug is covered by new tests.
 
+9. **Publication (with the student's explicit approval).** The prototype branch was merged into `main` (a fast-forward, preserving every commit). A public repository was created at https://github.com/AidenS05342/the-kremlin-files and GitHub Pages enabled from `main`. The AI then played through the live site at https://aidens05342.github.io/the-kremlin-files/ from the title screen to *The Survivor* with no errors.
+
 ## 3. Software installed or downloaded
 
 - **Tweego 2.1.1** (a Twine compiler), downloaded into the project's `tools/` folder with the student's explicit approval. Nothing else was installed.
