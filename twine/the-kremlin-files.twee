@@ -1,0 +1,2470 @@
+:: About [academic]
+<div class="academic-page">
+<h1>About This Project</h1>
+<p class="subtitle">The Kremlin Files · a Digital Humanities project · University of Tennessee</p>
+
+<h2>Purpose</h2>
+
+<em>The Kremlin Files</em> is an interactive historical mystery about the collapse of the Soviet Union. Its argument is that the collapse was not a single event but a contested political transition, full of competing interests, institutional instability and real uncertainty about the future. The player experiences that transition from inside one of the institutions that was collapsing: the apparatus of the Communist Party's Central Committee on Staraya Ploshchad in Moscow.
+
+<h2>Historical background</h2>
+
+By 1991, Mikhail Gorbachev's reforms had loosened the Communist Party's monopoly on power. Competitive elections had brought new leaders to prominence, above all Boris Yeltsin, elected President of the Russian republic in June 1991. Several republics were pressing for independence, and Gorbachev had negotiated a new Union Treaty that would turn the USSR into a looser "Union of Sovereign States." It was due to be signed on 20 August 1991.
+
+On 19 August, the day before the signing, a group of senior officials, including the vice president, the head of the KGB, the defence minister and the interior minister, declared a State Committee on the State of Emergency. They isolated Gorbachev at his holiday home in Crimea, banned most newspapers and sent troops into Moscow. Tens of thousands of people gathered to defend the Russian parliament building, the "White House," where Yeltsin denounced the coup. Within three days it had collapsed. In its aftermath, Yeltsin suspended the Communist Party in Russia, the Central Committee's buildings were sealed, and by the end of December 1991 the Soviet Union no longer existed.
+
+The game's prologue takes place on 12 August. Its acts follow 19, 20–21 and 23 August, and its epilogue is set on 25 December 1991, the day Gorbachev resigned.
+
+<h2>Political science concepts</h2>
+
+<div class="concept"><h3>Political legitimacy</h3>
+<p>The belief, among citizens and elites, that those in power have the right to rule and should be obeyed. Legitimacy, not force alone, is what makes orders effective.</p>
+<p class="tie">In the game: Volkov can ask Rudin "on what legal basis" the Committee acts, and Belova calls from a crowd that refuses its authority. Ending: <em>The Witness</em>, in which legitimacy passes to new institutions.</p></div>
+
+<div class="concept"><h3>Authoritarianism</h3>
+<p>Rule by a leader or small group that is not accountable through free and competitive elections and that restricts political pluralism and civil liberties.</p>
+<p class="tie">In the game: the Committee's "list of measures" covers newspaper bans, controlled broadcasts and lists of people requiring "special attention." Ending: <em>The Scapegoat</em>, which shows what happens to individuals caught in an authoritarian structure as it collapses.</p></div>
+
+<div class="concept"><h3>Democratization</h3>
+<p>A transition toward a political system in which leaders are chosen in competitive elections and civil liberties are protected. Juan Linz and Alfred Stepan stress that a transition is only complete when the new rules become "the only game in town."</p>
+<p class="tie">In the game: Yeltsin's appeal from the tank, the crowds at the White House and the journalists who keep printing. Ending: <em>The Witness</em>.</p></div>
+
+<div class="concept"><h3>Regime change</h3>
+<p>The replacement of the fundamental rules and institutions of a political system, not merely of its leaders. A regime can change while many of the people who ran it remain in power.</p>
+<p class="tie">In the game: the suspension of the Party, the sealing of Staraya Ploshchad and the end of the USSR. Ending: <em>The Survivor</em>, which shows regime change without elite turnover.</p></div>
+
+<div class="concept"><h3>Institutional collapse</h3>
+<p>The loss of an institution's capacity to enforce its rules and command compliance. Steven Solnick describes the Soviet case as a kind of "bank run," in which officials at every level stopped obeying the hierarchy and seized what they could, so the institutions emptied out from within.</p>
+<p class="tie">In the game: the packet that bypasses the registry, the papers burning in office sinks, the order to shred everything. Ending: <em>The Loyalist</em>, who stays loyal to an institution that no longer exists.</p></div>
+
+<h2>Educational objectives</h2>
+
+<ul>
+<li>Understand the August 1991 coup and the end of the USSR as a process with several possible outcomes, not a foregone conclusion.</li>
+<li>Apply the concepts of legitimacy, authoritarianism, democratization, regime change and institutional collapse to a concrete historical case.</li>
+<li>Recognize the moral ambiguity of individual choices inside institutions under stress: loyalty, reform and survival each have costs.</li>
+<li>Practice distinguishing documented history from historical fiction.</li>
+<li>Encounter beginner Russian vocabulary in a meaningful context.</li>
+</ul>
+
+<h2>Fact and fiction</h2>
+
+The protagonist, Andrei Nikolaevich Volkov, and his colleagues Rudin, Belova and Zaitsev are fictional, as is the journalist Lena Markova (although <em>Moscow News</em> was a real newspaper). So are Packet 7/С, every document in the player's tray and every conversation. Real people appear only through their documented public actions. Everything marked with the red stamp <span class="stamp-inline">ИСТОРИЧЕСКАЯ СПРАВКА</span> is documented history and opens a note with its sources. The registry terminal is a plausible reconstruction and is labelled as one.
+
+<h2>How Russian is used</h2>
+
+Russian words appear with a dotted underline. Hover over one, or tap it, to see the Cyrillic, a transliteration and the English meaning. Each word you meet is added to the Dictionary in the desk drawer. Nothing in the story requires knowing Russian.
+
+<h2>Project status</h2>
+
+This is a <strong>prototype</strong> (November 2026). The Prologue and Act I are fully playable and branching, and one complete route leads through Acts II–III to <em>The Survivor</em>. The endings <em>The Witness</em>, <em>The Loyalist</em> and <em>The Scapegoat</em> are designed and currently appear as clearly marked "in development" cards. Planned work includes the remaining branches and endings, more documents and vocabulary, ambient sound and page-level verification of every citation.
+
+<h2>Built with</h2>
+
+Twine 2 story format SugarCube 2, compiled with Tweego. Source code and development history are in the project's GitHub repository.
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[Bibliography|Bibliography]] [[Credits|Credits]] [[Title screen|Start]]</div>
+</div>
+
+
+:: Bibliography [academic]
+<div class="academic-page">
+<h1>Bibliography</h1>
+<p class="subtitle">Preliminary · Chicago notes-bibliography style</p>
+
+Sources marked <span class="unverified">awaiting verification</span> have not yet been checked against a library catalogue or publisher record. Page-level citations for the historical notes are also still being verified.
+
+<h2>Scholarly sources</h2>
+<ul class="bib"><<for _k range setup.sourcesByType("scholarly")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<h2>Primary sources</h2>
+<ul class="bib"><<for _k range setup.sourcesByType("primary")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[About this project|About]] [[Credits|Credits]] [[Title screen|Start]]</div>
+</div>
+
+
+:: Credits [academic]
+<div class="academic-page">
+<h1>Credits</h1>
+<p class="subtitle">The Kremlin Files · prototype, November 2026</p>
+
+<h2>Project</h2>
+
+Concept, historical research direction and design decisions: Aiden Smith, Digital Humanities, University of Tennessee. Developed with the assistance of Claude, an AI model by Anthropic, in Claude Code. An AI use log documents that collaboration.
+
+<h2>Software</h2>
+
+<ul>
+<li><strong>SugarCube 2</strong> story format, by Thomas Michael Edwards: BSD 2-Clause License.</li>
+<li><strong>Tweego</strong> compiler, by Thomas Michael Edwards: BSD 2-Clause License.</li>
+<li><strong>Twine 2</strong>, by Chris Klimas and contributors: GPL-3.0. The source is compatible with the Twine 2 editor.</li>
+</ul>
+
+<h2>Fonts</h2>
+
+<ul>
+<li><strong>PT Serif, PT Sans Narrow, PT Mono</strong>, by ParaType: SIL Open Font License 1.1, served by Google Fonts.</li>
+<li><strong>Marck Script</strong>, by Denis Masharov: SIL Open Font License 1.1, served by Google Fonts.</li>
+</ul>
+
+<h2>Images</h2>
+
+All visual elements (the desk, telephone, terminal, stamps and paper) are drawn with original CSS and SVG. No photographs or third-party images are used.
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[About this project|About]] [[Bibliography|Bibliography]] [[Title screen|Start]]</div>
+</div>
+
+
+:: Act1_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>РАДИО · 06:00</span><span>ДЕЙСТВИЕ I · ACT I</span></div>
+<div class="bulletin-date"><<ru "ponedelnik" "ПОНЕДЕЛЬНИК">>, 19 АВГУСТА 1991</div>
+
+The radio wakes you, not the alarm. An announcer reads slowly, as if from a document he has never seen before: Vice President Yanayev has assumed the duties of the President, "in connection with Mikhail Sergeyevich Gorbachev's inability, for health reasons, to perform his duties." <<note "gorbachev-foros">>
+
+A State Committee on the State of Emergency (<<ru "chp" "ГКЧП">>) has been formed. A state of emergency is declared in certain areas for six months. <<note "gkchp-announcement">>
+
+Your wife turns on the television. There is no news. There is <em>Swan Lake</em>. <<note "swan-lake">>
+
+You put on your best suit and go to work. It does not occur to you not to.
+
+<div class="continue"><<link "Staraya Ploshchad →">><<set $time to "09:30">><<goto "A1_Briefing">><</link>></div>
+</div>
+
+
+:: A1_Briefing [scene conversation]
+<<if not $flags.a1Init>><<set $flags.a1Init to true>><<run State.variables.tray.indexOf("d3") === -1 && State.variables.tray.push("d3")>><</if>>
+<div class="scene-body">
+<p class="lead">Sector meeting room · 09:30</p>
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector · twenty-six years in the apparatus</span></div></div>
+
+Every chair is full, though half the department was on holiday on Friday. No one is talking. Through the window you hear a sound you have never heard on Staraya Ploshchad: the grinding of tracks on asphalt, somewhere toward the Kremlin.
+
+Rudin stands. He looks rested, almost happy.
+
+<p class="say">Comrades. The State Committee has acted to save the country from chaos. It is our duty to support it. Today our sector will process outgoing <<ru "shifrotelegramma" "cipher telegrams">> to the regional Party committees, the <<ru "obkom" "obkoms">>. <<ru "srochno" "Urgently">>. Volkov, the draft is in your tray. Check it, register it, and send it down to the cipher room.</p>
+
+His eyes rest on you for a moment longer than on anyone else.
+
+<div class="choices"><<link "“Understood, Gennady Ivanovich. It will be done at once.” (comply eagerly)">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 2)>><<set $flags.a1Brief to "eager">><<set $time to "10:15">><<goto "A1_Desk">><</link>>
+<<link "Nod, and say nothing. (comply quietly)">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.a1Brief to "quiet">><<set $time to "10:15">><<goto "A1_Desk">><</link>>
+<<link "“On what legal basis, Gennady Ivanovich? The President hasn't signed anything.” (ask)">><<run setup.adjustTrust(State.variables, "rudin", -1); setup.addPull(State.variables, "reform", 1); setup.addExposure(State.variables, 1)>><<set $flags.a1Brief to "questioned">><<set $time to "10:15">><<goto "A1_Desk">><</link>></div>
+</div>
+
+
+:: A1_Desk [scene]
+<div class="scene-body">
+<p class="lead">Room 412 · 19 August</p>
+
+<<if $flags.a1Brief is "questioned">>Nobody in the meeting room looked at you as you left. Rudin said only, "We will discuss the law another time, Andrei Nikolaevich." <</if>>Your colleagues move through the corridor in pairs, speaking quietly. Somebody has closed every window on the floor.
+
+<<if not ($docs.d3 and $docs.d3.seen)>>Rudin's draft telegram is waiting in your tray.
+
+<div class="choices">[[Read the draft telegram|D3_Telegram]]</div><<elseif not ($docs.d4 and $docs.d4.seen)>>The registration stamp on the draft is still in front of you: 14 August. Five days before anyone in this building "learned" of the emergency. The draft was filed with Packet 7/С, the packet that was never supposed to be registered.
+
+You need to know what else is in Packet 7/С. You can try the registry with what you know, which is the packet number and the date. <<if $trust.zaitsev gte 1 and not $flags.zaitsevPulled>>Or you could ask Zaitsev, who knows where every card in this building is kept.<</if>>
+
+<div class="choices">[[Search the registry terminal|Terminal]]<<if $trust.zaitsev gte 1 and not $flags.zaitsevPulled>>
+<<link "Go down to the archive and ask Zaitsev to pull the card">><<goto "A1_Zaitsev">><</link>><</if>><<if $tray.includes("d4")>>
+[[Open Packet 7/С|D4_List]]<</if>></div><<else>>You sit with the list in front of you for a long time. Then, at 13:40, the city line rings. Not the internal phone: the outside line, which almost never rings.
+<<set $time to "13:40">><<set $phone to {passage: "A1_Call_Belova", from: "City line · outside call"}>>
+<div class="choices">[[Answer the phone|A1_Call_Belova]]</div><</if>>
+</div>
+
+
+:: A1_Zaitsev [scene conversation]
+<<set $flags.zaitsevPulled to true>><<run State.variables.tray.indexOf("d4") === -1 && State.variables.tray.push("d4")>>
+<div class="scene-body">
+<p class="lead">The archive · 11:50</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+Zaitsev listens without interrupting. Then he takes a ring of keys from his drawer, unlocks a cabinet you have never seen open, and walks his fingers along the cards like a pianist.
+
+<p class="say">Box twelve. Restricted.</p>
+
+He pulls out a thin grey <<ru "papka">> and puts it in your hands. He does not let go of it at once.
+
+<p class="say">I did not give you this, Andrei Nikolaevich. In 1953 I did not see anything either. That is why I am sixty-one years old.</p>
+
+<div class="choices"><<link "“Спасибо, Pyotr Fomich.” (thank him)">><<run setup.adjustTrust(State.variables, "zaitsev", 1)>><<goto "A1_Desk">><</link>>
+<<link "“Whatever happens, your name stays out of it. I promise.”">><<run setup.adjustTrust(State.variables, "zaitsev", 1); setup.addPull(State.variables, "survival", 1)>><<set $flags.promisedZaitsev to true>><<goto "A1_Desk">><</link>></div>
+</div>
+
+
+:: A1_Call_Belova [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 13:41</span>
+<div class="speaker" data-who="belova"><div class="speaker-portrait"></div><div><span class="speaker-name">Irina Sergeyevna Belova</span><span class="speaker-role">Calling from a pay phone</span></div></div>
+
+Traffic noise, and under it something like a crowd.
+
+<p class="say">Andrei? It's Irina. I'm at the <<ru "bely-dom">>. There are thousands of people here, building barricades out of trolleybuses. Yeltsin came out an hour ago and climbed onto a <<ru "tank">>. He read an appeal: he called it a <<ru "putch">>, a coup, and said it's illegal. <<note "yeltsin-tank">></p>
+
+<p class="say">What's happening inside? Everyone here is asking whether the Party planned this. Did it?</p>
+
+You look at the list on your desk.
+
+<div class="choices"><<link "Tell her about the draft dated 14 August.">><<run setup.adjustTrust(State.variables, "belova", 2); setup.addPull(State.variables, "reform", 2); setup.addExposure(State.variables, 1)>><<set $flags.toldBelova to true>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>>
+<<link "“I don't know anything, Irina. Be careful.” (say nothing)">><<run setup.addPull(State.variables, "survival", 1)>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>>
+<<link "Hang up, and report the call to Rudin.">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 1); setup.adjustTrust(State.variables, "belova", -2)>><<set $flags.reportedBelova to true>><<if $trust.belova gte 1>><<goto "A1_Markova_Ring">><<else>><<goto "A1_Evening">><</if>><</link>></div>
+</div></div>
+
+
+:: A1_Markova_Ring [scene]
+<<set $time to "16:20">><<set $phone to {passage: "A1_Call_Markova", from: "City line · unknown caller"}>>
+<div class="scene-body">
+<p class="lead">Room 412 · 16:20</p>
+
+The afternoon crawls. The cipher room has sent up the confirmation: the telegrams have gone out to every region of the country. At twenty past four the city line rings again. A woman's voice you don't know asks for "Andrei Nikolaevich, Irina's friend."
+
+<div class="choices">[[Answer the phone|A1_Call_Markova]]</div>
+</div>
+
+
+:: A1_Call_Markova [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 16:21</span>
+<div class="speaker" data-who="markova"><div class="speaker-portrait"></div><div><span class="speaker-name">Lena Markova</span><span class="speaker-role">Journalist, <em>Moscow News</em></span></div></div>
+
+<p class="say"><<ru "zdravstvuyte">>. My name is Lena Markova. I work, or worked until this morning, for <em>Moscow News</em>. The Committee has shut us down, along with most of the papers in the city. We're printing anyway. <<note "press-suspended">></p>
+
+<p class="say">Irina says you are an honest man in a dishonest building. If there is paper that shows this was planned in advance, people need to see it. Not today. But soon.</p>
+
+<div class="choices"><<link "“I'll meet you. Not this week. I'll call.” (agree)">><<run setup.adjustTrust(State.variables, "markova", 1); setup.addExposure(State.variables, 1)>><<set $flags.markovaContact to true>><<goto "A1_Evening">><</link>>
+<<link "“You have the wrong number.” (refuse)">><<run setup.addPull(State.variables, "survival", 1)>><<goto "A1_Evening">><</link>></div>
+</div></div>
+
+
+:: A1_Evening [scene]
+<<set $time to "21:05">>
+<div class="scene-body">
+<p class="lead">Room 412 · 21:05</p>
+
+The building is half empty. Outside, the evening has the strange quiet of a city that is waiting for something. Packet 7/С is on your desk: the list, the draft, the date. In the morning it will have to be somewhere. (A carbon <<ru "kopiya">> would take ten minutes on the typewriter.)
+
+By the rules in the circular, it should go back to the registry. By the rules of this building, it should go back to Rudin. By the rules of survival, it should go somewhere nobody else knows about.
+
+<div class="choices"><<link "File it back in the registry, as procedure requires.">><<run setup.addPull(State.variables, "loyalty", 1); setup.setDoc(State.variables, "d4", "held", false); State.variables.tray.delete("d4")>><<set $flags.a1Decision to "filed">><<goto "A1_End">><</link>>
+<<link "Lock it in your desk drawer.">><<run setup.addPull(State.variables, "survival", 1); setup.setDoc(State.variables, "d4", "held"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.a1Decision to "kept">><<goto "A1_End">><</link>>
+<<link "Type a carbon copy first, then file the original.">><<run setup.addPull(State.variables, "reform", 1); setup.addPull(State.variables, "survival", 1); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "copied"); State.variables.tray.delete("d4"); State.variables.kept.pushUnique("d4")>><<set $flags.a1Decision to "copied">><<goto "A1_End">><</link>></div>
+</div>
+
+
+:: A1_End [scene]
+<div class="scene-body">
+<p class="lead">Kutuzovsky Prospekt · 23:40</p>
+
+<<if $flags.a1Decision is "filed">>You filed it. The card is back in box twelve, where anyone with a key can find it, or make it disappear.<<elseif $flags.a1Decision is "kept">>The drawer locks with a small, final click. You put the key on the same ring as your apartment key.<<else>>The carbon copy is folded inside your jacket. The original is back in box twelve. You feel the copy all the way home, like a stone.<</if>>
+
+On the way home your trolleybus is diverted. Two streets away, people are carrying something heavy in the dark: paving stones, a door, a bench. Tomorrow is Tuesday.
+
+<div class="continue"><<link "Tuesday, 20 August →">><<set $act to "act2">><<set $date to "20 АВГ 1991">><<set $time to "08:00">><<goto "Act2_Bulletin">><</link>></div>
+</div>
+
+
+:: Act2_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>«ЭХО МОСКВЫ» · RADIO</span><span>ДЕЙСТВИЕ II · ACT II</span></div>
+<div class="bulletin-date">ВТОРНИК, 20 АВГУСТА 1991</div>
+
+Overnight the barricades around the Russian parliament grew. Trolleybuses, concrete blocks, park benches, anything that could be dragged. By afternoon tens of thousands of people are standing in the rain around the <<ru "bely-dom">>. <<note "white-house-defense">>
+
+The State Committee declares a curfew in Moscow from 23:00. Everyone says the storm of the White House will come tonight.
+
+At Staraya Ploshchad the corridors are almost silent. Nobody has had any instructions since yesterday's telegrams.
+
+<div class="continue"><<link "Go to the archive →">><<set $time to "10:30">><<goto "A2_Archive">><</link>></div>
+</div>
+
+
+:: A2_Archive [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · 20 August · 10:30</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+Zaitsev has made tea for two. He has never made tea for you before.
+
+<p class="say">In 1953, when Beria fell, the men who kept their jobs were not the brave ones or the loyal ones. They were the ones who still had their papers when the new people arrived. In 1964 it was the same. Paper outlives everyone, Andrei Nikolaevich.</p>
+
+<p class="say">Whatever happens at the White House tonight, the people who win will need to know where everything is. Keep your papers dry.</p>
+
+<<if $kept.includes("d4")>>Packet 7/С is in your desk drawer upstairs.<<else>>Packet 7/С is back in box twelve, a few metres from where you are sitting. Zaitsev glances at the cabinet, then at you.<</if>>
+
+<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
+<<link "Take the file to the press. Let the country see it.">><<goto "Stub_Witness">><</link>>
+<<link "Give the file to Rudin and let the Party deal with it.">><<goto "Stub_Loyalist">><</link>></div>
+</div>
+
+
+:: A2_Intercept [scene]
+<<if not $flags.a2Intercept>><<set $flags.a2Intercept to true>><<run State.variables.tray.pushUnique("d5")>><</if>>
+<div class="scene-body">
+<p class="lead">Room 412 · 20 August · 17:15</p>
+
+Late in the afternoon Zaitsev comes up to your floor, which he never does, and leaves a sheet of flimsy paper on your desk without a word. A transcript. Someone in the special communications service owed him a favour.
+
+<<if not ($docs.d5 and $docs.d5.seen)>><div class="choices">[[Read the transcript|D5_Intercept]]</div><<else>>You read it twice. Someone on the other side of the barricades is already planning for the morning after. They are not looking for heroes; they are looking for people who know where the files are.
+
+The curfew begins at eleven. You wait until the floor is empty, then pick up the city line and dial the number with your finger, one hole at a time.
+
+<div class="choices"><<link "Dial 205-41-07">><<set $time to "23:40">><<goto "A2_Call_Aide">><</link>></div><</if>>
+</div>
+
+
+:: A2_Call_Aide [scene phone]
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 20 August · 23:41</span>
+<div class="speaker" data-who="aide"><div class="speaker-portrait"></div><div><span class="speaker-name">“Sergei”</span><span class="speaker-role">Says only that he works “for the Russian government”</span></div></div>
+
+The line crackles. Behind the voice there are other voices, a radio, someone shouting about armoured vehicles on the Garden Ring.
+
+<p class="say">Staraya Ploshchad? Good. Listen carefully, I don't have much time. Tonight may go very badly. If it doesn't, in a week there will be no Central Committee. There will be a Russian government that has to run everything, and it has no idea where anything is kept.</p>
+
+<p class="say">We need people who know the system. Not the bosses. The ones who did the actual work. If you have something that shows good faith, bring it. We'll remember who helped.</p>
+
+<div class="choices"><<link "“I have something. I'll bring it when this is over.”">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.aideContact to true>><<goto "A2_Night">><</link>>
+<<link "Hang up. This is not what you want to become.">><<goto "Stub_Witness">><</link>></div>
+</div></div>
+
+
+:: A2_Night [scene]
+<div class="scene-body">
+<p class="lead">Kutuzovsky Prospekt · night of 20–21 August</p>
+
+You do not sleep. Around one in the morning the shortwave radio reports gunfire near the White House. In an underpass on the Garden Ring, a crowd has tried to stop a column of armoured vehicles. Three young men are dead. <<note "three-deaths">>
+
+Your wife sits up beside you in the dark until dawn. Neither of you says anything about what you are listening for.
+
+<div class="continue"><<link "Wednesday, 21 August →">><<goto "A2_Collapse">><</link>></div>
+</div>
+
+
+:: A2_Collapse [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>ТАСС · 21.08.91</span><span>ДЕЙСТВИЕ II · ACT II</span></div>
+<div class="bulletin-date">СРЕДА, 21 АВГУСТА 1991</div>
+
+There is no storm. In the morning the armoured columns begin to leave Moscow. By evening the State Committee has fallen apart. Several of its members fly to Crimea to see Gorbachev, and Gorbachev flies back to Moscow in the early hours of the next day. <<note "coup-collapse">>
+
+Crowds celebrate outside the White House. Russian tricolour flags are everywhere.
+
+At Staraya Ploshchad, someone on your floor is burning papers in an office sink. Nobody asks what they are.
+
+<div class="continue"><<link "Friday, 23 August →">><<set $act to "act3">><<set $date to "23 АВГ 1991">><<set $time to "14:00">><<goto "A3_Order">><</link>></div>
+</div>
+
+
+:: A3_Order [scene conversation]
+<div class="scene-body">
+<p class="lead">Room 412 · Friday, 23 August · 14:00</p>
+
+This morning Yeltsin signed a decree suspending the Communist Party's activity in Russia. <<note "cpsu-suspended">> By noon there was a crowd outside on Staraya Ploshchad, and by one o'clock it was a large crowd, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
+
+Rudin comes into your office without knocking. His tie is gone. He is carrying an empty cardboard box.
+
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector</span></div></div>
+
+<p class="say">All special correspondence goes to the shredder. All of it, Andrei Nikolaevich, in the next hour. Box twelve, the cipher drafts, your drawer. It is a <<ru "prikaz">>, an order.</p>
+
+<p class="say">We did nothing wrong. But they will not see it that way.</p>
+
+<<if $kept.includes("d4")>>Packet 7/С is in your drawer. Your briefcase is under the desk.<<else>>Packet 7/С is in box twelve, and box twelve is about to be emptied.<</if>>
+
+<div class="choices"><<link "Slip Packet 7/С into your briefcase. Shred everything else.">><<run setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.finalDecision to "kept">><<set $time to "16:30">><<goto "A3_Exit">><</link>>
+<<link "Feed Packet 7/С into the shredder yourself.">><<goto "Stub_Loyalist">><</link>><<if $flags.markovaContact>>
+<<link "Phone Lena Markova and tell her you are coming with the file.">><<goto "Stub_Witness">><</link>><</if>></div>
+</div>
+
+
+:: A3_Exit [scene]
+<div class="scene-body">
+<p class="lead">Entrance 5 · 23 August · 16:30</p>
+
+At half past four the order comes: everyone out. The building is to be sealed. <<note "old-square-sealed">> Staff file down the stairs with their coats over their arms. Some are carrying bags they did not arrive with. Outside, the crowd parts for you, slowly and with contempt.
+
+Your briefcase feels as heavy as a person. A policeman at the door looks at every face.
+
+<<if setup.resolveEnding(State.variables) is "scapegoat">>He looks at yours for a long time. Then he looks at a list.
+
+<div class="continue"><<link "Continue →">><<goto "Stub_Scapegoat">><</link>></div><<else>>He looks at yours, and then at the next one. The doors close behind you. Someone fixes a wax <<ru "pechat">>, a seal, across the handles. The sign on the door now reads <<ru "zakryto">>.
+
+<div class="continue"><<link "December 1991 →">><<set $act to "epilogue">><<set $date to "25 ДЕК 1991">><<set $time to "19:30">><<goto "Epilogue_Survivor">><</link>></div><</if>>
+</div>
+
+
+:: D1_Circular [document]
+<div class="doc">
+<span class="stamp stamp--violet">ВХ. № 3311 · 12.08.91</span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Общий отдел</span><span class="doc-sub">Circular · for internal use</span></div>
+<div class="doc-meta"><span>№ 112-ц</span><span>09.08.1991</span><span>Copy 14 of 40</span></div>
+<p class="doc-title">On the procedure for registering correspondence during the summer leave period</p>
+
+1. During the leave period (August), all incoming correspondence is to be registered on the day of receipt without exception.
+
+2. Documents marked <<ru "sekretno" "СЕКРЕТНО">> are to be entered in the restricted section of the <<ru "kartoteka">> and issued against signature only.
+
+3. Deliveries <<ru "narochnym">> (by courier) are to be registered in the general manner, and the courier's name recorded.
+
+4. Heads of sectors will ensure that the duty officer's telephone is answered at all times.
+
+<p class="doc-sign">Head of the General Department<br>(signature)</p>
+<div class="doc-footer"><em>Fictional document created for this game.</em> Point 3 matters: under the rules, nothing delivered by courier may bypass the registry.</div>
+<<returnlink>>
+</div>
+
+
+:: D2_RoutingSlip [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sekretno" "СЕКРЕТНО">></span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Общий отдел</span><span class="doc-sub">Сопроводительный лист · routing slip</span></div>
+<div class="routing-slip"><table>
+<tr><th>Пакет · packet</th><td><<clue "packet-7s">>№ 7/С<</clue>></td></tr>
+<tr><th>Отправитель · sender</th><td><span class="redacted">████████████</span></td></tr>
+<tr><th>Получатель · recipient</th><td>т. Рудину Г. И. — лично (personally)</td></tr>
+<tr><th>Доставка · delivery</th><td><<clue "by-hand">><<ru "narochnym">><</clue>> · 12.08.91 · 08:50</td></tr>
+<tr><th>Рег. № · reg. no.</th><td>— <em>none</em> —</td></tr>
+<tr><th>Указание · instruction</th><td>НЕ РЕГИСТРИРОВАТЬ. ВСКРЫТЬ ЛИЧНО.</td></tr>
+</table></div>
+<p class="doc-translation">“Do not register. To be opened personally.”</p>
+<p class="doc-sign">Received: <span class="margin-note">Г. Рудин</span></p>
+<div class="doc-footer"><em>Fictional document created for this game.</em> Click the underlined phrases to record them in your notebook.</div>
+<<returnlink>>
+</div>
+
+
+:: D3_Telegram [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sov-sekretno" "СОВ. СЕКРЕТНО">></span>
+<div class="doc-header"><span class="doc-org">ЦК КПСС · Секретариат</span><span class="doc-sub"><<clue "cipher-telegram">><<ru "shifrotelegramma" "Шифротелеграмма">><</clue>> · проект (draft)</span></div>
+<div class="doc-meta"><span>To: first secretaries of republican Central Committees, kraikoms and <<ru "obkom" "obkoms">></span><span>Copies: 1</span></div>
+<p class="doc-title">On measures in connection with the state of emergency</p>
+
+In connection with the introduction of a <<ru "chp">> in certain areas of the USSR, Party committees are to take measures to support the State Committee on the State of Emergency.
+
+Ensure that Communists in the soviets, the economy and the law-enforcement bodies assist in maintaining order. Do not permit meetings, strikes or the distribution of unauthorised publications. Report on the situation in your region by 18:00 Moscow time daily.
+
+<p class="doc-sign">Secretariat of the Central Committee</p>
+
+<div class="routing-slip"><table>
+<tr><th>Рег. № · reg. no.</th><td>0417/с</td></tr>
+<tr><th>Дата регистрации · registered</th><td><<clue "reg-date-14">>14.08.91<</clue>></td></tr>
+<tr><th>К пакету · filed with</th><td><<clue "packet-7s">>№ 7/С<</clue>></td></tr>
+</table></div>
+<p class="margin-note">Отправить 19.08 в 07:00. — Р.</p>
+<p class="doc-translation">Handwritten: “Send 19.08 at 07:00. — R.” This draft was registered on 14 August, five days before the State Committee announced itself.</p>
+<div class="doc-footer"><em>Fictional document created for this game</em>, modeled on a real episode: <<note "secretariat-telegram">></div>
+<<returnlink>>
+</div>
+
+
+:: D4_List [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sov-sekretno" "СОВ. СЕКРЕТНО">></span>
+<span class="stamp stamp--violet">ПАКЕТ 7/С</span>
+<div class="doc-header"><span class="doc-org">Перечень мероприятий</span><span class="doc-sub">List of measures · prepared 14.08.91 · copy 2</span></div>
+<p class="doc-title">Measures for the first day (“Day X”)</p>
+
+1. From 06:00, broadcast the Appeal and the Committee's statements on all central radio and television channels. Replace scheduled programming.
+
+2. Suspend publication of all central and Moscow <<ru "gazeta" "newspapers">> except those on the attached list (Appendix 1). Seal the editorial offices of <em>Moscow News</em>, <em>Kuranty</em>, <em>Nezavisimaya Gazeta</em> … <<note "press-suspended">>
+
+3. The Secretariat of the Central Committee to dispatch instructions to regional Party committees (draft attached, reg. 0417/с).
+
+4. Ensure the telephone and telegraph connection of the Crimean residence is “temporarily unavailable.”
+
+5. Persons requiring “special attention” are listed in Appendix 2. <span class="redacted">████████ ████████████ ██████ ███████████</span>
+
+<p class="margin-note">Г.И. — список №2 уничтожить после исполнения.</p>
+<p class="doc-translation">Handwritten: “G.I. — destroy list no. 2 after execution.” G.I. are Rudin's initials.</p>
+<div class="doc-footer"><em>Fictional document created for this game.</em> It is modeled on the kinds of measures the State Committee actually carried out on 19 August: the broadcasts, the newspaper ban and Gorbachev's isolation. No such list from the Central Committee's General Department is known to exist.</div>
+<<returnlink>>
+</div>
+
+
+:: D5_Intercept [document]
+<div class="doc">
+<span class="stamp stamp--red"><<ru "sekretno" "СЕКРЕТНО">></span>
+<div class="doc-header"><span class="doc-org">Стенограмма · transcript</span><span class="doc-sub">Telephone conversation · 20.08.91 · 14:22 · city line</span></div>
+<div class="doc-meta"><span>Subscriber A: male, unidentified (White House)</span><span>Subscriber B: male, unidentified</span></div>
+
+<p><strong>A:</strong> …and when it's over, who runs the ministries? Not us. We don't know where anything is.</p>
+<p><strong>B:</strong> Then we find people who do.</p>
+<p><strong>A:</strong> From <em>there</em>? From Staraya Ploshchad?</p>
+<p><strong>B:</strong> Not the secretaries. The clerks, the referents. They'll come to us themselves, you'll see. Give them a number. <<clue "aide-number">>205-41-07<</clue>>, ask for Sergei.</p>
+<p><strong>A:</strong> And what do we tell them?</p>
+<p><strong>B:</strong> That we'll remember who helped.</p>
+
+<div class="doc-footer"><em>Fictional document created for this game.</em></div>
+<<returnlink>>
+</div>
+
+
+:: Epilogue_Survivor [ending]
+<div class="ending-card">
+<span class="ru-name" lang="ru">Уцелевший</span>
+<h1>The Survivor</h1>
+<p class="lead-date"><strong>Moscow · 25 December 1991</strong></p>
+
+Your new office is in a ministry of the Russian Federation, two kilometres from Staraya Ploshchad. The desk is larger. The phone is the same model. Sergei kept his word: the government did remember who helped, and you helped it find the files. Packet 7/С is in your safe. You have never shown it to anyone, and everyone who matters knows you have it.
+
+<<if $trust.belova gte 1>>Irina Belova no longer returns your calls. You heard she is writing for one of the new papers.<<else>>You have not thought about Irina Belova in weeks.<</if>> <<if $trust.rudin gte 1>>Rudin telephoned in November. He needs a small favour, a signature on a pension document. You have not decided yet.<<else>>Rudin, they say, is unemployed and gives interviews to anyone who will listen.<</if>> <<if $flags.promisedZaitsev>>Zaitsev's name never came up. You kept that promise, at least.<<else>>Zaitsev retired in October. He sent you a postcard with no message on it.<</if>>
+
+This evening you watch on television as Gorbachev resigns. Shortly afterwards the red flag over the Kremlin comes down, and the Russian tricolour goes up. The Soviet Union no longer exists. You are still here. <<note "gorbachev-resignation">>
+
+<div class="concept-box"><h2>What this ending shows</h2>
+<p><strong>Regime change without elite turnover.</strong> The Soviet state collapsed, but many of the people who had run it moved into the institutions that replaced it, often by trading on what they knew and held. Volkov survives because the new order needs the old order's paperwork. <<note "nomenklatura">></p>
+<p>The Survivor is one of four endings. <em>The Witness</em>, <em>The Loyalist</em> and <em>The Scapegoat</em> are in development for the final version.</p></div>
+
+<div class="choices">[[About this project|About]]
+<<link "Play again from the beginning">><<run Object.assign(State.variables, setup.newGame())>><<goto "Start">><</link>></div>
+</div>
+
+
+:: Prologue_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>ТАСС · ТЕЛЕТАЙП</span><span>ПРОЛОГ · PROLOGUE</span></div>
+<div class="bulletin-date">12 <<ru "avgust" "АВГУСТА">> 1991</div>
+
+MOSCOW. Monday. A hot, quiet week in the capital. President Gorbachev is on holiday in Crimea. <<note "gorbachev-foros">>
+
+In eight days, on 20 August, the new Union Treaty is to be signed, loosening Moscow's grip on the fifteen republics. Some in the leadership call it reform. Others call it the end of the state. <<note "union-treaty">>
+
+At the Central Committee building on Staraya Ploshchad, the summer staff work through the in-trays as they always have.
+
+<div class="continue"><<link "Go to work →">><<set $act to "prologue">><<set $date to "12 АВГ 1991">><<set $time to "09:00">><<goto "P_Desk">><</link>></div>
+</div>
+
+
+:: P_Desk [scene]
+<<if not $flags.pDeskInit>><<set $flags.pDeskInit to true>><<set $tray to ["d1", "d2"]>><</if>>
+<div class="scene-body">
+<p class="lead">Staraya Ploshchad · Entrance 5 · Room 412 · 09:00</p>
+
+You are Andrei Nikolaevich Volkov, thirty-eight, a <<ru "referent">> in the <<ru "obshchy-otdel">> of the <<ru "tsk-kpss">>. Your department is where Party paper goes to be counted: every letter, report and decree is logged, numbered and routed. Nothing moves through this building without passing a desk like yours.
+
+The window is open onto the courtyard. A fan turns slowly. The <<ru "vertushka">> on your desk, the government line, is silent. Half the department is on holiday.
+
+Two items are waiting in your <<ru "vkhodyashchie">>. Open them from the tray on the left of the desk. On a small screen, the tray is further down the page.
+
+<<if $docs.d2 and $docs.d2.seen>>One of them has been bothering you since you read it. The registry belongs to the archive, and the archive belongs to Pyotr Fomich Zaitsev.
+
+<div class="choices"><<link "Take the routing slip down to the archive">><<set $time to "11:20">><<goto "P_Archive">><</link>></div><<else>>
+<div class="choices">[[Open the circular|D1_Circular]]
+[[Open the routing slip|D2_RoutingSlip]]</div><</if>>
+</div>
+
+
+:: P_Archive [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · basement level · 11:20</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist · sixty-one · has outlasted every General Secretary since Khrushchev</span></div></div>
+
+The <<ru "arkhiv">> smells of dust and machine oil. Zaitsev takes the routing slip without looking up, then looks up very slowly.
+
+<p class="say">Пакет семь-эс. By courier. "Do not register." Signed for by Comrade Rudin personally.</p>
+
+He turns the slip over, as if something might be written on the back.
+
+<p class="say">Andrei Nikolaevich, in thirty years I have seen this instruction perhaps four times. Each time, a month later, a great many people were looking for new jobs.</p>
+
+<div class="choices"><<link "“You've noticed it too, then, Pyotr Fomich?” (ask gently)">><<run setup.adjustTrust(State.variables, "zaitsev", 1); setup.addPull(State.variables, "survival", 1)>><<set $flags.pArchive to "tactful">><<goto "P_Terminal_Hint">><</link>>
+<<link "“Who sent it? You must know where it came from.” (press him)">><<run setup.adjustTrust(State.variables, "zaitsev", -1); setup.addPull(State.variables, "reform", 1)>><<set $flags.pArchive to "pressed">><<goto "P_Terminal_Hint">><</link>>
+<<link "“Forget I showed you.” (drop it)">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.pArchive to "dropped">><<goto "P_Terminal_Hint">><</link>></div>
+</div>
+
+
+:: P_Terminal_Hint [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · 11:35</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+<<if $flags.pArchive is "tactful">>Zaitsev almost smiles.
+
+<p class="say">Noticed? I notice everything. That is why I am still here.</p><<elseif $flags.pArchive is "pressed">>His face closes like a drawer.
+
+<p class="say">I know where the tea is kept, Andrei Nikolaevich. That is all I know.</p><<else>>He hands the slip back.
+
+<p class="say">Wise. Very wise.</p><</if>>
+
+He nods toward the grey cabinet in the corner: the new registry computer, which the department received last year and which almost no one trusts.
+
+<p class="say">If it was ever entered anywhere, the machine will say so. Or it will say that you are not allowed to know. Either answer is an answer.</p>
+
+The terminal is on the right of your desk. Try searching for the packet number from the slip, or skip it for now.
+
+<div class="choices">[[Use the registry terminal|Terminal]]
+<<link "Go up to the canteen for lunch">><<set $time to "13:10">><<goto "P_Corridor">><</link>></div>
+</div>
+
+
+:: P_Corridor [scene conversation]
+<div class="scene-body">
+<p class="lead">Canteen, fourth floor · 13:10</p>
+<div class="speaker" data-who="belova"><div class="speaker-portrait"></div><div><span class="speaker-name">Irina Sergeyevna Belova</span><span class="speaker-role">Instructor, General Department · reads every newspaper in Moscow</span></div></div>
+
+Irina Belova sets down her tray across from yours. Cabbage soup, black bread, a glass of <<ru "chay">>.
+
+<p class="say">Have you read the treaty text? The republics will collect their own taxes. Ukraine will practically be a separate country. And still they say it saves the Union.</p>
+
+She lowers her voice.
+
+<p class="say">Some people upstairs say it will never be signed. They say it as if they already know.</p>
+
+<div class="choices"><<link "“Maybe it's time the republics had their say.” (agree)">><<run setup.adjustTrust(State.variables, "belova", 1); setup.addPull(State.variables, "reform", 1)>><<goto "P_Late">><</link>>
+<<link "“I just log the paperwork, Irina Sergeyevna.” (deflect)">><<run setup.addPull(State.variables, "survival", 1)>><<goto "P_Late">><</link>>
+<<link "“Be careful who hears you talking like that.” (warn her)">><<run setup.adjustTrust(State.variables, "belova", -1); setup.addPull(State.variables, "loyalty", 1)>><<goto "P_Late">><</link>></div>
+</div>
+
+
+:: P_Late [scene]
+<<set $time to "18:40">><<set $phone to {passage: "P_Call_Rudin", from: "Rudin · internal line"}>>
+<div class="scene-body">
+<p class="lead">Room 412 · 18:40</p>
+
+The afternoon goes the way afternoons do: stamps, numbers, signatures. The courtyard turns gold, then grey. You are reaching for your jacket when the internal phone rings: two short rings, which means someone on this floor.
+
+<div class="choices">[[Answer the phone|P_Call_Rudin]]</div>
+</div>
+
+
+:: P_Call_Rudin [scene phone]
+<<set $phone to null>>
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ Internal line · 18:41</span>
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector · your superior</span></div></div>
+
+<p class="say">Andrei Nikolaevich. Still at your desk. Good, good, a conscientious man.</p>
+
+A pause. You can hear him breathing, and somewhere behind him a door closing.
+
+<p class="say">A packet came through today by courier. Seven-S. Did it pass through your registry?</p>
+
+<div class="choices"><<link "“No, Gennady Ivanovich. I never saw it.” (lie)">><<run setup.addExposure(State.variables, 1)>><<set $flags.liedToRudin to true>><<goto "P_Evening">><</link>>
+<<link "“I saw the routing slip. Nothing more.” (admit it)">><<run setup.adjustTrust(State.variables, "rudin", 1); setup.addPull(State.variables, "loyalty", 1)>><<set $flags.toldRudin to true>><<goto "P_Evening">><</link>>
+<<link "“What's in it, if I may ask?” (ask)">><<run setup.adjustTrust(State.variables, "rudin", -1); setup.addPull(State.variables, "reform", 1); setup.addExposure(State.variables, 1)>><<set $flags.askedRudin to true>><<goto "P_Evening">><</link>></div>
+</div></div>
+
+
+:: P_Evening [scene]
+<div class="scene-body">
+<p class="lead">Home · Kutuzovsky Prospekt · evening</p>
+
+<<if $flags.liedToRudin>>Rudin said only "Good," and hung up. You keep hearing the word on the Metro home.<<elseif $flags.toldRudin>>Rudin thanked you warmly, like an uncle, and told you to forget about it. You find that you can't.<<else>>Rudin was quiet for a long moment. Then: "Curiosity, Andrei Nikolaevich, is a young man's habit." He hung up.<</if>>
+
+At home your wife is watching the news with the sound low. Your daughter is at the <<ru "dacha">> with her grandmother for the rest of August. On television a weather map of the Soviet Union, all fifteen republics, glows in the summer heat.
+
+You go to bed early. The week passes. Nothing happens, and then the weekend passes too.
+
+<div class="continue"><<link "Monday, 19 August →">><<set $act to "act1">><<set $date to "19 АВГ 1991">><<set $time to "06:00">><<goto "Act1_Bulletin">><</link>></div>
+</div>
+
+
+:: clues.js [script]
+/* Key phrases the player can mark in documents. registryKey is typed into the terminal. */
+(function () {
+	'use strict';
+	setup.clues = {
+		'packet-7s':       { label: 'Packet 7/С — routed outside the registry', registryKey: '7/С' },
+		'by-hand':         { label: 'Delivered нарочным (by courier)', registryKey: 'нарочным' },
+		'reg-date-14':     { label: 'Registration date 14.08.91 — five days before the coup', registryKey: '14.08.91' },
+		'cipher-telegram': { label: 'Cipher telegram to regional committees', registryKey: 'шифротелеграмма' },
+		'union-treaty':    { label: 'Union Treaty — signing set for 20 August', registryKey: 'союзный договор' },
+		'aide-number':     { label: 'A phone number for an aide at the White House', registryKey: '205-41-07' }
+	};
+}());
+
+
+
+:: documents.js [script]
+/* Documents the player can hold. All are fictional unless a note says otherwise. */
+(function () {
+	'use strict';
+	setup.documents = {
+		d1: { title: 'Circular on summer registration rules', ru: 'Циркуляр', classification: 'routine', passage: 'D1_Circular', date: '09.08.91' },
+		d2: { title: 'Routing slip — Packet 7/С', ru: 'Сопроводительный лист', classification: 'secret', passage: 'D2_RoutingSlip', date: '12.08.91' },
+		d3: { title: 'Draft cipher telegram to regional committees', ru: 'Шифротелеграмма (проект)', classification: 'top-secret', passage: 'D3_Telegram', date: '14.08.91' },
+		d4: { title: 'Packet 7/С — List of measures', ru: 'Перечень мероприятий', classification: 'top-secret', passage: 'D4_List', date: '14.08.91' },
+		d5: { title: 'Transcript of an intercepted call', ru: 'Стенограмма', classification: 'secret', passage: 'D5_Intercept', date: '20.08.91' }
+	};
+}());
+
+
+
+:: glossary.js [script]
+/* Beginner Russian vocabulary. Used by the <<ru "id">> macro and the Dictionary. */
+(function () {
+	'use strict';
+	setup.glossary = {
+		'sekretno':          { ru: 'секретно', translit: 'sekretno', en: 'secret' },
+		'sov-sekretno':      { ru: 'совершенно секретно', translit: 'sovershenno sekretno', en: 'top secret' },
+		'tsk-kpss':          { ru: 'ЦК КПСС', translit: 'Tse-Ka Ka-Pe-Es-Es', en: 'Central Committee of the Communist Party of the Soviet Union' },
+		'obshchy-otdel':     { ru: 'Общий отдел', translit: 'Obshchiy otdel', en: 'General Department' },
+		'tovarishch':        { ru: 'товарищ', translit: 'tovarishch', en: 'comrade' },
+		'referent':          { ru: 'референт', translit: 'referent', en: 'senior aide; analyst' },
+		'arkhiv':            { ru: 'архив', translit: 'arkhiv', en: 'archive' },
+		'kartoteka':         { ru: 'картотека', translit: 'kartoteka', en: 'card index' },
+		'dokument':          { ru: 'документ', translit: 'dokument', en: 'document' },
+		'papka':             { ru: 'папка', translit: 'papka', en: 'folder' },
+		'vertushka':         { ru: 'вертушка', translit: 'vertushka', en: 'government phone line (lit. “the turntable”)' },
+		'gazeta':            { ru: 'газета', translit: 'gazeta', en: 'newspaper' },
+		'srochno':           { ru: 'срочно', translit: 'srochno', en: 'urgent' },
+		'vkhodyashchie':     { ru: 'входящие', translit: 'vkhodyashchiye', en: 'incoming (in-tray)' },
+		'da':                { ru: 'да', translit: 'da', en: 'yes' },
+		'net':               { ru: 'нет', translit: 'net', en: 'no' },
+		'spasibo':           { ru: 'спасибо', translit: 'spasibo', en: 'thank you' },
+		'zdravstvuyte':      { ru: 'здравствуйте', translit: 'zdravstvuyte', en: 'hello (formal)' },
+		'do-svidaniya':      { ru: 'до свидания', translit: 'do svidaniya', en: 'goodbye' },
+		'avgust':            { ru: 'август', translit: 'avgust', en: 'August' },
+		'ponedelnik':        { ru: 'понедельник', translit: 'ponedelnik', en: 'Monday' },
+		'chp':               { ru: 'чрезвычайное положение', translit: 'chrezvychaynoye polozheniye', en: 'state of emergency' },
+		'dostup-ogranichen': { ru: 'доступ ограничен', translit: 'dostup ogranichen', en: 'access restricted' },
+		'zapis-ne-naidena':  { ru: 'запись не найдена', translit: 'zapis ne naydena', en: 'record not found' },
+		'putch':             { ru: 'путч', translit: 'putch', en: 'putsch, coup' },
+		'bely-dom':          { ru: 'Белый дом', translit: 'Bely dom', en: 'the White House (Russian parliament building)' },
+		'tank':              { ru: 'танк', translit: 'tank', en: 'tank' },
+		'prikaz':            { ru: 'приказ', translit: 'prikaz', en: 'order, directive' },
+		'narochnym':         { ru: 'нарочным', translit: 'narochnym', en: 'by courier (outside normal channels)' },
+		'shifrotelegramma':  { ru: 'шифротелеграмма', translit: 'shifrotelegramma', en: 'cipher telegram' },
+		'pechat':            { ru: 'печать', translit: 'pechat', en: 'seal, stamp; also “the press”' },
+		'obkom':             { ru: 'обком', translit: 'obkom', en: 'regional Party committee' },
+		'kopiya':            { ru: 'копия', translit: 'kopiya', en: 'copy' },
+		'chay':              { ru: 'чай', translit: 'chay', en: 'tea' },
+		'dacha':             { ru: 'дача', translit: 'dacha', en: 'country house' },
+		'zakryto':           { ru: 'закрыто', translit: 'zakryto', en: 'closed' }
+	};
+}());
+
+
+
+:: notes.js [script]
+/*
+ * Historical notes (ИСТОРИЧЕСКАЯ СПРАВКА). Each note states only well-documented
+ * facts and cites keys in setup.sources. Page-level citations have not yet been
+ * checked; the note dialog says so until `pagesChecked` is set to true.
+ * `reconstruction: true` marks a note explaining an in-game invention instead.
+ */
+(function () {
+	'use strict';
+	setup.notes = {
+		'union-treaty': {
+			title: 'The New Union Treaty', date: 'August 1991',
+			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser “Union of Sovereign States,” transferring substantial powers to the republics. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
+			sources: ['plokhy2014', 'dunlop1993']
+		},
+		'gorbachev-foros': {
+			title: 'Gorbachev at Foros', date: '18–21 August 1991',
+			body: 'On 18 August a delegation from Moscow visited Gorbachev at his holiday dacha at Foros, in Crimea, and demanded that he endorse emergency rule. He refused. His communications were cut and he was kept isolated there until the coup collapsed on 21 August.',
+			sources: ['plokhy2014', 'brown1996']
+		},
+		'gkchp-announcement': {
+			title: 'The State Committee on the State of Emergency (ГКЧП)', date: '19 August 1991',
+			body: 'Early on 19 August, Soviet state media announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them “for health reasons,” and that a State Committee on the State of Emergency had been formed. Its members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country, and armored units were ordered into Moscow that morning.',
+			sources: ['gkchpAppeal1991', 'dunlop1993']
+		},
+		'swan-lake': {
+			title: '<em>Swan Lake</em> on television', date: '19 August 1991',
+			body: 'On the morning of the coup, Soviet state television replaced its normal programming with Tchaikovsky’s ballet <em>Swan Lake</em>, broadcast repeatedly between official announcements. For many Soviet citizens the ballet became the defining image of those days.',
+			sources: ['remnick1993', 'plokhy2014']
+		},
+		'yeltsin-tank': {
+			title: 'Yeltsin on the tank', date: '19 August 1991',
+			body: 'Boris Yeltsin, elected President of the Russian republic (RSFSR) two months earlier, climbed onto a tank outside the Russian parliament building — the “White House” — and read an appeal “To the Citizens of Russia.” It called the committee’s actions an unconstitutional coup and called for a general strike.',
+			sources: ['yeltsinAppeal1991', 'dunlop1993']
+		},
+		'press-suspended': {
+			title: 'Newspapers suspended', date: '19 August 1991',
+			body: 'The emergency committee allowed only a short list of loyal central newspapers to appear and suspended the rest, including the reformist weekly <em>Moscow News</em>. Journalists from several banned papers responded by producing a jointly published underground paper, <em>Obshchaya gazeta</em> (“Common Newspaper”).',
+			sources: ['dunlop1993', 'remnick1993']
+		},
+		'secretariat-telegram': {
+			title: 'The Party apparatus and the coup', date: '19 August 1991',
+			body: 'Documents made public after the coup indicate that on 19 August the Central Committee Secretariat sent coded telegrams to regional Party committees urging them to support the emergency measures. These documents were later used to argue that the Party apparatus, not only individual leaders, had been complicit. The draft telegram in this game is fictional; it is modeled on that real episode.',
+			sources: ['dunlop1993', 'nsarchive']
+		},
+		'white-house-defense': {
+			title: 'Defending the White House', date: '19–21 August 1991',
+			body: 'Tens of thousands of Muscovites gathered around the Russian parliament building, building barricades from trolleybuses, construction materials, and anything else at hand. The emergency committee declared a curfew in Moscow on 20 August.',
+			sources: ['plokhy2014', 'remnick1993']
+		},
+		'three-deaths': {
+			title: 'Three deaths on the Garden Ring', date: 'Night of 20–21 August 1991',
+			body: 'In the early hours of 21 August, three young men — Dmitry Komar, Vladimir Usov, and Ilya Krichevsky — were killed in a confrontation with armored vehicles in an underpass on the Garden Ring near the White House. They were the only fatalities in Moscow during the coup and were posthumously named Heroes of the Soviet Union.',
+			sources: ['plokhy2014', 'remnick1993']
+		},
+		'coup-collapse': {
+			title: 'The coup collapses', date: '21–22 August 1991',
+			body: 'On 21 August the military began withdrawing troops from Moscow and the committee’s resolve collapsed. Gorbachev returned to Moscow in the early hours of 22 August, and several committee members were arrested.',
+			sources: ['plokhy2014', 'brown1996']
+		},
+		'cpsu-suspended': {
+			title: 'The Communist Party suspended', date: '23 August 1991',
+			body: 'On 23 August Yeltsin signed a decree suspending the activity of the Communist Party on the territory of the Russian republic. In November 1991 a further decree banned it in Russia.',
+			sources: ['dunlop1993', 'plokhy2014']
+		},
+		'old-square-sealed': {
+			title: 'Old Square sealed', date: '23 August 1991',
+			body: 'On 23 August the Central Committee buildings on Staraya Ploshchad (Old Square) were sealed on the orders of the Moscow city authorities and staff were told to leave, while crowds gathered outside. Contemporary accounts describe Party officials trying to remove or destroy documents before the doors were shut.',
+			sources: ['remnick1993', 'dunlop1993']
+		},
+		'gorbachev-resignation': {
+			title: 'The end of the USSR', date: 'August–December 1991',
+			body: 'On 24 August Gorbachev resigned as General Secretary and called on the Central Committee to dissolve itself. On 8 December the leaders of Russia, Ukraine, and Belarus declared that the USSR had ceased to exist and founded the Commonwealth of Independent States. On 25 December Gorbachev resigned as Soviet president in a televised address, and the Soviet flag was lowered over the Kremlin that evening.',
+			sources: ['gorbachevResignation1991', 'belovezha1991', 'brown1996']
+		},
+		'nomenklatura': {
+			title: 'From nomenklatura to new elite', date: '1990s',
+			body: 'The nomenklatura was the Soviet system of appointments to leading posts, and the class of officials who held them. Sociologists Olga Kryshtanovskaya and Stephen White found that a large share of post-Soviet Russia’s political and business elite had come from the old nomenklatura. Their research is a key source for the idea of regime change without elite turnover.',
+			sources: ['kryshtanovskaya1996', 'solnick1998']
+		},
+		'office-computers': {
+			title: 'The registry terminal', date: 'Late 1980s',
+			reconstruction: true,
+			body: 'The registry terminal in this game is a reconstruction, not a documented object. Soviet IBM-compatible personal computers such as the ЕС-1841 (ES-1841) were produced in the late 1980s for state institutions, but whether this particular department used one for its registry is not established. Paper card indexes (картотеки) remained the authoritative record in Soviet offices. This note will be revised if research shows otherwise.'
+		}
+	};
+}());
+
+
+
+:: registry-records.js [script]
+/*
+ * Registry terminal records. Searching a key prints the record; access depends on
+ * the player's clues (requiresClues) or a colleague's trust (unlockTrust).
+ * Record numbers and routing are fictional.
+ */
+(function () {
+	'use strict';
+	setup.registry = [
+		{
+			id: 'r-7s',
+			keys: ['7/с', 'пакет 7/с', 'packet 7/с'],
+			requiresClues: ['packet-7s', 'reg-date-14'],
+			docId: 'd4',
+			foundLines: [
+				'ПАКЕТ 7/С · РЕГ. № 0417/с',
+				'ЗАРЕГИСТРИРОВАН: 14.08.91 · НАРОЧНЫМ',
+				'СОДЕРЖАНИЕ: ПЕРЕЧЕНЬ МЕРОПРИЯТИЙ',
+				'(contents: list of measures)',
+				'МЕСТО ХРАНЕНИЯ: КАРТОТЕКА, ЯЩИК 12',
+				'КОПИЯ ВЫДАНА В ЛОТОК / copy sent to your tray'
+			],
+			restrictedLines: [
+				'ПАКЕТ 7/С',
+				'ДОСТУП ОГРАНИЧЕН',
+				'ACCESS RESTRICTED — registration date required'
+			]
+		},
+		{
+			id: 'r-telegram',
+			keys: ['шифротелеграмма', 'cipher telegram', 'telegram'],
+			docId: 'd3',
+			foundLines: [
+				'ШИФРОТЕЛЕГРАММА · ПРОЕКТ',
+				'АДРЕСАТ: ОБКОМЫ, КРАЙКОМЫ (regional Party committees)',
+				'СТАТУС: ОЖИДАЕТ ОТПРАВКИ / awaiting dispatch',
+				'КОПИЯ ВЫДАНА В ЛОТОК / copy sent to your tray'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-union',
+			keys: ['союзный договор', 'union treaty'],
+			foundLines: [
+				'ДОГОВОР О СОЮЗЕ СУВЕРЕННЫХ ГОСУДАРСТВ · ПРОЕКТ',
+				'(Treaty of the Union of Sovereign States · draft)',
+				'ПОДПИСАНИЕ: 20.08.91',
+				'ДОКУМЕНТ НЕ ВЫДАЁТСЯ / not issued to this terminal'
+			],
+			restrictedLines: []
+		},
+		{
+			id: 'r-by-hand',
+			keys: ['нарочным', 'by hand', 'by courier'],
+			foundLines: [
+				'НАРОЧНЫМ = доставка курьером, минуя регистрацию',
+				'(by courier — delivered outside the registry)',
+				'ЗА АВГУСТ 1991: 1 ЗАПИСЬ → ПАКЕТ 7/С'
+			],
+			restrictedLines: []
+		}
+	];
+}());
+
+
+
+:: sources.js [script]
+/*
+ * Bibliography (Chicago notes-bibliography style). `verified: false` means the
+ * entry has not yet been checked against a library catalog or publisher record;
+ * the Bibliography passage marks those entries visibly.
+ */
+(function () {
+	'use strict';
+	setup.sources = {
+		/* ---- Scholarly ---- */
+		plokhy2014: {
+			type: 'scholarly', verified: false,
+			chicago: 'Plokhy, Serhii. <em>The Last Empire: The Final Days of the Soviet Union.</em> New York: Basic Books, 2014.'
+		},
+		kotkin2001: {
+			type: 'scholarly', verified: false,
+			chicago: 'Kotkin, Stephen. <em>Armageddon Averted: The Soviet Collapse, 1970–2000.</em> Oxford: Oxford University Press, 2001.'
+		},
+		brown1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Brown, Archie. <em>The Gorbachev Factor.</em> Oxford: Oxford University Press, 1996.'
+		},
+		dunlop1993: {
+			type: 'scholarly', verified: false,
+			chicago: 'Dunlop, John B. <em>The Rise of Russia and the Fall of the Soviet Empire.</em> Princeton, NJ: Princeton University Press, 1993.'
+		},
+		solnick1998: {
+			type: 'scholarly', verified: false,
+			chicago: 'Solnick, Steven L. <em>Stealing the State: Control and Collapse in Soviet Institutions.</em> Cambridge, MA: Harvard University Press, 1998.'
+		},
+		beissinger2002: {
+			type: 'scholarly', verified: false,
+			chicago: 'Beissinger, Mark R. <em>Nationalist Mobilization and the Collapse of the Soviet State.</em> Cambridge: Cambridge University Press, 2002.'
+		},
+		linzstepan1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Linz, Juan J., and Alfred Stepan. <em>Problems of Democratic Transition and Consolidation: Southern Europe, South America, and Post-Communist Europe.</em> Baltimore: Johns Hopkins University Press, 1996.'
+		},
+		kryshtanovskaya1996: {
+			type: 'scholarly', verified: false,
+			chicago: 'Kryshtanovskaya, Olga, and Stephen White. “From Soviet <em>Nomenklatura</em> to Russian Elite.” <em>Europe-Asia Studies</em> 48, no. 5 (1996).'
+		},
+		remnick1993: {
+			type: 'scholarly', verified: false,
+			chicago: 'Remnick, David. <em>Lenin’s Tomb: The Last Days of the Soviet Empire.</em> New York: Random House, 1993.'
+		},
+
+		/* ---- Primary ---- */
+		gkchpAppeal1991: {
+			type: 'primary', verified: false,
+			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). “Appeal to the Soviet People” [Обращение к советскому народу] and accompanying statements, 18–19 August 1991. Published in <em>Pravda</em> and broadcast by Soviet state media, 19 August 1991.'
+		},
+		yeltsinAppeal1991: {
+			type: 'primary', verified: false,
+			chicago: 'Yeltsin, Boris, Ivan Silayev, and Ruslan Khasbulatov. “To the Citizens of Russia” [К гражданам России]. Moscow, 19 August 1991.'
+		},
+		belovezha1991: {
+			type: 'primary', verified: false,
+			chicago: 'Agreement on the Establishment of the Commonwealth of Independent States [Belovezha Accords]. Viskuli, Belarus, 8 December 1991.'
+		},
+		gorbachevResignation1991: {
+			type: 'primary', verified: false,
+			chicago: 'Gorbachev, Mikhail. Televised address announcing his resignation as President of the USSR. Moscow, 25 December 1991.'
+		},
+		nsarchive: {
+			type: 'primary', verified: false,
+			chicago: 'National Security Archive, George Washington University. Electronic Briefing Books on the August 1991 coup and the end of the Soviet Union. https://nsarchive.gwu.edu.'
+		}
+	};
+}());
+
+
+
+:: helpers.js [script]
+/* Small presentation helpers. Node-safe: references only `setup`. */
+(function () {
+	'use strict';
+
+	var MINDS = {
+		loyalty: 'You keep telling yourself the Party will hold.',
+		reform: 'You keep thinking about the people outside.',
+		survival: 'You keep thinking about your family.'
+	};
+
+	setup.stateOfMind = function (v) {
+		var best = null;
+		var top = 0;
+		['loyalty', 'reform', 'survival'].forEach(function (k) {
+			if (v.pulls[k] > top) { top = v.pulls[k]; best = k; }
+		});
+		return best ? MINDS[best] : 'You keep your head down and do your work.';
+	};
+
+	setup.sortedGlossary = function (v) {
+		return v.glossary.slice().sort(function (a, b) {
+			return setup.glossary[a].ru.localeCompare(setup.glossary[b].ru, 'ru');
+		});
+	};
+
+	setup.sourcesByType = function (type) {
+		var plain = function (k) { return setup.sources[k].chicago.replace(/<[^>]+>/g, ''); };
+		return Object.keys(setup.sources)
+			.filter(function (k) { return setup.sources[k].type === type; })
+			.sort(function (a, b) { return plain(a).localeCompare(plain(b)); });
+	};
+
+	setup.plainTitle = function (noteId) {
+		return setup.notes[noteId].title.replace(/<[^>]+>/g, '');
+	};
+}());
+
+
+
+:: registry.js [script]
+/*
+ * Registry terminal search. Node-safe: references only `setup`.
+ * Data lives in setup.registry (src/scripts/data/registry.js).
+ */
+(function () {
+	'use strict';
+
+	// Latin letters that look identical to Cyrillic ones on a 1991 keyboard layout.
+	var LOOKALIKE = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', k: 'к', m: 'м', t: 'т', b: 'в', h: 'н', y: 'у' };
+	var NEEDS_MAP = /[0-9Ѐ-ӿ]/;
+
+	function mapToken(token) {
+		if (!NEEDS_MAP.test(token)) { return token; }
+		return token.replace(/[a-z]/g, function (ch) { return LOOKALIKE[ch] || ch; });
+	}
+
+	setup.normalizeQuery = function (q) {
+		return String(q || '').trim().toLowerCase().split(/\s+/).map(mapToken).join(' ');
+	};
+
+	function hasAccess(entry, v) {
+		var clues = entry.requiresClues || [];
+		var allClues = clues.every(function (id) { return v.clues.indexOf(id) !== -1; });
+		if (allClues) { return true; }
+		var t = entry.unlockTrust;
+		return !!(t && v.trust[t.who] >= t.min);
+	}
+
+	setup.searchRegistry = function (query, v) {
+		var q = setup.normalizeQuery(query);
+		var entries = setup.registry || [];
+		for (var i = 0; i < entries.length; i++) {
+			var e = entries[i];
+			var match = e.keys.some(function (k) { return setup.normalizeQuery(k) === q; });
+			if (!match) { continue; }
+			if (hasAccess(e, v)) {
+				var found = { status: 'found', lines: e.foundLines.slice() };
+				if (e.docId) { found.docId = e.docId; }
+				return found;
+			}
+			return { status: 'restricted', lines: e.restrictedLines.slice() };
+		}
+		return { status: 'notfound', lines: ['ЗАПИСЬ НЕ НАЙДЕНА', 'RECORD NOT FOUND'] };
+	};
+}());
+
+
+
+:: state.js [script]
+/*
+ * Game-state rules. Node-safe: references only the global `setup` at load time.
+ * Every helper takes SugarCube's variables object (State.variables) as `v`.
+ */
+(function () {
+	'use strict';
+
+	setup.TRUST_MIN = -3;
+	setup.TRUST_MAX = 3;
+	setup.EXPOSURE_THRESHOLD = 5;
+
+	var PULLS = ['loyalty', 'reform', 'survival'];
+	var DOC_FIELDS = ['seen', 'held', 'copied', 'destroyed', 'handed'];
+
+	setup.newGame = function () {
+		return {
+			trust: { rudin: 0, belova: 0, zaitsev: 0, markova: 0 },
+			pulls: { loyalty: 0, reform: 0, survival: 0 },
+			exposure: 0,
+			flags: {},
+			docs: {},
+			clues: [],
+			glossary: [],
+			notesSeen: [],
+			tray: [],
+			kept: [],
+			phone: null,
+			act: 'prologue',
+			date: '12 АВГ 1991',
+			time: '09:00',
+			returnTo: 'Start'
+		};
+	};
+
+	setup.adjustTrust = function (v, who, delta) {
+		if (!Object.prototype.hasOwnProperty.call(v.trust, who)) {
+			throw new Error('adjustTrust: unknown character "' + who + '"');
+		}
+		var next = v.trust[who] + delta;
+		v.trust[who] = Math.max(setup.TRUST_MIN, Math.min(setup.TRUST_MAX, next));
+		return v.trust[who];
+	};
+
+	setup.addPull = function (v, which, n) {
+		if (PULLS.indexOf(which) === -1) {
+			throw new Error('addPull: unknown pull "' + which + '"');
+		}
+		v.pulls[which] += n;
+	};
+
+	setup.addExposure = function (v, n) {
+		v.exposure += n;
+		return v.exposure;
+	};
+
+	setup.markClue = function (v, id) {
+		if (v.clues.indexOf(id) !== -1) { return false; }
+		v.clues.push(id);
+		return true;
+	};
+
+	setup.setDoc = function (v, id, field, value) {
+		if (DOC_FIELDS.indexOf(field) === -1) {
+			throw new Error('setDoc: unknown field "' + field + '"');
+		}
+		if (!v.docs[id]) {
+			v.docs[id] = { seen: false, held: false, copied: false, destroyed: false, handed: false };
+		}
+		v.docs[id][field] = value === undefined ? true : value;
+	};
+
+	/* Exposure overrides everything; otherwise the final decision about the files decides.
+	   A player who never acts on the files is carried along by the institution. */
+	setup.resolveEnding = function (v) {
+		if (v.exposure >= setup.EXPOSURE_THRESHOLD) { return 'scapegoat'; }
+		switch (v.flags.finalDecision) {
+			case 'kept': return 'survivor';
+			case 'handed': return 'witness';
+			default: return 'loyalist';
+		}
+	};
+}());
+
+
+
+:: config.js [script]
+/* SugarCube configuration and passage bookkeeping (browser only). */
+(function () {
+	'use strict';
+
+	/* One history state: the browser Back button cannot undo a decision. */
+	Config.history.maxStates = 1;
+	Config.history.controls = false;
+	/* Autosave every story passage, but never the title screen or academic pages,
+	   so returning to the title does not overwrite progress. */
+	Config.saves.autosave = ['scene', 'document', 'conversation', 'phone', 'terminal', 'bulletin', 'side', 'stub', 'ending'];
+	Config.saves.slots = 6;
+	/* Blank lines become paragraphs; layout passages use the `nobr` tag. */
+	Config.cleanupWikifierOutput = true;
+
+	$(document).on(':passagestart', function (ev) {
+		var v = State.variables;
+		var tags = ev.passage.tags;
+		$('html').attr('data-kind', tags.join(' '));
+		if (tags.indexOf('academic') === -1) {
+			v.backTo = ev.passage.title;
+		}
+		if (tags.indexOf('scene') !== -1) {
+			v.returnTo = ev.passage.title;
+		}
+		if (tags.indexOf('document') !== -1) {
+			Object.keys(setup.documents).forEach(function (id) {
+				if (setup.documents[id].passage === ev.passage.title) {
+					setup.setDoc(v, id, 'seen');
+				}
+			});
+		}
+	});
+}());
+
+/* Favicon: a red star, drawn inline (no image file needed). */
+(function () {
+	'use strict';
+	var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon fill="%23a3201a" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/></svg>';
+	$('<link rel="icon" type="image/svg+xml">').attr('href', 'data:image/svg+xml,' + svg).appendTo('head');
+}());
+
+
+
+:: macros.js [script]
+/* Custom macros: <<ru>>, <<note>>, <<clue>>…<</clue>>, <<returnlink>> (browser only). */
+(function () {
+	'use strict';
+
+	function pushOnce(list, id) {
+		if (list.indexOf(id) === -1) { list.push(id); }
+	}
+
+	function toast(text) {
+		var el = $('<div class="toast" role="status"></div>').text(text).appendTo('body');
+		setTimeout(function () { el.addClass('toast--out'); }, 1800);
+		setTimeout(function () { el.remove(); }, 2400);
+	}
+	setup.toast = toast;
+
+	/* <<ru "id" ["display text"]>> — Russian term with tooltip; records it in the Dictionary. */
+	Macro.add('ru', {
+		handler: function () {
+			var id = this.args[0];
+			var g = setup.glossary[id];
+			if (!g) { return this.error('unknown glossary id "' + id + '"'); }
+			pushOnce(State.variables.glossary, id);
+			var tip = g.ru + ' · ' + g.translit + ' · ' + g.en;
+			$('<span class="ru" tabindex="0"></span>')
+				.attr({ 'data-tip': tip, 'aria-label': (this.args[1] || g.ru) + ' (' + g.translit + ': ' + g.en + ')' })
+				.text(this.args[1] || g.ru)
+				.appendTo(this.output);
+		}
+	});
+
+	/* <<note "id">> — historical-note stamp; opens the note with its citations. */
+	setup.openNote = function (id) {
+		var n = setup.notes[id];
+		pushOnce(State.variables.notesSeen, id);
+		var html = '<p class="note-date">' + n.date + '</p><p>' + n.body + '</p>';
+		if (n.reconstruction) {
+			html += '<p class="note-flag">Reconstruction — not a documented historical object.</p>';
+		} else {
+			html += '<h3>Sources</h3><ul class="note-sources">' + n.sources.map(function (key) {
+				return '<li>' + setup.sources[key].chicago + '</li>';
+			}).join('') + '</ul>';
+			if (!n.pagesChecked) {
+				html += '<p class="note-flag">Page-level citations pending verification.</p>';
+			}
+		}
+		Dialog.setup('ИСТОРИЧЕСКАЯ СПРАВКА · ' + n.title, 'note-dialog');
+		Dialog.append(html);
+		Dialog.open();
+	};
+
+	Macro.add('note', {
+		handler: function () {
+			var id = this.args[0];
+			if (!setup.notes[id]) { return this.error('unknown note id "' + id + '"'); }
+			$('<button type="button" class="note-stamp"></button>')
+				.attr('title', 'Historical note: ' + $('<span>').html(setup.notes[id].title).text())
+				.html('<span lang="ru">ИСТОРИЧЕСКАЯ СПРАВКА</span><small>historical note</small>')
+				.on('click', function () { setup.openNote(id); })
+				.appendTo(this.output);
+		}
+	});
+
+	/* <<clue "id">>text<</clue>> — a key phrase the player can mark into the notebook. */
+	Macro.add('clue', {
+		tags: null,
+		handler: function () {
+			var id = this.args[0];
+			if (!setup.clues[id]) { return this.error('unknown clue id "' + id + '"'); }
+			var btn = $('<button type="button" class="clue"></button>')
+				.attr('aria-label', 'Mark clue: ' + setup.clues[id].label)
+				.wiki(this.payload[0].contents)
+				.appendTo(this.output);
+			if (State.variables.clues.indexOf(id) !== -1) { btn.addClass('marked').attr('aria-pressed', 'true'); }
+			btn.on('click', function () {
+				if (setup.markClue(State.variables, id)) {
+					toast('Записано · Recorded in notebook');
+				}
+				btn.addClass('marked').attr('aria-pressed', 'true');
+			});
+		}
+	});
+
+	/* <<returnlink ["label"]>> — back to the last main-line scene. */
+	Macro.add('returnlink', {
+		handler: function () {
+			var target = State.variables.returnTo || 'Start';
+			$('<button type="button" class="return-link"></button>')
+				.text(this.args[0] || '← Return to desk')
+				.on('click', function () { Engine.play(target); })
+				.appendTo(this.output);
+		}
+	});
+}());
+
+
+
+:: terminal.js [script]
+/* Registry terminal rendering: typed output, search, chips (browser only). */
+(function () {
+	'use strict';
+
+	var reduced = function () {
+		return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	};
+	var queue = Promise.resolve();
+
+	function typeLine(out, text, cls) {
+		queue = queue.then(function () {
+			return new Promise(function (resolve) {
+				var line = $('<div class="term-line"></div>').addClass(cls || '').appendTo(out);
+				out.scrollTop(out.prop('scrollHeight'));
+				if (reduced()) { line.text(text); resolve(); return; }
+				var i = 0;
+				(function step() {
+					i += 2;
+					line.text(text.slice(0, i));
+					if (i < text.length) { setTimeout(step, 14); } else { resolve(); }
+				}());
+			});
+		});
+		return queue;
+	}
+
+	function stripCommand(q) {
+		return String(q).replace(/^\s*(поиск|search)\s+/i, '');
+	}
+
+	setup.terminal = {
+		run: function (raw) {
+			var out = $('#term-output');
+			var query = stripCommand(raw).trim();
+			if (!query) { return; }
+			var v = State.variables;
+			var result = setup.searchRegistry(query, v);
+			typeLine(out, '> ПОИСК ' + query.toUpperCase(), 'term-echo');
+			result.lines.forEach(function (l) {
+				typeLine(out, l, result.status === 'found' ? '' : 'term-warn');
+			});
+			if (result.status === 'found' && result.docId) {
+				var doc = setup.documents[result.docId];
+				if (v.tray.indexOf(result.docId) === -1 && v.kept.indexOf(result.docId) === -1) {
+					v.tray.push(result.docId);
+				}
+				queue = queue.then(function () {
+					$('<button type="button" class="term-open"></button>')
+						.text('ОТКРЫТЬ · open “' + doc.title + '”')
+						.on('click', function () { Engine.play(doc.passage); })
+						.appendTo($('<div class="term-line"></div>').appendTo(out));
+					out.scrollTop(out.prop('scrollHeight'));
+				});
+			}
+		}
+	};
+
+	$(document).on(':passagedisplay', function (ev) {
+		if (ev.passage.tags.indexOf('terminal') === -1) { return; }
+		queue = Promise.resolve();
+		var input = $('#term-input');
+		$('#term-form').on('submit', function (e) {
+			e.preventDefault();
+			setup.terminal.run(input.val());
+			input.val('');
+		});
+		$('.term-chip').on('click', function () {
+			input.val($(this).attr('data-key')).trigger('focus');
+		});
+		input.trigger('focus');
+	});
+}());
+
+
+
+:: StoryTitle
+The Kremlin Files
+
+
+:: StoryData
+{
+	"ifid": "C9E94DF2-E150-485B-8B83-B726627425FB",
+	"format": "SugarCube",
+	"format-version": "2.30.0",
+	"start": "Start",
+	"zoom": 1
+}
+
+
+:: StoryInit
+<<run Object.assign(State.variables, setup.newGame())>>
+
+
+:: StoryInterface
+<div id="desk">
+	<header id="desk-header" data-passage="PanelCalendar"></header>
+	<aside id="tray" aria-label="In-tray and kept files" data-passage="PanelTray"></aside>
+	<main id="passages" aria-live="polite"></main>
+	<aside id="instruments" aria-label="Telephone and registry terminal" data-passage="PanelPhone"></aside>
+	<nav id="desk-bar" aria-label="Desk drawer" data-passage="PanelBar"></nav>
+</div>
+
+
+:: PanelCalendar [panel nobr]
+<div class="calendar" aria-label="Date"><span class="cal-month">$date</span></div>
+<div class="org"><span class="org-ru">ЦК КПСС · Общий отдел</span><span class="org-en">CPSU Central Committee · General Department</span></div>
+<div class="clock" aria-label="Time">$time</div>
+
+
+:: PanelTray [panel nobr]
+<h2 class="panel-title"><span lang="ru">Входящие</span> In-tray</h2>
+<<if $tray.length is 0>><p class="panel-empty">Empty.</p><<else>><ul class="tray-list"><<for _id range $tray>><<capture _id>><li class="tray-item" @data-class="setup.documents[_id].classification"><<link setup.documents[_id].title setup.documents[_id].passage>><</link>><<if $docs[_id] and $docs[_id].seen>><span class="tray-seen">read</span><</if>></li><</capture>><</for>></ul><</if>>
+<h2 class="panel-title"><span lang="ru">Ящик стола</span> Desk drawer</h2>
+<<if $kept.length is 0>><p class="panel-empty">Nothing kept.</p><<else>><ul class="tray-list kept"><<for _id range $kept>><<capture _id>><li class="tray-item" @data-class="setup.documents[_id].classification"><<link setup.documents[_id].title setup.documents[_id].passage>><</link>><<if $docs[_id] and $docs[_id].copied>><span class="tray-seen">carbon copy</span><</if>></li><</capture>><</for>></ul><</if>>
+
+
+:: PanelPhone [panel nobr]
+<div @class="'phone' + ($phone ? ' ringing' : '')">
+<svg class="phone-svg" viewBox="0 0 120 90" aria-hidden="true"><path class="ph-handset" d="M10 22c0-8 16-14 50-14s50 6 50 14l-4 10c-1 3-4 4-7 3l-14-4c-3-1-4-3-4-6v-5c-14-3-28-3-42 0v5c0 3-1 5-4 6l-14 4c-3 1-6 0-7-3z"/><path class="ph-body" d="M24 44c4-6 14-8 36-8s32 2 36 8l14 34c1 4-1 7-5 7H15c-4 0-6-3-5-7z"/><circle class="ph-dial" cx="60" cy="62" r="17"/><circle class="ph-hub" cx="60" cy="62" r="6"/></svg>
+<<if $phone>><p class="phone-label">☎ <<print $phone.from>></p><<link "Answer the phone" $phone.passage>><</link>><<else>><p class="phone-label"><span lang="ru">Вертушка</span> · silent</p><</if>>
+</div>
+<div class="terminal-card">
+<div class="term-screen" aria-hidden="true"><span>ЕС-1841</span><span class="term-cursor">█</span></div>
+[[Registry terminal|Terminal]]
+</div>
+
+
+:: PanelBar [panel nobr]
+<ul class="bar-list">
+<li>[[Notebook|Notebook]]</li>
+<li>[[Dictionary|Dictionary]]</li>
+<li>[[Historical notes|NotesIndex]]</li>
+<li><<link "Save / Load">><<run UI.saves()>><</link>></li>
+<li>[[About|About]]</li>
+<li>[[Bibliography|Bibliography]]</li>
+<li>[[Title|Start]]</li>
+</ul>
+
+
+:: Notebook [side nobr]
+<div class="sheet notebook">
+<h1><span lang="ru">Блокнот</span> · Notebook</h1>
+<p class="state-of-mind"><<print setup.stateOfMind(State.variables)>></p>
+<<if $clues.length is 0>><p>No notes yet. Click underlined key phrases in documents to record them here.</p><<else>><ol class="clue-list"><<for _c range $clues>><li><<print setup.clues[_c].label>> <span class="clue-key">registry key: <code><<print setup.clues[_c].registryKey>></code></span></li><</for>></ol><</if>>
+<<returnlink>>
+</div>
+
+
+:: Dictionary [side nobr]
+<div class="sheet dictionary">
+<h1><span lang="ru">Словарь</span> · Dictionary</h1>
+<p>Russian words you have met so far. Hover or tap any dotted word in the game to see its meaning.</p>
+<<if $glossary.length is 0>><p>No words yet.</p><<else>><dl class="dict"><<for _g range setup.sortedGlossary(State.variables)>><dt lang="ru"><<print setup.glossary[_g].ru>></dt><dd><em><<print setup.glossary[_g].translit>></em> — <<print setup.glossary[_g].en>></dd><</for>></dl><</if>>
+<<returnlink>>
+</div>
+
+
+:: NotesIndex [side nobr]
+<div class="sheet notes-index">
+<h1><span lang="ru">Исторические справки</span> · Historical notes</h1>
+<p>Notes you have opened. Everything marked with the red stamp is documented history; everything else in the game is fiction.</p>
+<<if $notesSeen.length is 0>><p>No notes opened yet.</p><<else>><ul class="notes-list"><<for _n range $notesSeen>><<capture _n>><li><<link setup.plainTitle(_n)>><<run setup.openNote(_n)>><</link>> <span class="note-date-inline"><<print setup.notes[_n].date>></span></li><</capture>><</for>></ul><</if>>
+<<returnlink>>
+</div>
+
+
+:: Stub_Witness [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Свидетель</span>
+<h1>The Witness</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+In this ending, Volkov gives Packet 7/С to investigators or the press. It explores <strong>democratization</strong> and the transfer of <strong>legitimacy</strong> to new institutions. Doing the right thing costs him his career, and the files change less than he hoped.
+
+This branch is in development for the final version of the game. The complete prototype route currently leads to <em>The Survivor</em>.
+
+<div class="choices"><<returnlink "← Return to the last decision">>
+[[Title screen|Start]]</div>
+</div>
+
+
+:: Stub_Loyalist [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Верный</span>
+<h1>The Loyalist</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+In this ending, Volkov destroys the files as ordered and stays with the Party until the doors are sealed. It explores <strong>institutional collapse from the inside</strong>: a man who sincerely believes he protected the country from chaos, left holding nothing.
+
+This branch is in development for the final version of the game. The complete prototype route currently leads to <em>The Survivor</em>.
+
+<div class="choices"><<returnlink "← Return to the last decision">>
+[[Title screen|Start]]</div>
+</div>
+
+
+:: Stub_Scapegoat [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Козёл отпущения</span>
+<h1>The Scapegoat</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+Your exposure reached <<print $exposure>> (the threshold is <<print setup.EXPOSURE_THRESHOLD>>). Too many small risks added up: the questions, the calls, the copies, the trust placed in the wrong people. In this ending Volkov is named in the investigation of the coup's organisers. It explores what happens to <strong>individuals when authoritarian structures collapse</strong>: relatively innocent intentions, real consequences.
+
+This branch is in development for the final version of the game. To reach <em>The Survivor</em>, play again and take fewer risks.
+
+<div class="choices">[[Title screen|Start]]
+<<link "Start a new game">><<run Object.assign(State.variables, setup.newGame())>><<goto "Prologue_Bulletin">><</link>></div>
+</div>
+
+
+:: Terminal [terminal side nobr]
+<div class="term-wrap">
+<div class="term-bezel"><div class="term-crt">
+<div class="term-boot">ЕС-1841 · АСУ «ДЕЛОПРОИЗВОДСТВО» · ЦК КПСС<br>registry control system · General Department · terminal 3</div>
+<div class="term-help">ВВЕДИТЕ: ПОИСК &lt;номер | ключ&gt; — enter a registration number or key</div>
+<div id="term-output" aria-live="polite"></div>
+<form id="term-form" autocomplete="off"><label for="term-input">&gt; ПОИСК</label><input id="term-input" type="text" spellcheck="false" aria-label="Registry search"><button type="submit" class="term-enter">ВВОД</button></form>
+</div></div>
+<div class="term-cards">
+<h2 class="term-cards-title"><<ru "kartoteka">> · your card index</h2>
+<<if $clues.length is 0>><p class="term-empty">No index cards yet. Mark key phrases in documents and they will appear here.</p><<else>><div class="term-chips"><<for _c range $clues>><button type="button" class="term-chip" @data-key="setup.clues[_c].registryKey"><span class="chip-key"><<print setup.clues[_c].registryKey>></span><span class="chip-label"><<print setup.clues[_c].label>></span></button><</for>></div><</if>>
+<<returnlink>>
+<span class="term-note"><<note "office-computers">></span>
+</div>
+</div>
+
+
+:: Start [title nobr]
+<div class="title-screen">
+<div class="title-star" aria-hidden="true"></div>
+<p class="title-kicker"><span lang="ru">Совершенно секретно</span> · Top secret</p>
+<h1 class="title-main"><span class="title-ru" lang="ru">Кремлёвские досье</span><span class="title-en">The Kremlin Files</span></h1>
+<p class="title-sub">Moscow · August 1991 · An interactive political mystery</p>
+<div class="title-actions">
+<<link "New game">><<run Object.assign(State.variables, setup.newGame())>><<goto "Prologue_Bulletin">><</link>>
+<<if Save.autosave.ok() and Save.autosave.has()>><<link "Continue">><<run Save.autosave.load()>><</link>><</if>>
+[[About this project|About]]
+[[Bibliography|Bibliography]]
+</div>
+<p class="fiction-notice">Andrei Volkov, his colleagues, and the files he investigates are fictional. The events of August 1991 are real: anything stamped <span class="stamp-inline">ИСТОРИЧЕСКАЯ СПРАВКА</span> opens a historical note with its sources.</p>
+<p class="title-credit">A Digital Humanities project · University of Tennessee · Prototype, November 2026</p>
+</div>
+
+
+:: academic.css [stylesheet]
+/* ===== About, Bibliography, Credits ===== */
+.academic-page {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 36px 52px 40px;
+	background: var(--paper);
+	color: var(--ink);
+	box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+}
+.academic-page h1 { font: 700 30px var(--narrow); letter-spacing: 0.06em; margin: 0 0 4px; }
+.academic-page h2 { font: 700 20px var(--narrow); letter-spacing: 0.06em; border-bottom: 2px solid var(--red); padding-bottom: 3px; margin: 1.8em 0 0.6em; }
+.academic-page h3 { font: 700 17px var(--narrow); letter-spacing: 0.04em; margin: 1.2em 0 0.3em; }
+.academic-page a, .academic-page .link-internal { color: var(--red); }
+.academic-page .subtitle { font: 16px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1.4em; }
+.concept { border-left: 4px solid var(--red); padding: 2px 0 2px 14px; margin: 0 0 1.2em; }
+.concept p { margin: 0.25em 0; }
+.concept .tie { font-size: 15px; color: var(--ink-soft); }
+.bib { padding-left: 0; list-style: none; }
+.bib li { padding-left: 2em; text-indent: -2em; margin-bottom: 0.8em; }
+.unverified { font: 700 11px var(--narrow); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); border: 1px solid var(--ink-soft); padding: 0 4px; margin-left: 6px; text-indent: 0; display: inline-block; }
+.academic-nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 2em; padding-top: 1em; border-top: 1px solid var(--paper-edge); font: 700 16px var(--narrow); letter-spacing: 0.06em; }
+@media (max-width: 600px) { .academic-page { padding: 26px 18px; } }
+
+
+
+:: base.css [stylesheet]
+/* ===== The Kremlin Files — base tokens and resets ===== */
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Narrow:wght@400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Marck+Script&display=swap');
+
+:root {
+	--wood-dark: #1d130c;
+	--wood: #3b2516;
+	--wood-light: #5a3a22;
+	--felt: #22362b;
+	--felt-light: #2e4638;
+	--paper: #f1e8d2;
+	--paper-shade: #e2d5b4;
+	--paper-edge: #c9b88f;
+	--ink: #1d1914;
+	--ink-soft: #4a4034;
+	--pencil: #5b5246;
+	--red: #a3201a;
+	--red-ink: rgba(163, 32, 26, 0.86);
+	--violet-ink: rgba(70, 52, 140, 0.85);
+	--brass: #c6a368;
+	--brass-dim: #8e7346;
+	--cream: #efe4c8;
+	--phosphor: #8cffa6;
+	--phosphor-dim: #3f9a58;
+	--term-bg: #06120a;
+	--focus: #f2c14e;
+	--serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+	--narrow: 'PT Sans Narrow', 'Arial Narrow', Arial, sans-serif;
+	--mono: 'PT Mono', 'Courier New', monospace;
+	--hand: 'Marck Script', 'Segoe Script', cursive;
+}
+
+html, body {
+	background: var(--wood-dark);
+	color: var(--cream);
+	font-family: var(--serif);
+	font-size: 17px;
+	line-height: 1.55;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background:
+		repeating-linear-gradient(92deg, rgba(0,0,0,0.12) 0 2px, transparent 2px 9px),
+		radial-gradient(ellipse at 50% 30%, var(--wood-light), var(--wood) 55%, var(--wood-dark));
+	min-height: 100vh;
+}
+
+/* SugarCube defaults we replace */
+#story { margin: 0; }
+#passages { padding: 0; }
+.passage { font-size: 1rem; }
+
+a, .link-internal, button {
+	font: inherit;
+}
+
+:focus-visible {
+	outline: 3px solid var(--focus);
+	outline-offset: 2px;
+}
+
+[lang="ru"] { font-feature-settings: normal; }
+
+/* Russian vocabulary with tooltip */
+.ru {
+	border-bottom: 1px dotted currentColor;
+	cursor: help;
+	position: relative;
+	white-space: nowrap;
+}
+.ru::after {
+	content: attr(data-tip);
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 6px);
+	transform: translateX(-50%);
+	background: #14100b;
+	color: var(--cream);
+	font: 14px/1.35 var(--narrow);
+	letter-spacing: 0.02em;
+	padding: 5px 9px;
+	border-radius: 3px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+	white-space: normal;
+	width: max-content;
+	max-width: 260px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s;
+	z-index: 50;
+}
+.ru:hover::after, .ru:focus::after, .ru:focus-visible::after { opacity: 1; }
+
+/* Historical-note stamp */
+.note-stamp, .stamp-inline {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--red);
+	color: var(--red);
+	background: rgba(255, 245, 230, 0.6);
+	font: 700 11px/1.1 var(--narrow);
+	letter-spacing: 0.08em;
+	padding: 3px 7px 2px;
+	transform: rotate(-2deg);
+	cursor: pointer;
+	vertical-align: middle;
+	margin: 0 4px;
+	border-radius: 2px;
+}
+.note-stamp small { font-weight: 400; font-size: 10px; letter-spacing: 0.04em; text-transform: uppercase; }
+.note-stamp:hover { background: rgba(163, 32, 26, 0.08); }
+.stamp-inline { display: inline-block; cursor: default; }
+
+/* Clue phrases */
+.clue {
+	background: none;
+	border: 0;
+	border-bottom: 2px dashed var(--red);
+	color: inherit;
+	padding: 0 1px;
+	cursor: pointer;
+}
+.clue:hover { background: rgba(163, 32, 26, 0.08); }
+.clue.marked {
+	border-bottom: 3px solid var(--red);
+	background: linear-gradient(transparent 55%, rgba(163, 32, 26, 0.16) 55%);
+}
+.clue.marked::after { content: ' ✓'; color: var(--red); font-size: 0.8em; }
+
+/* Toast */
+.toast {
+	position: fixed;
+	left: 50%;
+	bottom: 24px;
+	transform: translateX(-50%);
+	background: var(--paper);
+	color: var(--ink);
+	border: 2px solid var(--red);
+	font: 700 15px var(--narrow);
+	letter-spacing: 0.05em;
+	padding: 8px 16px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+	z-index: 100;
+	transition: opacity 0.5s;
+}
+.toast--out { opacity: 0; }
+
+/* Return link */
+.return-link {
+	display: inline-block;
+	margin-top: 1.5em;
+	background: none;
+	border: 1px solid var(--ink-soft);
+	color: var(--ink);
+	padding: 6px 14px;
+	cursor: pointer;
+	font-family: var(--narrow);
+	font-size: 16px;
+	letter-spacing: 0.03em;
+}
+.return-link:hover { background: rgba(0,0,0,0.06); }
+
+/* Dialog (historical notes, saves) */
+#ui-overlay.open { background: rgba(10, 6, 2, 0.75); }
+#ui-dialog {
+	background: var(--paper);
+	color: var(--ink);
+	border: 0;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+	max-width: 640px;
+}
+#ui-dialog-titlebar {
+	background: var(--paper-shade);
+	border-bottom: 2px solid var(--red);
+}
+#ui-dialog-title {
+	color: var(--red);
+	font: 700 17px var(--narrow);
+	letter-spacing: 0.06em;
+	text-transform: none;
+}
+#ui-dialog-close { color: var(--ink); }
+#ui-dialog-body { color: var(--ink); font-family: var(--serif); }
+#ui-dialog-body h3 { font: 700 13px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
+.note-date { font: 700 14px var(--narrow); color: var(--red); letter-spacing: 0.05em; margin-top: 0; }
+.note-sources { padding-left: 1.2em; font-size: 15px; }
+.note-sources li { margin-bottom: 0.4em; }
+.note-flag { font: italic 14px var(--serif); color: var(--ink-soft); border-left: 3px solid var(--brass-dim); padding-left: 0.6em; }
+#ui-dialog-body button, #ui-dialog-body .link-internal { color: var(--ink); }
+#ui-dialog .saves button, #ui-dialog-body button {
+	background: var(--paper-shade);
+	border: 1px solid var(--ink-soft);
+	color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+
+
+:: bulletin.css [stylesheet]
+/* ===== Act bulletins (teletype) and title screen ===== */
+.bulletin-sheet {
+	max-width: 680px;
+	margin: 6vh auto 0;
+	background: #f4f0e2;
+	color: var(--ink);
+	font-family: var(--mono);
+	padding: 34px 40px 30px;
+	box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+	border-top: 14px solid #ddd5bd;
+	border-bottom: 14px solid #ddd5bd;
+	background-image: repeating-linear-gradient(transparent 0 25px, rgba(0,0,0,0.035) 25px 26px);
+}
+.bulletin-head {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.16em;
+	color: var(--red);
+	border-bottom: 2px solid var(--ink);
+	padding-bottom: 8px;
+	margin-bottom: 18px;
+	flex-wrap: wrap;
+}
+.bulletin-date { font: 700 30px var(--narrow); letter-spacing: 0.12em; margin: 0 0 12px; }
+.bulletin-sheet p { margin: 0 0 1em; opacity: 0; animation: type-in 0.6s forwards; }
+.bulletin-sheet p:nth-of-type(1) { animation-delay: 0.2s; }
+.bulletin-sheet p:nth-of-type(2) { animation-delay: 0.9s; }
+.bulletin-sheet p:nth-of-type(3) { animation-delay: 1.6s; }
+.bulletin-sheet p:nth-of-type(4) { animation-delay: 2.3s; }
+.bulletin-sheet p:nth-of-type(n+5) { animation-delay: 3s; }
+@keyframes type-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.bulletin-sheet .continue a, .bulletin-sheet .continue .link-internal { color: var(--red); }
+@media (prefers-reduced-motion: reduce) { .bulletin-sheet p { opacity: 1; } }
+
+/* Title */
+html[data-kind~="title"] body {
+	background:
+		radial-gradient(ellipse at 50% 35%, rgba(163,32,26,0.35), transparent 60%),
+		radial-gradient(ellipse at 50% 40%, #3a1410, #140806 70%);
+}
+.title-screen {
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 8vh 16px 40px;
+	text-align: center;
+	color: var(--cream);
+}
+.title-star {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 18px;
+	background: var(--red);
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	filter: drop-shadow(0 0 12px rgba(255,80,60,0.4));
+}
+.title-kicker {
+	display: inline-block;
+	border: 2px solid var(--red);
+	color: #ff8b80;
+	font: 700 13px var(--narrow);
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	padding: 3px 12px;
+	transform: rotate(-2deg);
+}
+.title-main { margin: 22px 0 8px; }
+.title-ru { display: block; font: 700 clamp(34px, 7vw, 60px)/1.05 var(--narrow); letter-spacing: 0.06em; text-transform: uppercase; color: var(--paper); }
+.title-en { display: block; font: italic clamp(20px, 3.4vw, 28px) var(--serif); color: var(--brass); margin-top: 6px; }
+.title-sub { font: 16px var(--narrow); letter-spacing: 0.12em; text-transform: uppercase; color: #cbb89a; }
+.title-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin: 34px auto 30px;
+	max-width: 300px;
+}
+.title-actions br { display: none; }
+.title-actions a, .title-actions .link-internal {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 11px 18px;
+	background: var(--paper);
+	color: var(--ink);
+	font: 700 17px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+	border-left: 6px solid var(--red);
+}
+.title-actions a:hover, .title-actions .link-internal:hover { background: #fff6e2; }
+.fiction-notice {
+	font-size: 15px;
+	color: #e3d6bb;
+	background: rgba(0,0,0,0.3);
+	border: 1px solid rgba(198,163,104,0.4);
+	padding: 12px 16px;
+	text-align: left;
+}
+.fiction-notice .stamp-inline { background: var(--paper); }
+.title-credit { font: 13px var(--narrow); letter-spacing: 0.08em; color: #a8977a; margin-top: 18px; }
+
+
+
+:: desk.css [stylesheet]
+/* ===== Desk layout ===== */
+#desk {
+	display: grid;
+	grid-template-columns: 230px minmax(0, 1fr) 210px;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header header header"
+		"tray   main   instruments"
+		"bar    bar    bar";
+	min-height: 100vh;
+	gap: 0 18px;
+}
+
+#desk-header {
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	background: linear-gradient(#2b3d33, #1e2c24);
+	border-bottom: 3px solid var(--brass-dim);
+	padding: 8px 20px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+.calendar {
+	background: var(--paper);
+	color: var(--ink);
+	font: 700 15px var(--narrow);
+	letter-spacing: 0.08em;
+	padding: 4px 12px;
+	border-top: 6px solid var(--red);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.org { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.org-ru { font: 700 17px var(--narrow); letter-spacing: 0.14em; color: var(--cream); }
+.org-en { font: 13px var(--narrow); letter-spacing: 0.06em; color: #b9c4b5; }
+.clock {
+	font: 20px var(--mono);
+	color: var(--cream);
+	background: #111;
+	border: 2px solid var(--brass-dim);
+	border-radius: 4px;
+	padding: 2px 10px;
+	letter-spacing: 0.1em;
+}
+
+#passages {
+	grid-area: main;
+	padding: 28px 0 40px;
+	min-width: 0;
+}
+
+/* Side panels sit on the green desk blotter */
+#tray, #instruments {
+	padding: 24px 0;
+}
+#tray {
+	grid-area: tray;
+	padding-left: 16px;
+}
+#instruments {
+	grid-area: instruments;
+	padding-right: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+.panel-title {
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--brass);
+	border-bottom: 1px solid var(--brass-dim);
+	padding-bottom: 3px;
+	margin: 0 0 10px;
+}
+.panel-title span { color: var(--cream); margin-right: 4px; }
+.panel-empty { color: #b8a98a; font-style: italic; font-size: 15px; margin: 0 0 22px; }
+.tray-list { list-style: none; margin: 0 0 24px; padding: 0; }
+.tray-item {
+	position: relative;
+	background: linear-gradient(#d9c08a, #c8ab72);
+	color: var(--ink);
+	margin: 0 0 10px;
+	padding: 9px 10px 8px 12px;
+	border-radius: 2px 8px 2px 2px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.45);
+	font: 15px/1.3 var(--narrow);
+}
+#tray .tray-item a.link-internal { color: var(--ink); text-decoration: none; display: block; font-weight: 700; }
+.tray-item .link-internal:hover { text-decoration: underline; }
+.tray-item[data-class="secret"]::before,
+.tray-item[data-class="top-secret"]::before {
+	content: 'СЕКРЕТНО';
+	position: absolute;
+	right: 6px;
+	top: -8px;
+	font: 700 10px var(--narrow);
+	letter-spacing: 0.1em;
+	color: var(--red);
+	border: 1.5px solid var(--red);
+	background: var(--paper);
+	padding: 0 4px;
+	transform: rotate(3deg);
+}
+.tray-item[data-class="top-secret"]::before { content: 'СОВ. СЕКРЕТНО'; }
+.tray-seen { display: block; font-size: 12px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Telephone */
+.phone { text-align: center; }
+.phone-svg { width: 130px; height: auto; display: block; margin: 0 auto 6px; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.5)); }
+.ph-handset, .ph-body { fill: #e9e0c9; stroke: #6c5a3a; stroke-width: 2; }
+.ph-dial { fill: #d8cdb0; stroke: #6c5a3a; stroke-width: 2; }
+.ph-hub { fill: var(--red); }
+.phone.ringing .phone-svg { animation: ring 0.5s infinite; }
+.phone.ringing .ph-hub { fill: #ff3b2f; }
+@keyframes ring {
+	0%, 100% { transform: rotate(0); }
+	20% { transform: rotate(-6deg); }
+	40% { transform: rotate(6deg); }
+	60% { transform: rotate(-4deg); }
+	80% { transform: rotate(4deg); }
+}
+.phone-label { font: 14px var(--narrow); color: #cdbf9e; margin: 0 0 6px; letter-spacing: 0.05em; }
+.phone .link-internal {
+	display: inline-block;
+	background: var(--red);
+	color: #fff;
+	font: 700 15px var(--narrow);
+	letter-spacing: 0.06em;
+	padding: 6px 14px;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+/* Terminal card */
+.terminal-card { text-align: center; }
+.term-screen {
+	background: var(--term-bg);
+	border: 8px solid #c9c2b0;
+	border-radius: 8px;
+	box-shadow: inset 0 0 12px rgba(140,255,166,0.25), 0 3px 6px rgba(0,0,0,0.5);
+	color: var(--phosphor);
+	font: 14px var(--mono);
+	padding: 14px 8px;
+	margin: 0 auto 8px;
+	max-width: 160px;
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+}
+.term-cursor { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.terminal-card .link-internal { color: var(--phosphor); font: 15px var(--narrow); letter-spacing: 0.05em; }
+
+/* Bottom drawer bar */
+#desk-bar {
+	grid-area: bar;
+	background: linear-gradient(#2a1a0f, #1a100a);
+	border-top: 3px solid var(--brass-dim);
+	padding: 8px 16px;
+}
+.bar-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 6px 22px;
+}
+.bar-list a, .bar-list .link-internal {
+	color: var(--brass);
+	font: 700 15px var(--narrow);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.bar-list a:hover { color: var(--cream); }
+
+/* Full-screen passages hide the desk furniture */
+html[data-kind~="title"] #desk-header, html[data-kind~="title"] #tray,
+html[data-kind~="title"] #instruments, html[data-kind~="title"] #desk-bar,
+html[data-kind~="bulletin"] #desk-header, html[data-kind~="bulletin"] #tray,
+html[data-kind~="bulletin"] #instruments, html[data-kind~="bulletin"] #desk-bar,
+html[data-kind~="academic"] #tray, html[data-kind~="academic"] #instruments,
+html[data-kind~="academic"] #desk-header {
+	display: none;
+}
+html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kind~="academic"] #desk {
+	grid-template-columns: minmax(0, 1fr);
+	grid-template-areas: "main" "bar";
+	grid-template-rows: 1fr auto;
+}
+
+
+
+:: dialogue.css [stylesheet]
+/* ===== Scenes, conversations, phone calls ===== */
+.scene-body {
+	max-width: 700px;
+	margin: 0 auto;
+	color: var(--cream);
+	font-size: 1.04rem;
+}
+.scene-body p { margin: 0 0 1em; }
+.scene-body .lead {
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--brass);
+	margin-bottom: 1.2em;
+}
+.scene-body a, .scene-body .link-internal { color: #f3cf86; }
+.scene-body em { color: #f6ead0; }
+
+.speaker {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	background: rgba(0,0,0,0.28);
+	border-left: 4px solid var(--brass);
+	padding: 10px 14px;
+	margin: 0 0 18px;
+}
+.speaker-portrait {
+	flex: none;
+	width: 58px;
+	height: 58px;
+	border-radius: 50%;
+	background: #c9b993;
+	border: 3px solid var(--brass-dim);
+	position: relative;
+	overflow: hidden;
+	filter: sepia(0.4);
+}
+.speaker-portrait::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 11px;
+	width: 22px;
+	height: 24px;
+	transform: translateX(-50%);
+	background: #3a2c1e;
+	border-radius: 50% 50% 46% 46%;
+}
+.speaker-portrait::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: -12px;
+	width: 50px;
+	height: 30px;
+	transform: translateX(-50%);
+	background: #3a2c1e;
+	border-radius: 50% 50% 0 0;
+}
+.speaker[data-who="belova"] .speaker-portrait::before { width: 26px; height: 28px; border-radius: 50% 50% 40% 40%; }
+.speaker[data-who="zaitsev"] .speaker-portrait { background: #b9b2a0; }
+.speaker[data-who="markova"] .speaker-portrait { background: #c3a98c; }
+.speaker-name { font: 700 17px var(--narrow); letter-spacing: 0.05em; color: var(--cream); display: block; }
+.speaker-role { font: 14px var(--narrow); color: #c8bb9c; letter-spacing: 0.03em; }
+
+.say { margin: 0 0 0.9em; }
+.say::before { content: '— '; color: var(--brass); }
+
+.choices {
+	margin: 1.6em 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.choices br { display: none; }
+.choices a, .choices .link-internal {
+	display: block;
+	background: linear-gradient(#f4ecd9, #e6d9ba);
+	color: var(--ink);
+	text-decoration: none;
+	padding: 11px 16px 11px 40px;
+	border-left: 6px solid var(--red);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+	position: relative;
+	font-family: var(--serif);
+	line-height: 1.4;
+	transition: transform 0.12s;
+}
+.choices a::before, .choices .link-internal::before {
+	content: '▸';
+	position: absolute;
+	left: 16px;
+	color: var(--red);
+}
+.choices a:hover, .choices .link-internal:hover { transform: translateX(4px); }
+.choice-hint { display: block; font: 13px var(--narrow); color: var(--ink-soft); letter-spacing: 0.04em; margin-top: 2px; }
+
+.continue { margin-top: 1.6em; }
+.continue a, .continue .link-internal {
+	font: 700 16px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #f3cf86;
+}
+
+/* Phone calls */
+.call {
+	background: rgba(0,0,0,0.35);
+	border: 1px solid var(--brass-dim);
+	padding: 18px 22px;
+}
+.call-header {
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--red);
+	background: var(--paper);
+	display: inline-block;
+	padding: 2px 10px;
+	margin-bottom: 14px;
+}
+.call .say { font-family: var(--mono); font-size: 15.5px; }
+
+/* Branch in development / ending cards */
+.stub-card, .ending-card {
+	max-width: 640px;
+	margin: 0 auto;
+	background: var(--paper);
+	color: var(--ink);
+	padding: 36px 40px;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+	border-top: 10px solid var(--red);
+}
+.stub-card h1, .ending-card h1 { font: 700 26px var(--narrow); letter-spacing: 0.08em; margin: 0 0 4px; }
+.stub-card .ru-name, .ending-card .ru-name { display: block; font: 700 18px var(--narrow); color: var(--red); letter-spacing: 0.1em; }
+.stub-flag {
+	display: inline-block;
+	border: 2px dashed var(--ink-soft);
+	font: 700 14px var(--narrow);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 4px 10px;
+	margin: 12px 0;
+}
+.stub-card a, .stub-card .link-internal, .ending-card a, .ending-card .link-internal, .stub-card button { color: var(--red); }
+.concept-box { border-left: 4px solid var(--red); background: rgba(0,0,0,0.04); padding: 10px 14px; margin: 18px 0; }
+.concept-box h2 { font: 700 14px var(--narrow); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 6px; }
+
+@media (max-width: 600px) {
+	.stub-card, .ending-card { padding: 26px 18px; }
+}
+
+.scene-body p:empty, .doc p:empty, .bulletin-sheet p:empty, .ending-card p:empty, .stub-card p:empty, .academic-page p:empty { display: none; }
+
+
+
+:: document.css [stylesheet]
+/* ===== Paper: documents, notebook, side sheets ===== */
+.doc, .sheet {
+	position: relative;
+	background:
+		radial-gradient(ellipse at 20% 10%, rgba(255,255,255,0.35), transparent 60%),
+		linear-gradient(var(--paper), var(--paper-shade));
+	color: var(--ink);
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 40px 48px 36px;
+	box-shadow: 0 1px 0 var(--paper-edge), 0 12px 30px rgba(0,0,0,0.55);
+	font-family: var(--serif);
+	overflow-x: clip;
+}
+.doc { font-family: var(--mono); font-size: 15.5px; line-height: 1.6; }
+.doc::before {
+	/* paper clip */
+	content: '';
+	position: absolute;
+	top: -14px;
+	left: 46px;
+	width: 16px;
+	height: 44px;
+	border: 3px solid #8b8b8b;
+	border-radius: 9px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+.sheet h1, .doc h1 {
+	font: 700 22px var(--narrow);
+	letter-spacing: 0.08em;
+	margin: 0 0 0.8em;
+	color: var(--ink);
+}
+.sheet a, .sheet .link-internal, .doc a, .doc .link-internal { color: var(--red); }
+
+.doc-header {
+	text-align: center;
+	font-family: var(--narrow);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	border-bottom: 2px solid var(--ink);
+	padding-bottom: 10px;
+	margin-bottom: 18px;
+}
+.doc-header .doc-org { display: block; font-weight: 700; font-size: 18px; }
+.doc-header .doc-sub { display: block; font-size: 14px; color: var(--ink-soft); }
+.doc-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 4px 20px;
+	font-size: 13.5px;
+	color: var(--ink-soft);
+	margin-bottom: 18px;
+}
+.doc-title { text-align: center; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 14px; }
+.doc p { margin: 0 0 0.9em; }
+.doc-translation {
+	font-family: var(--serif);
+	font-style: italic;
+	font-size: 14.5px;
+	color: var(--ink-soft);
+	border-left: 2px solid var(--paper-edge);
+	padding-left: 10px;
+}
+.doc-sign { margin-top: 22px; text-align: right; }
+.doc-footer { margin-top: 28px; padding-top: 14px; border-top: 1px dashed var(--paper-edge); font-family: var(--serif); }
+
+.stamp {
+	position: absolute;
+	font: 700 20px var(--narrow);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	padding: 4px 12px;
+	border: 3px double currentColor;
+	border-radius: 4px;
+	transform: rotate(-8deg);
+	mix-blend-mode: multiply;
+	pointer-events: none;
+	opacity: 0.88;
+}
+.stamp--red { color: var(--red-ink); top: 26px; right: 30px; }
+.stamp--violet { color: var(--violet-ink); bottom: 70px; right: 60px; transform: rotate(6deg); font-size: 16px; }
+.stamp--date { color: var(--violet-ink); font-size: 14px; border-radius: 50%; padding: 14px 10px; border-width: 2px; border-style: solid; }
+
+.margin-note {
+	font-family: var(--hand);
+	font-size: 21px;
+	line-height: 1.2;
+	color: #2f4a8a;
+	transform: rotate(-2deg);
+	margin: 6px 0 14px 20px;
+}
+
+.routing-slip {
+	background: #f6efe0;
+	border: 1px solid var(--paper-edge);
+	padding: 12px 14px;
+	margin: 0 0 16px;
+	font-size: 14px;
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.08);
+}
+.routing-slip table { width: 100%; border-collapse: collapse; }
+.routing-slip th, .routing-slip td { border: 1px solid #b9a77f; padding: 4px 6px; text-align: left; vertical-align: top; }
+.routing-slip th { font-family: var(--narrow); letter-spacing: 0.06em; font-weight: 700; background: rgba(0,0,0,0.04); }
+
+.redacted { background: var(--ink); color: transparent; user-select: none; padding: 0 2px; }
+
+/* Notebook & dictionary */
+.notebook { background: repeating-linear-gradient(var(--paper) 0 27px, #c8d3de 27px 28px); font-family: var(--serif); }
+.state-of-mind { font-style: italic; color: var(--ink-soft); }
+.clue-list li { margin-bottom: 0.5em; }
+.clue-key { display: block; font-size: 14px; color: var(--ink-soft); }
+.clue-key code { font-family: var(--mono); color: var(--red); }
+.dict { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+.dict dt { font-weight: 700; }
+.dict dd { margin: 0; }
+.notes-list { padding-left: 1.2em; }
+.note-date-inline { color: var(--ink-soft); font-size: 14px; }
+
+@media (max-width: 600px) {
+	.doc, .sheet { padding: 30px 18px 24px; }
+	.stamp { font-size: 15px; }
+	.stamp--red { top: 10px; right: 8px; }
+	.dict { grid-template-columns: 1fr; }
+	.dict dd { margin-bottom: 8px; }
+}
+
+
+
+:: responsive.css [stylesheet]
+/* ===== Narrow screens: panels stack below the passage ===== */
+@media (max-width: 900px) {
+	#desk {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas: "header" "main" "instruments" "tray" "bar";
+		grid-template-rows: auto;
+		gap: 0;
+	}
+	#desk-header { padding: 8px 12px; flex-wrap: wrap; }
+	.org-en { display: none; }
+	#passages { padding: 16px 12px 24px; }
+	#tray, #instruments { padding: 12px 16px; }
+	#instruments { flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; }
+	.phone-svg { width: 96px; }
+}
+@media (max-width: 480px) {
+	html, body { font-size: 16px; }
+	.calendar { font-size: 13px; }
+	.clock { font-size: 16px; }
+	.org-ru { font-size: 14px; letter-spacing: 0.08em; }
+}
+
+
+
+:: terminal.css [stylesheet]
+/* ===== Registry terminal (ES-1841-style monochrome display) ===== */
+.term-wrap { max-width: 760px; margin: 0 auto; }
+.term-bezel {
+	background: linear-gradient(#d6cfbd, #b9b19b);
+	border-radius: 14px;
+	padding: 22px;
+	box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 14px 30px rgba(0,0,0,0.6);
+}
+.term-crt {
+	position: relative;
+	background: radial-gradient(ellipse at center, #0b1d10, var(--term-bg) 75%);
+	color: var(--phosphor);
+	font: 16px/1.5 var(--mono);
+	border-radius: 18px / 26px;
+	padding: 20px 22px;
+	min-height: 320px;
+	box-shadow: inset 0 0 30px rgba(0,0,0,0.9), inset 0 0 6px rgba(140,255,166,0.3);
+	text-shadow: 0 0 6px rgba(140,255,166,0.55);
+	overflow: hidden;
+}
+.term-crt::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,0.22) 2px 3px);
+	pointer-events: none;
+}
+.term-boot { color: var(--phosphor); border-bottom: 1px dashed var(--phosphor-dim); padding-bottom: 8px; margin-bottom: 8px; text-transform: uppercase; font-size: 14px; }
+.term-help { color: var(--phosphor-dim); font-size: 14px; margin-bottom: 12px; }
+#term-output { max-height: 260px; overflow-y: auto; margin-bottom: 10px; }
+.term-line { white-space: pre-wrap; }
+.term-echo { color: #d8ffe0; margin-top: 8px; }
+.term-warn { color: #ffd27a; text-shadow: 0 0 6px rgba(255,210,122,0.5); }
+#term-form { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#term-form label { color: var(--phosphor); }
+#term-input {
+	flex: 1 1 140px;
+	min-width: 0;
+	background: transparent;
+	border: 0;
+	border-bottom: 2px solid var(--phosphor-dim);
+	color: var(--phosphor);
+	font: 16px var(--mono);
+	caret-color: var(--phosphor);
+	text-transform: uppercase;
+	padding: 2px 4px;
+}
+#term-input:focus { outline: none; border-bottom-color: var(--phosphor); }
+.term-enter, .term-open {
+	background: transparent;
+	border: 1px solid var(--phosphor);
+	color: var(--phosphor);
+	font: 14px var(--mono);
+	padding: 2px 10px;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+.term-enter:hover, .term-open:hover { background: rgba(140,255,166,0.12); }
+.term-open { margin-top: 6px; }
+.term-cards { margin-top: 22px; color: var(--cream); }
+.term-cards-title { font: 700 15px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); }
+.term-empty { font-style: italic; color: #cdbf9e; }
+.term-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.term-chip {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: #f4ecd9;
+	color: var(--ink);
+	border: 0;
+	border-top: 4px solid var(--red);
+	padding: 6px 12px 8px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.45);
+	cursor: pointer;
+	text-align: left;
+	max-width: 240px;
+}
+.chip-key { font: 700 15px var(--mono); color: var(--red); }
+.chip-label { font: 13px var(--narrow); color: var(--ink-soft); }
+.term-cards .return-link { color: var(--cream); border-color: var(--brass-dim); }
+.term-note { display: inline-block; margin-left: 12px; }
+@media (max-width: 600px) { .term-bezel { padding: 10px; } .term-crt { padding: 14px; font-size: 14px; } }
+
+
+

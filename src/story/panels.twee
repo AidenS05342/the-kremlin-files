@@ -30,4 +30,5 @@
 <li><<link "Save / Load">><<run UI.saves()>><</link>></li>
 <li>[[About|About]]</li>
 <li>[[Bibliography|Bibliography]]</li>
+<li>[[Title|Start]]</li>
 </ul>

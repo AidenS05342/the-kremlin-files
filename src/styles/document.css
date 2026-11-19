@@ -10,6 +10,7 @@
 	padding: 40px 48px 36px;
 	box-shadow: 0 1px 0 var(--paper-edge), 0 12px 30px rgba(0,0,0,0.55);
 	font-family: var(--serif);
+	overflow-x: clip;
 }
 .doc { font-family: var(--mono); font-size: 15.5px; line-height: 1.6; }
 .doc::before {

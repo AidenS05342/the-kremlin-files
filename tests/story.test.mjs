@@ -130,3 +130,8 @@ test('the three unfinished endings are stubs and the Survivor ending is complete
   const s = passages.get('Epilogue_Survivor');
   assert.ok(s && s.tags.includes('ending'));
 });
+
+test('macro expressions use backticks, not bare parentheses (SugarCube 2.30)', () => {
+  const bad = [...passages.values()].filter((p) => /<<(goto|include|link|button)\s+\(/.test(p.text)).map((p) => p.name);
+  assert.deepEqual(bad, []);
+});

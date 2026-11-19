@@ -1,0 +1,30 @@
+:: Credits [academic]
+<div class="academic-page">
+<h1>Credits</h1>
+<p class="subtitle">The Kremlin Files · prototype, November 2026</p>
+
+<h2>Project</h2>
+
+Concept, historical research direction and design decisions: Aiden Smith, Digital Humanities, University of Tennessee. Developed with the assistance of Claude, an AI model by Anthropic, in Claude Code. An AI use log documents that collaboration.
+
+<h2>Software</h2>
+
+<ul>
+<li><strong>SugarCube 2</strong> story format, by Thomas Michael Edwards: BSD 2-Clause License.</li>
+<li><strong>Tweego</strong> compiler, by Thomas Michael Edwards: BSD 2-Clause License.</li>
+<li><strong>Twine 2</strong>, by Chris Klimas and contributors: GPL-3.0. The source is compatible with the Twine 2 editor.</li>
+</ul>
+
+<h2>Fonts</h2>
+
+<ul>
+<li><strong>PT Serif, PT Sans Narrow, PT Mono</strong>, by ParaType: SIL Open Font License 1.1, served by Google Fonts.</li>
+<li><strong>Marck Script</strong>, by Denis Masharov: SIL Open Font License 1.1, served by Google Fonts.</li>
+</ul>
+
+<h2>Images</h2>
+
+All visual elements (the desk, telephone, terminal, stamps and paper) are drawn with original CSS and SVG. No photographs or third-party images are used.
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[About this project|About]] [[Bibliography|Bibliography]] [[Title screen|Start]]</div>
+</div>

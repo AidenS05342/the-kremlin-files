@@ -31,3 +31,10 @@
 		}
 	});
 }());
+
+/* Favicon: a red star, drawn inline (no image file needed). */
+(function () {
+	'use strict';
+	var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon fill="%23a3201a" points="50,4 61,38 97,38 68,59 79,94 50,72 21,94 32,59 3,38 39,38"/></svg>';
+	$('<link rel="icon" type="image/svg+xml">').attr('href', 'data:image/svg+xml,' + svg).appendTo('head');
+}());

@@ -140,3 +140,13 @@ test('sortedGlossary sorts encountered words by Russian form', () => {
 test('plainTitle strips markup from note titles', () => {
   assert.equal(setup.plainTitle('swan-lake'), 'Swan Lake on television');
 });
+
+// ---- Bibliography (Task 12) ----
+test('sourcesByType groups and sorts sources alphabetically by citation', () => {
+  const scholarly = [...setup.sourcesByType('scholarly')];
+  const primary = [...setup.sourcesByType('primary')];
+  assert.ok(scholarly.length >= 9 && primary.length >= 4);
+  assert.ok(scholarly.every((k) => setup.sources[k].type === 'scholarly'));
+  const texts = scholarly.map((k) => setup.sources[k].chicago.replace(/<[^>]+>/g, ''));
+  assert.deepEqual(texts, [...texts].sort((a, b) => a.localeCompare(b)));
+});

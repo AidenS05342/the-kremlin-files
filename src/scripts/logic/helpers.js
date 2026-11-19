@@ -23,6 +23,13 @@
 		});
 	};
 
+	setup.sourcesByType = function (type) {
+		var plain = function (k) { return setup.sources[k].chicago.replace(/<[^>]+>/g, ''); };
+		return Object.keys(setup.sources)
+			.filter(function (k) { return setup.sources[k].type === type; })
+			.sort(function (a, b) { return plain(a).localeCompare(plain(b)); });
+	};
+
 	setup.plainTitle = function (noteId) {
 		return setup.notes[noteId].title.replace(/<[^>]+>/g, '');
 	};

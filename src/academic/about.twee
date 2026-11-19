@@ -1,0 +1,67 @@
+:: About [academic]
+<div class="academic-page">
+<h1>About This Project</h1>
+<p class="subtitle">The Kremlin Files · a Digital Humanities project · University of Tennessee</p>
+
+<h2>Purpose</h2>
+
+<em>The Kremlin Files</em> is an interactive historical mystery about the collapse of the Soviet Union. Its argument is that the collapse was not a single event but a contested political transition, full of competing interests, institutional instability and real uncertainty about the future. The player experiences that transition from inside one of the institutions that was collapsing: the apparatus of the Communist Party's Central Committee on Staraya Ploshchad in Moscow.
+
+<h2>Historical background</h2>
+
+By 1991, Mikhail Gorbachev's reforms had loosened the Communist Party's monopoly on power. Competitive elections had brought new leaders to prominence, above all Boris Yeltsin, elected President of the Russian republic in June 1991. Several republics were pressing for independence, and Gorbachev had negotiated a new Union Treaty that would turn the USSR into a looser "Union of Sovereign States." It was due to be signed on 20 August 1991.
+
+On 19 August, the day before the signing, a group of senior officials, including the vice president, the head of the KGB, the defence minister and the interior minister, declared a State Committee on the State of Emergency. They isolated Gorbachev at his holiday home in Crimea, banned most newspapers and sent troops into Moscow. Tens of thousands of people gathered to defend the Russian parliament building, the "White House," where Yeltsin denounced the coup. Within three days it had collapsed. In its aftermath, Yeltsin suspended the Communist Party in Russia, the Central Committee's buildings were sealed, and by the end of December 1991 the Soviet Union no longer existed.
+
+The game's prologue takes place on 12 August. Its acts follow 19, 20–21 and 23 August, and its epilogue is set on 25 December 1991, the day Gorbachev resigned.
+
+<h2>Political science concepts</h2>
+
+<div class="concept"><h3>Political legitimacy</h3>
+<p>The belief, among citizens and elites, that those in power have the right to rule and should be obeyed. Legitimacy, not force alone, is what makes orders effective.</p>
+<p class="tie">In the game: Volkov can ask Rudin "on what legal basis" the Committee acts, and Belova calls from a crowd that refuses its authority. Ending: <em>The Witness</em>, in which legitimacy passes to new institutions.</p></div>
+
+<div class="concept"><h3>Authoritarianism</h3>
+<p>Rule by a leader or small group that is not accountable through free and competitive elections and that restricts political pluralism and civil liberties.</p>
+<p class="tie">In the game: the Committee's "list of measures" covers newspaper bans, controlled broadcasts and lists of people requiring "special attention." Ending: <em>The Scapegoat</em>, which shows what happens to individuals caught in an authoritarian structure as it collapses.</p></div>
+
+<div class="concept"><h3>Democratization</h3>
+<p>A transition toward a political system in which leaders are chosen in competitive elections and civil liberties are protected. Juan Linz and Alfred Stepan stress that a transition is only complete when the new rules become "the only game in town."</p>
+<p class="tie">In the game: Yeltsin's appeal from the tank, the crowds at the White House and the journalists who keep printing. Ending: <em>The Witness</em>.</p></div>
+
+<div class="concept"><h3>Regime change</h3>
+<p>The replacement of the fundamental rules and institutions of a political system, not merely of its leaders. A regime can change while many of the people who ran it remain in power.</p>
+<p class="tie">In the game: the suspension of the Party, the sealing of Staraya Ploshchad and the end of the USSR. Ending: <em>The Survivor</em>, which shows regime change without elite turnover.</p></div>
+
+<div class="concept"><h3>Institutional collapse</h3>
+<p>The loss of an institution's capacity to enforce its rules and command compliance. Steven Solnick describes the Soviet case as a kind of "bank run," in which officials at every level stopped obeying the hierarchy and seized what they could, so the institutions emptied out from within.</p>
+<p class="tie">In the game: the packet that bypasses the registry, the papers burning in office sinks, the order to shred everything. Ending: <em>The Loyalist</em>, who stays loyal to an institution that no longer exists.</p></div>
+
+<h2>Educational objectives</h2>
+
+<ul>
+<li>Understand the August 1991 coup and the end of the USSR as a process with several possible outcomes, not a foregone conclusion.</li>
+<li>Apply the concepts of legitimacy, authoritarianism, democratization, regime change and institutional collapse to a concrete historical case.</li>
+<li>Recognize the moral ambiguity of individual choices inside institutions under stress: loyalty, reform and survival each have costs.</li>
+<li>Practice distinguishing documented history from historical fiction.</li>
+<li>Encounter beginner Russian vocabulary in a meaningful context.</li>
+</ul>
+
+<h2>Fact and fiction</h2>
+
+The protagonist, Andrei Nikolaevich Volkov, and his colleagues Rudin, Belova and Zaitsev are fictional, as is the journalist Lena Markova (although <em>Moscow News</em> was a real newspaper). So are Packet 7/С, every document in the player's tray and every conversation. Real people appear only through their documented public actions. Everything marked with the red stamp <span class="stamp-inline">ИСТОРИЧЕСКАЯ СПРАВКА</span> is documented history and opens a note with its sources. The registry terminal is a plausible reconstruction and is labelled as one.
+
+<h2>How Russian is used</h2>
+
+Russian words appear with a dotted underline. Hover over one, or tap it, to see the Cyrillic, a transliteration and the English meaning. Each word you meet is added to the Dictionary in the desk drawer. Nothing in the story requires knowing Russian.
+
+<h2>Project status</h2>
+
+This is a <strong>prototype</strong> (November 2026). The Prologue and Act I are fully playable and branching, and one complete route leads through Acts II–III to <em>The Survivor</em>. The endings <em>The Witness</em>, <em>The Loyalist</em> and <em>The Scapegoat</em> are designed and currently appear as clearly marked "in development" cards. Planned work includes the remaining branches and endings, more documents and vocabulary, ambient sound and page-level verification of every citation.
+
+<h2>Built with</h2>
+
+Twine 2 story format SugarCube 2, compiled with Tweego. Source code and development history are in the project's GitHub repository.
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[Bibliography|Bibliography]] [[Credits|Credits]] [[Title screen|Start]]</div>
+</div>

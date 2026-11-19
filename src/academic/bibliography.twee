@@ -1,0 +1,15 @@
+:: Bibliography [academic]
+<div class="academic-page">
+<h1>Bibliography</h1>
+<p class="subtitle">Preliminary · Chicago notes-bibliography style</p>
+
+Sources marked <span class="unverified">awaiting verification</span> have not yet been checked against a library catalogue or publisher record. Page-level citations for the historical notes are also still being verified.
+
+<h2>Scholarly sources</h2>
+<ul class="bib"><<for _k range setup.sourcesByType("scholarly")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<h2>Primary sources</h2>
+<ul class="bib"><<for _k range setup.sourcesByType("primary")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[About this project|About]] [[Credits|Credits]] [[Title screen|Start]]</div>
+</div>
