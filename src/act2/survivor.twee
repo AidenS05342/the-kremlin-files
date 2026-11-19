@@ -1,0 +1,90 @@
+:: Act2_Bulletin [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>«ЭХО МОСКВЫ» · RADIO</span><span>ДЕЙСТВИЕ II · ACT II</span></div>
+<div class="bulletin-date">ВТОРНИК, 20 АВГУСТА 1991</div>
+
+Overnight the barricades around the Russian parliament grew. Trolleybuses, concrete blocks, park benches, anything that could be dragged. By afternoon tens of thousands of people are standing in the rain around the <<ru "bely-dom">>. <<note "white-house-defense">>
+
+The State Committee declares a curfew in Moscow from 23:00. Everyone says the storm of the White House will come tonight.
+
+At Staraya Ploshchad the corridors are almost silent. Nobody has had any instructions since yesterday's telegrams.
+
+<div class="continue"><<link "Go to the archive →">><<set $time to "10:30">><<goto "A2_Archive">><</link>></div>
+</div>
+
+
+:: A2_Archive [scene conversation]
+<div class="scene-body">
+<p class="lead">The archive · 20 August · 10:30</p>
+<div class="speaker" data-who="zaitsev"><div class="speaker-portrait"></div><div><span class="speaker-name">Pyotr Fomich Zaitsev</span><span class="speaker-role">Archivist</span></div></div>
+
+Zaitsev has made tea for two. He has never made tea for you before.
+
+<p class="say">In 1953, when Beria fell, the men who kept their jobs were not the brave ones or the loyal ones. They were the ones who still had their papers when the new people arrived. In 1964 it was the same. Paper outlives everyone, Andrei Nikolaevich.</p>
+
+<p class="say">Whatever happens at the White House tonight, the people who win will need to know where everything is. Keep your papers dry.</p>
+
+<<if $kept.includes("d4")>>Packet 7/С is in your desk drawer upstairs.<<else>>Packet 7/С is back in box twelve, a few metres from where you are sitting. Zaitsev glances at the cabinet, then at you.<</if>>
+
+<div class="choices"><<if $kept.includes("d4")>><<link "Keep the file as insurance. Say nothing to anyone.">><<run setup.addPull(State.variables, "survival", 2)>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><<else>><<link "Take the file back out of box twelve and keep it.">><<run setup.addPull(State.variables, "survival", 2); setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.insurance to true>><<goto "A2_Intercept">><</link>><</if>>
+<<link "Take the file to the press. Let the country see it.">><<goto "Stub_Witness">><</link>>
+<<link "Give the file to Rudin and let the Party deal with it.">><<goto "Stub_Loyalist">><</link>></div>
+</div>
+
+
+:: A2_Intercept [scene]
+<<if not $flags.a2Intercept>><<set $flags.a2Intercept to true>><<run State.variables.tray.pushUnique("d5")>><</if>>
+<div class="scene-body">
+<p class="lead">Room 412 · 20 August · 17:15</p>
+
+Late in the afternoon Zaitsev comes up to your floor, which he never does, and leaves a sheet of flimsy paper on your desk without a word. A transcript. Someone in the special communications service owed him a favour.
+
+<<if not ($docs.d5 and $docs.d5.seen)>><div class="choices">[[Read the transcript|D5_Intercept]]</div><<else>>You read it twice. Someone on the other side of the barricades is already planning for the morning after. They are not looking for heroes; they are looking for people who know where the files are.
+
+The curfew begins at eleven. You wait until the floor is empty, then pick up the city line and dial the number with your finger, one hole at a time.
+
+<div class="choices"><<link "Dial 205-41-07">><<set $time to "23:40">><<goto "A2_Call_Aide">><</link>></div><</if>>
+</div>
+
+
+:: A2_Call_Aide [scene phone]
+<div class="scene-body"><div class="call">
+<span class="call-header">☎ City line · 20 August · 23:41</span>
+<div class="speaker" data-who="aide"><div class="speaker-portrait"></div><div><span class="speaker-name">“Sergei”</span><span class="speaker-role">Says only that he works “for the Russian government”</span></div></div>
+
+The line crackles. Behind the voice there are other voices, a radio, someone shouting about armoured vehicles on the Garden Ring.
+
+<p class="say">Staraya Ploshchad? Good. Listen carefully, I don't have much time. Tonight may go very badly. If it doesn't, in a week there will be no Central Committee. There will be a Russian government that has to run everything, and it has no idea where anything is kept.</p>
+
+<p class="say">We need people who know the system. Not the bosses. The ones who did the actual work. If you have something that shows good faith, bring it. We'll remember who helped.</p>
+
+<div class="choices"><<link "“I have something. I'll bring it when this is over.”">><<run setup.addPull(State.variables, "survival", 1)>><<set $flags.aideContact to true>><<goto "A2_Night">><</link>>
+<<link "Hang up. This is not what you want to become.">><<goto "Stub_Witness">><</link>></div>
+</div></div>
+
+
+:: A2_Night [scene]
+<div class="scene-body">
+<p class="lead">Kutuzovsky Prospekt · night of 20–21 August</p>
+
+You do not sleep. Around one in the morning the shortwave radio reports gunfire near the White House. In an underpass on the Garden Ring, a crowd has tried to stop a column of armoured vehicles. Three young men are dead. <<note "three-deaths">>
+
+Your wife sits up beside you in the dark until dawn. Neither of you says anything about what you are listening for.
+
+<div class="continue"><<link "Wednesday, 21 August →">><<goto "A2_Collapse">><</link>></div>
+</div>
+
+
+:: A2_Collapse [bulletin]
+<div class="bulletin-sheet">
+<div class="bulletin-head"><span>ТАСС · 21.08.91</span><span>ДЕЙСТВИЕ II · ACT II</span></div>
+<div class="bulletin-date">СРЕДА, 21 АВГУСТА 1991</div>
+
+There is no storm. In the morning the armoured columns begin to leave Moscow. By evening the State Committee has fallen apart. Several of its members fly to Crimea to see Gorbachev, and Gorbachev flies back to Moscow in the early hours of the next day. <<note "coup-collapse">>
+
+Crowds celebrate outside the White House. Russian tricolour flags are everywhere.
+
+At Staraya Ploshchad, someone on your floor is burning papers in an office sink. Nobody asks what they are.
+
+<div class="continue"><<link "Friday, 23 August →">><<set $act to "act3">><<set $date to "23 АВГ 1991">><<set $time to "14:00">><<goto "A3_Order">><</link>></div>
+</div>

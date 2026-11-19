@@ -151,4 +151,4 @@
 	.stub-card, .ending-card { padding: 26px 18px; }
 }
 
-.scene-body p:empty, .doc p:empty, .bulletin-sheet p:empty { display: none; }
+.scene-body p:empty, .doc p:empty, .bulletin-sheet p:empty, .ending-card p:empty, .stub-card p:empty, .academic-page p:empty { display: none; }

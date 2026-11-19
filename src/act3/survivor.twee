@@ -1,0 +1,36 @@
+:: A3_Order [scene conversation]
+<div class="scene-body">
+<p class="lead">Room 412 · Friday, 23 August · 14:00</p>
+
+This morning Yeltsin signed a decree suspending the Communist Party's activity in Russia. <<note "cpsu-suspended">> By noon there was a crowd outside on Staraya Ploshchad, and by one o'clock it was a large crowd, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
+
+Rudin comes into your office without knocking. His tie is gone. He is carrying an empty cardboard box.
+
+<div class="speaker" data-who="rudin"><div class="speaker-portrait"></div><div><span class="speaker-name">Gennady Ivanovich Rudin</span><span class="speaker-role">Deputy head of sector</span></div></div>
+
+<p class="say">All special correspondence goes to the shredder. All of it, Andrei Nikolaevich, in the next hour. Box twelve, the cipher drafts, your drawer. It is a <<ru "prikaz">>, an order.</p>
+
+<p class="say">We did nothing wrong. But they will not see it that way.</p>
+
+<<if $kept.includes("d4")>>Packet 7/С is in your drawer. Your briefcase is under the desk.<<else>>Packet 7/С is in box twelve, and box twelve is about to be emptied.<</if>>
+
+<div class="choices"><<link "Slip Packet 7/С into your briefcase. Shred everything else.">><<run setup.addExposure(State.variables, 1); setup.setDoc(State.variables, "d4", "held"); State.variables.kept.pushUnique("d4")>><<set $flags.finalDecision to "kept">><<set $time to "16:30">><<goto "A3_Exit">><</link>>
+<<link "Feed Packet 7/С into the shredder yourself.">><<goto "Stub_Loyalist">><</link>><<if $flags.markovaContact>>
+<<link "Phone Lena Markova and tell her you are coming with the file.">><<goto "Stub_Witness">><</link>><</if>></div>
+</div>
+
+
+:: A3_Exit [scene]
+<div class="scene-body">
+<p class="lead">Entrance 5 · 23 August · 16:30</p>
+
+At half past four the order comes: everyone out. The building is to be sealed. <<note "old-square-sealed">> Staff file down the stairs with their coats over their arms. Some are carrying bags they did not arrive with. Outside, the crowd parts for you, slowly and with contempt.
+
+Your briefcase feels as heavy as a person. A policeman at the door looks at every face.
+
+<<if setup.resolveEnding(State.variables) is "scapegoat">>He looks at yours for a long time. Then he looks at a list.
+
+<div class="continue"><<link "Continue →">><<goto "Stub_Scapegoat">><</link>></div><<else>>He looks at yours, and then at the next one. The doors close behind you. Someone fixes a wax <<ru "pechat">>, a seal, across the handles. The sign on the door now reads <<ru "zakryto">>.
+
+<div class="continue"><<link "December 1991 →">><<set $act to "epilogue">><<set $date to "25 ДЕК 1991">><<set $time to "19:30">><<goto "Epilogue_Survivor">><</link>></div><</if>>
+</div>

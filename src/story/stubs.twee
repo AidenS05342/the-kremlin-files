@@ -1,0 +1,43 @@
+:: Stub_Witness [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Свидетель</span>
+<h1>The Witness</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+In this ending, Volkov gives Packet 7/С to investigators or the press. It explores <strong>democratization</strong> and the transfer of <strong>legitimacy</strong> to new institutions. Doing the right thing costs him his career, and the files change less than he hoped.
+
+This branch is in development for the final version of the game. The complete prototype route currently leads to <em>The Survivor</em>.
+
+<div class="choices"><<returnlink "← Return to the last decision">>
+[[Title screen|Start]]</div>
+</div>
+
+
+:: Stub_Loyalist [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Верный</span>
+<h1>The Loyalist</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+In this ending, Volkov destroys the files as ordered and stays with the Party until the doors are sealed. It explores <strong>institutional collapse from the inside</strong>: a man who sincerely believes he protected the country from chaos, left holding nothing.
+
+This branch is in development for the final version of the game. The complete prototype route currently leads to <em>The Survivor</em>.
+
+<div class="choices"><<returnlink "← Return to the last decision">>
+[[Title screen|Start]]</div>
+</div>
+
+
+:: Stub_Scapegoat [stub]
+<div class="stub-card">
+<span class="ru-name" lang="ru">Козёл отпущения</span>
+<h1>The Scapegoat</h1>
+<span class="stub-flag">Branch in development · final version</span>
+
+Your exposure reached <<print $exposure>> (the threshold is <<print setup.EXPOSURE_THRESHOLD>>). Too many small risks added up: the questions, the calls, the copies, the trust placed in the wrong people. In this ending Volkov is named in the investigation of the coup's organisers. It explores what happens to <strong>individuals when authoritarian structures collapse</strong>: relatively innocent intentions, real consequences.
+
+This branch is in development for the final version of the game. To reach <em>The Survivor</em>, play again and take fewer risks.
+
+<div class="choices">[[Title screen|Start]]
+<<link "Start a new game">><<run Object.assign(State.variables, setup.newGame())>><<goto "Prologue_Bulletin">><</link>></div>
+</div>

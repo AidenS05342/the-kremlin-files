@@ -112,3 +112,21 @@ test('every registry docId and required clue exists', () => {
     for (const c of e.requiresClues || []) assert.ok(c in setup.clues, `${e.id} -> unknown clue ${c}`);
   }
 });
+
+test('every document has a passage tagged document', () => {
+  for (const [id, d] of Object.entries(setup.documents)) {
+    const p = passages.get(d.passage);
+    assert.ok(p, `${id}: missing passage ${d.passage}`);
+    assert.ok(p.tags.includes('document'), `${d.passage} not tagged document`);
+  }
+});
+
+test('the three unfinished endings are stubs and the Survivor ending is complete', () => {
+  for (const name of ['Stub_Witness', 'Stub_Loyalist', 'Stub_Scapegoat']) {
+    const p = passages.get(name);
+    assert.ok(p && p.tags.includes('stub'), `${name} must exist as a stub`);
+    assert.match(p.text, /in development/i);
+  }
+  const s = passages.get('Epilogue_Survivor');
+  assert.ok(s && s.tags.includes('ending'));
+});

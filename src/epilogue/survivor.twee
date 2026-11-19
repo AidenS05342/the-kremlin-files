@@ -1,0 +1,19 @@
+:: Epilogue_Survivor [ending]
+<div class="ending-card">
+<span class="ru-name" lang="ru">Уцелевший</span>
+<h1>The Survivor</h1>
+<p class="lead-date"><strong>Moscow · 25 December 1991</strong></p>
+
+Your new office is in a ministry of the Russian Federation, two kilometres from Staraya Ploshchad. The desk is larger. The phone is the same model. Sergei kept his word: the government did remember who helped, and you helped it find the files. Packet 7/С is in your safe. You have never shown it to anyone, and everyone who matters knows you have it.
+
+<<if $trust.belova gte 1>>Irina Belova no longer returns your calls. You heard she is writing for one of the new papers.<<else>>You have not thought about Irina Belova in weeks.<</if>> <<if $trust.rudin gte 1>>Rudin telephoned in November. He needs a small favour, a signature on a pension document. You have not decided yet.<<else>>Rudin, they say, is unemployed and gives interviews to anyone who will listen.<</if>> <<if $flags.promisedZaitsev>>Zaitsev's name never came up. You kept that promise, at least.<<else>>Zaitsev retired in October. He sent you a postcard with no message on it.<</if>>
+
+This evening you watch on television as Gorbachev resigns. Shortly afterwards the red flag over the Kremlin comes down, and the Russian tricolour goes up. The Soviet Union no longer exists. You are still here. <<note "gorbachev-resignation">>
+
+<div class="concept-box"><h2>What this ending shows</h2>
+<p><strong>Regime change without elite turnover.</strong> The Soviet state collapsed, but many of the people who had run it moved into the institutions that replaced it, often by trading on what they knew and held. Volkov survives because the new order needs the old order's paperwork. <<note "nomenklatura">></p>
+<p>The Survivor is one of four endings. <em>The Witness</em>, <em>The Loyalist</em> and <em>The Scapegoat</em> are in development for the final version.</p></div>
+
+<div class="choices">[[About this project|About]]
+<<link "Play again from the beginning">><<run Object.assign(State.variables, setup.newGame())>><<goto "Start">><</link>></div>
+</div>
