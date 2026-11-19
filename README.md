@@ -2,6 +2,8 @@
 
 An interactive historical political mystery set inside the Central Committee of the Communist Party of the Soviet Union during the August Coup of 1991. You play Andrei Volkov, a mid-level Party official who finds evidence that "emergency measures" were prepared before the coup, and who has to decide what to do with it as his own institution collapses around him.
 
+> **🚧 Work-in-progress prototype (November 2026).** The Prologue, Act I and one complete route to the ending *The Survivor* are playable. **Three additional endings, *The Witness*, *The Loyalist* and *The Scapegoat*, are planned for future development.** In the game they currently appear as clearly marked "in development" cards.
+
 Final project for an undergraduate **Digital Humanities** course at the **University of Tennessee**. Built with **Twine 2 / SugarCube 2**.
 
 **Play:** _GitHub Pages URL to be added on publication_
