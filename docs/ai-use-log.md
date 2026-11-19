@@ -66,7 +66,11 @@
 - **Bibliography verification (19 November 2026).** At the student's request, the AI checked every bibliography entry by web search against library catalogue records, publisher listings and the National Security Archive's own pages. The check covered author, title, publisher or venue, and year.
   - All 14 entries were confirmed and marked `verified: true`.
   - Corrections and additions: the page range and DOI for Kryshtanovskaya & White (711–33); series names for Solnick and Beissinger; the specific National Security Archive briefing book (No. 357, ed. Savranskaya, 2011); the samizdat reprint of Yeltsin's appeal; and the removal of an unconfirmed claim about where the emergency committee's appeal was printed.
-- **Still open:** the *page-level* support for each historical note (`pagesChecked` in `notes.js`) has not been checked against the books themselves. The student should confirm these at the library before treating the notes as fully cited.
+- **Historical-note verification (19 November 2026).** At the student's request, the AI extracted the claims in all 15 historical notes and checked each against accessible sources by web search. These included primary documents (decrees No. 79 and No. 169, the emergency committee's Resolution No. 2, Gorbachev's 24 August statement and the Moscow curfew order), reference works (Britannica, *Bol'shaia rossiiskaia entsiklopediia*, *Encyclopedia of Russian History*), and contemporary or later reporting.
+  - **Results:** 9 notes verified, 5 partly verified (each states in-game what remains), and 1 labelled a reconstruction.
+  - **Corrections:** the 23 August decree suspended the Communist Party *of the RSFSR*; Gorbachev's refusal at Foros is his account and was disputed by Varennikov; "the only fatalities in Moscow" and the attribution of the Old Square sealing to the city authorities were removed as unsupported; the press ban is now tied to Resolution No. 2; and the Party telegram's wording is marked unconfirmed.
+  - **No page numbers in the scholarly books could be confirmed**, so none were added. Fifteen new sources were added to the bibliography, and none were removed.
+- **Still open:** the items listed as "Still to check" in the five partly verified notes, and page numbers in the scholarly books.
 - All characters, documents and conversations are fictional and are labelled as such in the game.
 
 ## 6. Decisions the AI made on the student's behalf

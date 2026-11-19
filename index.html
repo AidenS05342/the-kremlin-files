@@ -314,6 +314,9 @@ a, .link-internal, button {
 .note-sources { padding-left: 1.2em; font-size: 15px; }
 .note-sources li { margin-bottom: 0.4em; }
 .note-flag { font: italic 14px var(--serif); color: var(--ink-soft); border-left: 3px solid var(--brass-dim); padding-left: 0.6em; }
+.note-flag--verified { border-left-color: #3f7a4a; }
+.note-flag--partial { border-left-color: var(--red); }
+.note-loc { color: var(--ink-soft); font-style: italic; }
 #ui-dialog-body button, #ui-dialog-body .link-internal { color: var(--ink); }
 #ui-dialog .saves button, #ui-dialog-body button {
 	background: var(--paper-shade);
@@ -1085,88 +1088,130 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 }());
 /* twine-user-script #4: "notes.js" */
 /*
- * Historical notes (ИСТОРИЧЕСКАЯ СПРАВКА). Each note states only well-documented
- * facts and cites keys in setup.sources. Page-level citations have not yet been
- * checked; the note dialog says so until `pagesChecked` is set to true.
- * `reconstruction: true` marks a note explaining an in-game invention instead.
+ * Historical notes (ИСТОРИЧЕСКАЯ СПРАВКА).
+ *
+ * Verification pass of 19 November 2026: every claim below was checked against
+ * the sources listed. `locators` gives a document identifier, section or entry
+ * where one could be confirmed. NO PAGE NUMBERS in the books have been
+ * confirmed; the books remain listed as general scholarly support only.
+ *
+ * status:
+ *   verified        each claim confirmed by at least one listed source
+ *   partial         some claims confirmed; `remaining` says what is not
+ *   reconstruction  explains an in-game invention, not a documented object
  */
 (function () {
 	'use strict';
 	setup.notes = {
 		'union-treaty': {
 			title: 'The New Union Treaty', date: 'August 1991',
-			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser federation of sovereign republics, transferring substantial powers to them. Several republics, including the three Baltic states, refused to take part. Its signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
-			sources: ['plokhy2014', 'dunlop1993']
+			body: 'Gorbachev negotiated a new treaty to hold the USSR together as a looser federation of sovereign republics, transferring substantial powers to them. Several republics, including the three Baltic states, Georgia and Moldova, refused to take part in the process. The signing was scheduled for 20 August 1991. Hardliners in the leadership saw the treaty as the end of the centralized Soviet state; the coup was launched the day before it could be signed.',
+			sources: ['encRusHist', 'bigencGkchp', 'plokhy2014'],
+			locators: { encRusHist: 'entry “Union Treaty”', bigencGkchp: 'motive: to prevent the signing of the new Union Treaty' },
+			status: 'verified'
 		},
 		'gorbachev-foros': {
-			title: 'Gorbachev at Foros', date: '18–21 August 1991',
-			body: 'On 18 August a delegation from Moscow visited Gorbachev at his holiday dacha at Foros, in Crimea, and demanded that he endorse emergency rule. He refused. His communications were cut and he was kept isolated there until the coup collapsed on 21 August.',
-			sources: ['plokhy2014', 'brown1996']
+			title: 'Gorbachev at Foros', date: '18–22 August 1991',
+			body: 'On 18 August a group of officials from Moscow arrived at Gorbachev’s holiday dacha at Foros, in Crimea, and demanded that he either declare a state of emergency or resign in favour of Vice President Yanayev. By the account of Gorbachev and his aides, he refused; one of the visitors, General Valentin Varennikov, later disputed this. Gorbachev was kept isolated at Foros until the coup collapsed, and flew back to Moscow in the early hours of 22 August.',
+			sources: ['britannicaCoup', 'forosAccount', 'plokhy2014'],
+			locators: { britannicaCoup: 'the 18 August visit and its demands', forosAccount: 'eyewitness account of the visit (Baklanov, Boldin, Shenin, Varennikov)' },
+			status: 'partial',
+			remaining: 'The exact moment and extent of the cut to the dacha’s communications is reported in reference summaries but was not confirmed in a scholarly source during this check.'
 		},
 		'gkchp-announcement': {
 			title: 'The State Committee on the State of Emergency (ГКЧП)', date: '19 August 1991',
-			body: 'Early on 19 August, Soviet state media announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them “for health reasons,” and that a State Committee on the State of Emergency had been formed. Its members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country, and armored units were ordered into Moscow that morning.',
-			sources: ['gkchpAppeal1991', 'dunlop1993']
+			body: 'On the morning of 19 August, Soviet radio and television announced that Vice President Gennady Yanayev had assumed the president’s duties because Gorbachev was unable to perform them for health reasons, and that a State Committee on the State of Emergency had been formed. Its eight members included KGB chairman Vladimir Kryuchkov, Defense Minister Dmitry Yazov, Interior Minister Boris Pugo, and Prime Minister Valentin Pavlov. A state of emergency was declared in parts of the country for six months, and troops and tanks moved into Moscow that morning.',
+			sources: ['gkchpAppeal1991', 'bigencGkchp', 'britannicaCoup', 'npr2021'],
+			locators: { bigencGkchp: 'announcement by radio and television on the morning of 19 August; “health” justification in the preamble of the GKChP statement', britannicaCoup: 'eight-member committee and its members', npr2021: 'tanks and troops entering Moscow on the morning of 19 August' },
+			status: 'verified'
 		},
 		'swan-lake': {
 			title: '<em>Swan Lake</em> on television', date: '19 August 1991',
-			body: 'On the morning of the coup, Soviet state television replaced its normal programming with Tchaikovsky’s ballet <em>Swan Lake</em>, broadcast repeatedly between official announcements. For many Soviet citizens the ballet became the defining image of those days.',
-			sources: ['remnick1993', 'plokhy2014']
+			body: 'On the morning of the coup, Soviet state television replaced its normal programming with Tchaikovsky’s ballet <em>Swan Lake</em>, shown repeatedly between official announcements. Viewers who remembered the ballet being broadcast after the death of Leonid Brezhnev in 1982 understood it as a sign of political crisis, and it became an enduring symbol of the coup.',
+			sources: ['npr2021', 'remnick1993'],
+			locators: { npr2021: 'looped broadcast on 19 August; precedent of Brezhnev’s death in 1982' },
+			status: 'verified'
 		},
 		'yeltsin-tank': {
 			title: 'Yeltsin on the tank', date: '19 August 1991',
-			body: 'Boris Yeltsin, elected President of the Russian republic (RSFSR) two months earlier, climbed onto a tank outside the Russian parliament building — the “White House” — and read an appeal “To the Citizens of Russia.” It called the committee’s actions an unconstitutional coup and called for a general strike.',
-			sources: ['yeltsinAppeal1991', 'dunlop1993']
+			body: 'Boris Yeltsin, elected President of the Russian republic (RSFSR) two months earlier, climbed onto a tank outside the Russian parliament building, the “White House,” at about midday and read the appeal “To the Citizens of Russia.” It called the committee’s actions a coup and called for a general strike.',
+			sources: ['yeltsinAppeal1991', 'britannicaCoup'],
+			locators: { yeltsinAppeal1991: 'text of the appeal (signed Yeltsin, Silayev, Khasbulatov)' },
+			status: 'verified'
 		},
 		'press-suspended': {
 			title: 'Newspapers suspended', date: '19 August 1991',
-			body: 'The emergency committee allowed only a short list of loyal central newspapers to appear and suspended the rest, including the reformist weekly <em>Moscow News</em>. Journalists from several banned papers responded by producing a jointly published underground paper, <em>Obshchaya gazeta</em> (“Common Newspaper”).',
-			sources: ['dunlop1993', 'remnick1993']
+			body: 'The emergency committee’s Resolution No. 2 limited the press to a list of nine loyal newspapers and suspended the rest, including the reformist weekly <em>Moscow News</em>. Journalists from banned papers responded by producing a jointly published paper, <em>Obshchaya gazeta</em> (“Common Newspaper”), distributed by hand during the coup.',
+			sources: ['gkchpResolution2', 'nation2021', 'dunlop1993'],
+			locators: { gkchpResolution2: 'Resolution No. 2 of 19 August 1991 (title and adoption)', nation2021: 'origin of <em>Obshchaya gazeta</em> as a joint publication of banned papers' },
+			status: 'partial',
+			remaining: 'The figure of nine permitted newspapers comes from contemporary and later press reporting; the full text of Resolution No. 2 and its list was not seen during this check. Sources also disagree on whether <em>Obshchaya gazeta</em> first appeared on 19 or 20 August.'
 		},
 		'secretariat-telegram': {
 			title: 'The Party apparatus and the coup', date: '19 August 1991',
-			body: 'Documents made public after the coup indicate that on 19 August the Central Committee Secretariat sent coded telegrams to regional Party committees urging them to support the emergency measures. These documents were later used to argue that the Party apparatus, not only individual leaders, had been complicit. The draft telegram in this game is fictional; it is modeled on that real episode.',
-			sources: ['dunlop1993', 'nsarchive']
+			body: 'On the morning of 19 August a telegram in the name of the Central Committee Secretariat was sent to the Party leaders of the republics, territories and regions, as Central Committee Secretary Oleg Shenin later acknowledged. Contemporary reports also describe the Secretariat sending republican leaders documents in support of the emergency committee. A recent study of the Central Committee building during the coup finds that most of the Secretariat had not known of the plot in advance but did nothing to oppose it. The draft telegram in this game is fictional; it is modeled on this episode.',
+			sources: ['sheninInterview', 'puchenkov2019', 'dunlop1993'],
+			locators: { sheninInterview: 'Shenin on the telegram sent in the Secretariat’s name on the morning of 19 August', puchenkov2019: 'abstract: Secretariat largely unaware of the plot but passive during it' },
+			status: 'partial',
+			remaining: 'The exact wording of the 19 August telegram, and how directly it instructed support for the committee, has not been confirmed; check the documents published from the 1992 Constitutional Court case on the CPSU.'
 		},
 		'white-house-defense': {
 			title: 'Defending the White House', date: '19–21 August 1991',
-			body: 'Tens of thousands of Muscovites gathered around the Russian parliament building, building barricades from trolleybuses, construction materials, and anything else at hand. The emergency committee declared a curfew in Moscow on 20 August.',
-			sources: ['plokhy2014', 'remnick1993']
+			body: 'Tens of thousands of people gathered around the Russian parliament building, building barricades from trolleybuses, trees, building materials and whatever else was at hand. A curfew was declared in Moscow from 23:00 to 05:00, beginning on 20 August.',
+			sources: ['encRusHist', 'moscowCurfew1991', 'plokhy2014'],
+			locators: { encRusHist: 'entry “August 1991 Putsch”: crowds and barricades', moscowCurfew1991: 'curfew order, 23:00–05:00 from 20 August' },
+			status: 'verified'
 		},
 		'three-deaths': {
 			title: 'Three deaths on the Garden Ring', date: 'Night of 20–21 August 1991',
-			body: 'In the early hours of 21 August, three young men — Dmitry Komar, Vladimir Usov, and Ilya Krichevsky — were killed in a confrontation with armored vehicles in an underpass on the Garden Ring near the White House. They were the only fatalities in Moscow during the coup and were posthumously named Heroes of the Soviet Union.',
-			sources: ['plokhy2014', 'remnick1993']
+			body: 'In the early hours of 21 August, three young men, Dmitry Komar, Vladimir Usov and Ilya Krichevsky, were killed in a confrontation with armored vehicles in the underpass where the Garden Ring crosses Novy Arbat, near the White House. They were posthumously made Heroes of the Soviet Union by decree of the Soviet president and were buried at Vagankovo Cemetery on 24 August.',
+			sources: ['kommersantFuneral1991', 'tassMemorial', 'plokhy2014'],
+			locators: { kommersantFuneral1991: 'funeral at Vagankovo on 24 August; posthumous Hero title', tassMemorial: 'memorial at the junction of Novy Arbat and the Garden Ring' },
+			status: 'verified'
 		},
 		'coup-collapse': {
 			title: 'The coup collapses', date: '21–22 August 1991',
-			body: 'On 21 August the military began withdrawing troops from Moscow and the committee’s resolve collapsed. Gorbachev returned to Moscow in the early hours of 22 August, and several committee members were arrested.',
-			sources: ['plokhy2014', 'brown1996']
+			body: 'On 21 August the troops began to be withdrawn from Moscow and the committee fell apart; several of its members flew to Crimea to see Gorbachev. Gorbachev returned to Moscow in the early hours of 22 August, and several committee members were arrested.',
+			sources: ['britannicaCoup', 'nsarchive', 'brown1996'],
+			locators: { nsarchive: 'documents of 19–21 August 1991, including the Russian Supreme Soviet session of 21 August' },
+			status: 'verified'
 		},
 		'cpsu-suspended': {
 			title: 'The Communist Party suspended', date: '23 August 1991',
-			body: 'On 23 August Yeltsin signed a decree suspending the activity of the Communist Party on the territory of the Russian republic. In November 1991 a further decree banned it in Russia.',
-			sources: ['dunlop1993', 'plokhy2014']
+			body: 'On 23 August Yeltsin signed Decree No. 79 suspending the activity of the Communist Party of the RSFSR, the Russian branch of the Soviet Communist Party, pending an investigation of its role in the coup. On 6 November 1991, Decree No. 169 ended the activity of the CPSU and the Communist Party of the RSFSR on Russian territory.',
+			sources: ['decree79', 'decree169', 'bigencGkchp'],
+			locators: { decree79: 'Decree No. 79 of 23 August 1991', decree169: 'Decree No. 169 of 6 November 1991; <em>Vedomosti</em> 1991, no. 45, art. 1537' },
+			status: 'verified'
 		},
 		'old-square-sealed': {
-			title: 'Old Square sealed', date: '23 August 1991',
-			body: 'On 23 August the Central Committee buildings on Staraya Ploshchad (Old Square) were sealed on the orders of the Moscow city authorities and staff were told to leave, while crowds gathered outside. Contemporary accounts describe Party officials trying to remove or destroy documents before the doors were shut.',
-			sources: ['remnick1993', 'dunlop1993']
+			title: 'Old Square sealed', date: '23–24 August 1991',
+			body: 'After the coup failed, the Russian authorities ordered Communist Party buildings sealed. The Central Committee complex on Staraya Ploshchad (Old Square) was closed and its archives sealed, ending the Central Committee’s ability to meet there.',
+			sources: ['puchenkov2019', 'remnick1993'],
+			locators: { puchenkov2019: 'the coup as seen from the Central Committee building' },
+			status: 'partial',
+			remaining: 'Contemporary press reports confirm the order to seal Party buildings, but the exact date and authority for sealing the Old Square complex, the crowds outside, and reports of officials destroying documents were not confirmed in a citable source during this check. These details appear in the game as fiction.'
 		},
 		'gorbachev-resignation': {
 			title: 'The end of the USSR', date: 'August–December 1991',
-			body: 'On 24 August Gorbachev resigned as General Secretary and called on the Central Committee to dissolve itself. On 8 December the leaders of Russia, Ukraine, and Belarus declared that the USSR had ceased to exist and founded the Commonwealth of Independent States. On 25 December Gorbachev resigned as Soviet president in a televised address, and the Soviet flag was lowered over the Kremlin that evening.',
-			sources: ['gorbachevResignation1991', 'belovezha1991', 'brown1996']
+			body: 'On 24 August Gorbachev resigned as General Secretary and called on the Central Committee to dissolve itself, saying the Secretariat and Politburo had not spoken out against the coup. On 8 December the leaders of Russia, Ukraine and Belarus declared that the USSR had ceased to exist and founded the Commonwealth of Independent States. On 25 December Gorbachev resigned as Soviet president in a televised address, and shortly afterwards the Soviet flag over the Kremlin was lowered.',
+			sources: ['gorbachevStatement1991', 'belovezha1991', 'gorbachevResignation1991', 'brown1996'],
+			locators: { gorbachevStatement1991: 'statement of 24 August 1991 (<em>Krasnaia zvezda</em>, 27 August 1991)', belovezha1991: 'agreement signed at Viskuli, 8 December 1991' },
+			status: 'verified'
 		},
 		'nomenklatura': {
 			title: 'From nomenklatura to new elite', date: '1990s',
-			body: 'The nomenklatura was the Soviet system of appointments to leading posts, and the class of officials who held them. Sociologists Olga Kryshtanovskaya and Stephen White found that a large share of post-Soviet Russia’s political and business elite had come from the old nomenklatura. Their research is a key source for the idea of regime change without elite turnover.',
-			sources: ['kryshtanovskaya1996', 'solnick1998']
+			body: 'The nomenklatura was the Soviet system of appointments to leading posts, and the class of officials who held them. Sociologists Olga Kryshtanovskaya and Stephen White argued that much of post-Soviet Russia’s political and business elite had come from the old nomenklatura. Their research is a key source for the idea of regime change without elite turnover.',
+			sources: ['kryshtanovskaya1996', 'solnick1998'],
+			locators: { kryshtanovskaya1996: 'article, pp. 711–33 (whole article)' },
+			status: 'partial',
+			remaining: 'The article’s overall argument is confirmed by later scholarship that cites it, but its specific percentages were not seen; quote figures only after reading the article itself (DOI 10.1080/09668139608412377).'
 		},
 		'office-computers': {
 			title: 'The registry terminal', date: 'Late 1980s',
 			reconstruction: true,
-			body: 'The registry terminal in this game is a reconstruction, not a documented object. Soviet IBM-compatible personal computers such as the ЕС-1841 (ES-1841) were produced in the late 1980s for state institutions, but whether this particular department used one for its registry is not established. Paper card indexes (картотеки) remained the authoritative record in Soviet offices. This note will be revised if research shows otherwise.'
+			status: 'reconstruction',
+			body: 'The registry terminal in this game is a reconstruction, not a documented object. Soviet IBM PC-compatible computers such as the ЕС-1841 (ES-1841) were manufactured in Minsk from 1987, but whether this particular department used one for its registry is not established. Paper card indexes (картотеки) remained the authoritative record in Soviet offices.',
+			remaining: 'The ES-1841 production details come from computing-history sources, not a scholarly publication; the use of computers in the Central Committee apparatus has not been researched.'
 		}
 	};
 }());
@@ -1318,6 +1363,66 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 		gorbachevResignation1991: {
 			type: 'primary', verified: true,
 			chicago: 'Gorbachev, Mikhail. Televised address announcing his resignation as President of the USSR. Moscow, 25 December 1991.'
+		},
+		gkchpResolution2: {
+			type: 'primary', verified: true,
+			chicago: 'State Committee on the State of Emergency in the USSR (GKChP). Resolution No. 2, “On Limiting the List of Central, Moscow City and Regional Socio-Political Publications” [Об ограничении перечня выпускаемых центральных, московских городских и областных общественно-политических изданий], 19 August 1991. Discussed in “Dokumenty GKChP gotovilis’ v KGB,” <em>Novaya gazeta</em>, 15 August 2011. https://novayagazeta.ru/articles/2011/08/15/45468-dokumenty-gkchp-gotovilis-v-kgb-2.'
+		},
+		moscowCurfew1991: {
+			type: 'primary', verified: true,
+			chicago: 'Order introducing a curfew in Moscow from 23:00 to 05:00, effective 20 August 1991. Reproduced in <em>Kommersant</em>’s archive of August 1991 documents. https://www.kommersant.ru/doc/597.'
+		},
+		decree79: {
+			type: 'primary', verified: true,
+			chicago: 'Decree of the President of the RSFSR No. 79, “On the Suspension of the Activity of the Communist Party of the RSFSR” [О приостановлении деятельности Коммунистической партии РСФСР], 23 August 1991. Text at Russian Wikisource: https://ru.wikisource.org/wiki/Указ_Президента_РСФСР_от_23.08.1991_№_79.'
+		},
+		decree169: {
+			type: 'primary', verified: true,
+			chicago: 'Decree of the President of the RSFSR No. 169, “On the Activity of the CPSU and the CP RSFSR” [О деятельности КПСС и КП РСФСР], 6 November 1991. <em>Vedomosti S’’ezda narodnykh deputatov i Verkhovnogo Soveta RSFSR</em>, 1991, no. 45, art. 1537.'
+		},
+		gorbachevStatement1991: {
+			type: 'primary', verified: true,
+			chicago: 'Gorbachev, Mikhail. Statement on resigning as General Secretary of the CPSU, 24 August 1991. <em>Krasnaia zvezda</em>, 27 August 1991. English translation in <em>Seventeen Moments in Soviet History</em>, “Gorbachev Resigns from the Communist Party.” https://soviethistory.msu.edu/1991/august-coup/august-coup-texts/gorbachev-resigns-from-the-communist-party/.'
+		},
+		kommersantFuneral1991: {
+			type: 'primary', verified: true,
+			chicago: '“Kak ikh khoronili” [How They Were Buried]. <em>Kommersant</em>, August 1991. https://www.kommersant.ru/doc/590.'
+		},
+		sheninInterview: {
+			type: 'primary', verified: true,
+			chicago: 'Shenin, Oleg. Interview on the events of August 1991. <em>Kommersant</em>. https://www.kommersant.ru/doc/71453.'
+		},
+		forosAccount: {
+			type: 'primary', verified: true,
+			chicago: '“Three Days in Foros.” <em>Foreign Policy</em>, 20 June 2011. https://foreignpolicy.com/2011/06/20/three-days-in-foros/.'
+		},
+		puchenkov2019: {
+			type: 'scholarly', verified: false,
+			chicago: 'Puchenkov, Aleksandr S. “The August Coup in 1991: A View from the Central Committee Building and Eyewitness Accounts.” <em>Modern History of Russia</em> (<em>Noveishaia istoriia Rossii</em>), 2019, 454–84. https://dspace.spbu.ru/handle/11701/15745.'
+		},
+		britannicaCoup: {
+			type: 'reference', verified: true,
+			chicago: '“1991 Soviet Coup Attempt.” <em>Encyclopaedia Britannica</em>. https://www.britannica.com/topic/Soviet-Coup-of-1991. Accessed 19 November 2026.'
+		},
+		bigencGkchp: {
+			type: 'reference', verified: true,
+			chicago: '“Gosudarstvennyi komitet po chrezvychainomu polozheniiu” [State Committee on the State of Emergency]. <em>Bol’shaia rossiiskaia entsiklopediia</em> (electronic version). https://bigenc.ru/c/gosudarstvennyi-komitet-po-chrezvychainomu-polozheniiu-5f32f7. Accessed 19 November 2026.'
+		},
+		encRusHist: {
+			type: 'reference', verified: true,
+			chicago: 'Millar, James R., ed. <em>Encyclopedia of Russian History</em>. New York: Macmillan Reference USA, 2004. Entries “Union Treaty” and “August 1991 Putsch,” via Encyclopedia.com. Accessed 19 November 2026.'
+		},
+		npr2021: {
+			type: 'reference', verified: true,
+			chicago: '“In 1991, Soviet Citizens Saw Swans on the TV and Knew It Meant Turmoil.” NPR, 19 August 2021. https://www.npr.org/2021/08/19/1029437787/in-1991-soviet-citizens-saw-swans-on-the-tv-and-knew-it-meant-turmoil.'
+		},
+		nation2021: {
+			type: 'reference', verified: true,
+			chicago: '“30 Years Ago, the Tanks Rolled Into Moscow—but We Refused to Be Silent.” <em>The Nation</em>, August 2021. https://www.thenation.com/article/world/soviet-coup-attempt/.'
+		},
+		tassMemorial: {
+			type: 'reference', verified: true,
+			chicago: '“Gorbachev Sends Wreath to Memorial to Democracy Defenders in August 1991 ‘Putsch.’” TASS. https://tass.com/society/895350.'
 		},
 		nsarchive: {
 			type: 'primary', verified: true,
@@ -1576,16 +1681,18 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 		var n = setup.notes[id];
 		pushOnce(State.variables.notesSeen, id);
 		var html = '<p class="note-date">' + n.date + '</p><p>' + n.body + '</p>';
-		if (n.reconstruction) {
-			html += '<p class="note-flag">Reconstruction — not a documented historical object.</p>';
-		} else {
+		var STATUS = {
+			verified: 'Verified (November 2026) against the sources below. Book sources are general support; no page numbers have been confirmed.',
+			partial: 'Partly verified (November 2026). Still to check: ',
+			reconstruction: 'Reconstruction: not a documented historical object. '
+		};
+		if (n.sources && n.sources.length) {
 			html += '<h3>Sources</h3><ul class="note-sources">' + n.sources.map(function (key) {
-				return '<li>' + setup.sources[key].chicago + '</li>';
+				var loc = n.locators && n.locators[key];
+				return '<li>' + setup.sources[key].chicago + (loc ? ' <span class="note-loc">— ' + loc + '</span>' : '') + '</li>';
 			}).join('') + '</ul>';
-			if (!n.pagesChecked) {
-				html += '<p class="note-flag">Page-level citations pending verification.</p>';
-			}
 		}
+		html += '<p class="note-flag note-flag--' + n.status + '">' + STATUS[n.status] + (n.status === 'verified' ? '' : (n.remaining || '')) + '</p>';
 		Dialog.setup('ИСТОРИЧЕСКАЯ СПРАВКА · ' + n.title, 'note-dialog');
 		Dialog.append(html);
 		Dialog.open();
@@ -1719,7 +1826,7 @@ html[data-kind~="title"] #desk, html[data-kind~="bulletin"] #desk, html[data-kin
 
 By 1991, Mikhail Gorbachev&#39;s reforms had loosened the Communist Party&#39;s monopoly on power. Competitive elections had brought new leaders to prominence, above all Boris Yeltsin, elected President of the Russian republic in June 1991. Several republics were pressing for independence, and Gorbachev had negotiated a new Union Treaty that would turn the USSR into a looser federation of sovereign republics. It was due to be signed on 20 August 1991.
 
-On 19 August, the day before the signing, a group of senior officials, including the vice president, the head of the KGB, the defence minister and the interior minister, declared a State Committee on the State of Emergency. They isolated Gorbachev at his holiday home in Crimea, banned most newspapers and sent troops into Moscow. Tens of thousands of people gathered to defend the Russian parliament building, the &quot;White House,&quot; where Yeltsin denounced the coup. Within three days it had collapsed. In its aftermath, Yeltsin suspended the Communist Party in Russia, the Central Committee&#39;s buildings were sealed, and by the end of December 1991 the Soviet Union no longer existed.
+On 19 August, the day before the signing, a group of senior officials, including the vice president, the head of the KGB, the defence minister and the interior minister, declared a State Committee on the State of Emergency. They isolated Gorbachev at his holiday home in Crimea, banned most newspapers and sent troops into Moscow. Tens of thousands of people gathered to defend the Russian parliament building, the &quot;White House,&quot; where Yeltsin denounced the coup. Within three days it had collapsed. In its aftermath, Yeltsin suspended the Communist Party of the Russian republic, Party buildings were sealed, and by the end of December 1991 the Soviet Union no longer existed.
 
 The game&#39;s prologue takes place on 12 August. Its acts follow 19, 20–21 and 23 August, and its epilogue is set on 25 December 1991, the day Gorbachev resigned.
 
@@ -1776,13 +1883,20 @@ Twine 2 story format SugarCube 2, compiled with Tweego. Source code and developm
 &lt;h1&gt;Bibliography&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Preliminary · Chicago notes-bibliography style&lt;/p&gt;
 
-Each entry&#39;s author, title, publisher and year have been checked against library catalogue, publisher or archive records (November 2026). Any entry marked &lt;span class=&quot;unverified&quot;&gt;awaiting verification&lt;/span&gt; has not yet been checked. Page-level citations for the historical notes are still being verified against the books themselves.
+Each entry&#39;s author, title, publisher and year have been checked against library catalogue, publisher or archive records (November 2026). Any entry marked &lt;span class=&quot;unverified&quot;&gt;awaiting verification&lt;/span&gt; has not yet been checked. 
 
 &lt;h2&gt;Scholarly and journalistic sources&lt;/h2&gt;
 &lt;ul class=&quot;bib&quot;&gt;&lt;&lt;for _k range setup.sourcesByType(&quot;scholarly&quot;)&gt;&gt;&lt;li&gt;&lt;&lt;print setup.sources[_k].chicago&gt;&gt;&lt;&lt;if not setup.sources[_k].verified&gt;&gt;&lt;span class=&quot;unverified&quot;&gt;awaiting verification&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;
 
 &lt;h2&gt;Primary sources&lt;/h2&gt;
 &lt;ul class=&quot;bib&quot;&gt;&lt;&lt;for _k range setup.sourcesByType(&quot;primary&quot;)&gt;&gt;&lt;li&gt;&lt;&lt;print setup.sources[_k].chicago&gt;&gt;&lt;&lt;if not setup.sources[_k].verified&gt;&gt;&lt;span class=&quot;unverified&quot;&gt;awaiting verification&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Reference works and journalism&lt;/h2&gt;
+&lt;ul class=&quot;bib&quot;&gt;&lt;&lt;for _k range setup.sourcesByType(&quot;reference&quot;)&gt;&gt;&lt;li&gt;&lt;&lt;print setup.sources[_k].chicago&gt;&gt;&lt;&lt;if not setup.sources[_k].verified&gt;&gt;&lt;span class=&quot;unverified&quot;&gt;awaiting verification&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;/li&gt;&lt;&lt;/for&gt;&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Verification of the historical notes&lt;/h2&gt;
+
+Each historical note in the game shows its verification status. Claims were checked in November 2026 against the primary documents, reference works and reporting listed here. Notes marked &quot;partly verified&quot; state exactly what remains to be checked. No page numbers in the scholarly books have yet been confirmed; those books are cited as general support.
 
 &lt;div class=&quot;academic-nav&quot;&gt;&lt;&lt;link &quot;← Back&quot;&gt;&gt;&lt;&lt;goto `$backTo or &quot;Start&quot;`&gt;&gt;&lt;&lt;/link&gt;&gt; [[About this project|About]] [[Credits|Credits]] [[Title screen|Start]]&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Credits" tags="academic" position="350,100" size="100,100">&lt;div class=&quot;academic-page&quot;&gt;
@@ -1997,7 +2111,7 @@ At Staraya Ploshchad, someone on your floor is burning papers in an office sink.
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="A3_Order" tags="scene conversation" position="1100,225" size="100,100">&lt;div class=&quot;scene-body&quot;&gt;
 &lt;p class=&quot;lead&quot;&gt;Room 412 · Friday, 23 August · 14:00&lt;/p&gt;
 
-Today Yeltsin signed a decree suspending the Communist Party&#39;s activity in Russia. &lt;&lt;note &quot;cpsu-suspended&quot;&gt;&gt; A crowd has gathered outside on Staraya Ploshchad, and it keeps growing, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
+Today Yeltsin signed a decree suspending the Russian Communist Party. &lt;&lt;note &quot;cpsu-suspended&quot;&gt;&gt; A crowd has gathered outside on Staraya Ploshchad, and it keeps growing, chanting. Someone has painted something on the wall by Entrance 5 that you choose not to read.
 
 Rudin comes into your office without knocking. His tie is gone. He is carrying an empty cardboard box.
 

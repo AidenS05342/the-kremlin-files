@@ -69,9 +69,19 @@ test('every source has a type and a Chicago citation', () => {
   const entries = Object.entries(setup.sources || {});
   assert.ok(entries.length >= 10);
   for (const [key, s] of entries) {
-    assert.ok(['scholarly', 'primary'].includes(s.type), `${key} type`);
+    assert.ok(['scholarly', 'primary', 'reference'].includes(s.type), `${key} type`);
     assert.ok(s.chicago && s.chicago.length > 20, `${key} citation`);
     assert.equal(typeof s.verified, 'boolean', `${key} verified flag`);
+  }
+});
+
+test('every note has a verification status, and partial notes say what remains', () => {
+  for (const [id, n] of Object.entries(setup.notes)) {
+    assert.ok(['verified', 'partial', 'reconstruction'].includes(n.status), `${id}: bad status ${n.status}`);
+    if (n.status !== 'verified') assert.ok(n.remaining && n.remaining.length > 20, `${id}: must state what remains to be checked`);
+    for (const key of Object.keys(n.locators || {})) {
+      assert.ok((n.sources || []).includes(key), `${id}: locator for ${key} which is not among its sources`);
+    }
   }
 });
 

@@ -33,16 +33,18 @@
 		var n = setup.notes[id];
 		pushOnce(State.variables.notesSeen, id);
 		var html = '<p class="note-date">' + n.date + '</p><p>' + n.body + '</p>';
-		if (n.reconstruction) {
-			html += '<p class="note-flag">Reconstruction — not a documented historical object.</p>';
-		} else {
+		var STATUS = {
+			verified: 'Verified (November 2026) against the sources below. Book sources are general support; no page numbers have been confirmed.',
+			partial: 'Partly verified (November 2026). Still to check: ',
+			reconstruction: 'Reconstruction: not a documented historical object. '
+		};
+		if (n.sources && n.sources.length) {
 			html += '<h3>Sources</h3><ul class="note-sources">' + n.sources.map(function (key) {
-				return '<li>' + setup.sources[key].chicago + '</li>';
+				var loc = n.locators && n.locators[key];
+				return '<li>' + setup.sources[key].chicago + (loc ? ' <span class="note-loc">— ' + loc + '</span>' : '') + '</li>';
 			}).join('') + '</ul>';
-			if (!n.pagesChecked) {
-				html += '<p class="note-flag">Page-level citations pending verification.</p>';
-			}
 		}
+		html += '<p class="note-flag note-flag--' + n.status + '">' + STATUS[n.status] + (n.status === 'verified' ? '' : (n.remaining || '')) + '</p>';
 		Dialog.setup('ИСТОРИЧЕСКАЯ СПРАВКА · ' + n.title, 'note-dialog');
 		Dialog.append(html);
 		Dialog.open();

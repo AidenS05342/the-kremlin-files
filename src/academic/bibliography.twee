@@ -3,13 +3,20 @@
 <h1>Bibliography</h1>
 <p class="subtitle">Preliminary · Chicago notes-bibliography style</p>
 
-Each entry's author, title, publisher and year have been checked against library catalogue, publisher or archive records (November 2026). Any entry marked <span class="unverified">awaiting verification</span> has not yet been checked. Page-level citations for the historical notes are still being verified against the books themselves.
+Each entry's author, title, publisher and year have been checked against library catalogue, publisher or archive records (November 2026). Any entry marked <span class="unverified">awaiting verification</span> has not yet been checked. 
 
 <h2>Scholarly and journalistic sources</h2>
 <ul class="bib"><<for _k range setup.sourcesByType("scholarly")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
 
 <h2>Primary sources</h2>
 <ul class="bib"><<for _k range setup.sourcesByType("primary")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<h2>Reference works and journalism</h2>
+<ul class="bib"><<for _k range setup.sourcesByType("reference")>><li><<print setup.sources[_k].chicago>><<if not setup.sources[_k].verified>><span class="unverified">awaiting verification</span><</if>></li><</for>></ul>
+
+<h2>Verification of the historical notes</h2>
+
+Each historical note in the game shows its verification status. Claims were checked in November 2026 against the primary documents, reference works and reporting listed here. Notes marked "partly verified" state exactly what remains to be checked. No page numbers in the scholarly books have yet been confirmed; those books are cited as general support.
 
 <div class="academic-nav"><<link "← Back">><<goto `$backTo or "Start"`>><</link>> [[About this project|About]] [[Credits|Credits]] [[Title screen|Start]]</div>
 </div>
