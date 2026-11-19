@@ -1,0 +1,3014 @@
+▗ ▗   ▖ ▖  Claude Code v2.1.319
+           Opus 5.5 · Claude Pro
+ ▘▘   ▝▝   ~/Documents/dh_class/the-kremlin-files
+
+
+❯ /plugin                                                                       
+
+❯ /skills 
+  ⎿  No changes
+
+❯ I am developing a final project for my undergraduate                          
+  Digital Humanities course at the University of Tennessee.                     
+                                                                                
+  Project Title: The Kremlin Files                                              
+                                                                                
+  Concept:                                                                      
+  An interactive historical political mystery set in                            
+  Moscow during the collapse of the Soviet Union in 1991.                       
+                                                                                
+  The player assumes the role of a fictional Soviet                             
+  government official investigating mysterious documents                        
+  and navigating political uncertainty.                                         
+                                                                                
+  The project should combine:                                                   
+  - Historically grounded political events                                      
+  - Soviet political institutions                                               
+  - Beginner-level Russian vocabulary                                           
+  - Interactive dialogue and decisions                                          
+  - Branching storylines                                                        
+  - Multiple possible endings                                                   
+  - A visually immersive Soviet-era interface                                   
+                                                                                
+  I want the finished project to look professional,                             
+  function as an interactive website, and be published                          
+  through GitHub Pages.                                                         
+                                                                                
+  Use the Superpowers brainstorming skill.                                      
+                                                                                
+  Before writing any code, ask me questions one at a time                       
+  to help develop the concept, gameplay mechanics,                              
+  historical accuracy, and visual design.                                       
+                                                                                
+  After brainstorming, present a development plan                               
+  for my approval.                                                              
+                                                                                
+  Keep all project files inside the current directory.                          
+  Do not delete existing files or modify other projects.                        
+  Ask permission before installing dependencies or                              
+  publishing anything.                                                          
+
+⏺ Skill(superpowers:brainstorming)
+  ⎿  Successfully loaded skill
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ I'm using the brainstorming skill, so I'll ask you questions one at a time
+  before planning or building anything.
+
+  Here's what I understand so far: The Kremlin Files is a narrative game you
+  play in the browser. You're a fictional Soviet official in Moscow in 1991,
+  reading through mysterious documents while the country falls apart around you.
+  Your choices in dialogue branch the story toward one of several endings.
+  Along the way you pick up some basic Russian. The whole thing should feel like
+  an authentic late-Soviet interface. It's your final project for a Digital
+  Humanities course at UT, so it needs to look professional and run as a static
+  site on GitHub Pages.
+
+  What I found: the project folder is empty, so we're starting from scratch.
+  GitHub Pages only serves static files, so the game will run entirely in the
+  browser with no server. That works well for a branching story, and saving
+  progress can happen in the player's own browser.
+
+  I'll keep everything in this folder and ask before installing anything or
+  publishing. If I've got any of that wrong, tell me.
+
+  My first question: a DH project usually has an argument or learning goal
+  behind it, beyond just being a game. When someone finishes The Kremlin Files,
+  what do you want them to understand about 1991 that they didn't before? And
+  does your instructor expect anything specific, like cited primary sources, a
+  written reflection, or an "about this project" section?
+
+✻ Churned for 10s · done 12:36 PM
+
+❯ I want players to understand that the collapse of the Soviet Union in 1991    
+  was not simply a single historical event, but a complicated political         
+  transition involving competing interests, institutional instability, and      
+  uncertainty about the future.                                                 
+                                                                                
+  I want the game to explore the conflict between loyalty to the Soviet         
+  government, political reform, and personal survival. Players should           
+  experience how difficult political decisions become when established          
+  institutions begin losing authority.                                          
+                                                                                
+  I also want to incorporate political science concepts such as regime change,  
+  political legitimacy, authoritarianism, democratization, and institutional    
+  collapse.                                                                     
+                                                                                
+  Since I’m studying Russian, I’d like to incorporate beginner-level Russian    
+  vocabulary into documents, conversations, and environmental details. However, 
+  Russian should enhance the experience rather than make the game difficult     
+  for players who don’t speak the language.                                     
+                                                                                
+  For the academic component, I want an “About This Project” section explaining 
+  the historical background, political science concepts, and educational        
+  objectives. I’d also like to include a bibliography with credible academic    
+  sources and historical documents.                                             
+                                                                                
+  The game should distinguish between actual historical events and fictional    
+  characters or scenarios. I want the story to be entertaining and immersive    
+  without sacrificing historical accuracy.                                      
+                                                                                
+  My instructor hasn’t specified additional requirements that I’m aware of, so  
+  let’s plan around these academic elements for now.                            
+
+⏺ That gives me a clear purpose to build around. Here's my summary.
+
+  What the project is for
+
+  The main idea is that 1991 was a process, not a single event. The player
+  should feel institutions losing authority while they're still inside them.
+  Every big choice pulls between three things:
+
+  - Loyalty to the Soviet state and the Party
+  - Reform: siding with Gorbachev's or Yeltsin's camps, democratization, the
+    republics
+  - Survival: protecting yourself, your family, your career
+
+  Political science concepts (legitimacy, regime change, authoritarianism,
+  democratization, institutional collapse) should show up in what happens in the
+  story, not just in labels. My suggestion: the endings each stand for a
+  different outcome of the transition, and the About page names the concept each
+  one shows.
+
+  Russian is flavor, not a barrier. Every Russian word comes with a translation
+  available, and nothing in the story ever depends on knowing Russian.
+
+  The academic layer includes an About This Project section (background,
+  concepts, objectives) and a bibliography of scholarly sources and primary
+  documents. The game also keeps fact and fiction clearly separate. My
+  suggestion here: real events and real people (Gorbachev, Yeltsin, the State
+  Committee on the State of Emergency, or GKChP) are marked in the game itself,
+  maybe with a small "historical note" stamp you can open. Your character and
+  the mystery are clearly fictional.
+
+  My working assumption on setting: the story centers on the August Coup (19–21 
+  August 1991). Three days when the KGB, the Party, the army, and the Russian
+  republic's government all claimed authority at once fit your theme better than
+  anything else in 1991. I'd likely frame it with the weeks before and the
+  December dissolution. Tell me if you had a different period in mind.
+
+  What's wrong or missing in that summary?
+
+  My question: when is the project due, and roughly how long do you picture one
+  playthrough taking? A 10-minute story with three endings and a 45-minute story
+  with seven endings are very different amounts of writing and research. I'd
+  rather size the story to your real timeline than plan something we can't
+  finish well.
+
+✻ Cooked for 11s · done 12:36 PM
+
+❯ Everything in your summary sounds good. I particularly like centering the     
+  story around the August 1991 coup (August 19–21), with a brief introduction   
+  establishing the political situation beforehand and an epilogue addressing    
+  the Soviet Union’s dissolution in December.                                   
+                                                                                
+  I want the game to feel like a genuine political mystery, not simply an       
+  educational simulation. There should be suspense, classified documents,       
+  investigations, difficult decisions, and consequences. The academic material  
+  should be incorporated naturally into the experience.                         
+                                                                                
+  I’m aiming for approximately 15–20 minutes per playthrough, with four         
+  distinct endings influenced by the player’s decisions. I’d rather have a      
+  shorter, polished experience with meaningful choices than a lengthy game with 
+  repetitive content.                                                           
+                                                                                
+  The endings should reflect different personal and institutional outcomes of   
+  the political transition, rather than suggesting that the player could        
+  single-handedly change the historical outcome of the Soviet Union.            
+                                                                                
+  I also want the game to have strong visual presentation, including            
+  historically inspired documents, interactive files, a Soviet-era computer     
+  interface, and atmospheric storytelling.                                      
+                                                                                
+  My project deadline is [INSERT DEADLINE].                                     
+                                                                                
+  Everything else in your summary is accurate. Continue brainstorming and       
+  asking questions one at a time before developing the implementation plan.     
+
+⏺ One quick note before the next question: your deadline came through as the
+  placeholder "[INSERT DEADLINE]". Send me the actual date whenever you have it.
+  Your scope (15–20 minutes, four endings, polished) is clear enough to keep
+  going in the meantime.
+
+  Next question: who is the player, and where do they work?
+
+  This decides which documents the player can plausibly get their hands on, who
+  they talk to, and whose authority falls apart around them. That shapes the
+  whole mystery. Here are three options that fit the August Coup:
+
+  1. A Central Committee staffer at the Party headquarters on Staraya Ploshchad 
+     (Old Square). You're a mid-level official in the department that handles
+     classified Party correspondence. You find a file suggesting senior figures
+     planned for "emergency measures" weeks before 19 August. The Party is the
+     institution that loses legitimacy most dramatically. It was suspended on
+     23–24 August and its headquarters was sealed while staff were reportedly
+     destroying documents. Trade-off: the KGB and the army stay a step away, so
+     you hear about them through documents and phone calls instead of seeing
+     them directly.
+  2. A KGB analyst at the Lubyanka. You're inside the machinery that helped
+     organize the coup, so the suspense is immediate and the danger is personal.
+     Trade-off: it's harder to keep things historically careful when the player
+     is near the actual plotters, and it can drift toward a spy thriller.
+  3. An aide in the Russian republic's government at the White House. You're on
+     Yeltsin's side of the standoff. Trade-off: the moral lines are clearer
+     (reformers vs. hardliners), so the pull between loyalty, reform, and
+     survival is weaker.
+
+  My pick is #1. A Party insider handling paperwork makes classified files the
+  natural core of the game. They can reach both the hardliners and reformers
+  inside the Party, so all three loyalties stay in play. And their institution's
+  collapse gives the story its ending: the sealed building and the shredded
+  files.
+
+  Which one fits what you have in mind? Or is it something else, like a Foreign
+  Ministry official or a Supreme Soviet deputy's aide?
+
+✻ Cooked for 15s · done 12:37 PM
+
+❯ My final project is due Monday, November 23, 2026.                            
+                                                                                
+  I want to go with Option 1: a mid-level Central Committee staffer working     
+  with classified Party correspondence at headquarters on Staraya Ploshchad in  
+  Moscow.                                                                       
+                                                                                
+  I like the idea of being an insider witnessing the collapse of the very       
+  institution I work for. The player should initially believe they’re           
+  performing routine government work, only to discover documents suggesting     
+  that senior officials were preparing emergency measures before the August     
+  Coup.                                                                         
+                                                                                
+  I want the mystery to unfold gradually through classified correspondence,     
+  intercepted communications, telephone conversations, and interactions with    
+  other officials.                                                              
+                                                                                
+  The player should face difficult decisions involving loyalty to the Party,    
+  political reform, and personal survival. I also want the player’s             
+  relationships with colleagues and superiors to influence what information     
+  becomes available and how the story develops.                                 
+                                                                                
+  The atmosphere should feel tense, secretive, and increasingly unstable as the 
+  coup unfolds. I’d like a historically inspired Soviet government office       
+  aesthetic, with classified folders, typewritten documents, red stamps, old    
+  telephones, and period-appropriate details.                                   
+                                                                                
+  Importantly, the player should not be able to change major historical events. 
+  Their choices should determine their personal fate, relationships, and what   
+  happens to the documents they uncover.                                        
+                                                                                
+  Since we only have five days, let’s prioritize a polished 15–20-minute        
+  experience with four meaningful endings, historical notes, and an academic    
+  bibliography.                                                                 
+                                                                                
+  Continue asking questions one at a time. I want to finish brainstorming       
+  efficiently so we can begin development as soon as possible.                  
+
+⏺ Five days is tight but doable at this scope. I'll keep each question focused
+  on things that actually change what gets built.
+
+  Here's the story as I understand it
+
+  You play a mid-level official in the Central Committee's
+  classified-correspondence section at Staraya Ploshchad. The game opens with
+  routine work: logging, routing, and stamping files. Small oddities build into
+  the discovery that senior officials were preparing "emergency measures" before
+  19 August. The mystery unfolds through four channels:
+
+  - Classified correspondence you open and examine
+  - Intercepted communications such as telegrams and transcripts
+  - Telephone calls on your office phones
+  - Conversations with colleagues and superiors
+
+  Relationships act as gates. How much each person trusts you decides which
+  files they pass you, what they tell you, and who protects you later. The
+  tension builds across the three coup days. History never changes: the coup
+  fails, and the Party is suspended. Your choices decide your fate, your 
+  relationships, and what happens to the documents.
+
+  My proposals, which you can correct:
+
+  - Your character is fictional, with a fixed name and the player seeing the
+    story through their eyes.
+  - Three or four fictional colleagues each represent one pull: a hardline
+    superior, a reform-minded peer, a cautious veteran clerk who looks out for
+    himself, and possibly a journalist contact outside the building.
+  - The 15–20 minutes break into four acts: Prologue (early August), 19 August,
+    20–21 August, and 23 August, the day the building is sealed. A short
+    December epilogue follows.
+
+  What's wrong or missing?
+
+  Next question: do these four endings fit? Each one is defined by what you do
+  with the documents and what that shows about the transition:
+
+  1. The Witness. You hand the files to investigators or the press.
+     Democratization and legitimacy shifting to new institutions. Your career
+     ends, but your conscience is clear.
+  2. The Loyalist. You shred the files as ordered and stand by the Party until
+     the doors are sealed. Institutional collapse from the inside.
+  3. The Survivor. You keep the files as leverage and move into a post in the
+     new Russian government. Regime change without elite turnover. This reflects
+     the real pattern of the old Party elite (the nomenklatura) converting
+     their positions into new ones.
+  4. The Scapegoat. You trust the wrong person and end up named in the
+     investigation of the plotters. What happens to the individual when 
+     authoritarian structures collapse.
+
+  Do these work, or would you change, merge, or replace any of them?
+
+✻ Brewed for 16s · done 12:38 PM
+
+❯ I like all four proposed endings: The Witness, The Loyalist, The Survivor,    
+  and The Scapegoat. Each represents a different consequence of institutional   
+  collapse and fits the political science foundation of the project.            
+                                                                                
+  I particularly like The Survivor because it demonstrates how political elites 
+  can maintain their influence even after the institutions that originally      
+  empowered them disappear.                                                     
+                                                                                
+  I would make one adjustment to The Scapegoat: this ending should develop      
+  through multiple decisions involving misplaced trust, compromised             
+  relationships, and questionable actions rather than being triggered by a      
+  single wrong choice.                                                          
+                                                                                
+  I also want the endings to have moral ambiguity. The Witness might do the     
+  right thing but face personal consequences. The Loyalist might genuinely      
+  believe they’re protecting the country. The Survivor might sacrifice personal 
+  principles for security. The Scapegoat might suffer despite relatively        
+  innocent intentions.                                                          
+                                                                                
+  The proposed four-act structure works well, as do the fictional colleagues    
+  representing different political perspectives. I would prefer the protagonist 
+  to have a fixed name and background.                                          
+                                                                                
+  One important clarification about my deadline: the project is due Monday,     
+  November 23, 2026, but it does not need to be completely finished by then.    
+                                                                                
+  My instructor primarily wants to see substantial progress, a clear creative   
+  and academic direction, and evidence that I am actively developing the        
+  project.                                                                      
+                                                                                
+  I would like to aim for approximately 60–70% completion by Monday.            
+                                                                                
+  My priorities are:                                                            
+                                                                                
+  1. A polished, historically inspired Soviet-era interface.                    
+  2. A functional opening sequence introducing the player and political         
+  situation.                                                                    
+  3. Interactive classified documents and an investigation system.              
+  4. Meaningful dialogue choices that influence the story.                      
+  5. At least one substantial, playable storyline demonstrating the branching   
+  narrative.                                                                    
+  6. An About This Project section explaining the academic purpose.             
+  7. A preliminary bibliography of credible historical and scholarly sources.   
+  8. A working GitHub repository demonstrating development progress.            
+                                                                                
+  The remaining story branches, additional endings, and secondary features can  
+  be identified as future development.                                          
+                                                                                
+  I still want the eventual finished project to feature approximately 15–20     
+  minutes of gameplay and four endings.                                         
+                                                                                
+  Please structure our development plan around producing a compelling,          
+  functional prototype by Monday rather than attempting to complete the entire  
+  game.                                                                         
+                                                                                
+  I’m satisfied with the overall narrative direction. Unless there are          
+  essential design questions remaining, I’d like to conclude brainstorming,     
+  review the development plan, and begin implementation.                        
+
+⏺ That's enough to work from. I don't have any essential design questions left.
+  The only remaining decision is how to build it, and that should be a quick
+  one.
+
+  Three ways to build it
+
+  A. Hand-built static site using plain HTML, CSS, and JavaScript (my 
+  recommendation)
+  The story lives in a data file listing scenes, documents, dialogue, and
+  choices. A small engine I write tracks trust, flags, discovered documents, and
+  act progression. The interface is a custom Soviet office "desktop" with a
+  file tray, typewritten documents you open and stamp, a rotary phone, and a
+  terminal.
+  - Advantages: nothing to install, no build step, and it publishes to GitHub
+    Pages as-is. You get full control over the look, which is your top priority.
+    The story data is separate from the code, so you can write or edit branches
+    without touching the engine.
+  - Disadvantages: I write the branching engine myself, which is about half a
+    day. There's no visual tool for mapping out branches, though I'd give you a
+    script that checks every path leads somewhere.
+
+  B. Twine (SugarCube) with heavy custom styling
+  Twine is a popular tool in Digital Humanities for interactive fiction, and it
+  gives you a visual map of passages.
+  - Advantages: quick to write branching text, and your instructor may recognize
+    it.
+  - Disadvantages: Twine thinks in terms of "pages of text with links". A
+    desktop interface with folders you open, a phone, and a separate file system
+    would fight it the whole way. Most of the polish would be CSS hacks layered
+    on top of it, which works against priority #1.
+
+  C. A React or Vite app
+  - Advantages: a clean component structure that would scale well beyond this
+    project.
+  - Disadvantages: it requires installing npm dependencies and setting up a
+    build-and-deploy pipeline for GitHub Pages. That's real overhead in five
+    days for little gain at this size, and the repository gets harder for a
+    reviewer to read.
+
+  I recommend A. It's the most direct path to a polished, distinctive interface.
+  It needs zero dependencies, so there's nothing to ask your permission to
+  install. And a reviewer can open the repository and see clean, readable files:
+  the story data, the engine, the styles, and the About and bibliography pages.
+
+  Which way do you want to go? Once you pick, I'll write the design document
+  with the Monday prototype scope and the later work marked separately, and send
+  it to you for approval.
+
+✻ Baked for 15s · done 12:40 PM
+
+❯ Let’s go with Option A: a hand-built static website using HTML, CSS, and      
+  JavaScript.                                                                   
+                                                                                
+  I agree that this gives us the most creative freedom while keeping the        
+  project manageable and easy to publish through GitHub Pages.                  
+                                                                                
+  I want the interface to be one of the strongest aspects of the project. It    
+  should feel like the player is sitting inside a Soviet government office in   
+  August 1991, physically interacting with documents, correspondence,           
+  telephones, and classified information.                                       
+                                                                                
+  The visual design should be immersive, historically inspired, and             
+  professional. I want the interface to feel distinctive rather than like a     
+  conventional text-based adventure.                                            
+                                                                                
+  I also like separating the story data from the game engine so we can expand   
+  the narrative without rewriting the underlying functionality.                 
+                                                                                
+  For Monday’s prototype, prioritize a polished interface, functional           
+  investigation mechanics, meaningful player choices, and a substantial         
+  playable opening.                                                             
+                                                                                
+  Please proceed with writing the design document. Clearly distinguish between  
+  features we will implement before Monday, November 23, and features reserved  
+  for later development.                                                        
+                                                                                
+  Do not begin coding until you’ve presented the design document for my         
+  approval.                                                                     
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ Write(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Wrote 246 lines to
+     docs/superpowers/specs/2026-11-18-kremlin-files-design.md
+       1 # The Kremlin Files — Design Document
+       2 
+       3 **Date:** 2026-11-18
+       4 **Author:** Aiden Smith (Digital Humanities, University of Tenne
+         ssee), with Claude
+       5 **Prototype milestone:** Monday, 23 November 2026 (~60–70% of th
+         e finished game)
+       6 **Status:** Draft for approval
+       7 
+       8 ---
+     … +238 lines (ctrl+o to expand)
+
+❯ Scratch that,                                                                 
+  Let’s go with Option A: a hand-built static website using HTML, CSS, and      
+  JavaScript.                                                                   
+                                                                                
+  I agree that this gives us the most creative freedom while keeping the        
+  project manageable and easy to publish through GitHub Pages.                  
+                                                                                
+  I want the interface to be one of the strongest aspects of the project. It    
+  should feel like the player is sitting inside a Soviet government office in   
+  August 1991, physically interacting with documents, correspondence,           
+  telephones, and classified information.                                       
+                                                                                
+  The visual design should be immersive, historically inspired, and             
+  professional. I want the interface to feel distinctive rather than like a     
+  conventional text-based adventure.                                            
+                                                                                
+  I also like separating the story data from the game engine so we can expand   
+  the narrative without rewriting the underlying functionality.                 
+                                                                                
+  For Monday’s prototype, prioritize a polished interface, functional           
+  investigation mechanics, meaningful player choices, and a substantial         
+  playable opening.                                                             
+                                                                                
+  Please proceed with writing the design document. Clearly distinguish between  
+  features we will implement before Monday, November 23, and features reserved  
+  for later development.                                                        
+                                                                                
+  Do not begin coding until you’ve presented the design document for my         
+  approval.                                                                     
+
+⏺ I've written the design document. Your latest message repeats the previous
+  request word for word after "Scratch that," so I took it as a re-send and
+  didn't change anything. If you did mean to change something, tell me what.
+
+  Design document: docs/superpowers/specs/2026-11-18-kremlin-files-design.md
+
+  I re-read it from the point of view of someone who'd have to build from it
+  without asking you anything. Nothing important is left open: what remains is
+  either decided or explicitly left to me.
+
+  What's in it:
+  - Purpose and argument: 1991 as a contested transition, built around loyalty,
+    reform, and survival, with the political science concepts tied to specific
+    events and endings.
+  - Rules for historical accuracy: real events can't be changed by the player.
+    Real figures only appear through what they did publicly and documents that
+    actually exist, never in invented private scenes. A red "ИСТОРИЧЕСКАЯ 
+    СПРАВКА / Historical note" stamp marks real content, and each note carries a
+    citation.
+  - Four endings: each is morally ambiguous. The Scapegoat builds up through a
+    hidden "exposure" score that rises over several risky actions, so no single
+    choice triggers it.
+  - Investigation loop: you click key phrases in a document to save them as
+    clues. Those clues become search terms in the registry terminal, which turns
+    up new files. Some files are only available through colleagues who trust
+    you enough. What you do with each file drives the ending.
+  - Interface: a single desk screen with an in-tray, folders, a rotary phone, a
+    green-phosphor terminal, a notebook, a dictionary, and a wall calendar and
+    clock. Russian terms show a hover tooltip with the Cyrillic, a
+    transliteration, and the English.
+  - Monday vs. later, split as you asked in Section 12.
+
+  Choices I made for you to check while reading:
+  1. Characters (all fictional): protagonist Andrei Nikolaevich Volkov, 38, a
+     senior aide (референт) in the Central Committee's General Department.
+     Colleagues are Rudin (the hardliner), Belova (the reformer) and Zaitsev
+     (the veteran archivist). Outside the building is Lena Markova, a fictional
+     journalist at the real newspaper Moscow News.
+  2. The one complete route for Monday ends in The Survivor, the ending you
+     singled out. Unfinished branches show a clearly marked "in development"
+     card, not a dead end.
+  3. Monday's content: the Prologue and Act I fully branching, plus that one
+     route through Acts II–III. Also about 25 Russian terms, 6–8 cited
+     historical notes, and 10–15 bibliography entries.
+  4. Bibliography: I'm confident in the sources in Section 13, but each one
+     should be checked against UT's library catalog before you submit.
+  5. No installs and no publishing without your permission. A local git
+     repository will hold the commit history. Creating the GitHub repository and
+     turning on Pages will wait for your go-ahead.
+
+  Please read it and tell me whether it's approved or what to change. Once you
+  approve it, I'll write the step-by-step development plan.
+
+✻ Sautéed for 2m 11s · done 12:43 PM
+
+❯ erase all progress you made with option A,                                    
+  I want to go with Option B: Twine using SugarCube.                            
+                                                                                
+  Twine was my original intended platform for this project, and I want to stay  
+  with it because I’ve previously worked with Twine in my Digital Humanities    
+  course.                                                                       
+                                                                                
+  I understand that creating a highly customized interface in Twine may require 
+  additional CSS and JavaScript, but I’m comfortable with that trade-off.       
+                                                                                
+  I still want the game to feature:                                             
+                                                                                
+  1. A historically inspired Soviet government office interface.                
+  2. Interactive classified documents and correspondence.                       
+  3. Branching dialogue and meaningful player decisions.                        
+  4. A system tracking relationships, loyalty, reform, and survival.            
+  5. An immersive atmosphere with Soviet-era visual elements.                   
+  6. Historical notes, an About section, and a bibliography.                    
+                                                                                
+  I want Twine to serve as the foundation for the interactive storytelling,     
+  with custom styling and functionality enhancing the experience.               
+                                                                                
+  Since the November 23 deadline only requires substantial progress, we don’t   
+  need to implement every advanced feature immediately.                         
+                                                                                
+  Please revise your development approach around Twine and SugarCube, keeping   
+  the Monday prototype realistic.                                               
+                                                                                
+  Proceed with the design document and present it for my approval before        
+  writing any code.                                                             
+
+⏺ Write(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Added 109 lines, removed 97 lines
+      2  
+      3  **Date:** 2026-11-18
+      4  **Author:** Aiden Smith (Digital Humanities, University of Tenne
+         ssee), with Claude
+      5 -**Prototype milestone:** Monday, 23 November 2026 (~60–70% of th
+        -e finished game)                                                
+      5 +**Prototype milestone:** Monday, 23 November 2026 (substantial p
+        +rogress, ~60–70% of the finished game)                          
+      6 +**Platform:** Twine 2 · SugarCube 2                             
+      7  **Status:** Draft for approval
+      8  
+      9  ---
+     ...
+      22  
+      23  **Goals (finished game)**
+      24  - 15–20 minute playthrough; four distinct, morally ambiguous en
+          dings.
+      24 -- A distinctive, polished "Soviet government office, August 199
+         -1" interface — the strongest part of the project.              
+      25 -- Investigation through documents, intercepts, telephone calls,
+         - and conversations.                                            
+      26 -- Relationships with colleagues gate what information the playe
+         -r can access.                                                  
+      25 +- A historically inspired Soviet government office interface bu
+         +ilt on Twine/SugarCube with custom CSS and JavaScript.         
+      26 +- Interactive classified documents, correspondence, intercepts,
+         + and telephone calls.                                          
+      27 +- Branching dialogue; a system tracking relationships and the l
+         +oyalty / reform / survival pulls.                              
+      28  - Beginner Russian woven into documents, dialogue, and environm
+          ent, always optional to understand.
+      29  - Clear separation of historical fact from fiction, with in-gam
+          e historical notes.
+      29 -- "About This Project" section and a bibliography of scholarly 
+         -and primary sources.                                           
+      30 +- About This Project section and a bibliography of scholarly an
+         +d primary sources.                                             
+      31  - Published on GitHub Pages from a public GitHub repository.
+      32  
+      33  **Non-goals**
+      34  - The player cannot change major historical events. The coup fa
+          ils on 21 August; the CPSU is suspended; the USSR dissolves in 
+          December. Choices shape only the protagonist's fate, relationsh
+          ips, and what happens to the documents.
+      35  - Not a language-learning app (no quizzes, no Russian required 
+          to progress).
+      35 -- No audio voice acting, no 3D, no accounts or server.         
+      36 +- No voice acting, no 3D, no accounts or server.               
+      37  
+      38  **Anti-goals (failure even if it "works")**
+      38 -- Feels like a generic text adventure or a click-through slides
+         -how.                                                           
+      39 +- Looks like default Twine — a plain page of text with blue lin
+         +ks.                                                            
+      40  - Real people shown saying or doing things they did not do, pre
+          sented as fact.
+      41  - Endings that moralize ("you chose correctly") instead of show
+          ing trade-offs.
+      42  - Russian that blocks or confuses non-speakers.
+      42 -- A prototype that's broad but shallow — many stubbed screens, 
+         -nothing polished.                                              
+      43 +- A prototype that's broad but shallow — many stubbed passages,
+         + nothing polished.                                             
+      44  
+      45  ## 3. Constraints
+      46  
+      46 -- **Static hosting only** (GitHub Pages): everything runs in th
+         -e browser; saves use `localStorage`.                           
+      47 -- **No dependencies to install.** Plain HTML/CSS/JavaScript (ES
+         - modules). Web fonts may load from Google Fonts by `<link>`; an
+         -ything beyond that requires the user's permission.             
+      47 +- **Twine 2 with the SugarCube 2 story format** is the foundati
+         +on (author's choice; prior course experience).                 
+      48 +- **Static hosting** (GitHub Pages): one compiled HTML file plu
+         +s an `assets/` folder; SugarCube's built-in save system in the 
+         +browser.                                                       
+      49  - **All files inside this project directory.** Do not touch oth
+          er projects.
+      49 -- **Ask before** installing anything, creating the GitHub repos
+         -itory, pushing, or enabling Pages.                             
+      50 +- **Ask before** installing anything (including Tweego, see §11
+         +), creating the GitHub repository, pushing, or enabling Pages. 
+      51  - **Images:** original CSS/SVG artwork, or public-domain/openly
+           licensed images with attribution recorded in the credits. No c
+          opyrighted photos.
+      51 -- **Fonts must support Cyrillic.**                             
+      52 +- **Fonts must support Cyrillic** (loaded from Google Fonts by 
+         +`@import`/`<link>` in the stylesheet — no installation).       
+      53  - **Timeline:** five days to the prototype milestone.
+      54  
+      55  ## 4. Approaches considered
+      56  
+      57  | Approach | Trade-off | Decision |
+      58  |---|---|---|
+      58 -| **A. Hand-built static site (HTML/CSS/JS) with story data sep
+         -arate from a small engine** | Full control of the interface; ze
+         -ro dependencies; deploys to Pages as-is. Requires writing a sma
+         -ll branching engine (~half a day). | **Chosen** — best path to 
+         -a distinctive interface, and the story can grow without touchin
+         -g the engine. |                                                
+      59 -| B. Twine (SugarCube) with custom CSS | Fast branching authori
+         -ng, DH-familiar. Its passage-and-link model fights a desktop of
+         - folders, phone, and terminal. | Rejected — works against inter
+         -face priority. |                                               
+      60 -| C. React/Vite app | Scalable components. Adds npm installs, b
+         -uild step, deploy pipeline. | Rejected — overhead without benef
+         -it at this size. |                                             
+      59 +| Hand-built static site (HTML/CSS/JS) with a custom engine | M
+         +aximum interface control; requires writing a branching engine. 
+         +| Not chosen. |                                                
+      60 +| **Twine 2 + SugarCube 2 with heavy custom CSS/JS** | Proven b
+         +ranching, variables, and saves out of the box; DH-familiar; aut
+         +hor has prior experience. Distinctive interface requires overri
+         +ding SugarCube's default layout (via its `StoryInterface` passa
+         +ge) and custom macros. | **Chosen by the author.** Interface am
+         +bitions are kept, but achieved inside SugarCube's model. |     
+      61 +| React/Vite app | Scalable components; npm installs, build pip
+         +eline. | Not chosen — overhead without benefit at this size. | 
+      62  
+      63  ## 5. Setting and history
+      64  
+     ...
+      76  
+      77  Every historical claim in the game must be checked against at l
+          east one source in the bibliography. Real figures (Gorbachev, Y
+          eltsin, Yanayev, Kryuchkov, Yazov, Pugo, Pavlov, etc.) appear o
+          nly through documented public actions, broadcasts, and historic
+          ally attested documents — never in invented private scenes or d
+          ialogue.
+      78  
+      78 -**Fiction:** the protagonist, colleagues, the specific "emergen
+         -cy measures" file trail the player uncovers, and all conversati
+         -ons are fictional, written to be plausible within documented hi
+         -story. The game says so on the title screen and in the About se
+         -ction.                                                         
+      79 +**Fiction:** the protagonist, colleagues, the specific "emergen
+         +cy measures" file trail, and all conversations are fictional, w
+         +ritten to be plausible within documented history. The game says
+         + so on the title screen and in the About section.              
+      80  
+      81  ## 6. Characters (all fictional)
+      82  
+      82 -- **Protagonist — Andrei Nikolaevich Volkov (Андрей Николаевич 
+         -Волков), 38.** Senior referent (*референт*) in the Central Comm
+         -ittee's General Department (*Общий отдел*), the section that re
+         -gisters and routes classified Party correspondence. Married, on
+         -e daughter; a Party careerist who has never questioned the pape
+         -rwork. Fixed name and background; seen through his eyes in seco
+         -nd person ("You…").                                            
+      83 -- **Gennady Ivanovich Rudin — deputy head of sector (the Loyali
+         -st pull).** Hardline, paternal, genuinely believes order must b
+         -e saved. Gives the player access to sensitive files — at a pric
+         -e.                                                             
+      84 -- **Irina Sergeyevna Belova — instructor, reform-minded peer (t
+         -he Reform pull).** Quietly sympathetic to the democratic moveme
+         -nt; knows people outside the building.                         
+      85 -- **Pyotr Fomich Zaitsev — veteran archivist, 61 (the Survival 
+         -pull).** Has outlasted every leadership since Khrushchev. Knows
+         - where everything is filed and how to stay unnoticed.          
+      86 -- **Lena Markova — journalist contact (outside the building).**
+         - Works for *Moscow News* (*Московские новости*), a real paper t
+         -hat was suspended during the coup; she herself is fictional. Re
+         -ached only by phone and in one meeting.                        
+      83 +- **Protagonist — Andrei Nikolaevich Volkov (Андрей Николаевич 
+         +Волков), 38.** Senior referent (*референт*) in the Central Comm
+         +ittee's General Department (*Общий отдел*), the section that re
+         +gisters and routes classified Party correspondence. Married, on
+         +e daughter; a Party careerist who has never questioned the pape
+         +rwork. Fixed name and background; written in second person ("Yo
+         +u…").                                                          
+      84 +- **Gennady Ivanovich Rudin — deputy head of sector (Loyalty).*
+         +* Hardline, paternal, genuinely believes order must be saved. G
+         +ives access to sensitive files — at a price.                   
+      85 +- **Irina Sergeyevna Belova — instructor, reform-minded peer (R
+         +eform).** Quietly sympathetic to the democratic movement; knows
+         + people outside the building.                                  
+      86 +- **Pyotr Fomich Zaitsev — veteran archivist, 61 (Survival).** 
+         +Has outlasted every leadership since Khrushchev. Knows where ev
+         +erything is filed and how to stay unnoticed.                   
+      87 +- **Lena Markova — journalist contact (outside the building).**
+         + Works for *Moscow News* (*Московские новости*), a real paper s
+         +uspended during the coup; she herself is fictional. Reached by 
+         +phone and in one meeting.                                      
+      88  
+      89  ## 7. Story structure (finished game)
+      90  
+     ...
+       96  | Act III | 23 Aug | Building sealed; final decision about the
+            documents | 3 min |
+       97  | Epilogue | Dec 1991 | Ending revealed; historical outcome st
+           ated | 2 min |
+       98  
+       98 -**The mystery thread:** documents show that people at the seni
+          -or level prepared "emergency measures" before 19 August — draf
+          -t decrees, unusual routing instructions, lists. The player pie
+          -ces this together. (Historically, sources describe KGB-led pre
+          -paration in the weeks before the coup, and on 19 August the CC
+          - Secretariat sent coded telegrams to regional Party committees
+          - about supporting the emergency measures. The game's specific 
+          -file trail is fictional and labeled as such; real documents ar
+          -e cited in historical notes.)                                 
+       99 +**The mystery thread:** documents show that people at the seni
+          +or level prepared "emergency measures" before 19 August — draf
+          +t decrees, unusual routing instructions, lists. The player pie
+          +ces this together. (Historically, sources describe KGB-led pre
+          +paration in the weeks before the coup, and on 19 August the CC
+          + Secretariat sent coded telegrams to regional Party committees
+          + concerning the emergency measures. The game's specific file t
+          +rail is fictional and labeled as such; real documents are cite
+          +d in historical notes.)                                       
+      100  
+      101  ## 8. Endings (finished game)
+      102  
+      102 -Each ending is determined by what happens to the documents, co
+          -mbined with relationships and accumulated exposure. Each is mo
+          -rally ambiguous and tied to a political science concept that t
+          -he About page explains.                                       
+      103 +Each ending is determined by what happens to the documents, co
+          +mbined with relationships and accumulated exposure. Each is mo
+          +rally ambiguous and tied to a political science concept that t
+          +he About section explains.                                    
+      104  
+      104 -1. **The Witness (Свидетель)** — The player gives the files to
+          - investigators or the press. *Democratization; legitimacy tran
+          -sferring to new institutions.* The right thing, with a cost: c
+          -areer ended, old colleagues treat Volkov as a traitor, and the
+          - files shift little.                                          
+      105 +1. **The Witness (Свидетель)** — The player gives the files to
+          + investigators or the press. *Democratization; legitimacy tran
+          +sferring to new institutions.* The right thing, with a cost: c
+          +areer ended, old colleagues treat Volkov as a traitor, and the
+          + files change less than he hoped.                             
+      106  2. **The Loyalist (Верный)** — The player destroys the files a
+           s ordered and stays to the end. *Institutional collapse from i
+           nside.* Sincerely believes he protected the country from chaos
+           ; left holding nothing when the doors are sealed.
+      107  3. **The Survivor (Уцелевший)** — The player keeps the files a
+           s leverage and moves into a post in the new Russian government
+           . *Regime change without elite turnover; the old Party elite (
+           nomenklatura) converting into a new one.* Secure and comfortab
+           le; principles traded away.
+      108  4. **The Scapegoat (Козёл отпущения)** — The player is named i
+           n the investigation of the plotters. *What happens to individu
+           als when authoritarian structures collapse.* **Builds up over 
+           several decisions** — misplaced trust, compromised relationshi
+           ps, questionable actions — never triggered by a single choice.
+            Relatively innocent intentions, real consequences.
+      109  
+      109 -**Ending resolution (rule for the builder):** at the end of Ac
+          -t III, if `exposure` ≥ threshold → Scapegoat (overrides). Othe
+          -rwise the ending follows the player's final decision about the
+          - documents, which is only offered if the necessary relationshi
+          -p and document conditions are met (e.g., Witness requires a co
+          -ntact who will take the files; Survivor requires holding enoug
+          -h key documents to be worth something).                       
+      110 +**Ending resolution:** at the end of Act III, if `$exposure` ≥
+          + threshold → Scapegoat (overrides). Otherwise the ending follo
+          +ws the player's final decision about the documents, which is o
+          +nly offered if the relevant relationship and document conditio
+          +ns are met (e.g., Witness requires a contact who will take the
+          + files; Survivor requires holding enough key documents to be w
+          +orth something).                                              
+      111  
+      111 -## 9. Game systems                                            
+      112 +## 9. Game systems (in SugarCube)                             
+      113  
+      113 -**State (hidden from the player except through consequences):*
+          -*                                                             
+      114 -- `trust` per character, integer −3…+3.                       
+      115 -- `leanings`: loyalty / reform / survival tallies (used for fl
+          -avor text and ending epilogues, not as visible meters).       
+      116 -- `exposure` integer, raised by risky actions (careless phone 
+          -calls, signing for documents, confiding in the wrong person, b
+          -eing seen in the wrong room).                                 
+      117 -- `flags`: named story facts (e.g., `copied_routing_slip`, `to
+          -ld_rudin_about_list`).                                        
+      118 -- `documents`: which files the player holds, has read, has cop
+          -ied, has handed over.                                         
+      119 -- `clues`: key phrases marked in documents.                   
+      120 -- Current act and scene.                                      
+      114 +**Story variables** (initialized in `StoryInit`, saved automat
+          +ically by SugarCube):                                         
+      115 +- `$trust` — object per character (`rudin`, `belova`, `zaitsev
+          +`, `markova`), integer −3…+3.                                 
+      116 +- `$loyalty`, `$reform`, `$survival` — tallies of the three pu
+          +lls; shape dialogue options, epilogue text, and which final ch
+          +oices feel available. Not shown as numbers; reflected in a sub
+          +tle "state of mind" line in the notebook.                     
+      117 +- `$exposure` — raised by risky actions (careless phone calls,
+          + signing for documents, confiding in the wrong person).       
+      118 +- `$flags` — named story facts (e.g., `copiedRoutingSlip`).   
+      119 +- `$docs` — per document: seen / held / copied / handed over /
+          + destroyed.                                                   
+      120 +- `$clues` — key phrases the player has marked.               
+      121 +- `$glossary` — Russian terms encountered.                    
+      122 +- `$act` — current act; drives date, clock, and atmosphere.   
+      123  
+      122 -**Investigation mechanic:**                                   
+      123 -1. Documents contain **marked key phrases** (a code word, a re
+          -ference number, a name, a date). Clicking one records it as a 
+          -clue in the player's **notebook** (*блокнот*).                
+      124 -2. Clues become **search terms in the registry terminal** — se
+          -arching the right term (or combination) reveals a new file, a 
+          -routing history, or a "record restricted" result that needs so
+          -meone's help to unlock.                                       
+      125 -3. Some files can only be obtained through a character with en
+          -ough trust (Zaitsev pulls it from the archive; Rudin hands it 
+          -over; Belova passes a photocopy).                             
+      126 -4. The player chooses what to do with each important file: fil
+          -e it normally, keep it, copy it, show it to someone, destroy i
+          -t. These are the decisions that drive the endings.            
+      124 +**Static data** in Story JavaScript (`setup.*`, not saved): ch
+          +aracter profiles, glossary entries, historical notes with cita
+          +tions, terminal search index.                                 
+      125  
+      128 -**Dialogue and phone:** conversations are scenes made of lines
+          - and choices. Choices can require or change trust, flags, docu
+          -ments, or exposure. Phone calls arrive by the phone ringing on
+          - the desk — the player can answer or ignore it (ignoring is it
+          -self a choice with consequences). Some calls can be placed usi
+          -ng numbers found in documents.                                
+      126 +**Investigation loop:**                                       
+      127 +1. Document passages contain **key phrases** written with a cu
+          +stom `<<clue>>` macro. Clicking one marks it, records it in `$
+          +clues`, and adds it to the notebook.                          
+      128 +2. The **registry terminal** passage offers the player's clues
+          + as search terms. The right term (or pair of terms) reveals a 
+          +new document passage, a routing history, or "record restricted
+          +" (needs a colleague's help).                                 
+      129 +3. Some files are obtainable only through characters with enou
+          +gh trust (`<<if $trust.zaitsev gte 2>>`).                     
+      130 +4. Key documents end with a decision — file normally, keep, co
+          +py, show someone, destroy — which sets `$docs` and the pull/ex
+          +posure variables.                                             
+      131  
+      130 -**Time/act progression:** each act advances when its required 
+          -story beats are complete, shown as a date/time change on the w
+          -all calendar and clock, with a short transitional screen (radi
+          -o/TV bulletin, typed teletype summary).                       
+      132 +**Dialogue and phone:** conversation passages with choice link
+          +s that `<<set>>` trust, pulls, flags, and exposure. Phone call
+          +s: when a call is pending, the phone in the side panel rings (
+          +CSS animation); clicking it goes to the call passage. Ignoring
+          + certain calls has consequences.                              
+      133  
+      132 -**Saving:** automatic save to `localStorage` at each scene; "C
+          -ontinue" and "New game" on the title screen. Wrapped in try/ca
+          -tch so the game still runs if storage is unavailable.         
+      134 +**Act progression:** when an act's required beats are done, a 
+          +transition passage shows a dated teletype/radio bulletin and a
+          +dvances `$act`.                                               
+      135  
+      136 +**Saving:** SugarCube's built-in save slots and autosave, rest
+          +yled to match the interface.                                  
+      137 +                                                              
+      138  ## 10. Interface and visual design
+      139  
+      136 -The player sits at Volkov's desk. **One main screen: the desk*
+          -*, viewed from above or at a slight angle. Everything is done 
+          -by interacting with objects on it — no generic menus during pl
+          -ay.                                                           
+      140 +The default SugarCube layout (left sidebar, plain text page) i
+          +s replaced entirely using a **`StoryInterface` passage** that 
+          +defines a desk layout. Passages render into the central area; 
+          +side panels are kept up to date by SugarCube's `data-passage` 
+          +regions, which refresh on each navigation.                    
+      141  
+      138 -Rough layout:                                                 
+      139 -                                                              
+      142  ```
+      143  ┌─────────────────────────────────────────────────────────────
+           ─────┐
+      144  │ [Calendar: 19 АВГ 1991]       ЦК КПСС · Общий отдел     [Clo
+           ck] │
+      145  ├───────────────┬──────────────────────────────────┬──────────
+           ─────┤
+      146  │  IN-TRAY      │                                  │   ROTARY 
+                │
+      145 -│  ВХОДЯЩИЕ     │     OPEN DOCUMENT / FOLDER       │   PHONE  
+          -     │                                                        
+      146 -│  [folders]    │   (typewritten, stamps, notes,   │   (rings)
+          -     │                                                        
+      147 -│               │    clickable key phrases)        │          
+          -     │                                                        
+      148 -│  KEPT FILES   │                                  │  TERMINAL
+          -     │                                                        
+      149 -│  (desk drawer)│                                  │  (registr
+          -y)   │                                                        
+      147 +│  ВХОДЯЩИЕ     │      CURRENT PASSAGE             │   PHONE  
+          +     │                                                        
+      148 +│  (documents   │   (document / conversation /     │   (rings)
+          +     │                                                        
+      149 +│   available)  │    terminal / scene)             │          
+          +     │                                                        
+      150 +│               │                                  │  TERMINAL
+          +     │                                                        
+      151 +│  KEPT FILES   │                                  │  (registr
+          +y)   │                                                        
+      152  ├───────────────┴──────────────────────────────────┴──────────
+           ─────┤
+      151 -│ NOTEBOOK (clues)  ·  DICTIONARY (Словарь)  ·  HISTORICAL NOT
+          -ES   │                                                        
+      153 +│ NOTEBOOK (clues) · DICTIONARY (Словарь) · NOTES · SAVE · ABO
+          +UT   │                                                        
+      154  └─────────────────────────────────────────────────────────────
+           ─────┘
+      155  ```
+      156  
+      155 -- **Documents:** off-white paper texture, typewriter font, Cyr
+          -illic headers (*СЕКРЕТНО*, *СОВ. СЕКРЕТНО*, *ЦК КПСС*), red an
+          -d violet stamps, routing slips, handwritten margin notes, stap
+          -les, carbon copies. English body text with Russian headers, st
+          -amps, and terms.                                              
+      156 -- **Folders:** buff card folders with string ties and red "СЕК
+          -РЕТНО" stamps; open with a short animation.                   
+      157 -- **Rotary phone:** clickable; rings with a shaking animation 
+          -when a call comes in; conversation appears as a typed transcri
+          -pt beside it.                                                 
+      158 -- **Registry terminal:** green-phosphor monochrome screen styl
+          -ed after Soviet-era computer terminals, with a blinking cursor
+          - and typed output. The player types or picks search terms from
+          - their clues.                                                 
+      159 -- **Dialogue with colleagues:** a character card (illustrated 
+          -silhouette or SVG portrait, name, position) with lines and cho
+          -ice buttons that look like typed index cards.                 
+      160 -- **Palette:** institutional greens and browns, aged paper, So
+          -viet red reserved for stamps and danger; tension shown by the 
+          -environment (more ringing phones, a TV bulletin overlay, light
+          -ing shifting toward evening).                                 
+      161 -- **Transitions:** dated teletype/bulletin screens between act
+          -s.                                                            
+      162 -- **Responsiveness:** designed for laptop/desktop first; usabl
+          -e on tablets; on phones the desk stacks vertically (functional
+          - but not the primary experience).                             
+      163 -- **Accessibility:** keyboard navigable, visible focus, adequa
+          -te contrast on all text, `prefers-reduced-motion` respected, n
+          -o information conveyed by color alone.                        
+      157 +- **Passage tags drive styling.** A passage tagged `document` 
+          +renders as a typed sheet of paper; `conversation` as a charact
+          +er card with index-card choices; `terminal` as a green-phospho
+          +r screen; `phone` as a call transcript; `bulletin` as a full-s
+          +creen act transition. SugarCube exposes tags as CSS classes, s
+          +o styling is per tag.                                         
+      158 +- **Documents:** off-white paper texture, typewriter font, Cyr
+          +illic headers (*СЕКРЕТНО*, *СОВ. СЕКРЕТНО*, *ЦК КПСС*), red an
+          +d violet stamps, routing slips, handwritten margin notes. Engl
+          +ish body text with Russian headers, stamps, and terms.        
+      159 +- **Rotary phone and terminal:** CSS/SVG objects in the right 
+          +panel; phone shakes when a call is pending.                   
+      160 +- **Palette:** institutional greens and browns, aged paper; So
+          +viet red reserved for stamps and danger. Tension shown through
+          + the environment (more pending calls, bulletin overlays, the c
+          +lock moving toward night).                                    
+      161 +- **Responsiveness:** laptop/desktop first; tablets supported;
+          + on phones the panels stack below the passage (functional, not
+          + primary).                                                    
+      162 +- **Accessibility:** keyboard-navigable links, visible focus, 
+          +adequate contrast, `prefers-reduced-motion` respected, no info
+          +rmation conveyed by color alone.                              
+      163  
+      165 -**Russian integration:** Russian terms appear with a dotted un
+          -derline; hover/tap shows Cyrillic, transliteration, and Englis
+          -h (e.g., *секретно · sekretno · secret*). Each new term is add
+          -ed to the **Dictionary** (*Словарь*). Target 40–60 beginner te
+          -rms in the finished game: office objects, ranks, greetings, da
+          -tes, months, institutional names, and stamp wording. Nothing i
+          -n the plot depends on understanding Russian.                  
+      164 +**Russian integration:** a `<<ru>>` widget/macro renders a ter
+          +m with a dotted underline; hover/tap shows Cyrillic, translite
+          +ration, and English (e.g., *секретно · sekretno · secret*), an
+          +d adds it to the **Dictionary** (*Словарь*). Finished game tar
+          +get: 40–60 beginner terms. Nothing in the plot depends on unde
+          +rstanding Russian.                                            
+      165  
+      167 -**Fact vs. fiction:** real events, people, and documents carry
+          - a small red **"ИСТОРИЧЕСКАЯ СПРАВКА / Historical note"** stam
+          -p. Clicking it opens a short note with a citation to the bibli
+          -ography. Everything without that stamp is understood as fictio
+          -n; the title screen and About page say so explicitly.         
+      166 +**Fact vs. fiction:** real events, people, and documents carry
+          + a red **"ИСТОРИЧЕСКАЯ СПРАВКА / Historical note"** stamp via 
+          +a `<<note>>` macro, which opens a SugarCube dialog with a shor
+          +t explanation and a citation. Everything without that stamp is
+          + fiction; the title screen and About section say so.          
+      167  
+      169 -## 11. Site structure                                         
+      168 +## 11. Authoring workflow and project layout                  
+      169  
+      171 -- `index.html` — title screen → game (desk).                  
+      172 -- `about.html` — About This Project: historical background, th
+          -e political science concepts (with each linked to the ending a
+          -nd events that embody it), educational objectives, fact vs. fi
+          -ction statement, how Russian is used, credits.                
+      173 -- `bibliography.html` — scholarly sources, primary documents, 
+          -image/font credits. Chicago style.                            
+      174 -- Shared stylesheet and consistent header/footer between pages
+          -.                                                             
+      170 +**Recommended workflow (needs your approval because it involve
+          +s an install):** the story is written as **Twee source files**
+          + (Twine's plain-text format) in the repository and compiled to
+          + `index.html` with **Tweego**, the standard Twee compiler, whi
+          +ch bundles SugarCube.                                         
+      171 +- Every passage, stylesheet, and script is a readable text fil
+          +e, so the GitHub history shows real, reviewable progress.     
+      172 +- Claude can build and test the game directly.                
+      173 +- You can still open the story in the **Twine 2 app** at any t
+          +ime: Twine 2.6+ imports Twee files (Library → Import), giving 
+          +you the visual story map. Edits you make in Twine can be expor
+          +ted back to Twee.                                             
+      174 +- Tweego is a single small program. It would be downloaded int
+          +o a `tools/` folder inside this project (not installed system-
+          +wide), **only with your permission**.                         
+      175  
+      176 -Repository layout (builder may refine):                       
+      176 +*Fallback if you'd rather not install Tweego:* Claude writes t
+          +he Twee files; you import them into Twine 2 and use "Publish t
+          +o File" to produce `index.html`. This works but slows every te
+          +st cycle, since each change has to pass through you.          
+      177  
+      178 +**Layout (builder may refine):**                              
+      179 +                                                              
+      180  ```
+      179 -index.html  about.html  bibliography.html                     
+      180 -css/        (base, desk, documents, terminal, phone, pages)   
+      181 -js/         (engine/state, ui modules, main)                  
+      182 -story/      (story data: scenes, documents, characters, glossa
+          -ry, historical notes)                                         
+      183 -assets/     (svg, images, textures)                           
+      184 -docs/       (this design, the plan, development log)          
+      181 +src/                                                          
+      182 +  story/        StoryData, StoryInit, StoryInterface, special 
+          +passages                                                      
+      183 +  prologue/     prologue passages (.twee)                     
+      184 +  act1/ act2/ act3/ epilogue/                                 
+      185 +  documents/    document passages                             
+      186 +  academic/     About, Bibliography, Historical Notes index, C
+          +redits                                                        
+      187 +  styles/       *.css (base, desk, documents, terminal, phone,
+          + dialogue)                                                    
+      188 +  scripts/      *.js (macros: clue, ru, note; setup data; help
+          +ers)                                                          
+      189 +assets/         svg, images, textures                         
+      190 +index.html      compiled game (what GitHub Pages serves)      
+      191 +docs/           this design, the plan, development log        
+      192 +tools/          Tweego (if approved; not committed)           
+      193  README.md
+      194  ```
+      195  
+      188 -Story data lives in plain JavaScript data modules (or JSON) un
+          -der `story/`, so new scenes, documents, and branches can be ad
+          -ded without modifying the engine.                             
+      196 +**About and bibliography** are passages inside the game, reach
+          +able from the title screen and the desk's bottom bar, so they 
+          +share the visual design. The README links to the published gam
+          +e and summarizes the academic purpose for anyone reviewing the
+          + repository.                                                  
+      197  
+      198 +**Testing:** play through in a browser after each build, inclu
+          +ding automated browser checks of the main path and the branchi
+          +ng choices (using the browser automation already available in 
+          +this environment — nothing to install). Twine's story map and 
+          +Tweego's warnings catch broken passage links.                 
+      199 +                                                              
+      200  ## 12. Scope: Monday prototype vs. later
+      201  
+      202  ### Before Monday, 23 November 2026 (prototype)
+      203  
+      194 -1. **Polished desk interface:** in-tray, folders, open documen
+          -t view with stamps and textures, rotary phone with incoming ca
+          -lls, registry terminal, notebook, dictionary, historical-note 
+          -stamps, calendar/clock, act transitions. Title screen with fac
+          -t/fiction notice.                                             
+      195 -2. **Engine:** state (trust, leanings, exposure, flags, docume
+          -nts, clues), scene/dialogue/choice system with conditions and 
+          -effects, document key-phrase → clue → terminal search loop, sa
+          -ve/continue.                                                  
+      196 -3. **Playable content:** Prologue and Act I complete and fully
+          - branching (all their choices tracked and consequential), plus
+          - **one complete route through Acts II–III to one ending** — *T
+          -he Survivor* (builder's call: the ending the author singled ou
+          -t, and the one that best shows the course's thesis). Other cho
+          -ices in Acts II–III show a clearly marked "This branch is in d
+          -evelopment" card rather than dead ends.                       
+      197 -4. **Russian:** ~25 glossary terms in the playable content, wi
+          -th tooltips and the Dictionary.                               
+      198 -5. **Historical notes:** at least 6–8 notes attached to real e
+          -vents in the playable content, each cited.                    
+      199 -6. **About This Project** page, complete in substance.        
+      200 -7. **Preliminary bibliography** (10–15 entries), with each ent
+          -ry checked against a library catalog or publisher record befor
+          -e submission.                                                 
+      201 -8. **GitHub repository** with meaningful commit history and a 
+          -README describing the project, how to play, and the developmen
+          -t roadmap. Published to GitHub Pages **only after your explici
+          -t permission**.                                               
+      202 -9. **Story-graph check script** that confirms every scene and 
+          -choice leads somewhere (no broken links), if Node.js is alread
+          -y available on the machine — nothing will be installed without
+          - asking.                                                      
+      204 +1. **Custom desk interface** replacing the default SugarCube l
+          +ayout: in-tray, kept files, phone, terminal, notebook, diction
+          +ary, notes, calendar/clock, styled passage types (document, co
+          +nversation, terminal, phone, bulletin), title screen with fact
+          +/fiction notice, restyled save dialog.                        
+      205 +2. **Systems:** story variables (trust, loyalty/reform/surviva
+          +l, exposure, flags, docs, clues, glossary); `<<clue>>`, `<<ru>
+          +>`, and `<<note>>` macros; terminal search unlocking documents
+          +; trust-gated content; act transitions.                       
+      206 +3. **Playable content:** **Prologue and Act I complete and bra
+          +nching**, with every choice tracked. Plus **one complete route
+          + through Acts II–III to one ending — The Survivor** (the endin
+          +g the author singled out). Other branches in Acts II–III end a
+          +t a clearly marked "This branch is in development" card, never
+          + a dead end.                                                  
+      207 +4. **Russian:** ~25 glossary terms with tooltips and the Dicti
+          +onary.                                                        
+      208 +5. **Historical notes:** 6–8 cited notes attached to real even
+          +ts in the playable content.                                   
+      209 +6. **About This Project** passage, complete in substance.     
+      210 +7. **Preliminary bibliography** (10–15 entries), each checked 
+          +against a library catalog or publisher record before submissio
+          +n.                                                            
+      211 +8. **GitHub repository** with a meaningful commit history and 
+          +a README (project description, how to play, roadmap of future 
+          +development). Published to GitHub Pages **only after your expl
+          +icit permission**.                                            
+      212  
+      213  ### Reserved for later development
+      214  
+      206 -- Remaining branches of Acts II–III and the endings **The Witn
+          -ess, The Loyalist, The Scapegoat** (full exposure system tunin
+          -g).                                                           
+      207 -- Full December epilogue variants for all four endings.       
+      208 -- Expanded glossary to 40–60 terms; more historical notes.    
+      215 +- Remaining branches of Acts II–III and the endings **The Witn
+          +ess, The Loyalist, The Scapegoat** (with exposure tuning).    
+      216 +- December epilogue variants for all four endings.            
+      217 +- Expanded glossary (40–60 terms) and more historical notes.  
+      218  - Ambient sound (typewriter, phone ring, radio) with a mute to
+           ggle.
+      219  - Additional documents and intercepts; optional side files.
+      211 -- Ending gallery / "endings discovered" screen on the title pa
+          -ge.                                                           
+      212 -- Playtesting pass and timing tuning to hit 15–20 minutes.    
+      213 -- Full bibliography expansion and a short design reflection/es
+          -say for the About page.                                       
+      220 +- Endings-discovered gallery on the title screen.             
+      221 +- Playtesting and timing tuning to hit 15–20 minutes.         
+      222 +- Full bibliography and a short design reflection for the Abou
+          +t section.                                                    
+      223  
+      224 +**If time runs short before Monday,** cut in this order: Survi
+          +vor route length (shorten Acts II–III to essential beats) → nu
+          +mber of historical notes → glossary size. The interface polish
+          +, the Prologue/Act I, the About section, and the bibliography 
+          +are protected.                                                
+      225 +                                                              
+      226  ## 13. Preliminary sources (to be verified before citing)
+      227  
+      228  **Scholarly**
+     ...
+      234  - Beissinger, Mark R. *Nationalist Mobilization and the Collap
+           se of the Soviet State.* Cambridge: Cambridge University Press
+           , 2002.
+      235  - Linz, Juan J., and Alfred Stepan. *Problems of Democratic Tr
+           ansition and Consolidation.* Baltimore: Johns Hopkins Universi
+           ty Press, 1996.
+      236  - Kryshtanovskaya, Olga, and Stephen White. "From Soviet *Nome
+           nklatura* to Russian Elite." *Europe-Asia Studies* 48, no. 5 (
+           1996).
+      226 -- Remnick, David. *Lenin's Tomb: The Last Days of the Soviet E
+          -mpire.* New York: Random House, 1993. (journalistic, but widel
+          -y cited)                                                      
+      237 +- Remnick, David. *Lenin's Tomb: The Last Days of the Soviet E
+          +mpire.* New York: Random House, 1993. (journalistic, widely ci
+          +ted)                                                          
+      238  
+      239  **Primary**
+      240  - GKChP, "Appeal to the Soviet People" and accompanying decree
+           s, 18–19 August 1991.
+      241  - Yeltsin, Boris, et al. "To the Citizens of Russia," 19 Augus
+           t 1991.
+      242  - Agreement on the Establishment of the Commonwealth of Indepe
+           ndent States (Belovezha Accords), 8 December 1991.
+      243  - Gorbachev, Mikhail. Televised resignation address, 25 Decemb
+           er 1991.
+      233 -- Document collections on the August coup held by the Wilson C
+          -enter Digital Archive and the National Security Archive (Georg
+          -e Washington University) — specific items to be selected.     
+      244 +- Document collections on the August coup at the Wilson Center
+          + Digital Archive and the National Security Archive (George Was
+          +hington University) — specific items to be selected.          
+      245  
+      246  ## 14. Left to the builder
+      247  
+      237 -- Exact file/module structure and naming within the layout abo
+          -ve.                                                           
+      238 -- Specific fonts (must support Cyrillic; e.g., PT Mono / PT Se
+          -rif families), textures, and animation details, within the vis
+          -ual direction above.                                          
+      239 -- Prologue and Act I scene-by-scene writing, document text, an
+          -d trust/exposure values, within the characters, mystery, and h
+          -istory above — subject to the author's review.                
+      248 +- Exact passage names, file split, and macro implementation de
+          +tails.                                                        
+      249 +- Specific fonts (Cyrillic-capable, e.g., PT Mono / PT Serif),
+          + textures, and animation details, within the visual direction 
+          +above.                                                        
+      250 +- Scene-by-scene writing of the Prologue, Act I, and the Survi
+          +vor route; document text; trust/exposure values — within the c
+          +haracters, mystery, and history above, subject to the author's
+          + review.                                                      
+      251  - Exposure threshold and ending-condition tuning.
+      252  - The exact set of glossary terms and historical notes.
+      253  
+      243 -## 15. Open items for the author                              
+      254 +## 15. Decisions needed from the author                       
+      255  
+      245 -- Review the fictional characters' names and roles (Section 6)
+          - before writing begins in earnest.                            
+      256 +- **Tweego:** approve downloading it into `tools/` (recommende
+          +d), or use the Twine-app import/publish fallback (§11).       
+      257 +- Review the fictional characters' names and roles (§6).      
+      258  - Confirm the GitHub account/repository name when it's time to
+            publish.
+
+⏺ I've switched the project to Twine with SugarCube. The only Option A work was
+  the design document, and I've rewritten it in place for Twine. No code had
+  been written, so nothing else needed removing.
+
+  Revised design document:
+  docs/superpowers/specs/2026-11-18-kremlin-files-design.md
+
+  What changed for Twine:
+  - Desk layout: SugarCube's default layout gets replaced with the Soviet desk
+    (in-tray, phone, registry terminal, notebook, dictionary). Twine handles the
+    story and branching underneath, and the desk's side panels refresh as you
+    move between passages.
+  - Passage tags set the look. A passage tagged document appears as a typed
+    classified sheet with stamps. conversation shows a character card, terminal
+    a green-screen computer, phone a call transcript, and bulletin a full-screen
+    act transition.
+  - Three custom commands for writing passages:
+    - <<clue>> marks a key phrase in a document as something you can click to
+      collect.
+    - <<ru>> adds a Russian word with a hover tooltip and puts it in the
+      dictionary.
+    - <<note>> adds a historical-note stamp that opens a cited explanation.
+  - Tracking: Twine story variables follow trust in each character, the loyalty,
+    reform and survival pulls, exposure (which builds up toward the Scapegoat
+    ending), and the documents and clues you've found. SugarCube's built-in
+    saves are restyled to match the desk.
+  - About and bibliography are passages inside the game, styled to match, and
+    the README links to them.
+
+  The Monday scope is unchanged: the full desk interface, the Prologue and Act I
+  with full branching, and one complete route through to The Survivor.
+  Unfinished branches end at an "in development" card. I added a cut order in
+  case time runs short: the Survivor route gets shortened first, then historical
+  notes, then dictionary terms. The interface, the opening, the About section
+  and the bibliography stay protected.
+
+  One decision needs your permission (§11). I'd like to write the story as Twee
+  files, which are Twine's plain-text format, and build them into the game with
+  Tweego, a small Twine compiler.
+  - It would be downloaded into a tools/ folder inside this project, not
+    installed system-wide.
+  - It lets me build and test the game myself, and your GitHub history shows
+    readable progress passage by passage.
+  - You can still import the same files into the Twine 2 app whenever you want
+    the visual story map.
+  - The alternative is that I write the files and you import them into Twine and
+    publish each time. That works, but every test cycle has to go through you.
+
+  Please review the document. Can you:
+  1. approve it or tell me what to change,
+  2. say yes or no to downloading Tweego into tools/, and
+  3. check the character names and roles in §6?
+
+  Once you approve, I'll write the step-by-step development plan.
+
+✻ Worked for 1m 36s · done 12:45 PM
+
+❯ I’ve reviewed the design document, and I approve the overall direction.       
+                                                                                
+  1. DESIGN DOCUMENT                                                            
+                                                                                
+  The Twine/SugarCube approach is approved. I want to retain the immersive      
+  Soviet government office interface, interactive documents, branching          
+  dialogue, relationship tracking, historical notes, and Russian vocabulary     
+  integration.                                                                  
+                                                                                
+  Before proceeding, please clean up the design document. I noticed duplicated  
+  sections and leftover references to Option A. The final document should       
+  consistently reflect Twine 2 and SugarCube 2 as our chosen platform.          
+                                                                                
+  2. TWEEGO                                                                     
+                                                                                
+  Yes, I approve downloading Tweego into the project’s tools/ directory.        
+                                                                                
+  Use Tweego to compile and test the Twee source files while keeping the        
+  project compatible with the Twine 2 visual editor.                            
+                                                                                
+  Do not install additional software or dependencies without asking.            
+                                                                                
+  3. CHARACTERS                                                                 
+                                                                                
+  I approve the proposed fictional characters and their roles:                  
+                                                                                
+  - Andrei Nikolaevich Volkov — protagonist and Central Committee official.     
+  - Gennady Ivanovich Rudin — hardline superior representing loyalty.           
+  - Irina Sergeyevna Belova — reform-minded colleague.                          
+  - Pyotr Fomich Zaitsev — veteran archivist representing survival.             
+  - Lena Markova — journalist contact outside the government.                   
+                                                                                
+  Keep their motivations complex and historically plausible.                    
+                                                                                
+  4. HISTORICAL ACCURACY                                                        
+                                                                                
+  I want the Soviet office environment to feel authentic to 1991. The registry  
+  terminal and other interactive elements should be historically plausible      
+  rather than resembling modern technology.                                     
+                                                                                
+  Maintain a clear distinction between documented historical events and         
+  fictional narrative elements.                                                 
+                                                                                
+  5. DEVELOPMENT PRIORITIES                                                     
+                                                                                
+  Our prototype milestone remains Monday, November 23, 2026.                    
+                                                                                
+  Prioritize:                                                                   
+                                                                                
+  - The immersive desk interface.                                               
+  - A fully playable prologue.                                                  
+  - Act I with meaningful branching decisions.                                  
+  - Interactive classified documents.                                           
+  - Functional dialogue and relationship systems.                               
+  - At least one route demonstrating how the story progresses toward an ending. 
+  - An About This Project section and preliminary bibliography.                 
+                                                                                
+  The remaining endings and additional story content can be developed later.    
+                                                                                
+  Please finalize the design document and proceed with creating the             
+  step-by-step implementation plan.                                             
+                                                                                
+  Once the implementation plan is complete, present it for my approval before   
+  beginning development.                                                        
+
+  Listed 1 directory (ctrl+o to expand)
+
+⏺ The file on disk is clean now, since the Twine overwrite removed the duplicate
+  sections, and I'll trim the leftover platform comparison and record your
+  decisions and the historical-plausibility requirement next.
+
+⏺ Update(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)  ⎿  Added 3 lines, removed 5 lines
+      54  
+      55  ## 4. Approaches considered
+      56  
+      57 -| Approach | Trade-off | Decision |                            
+      58 -|---|---|---|                                                  
+      59 -| Hand-built static site (HTML/CSS/JS) with a custom engine | M
+         -aximum interface control; requires writing a branching engine. 
+         -| Not chosen. |                                                
+      60 -| **Twine 2 + SugarCube 2 with heavy custom CSS/JS** | Proven b
+         -ranching, variables, and saves out of the box; DH-familiar; aut
+         -hor has prior experience. Distinctive interface requires overri
+         -ding SugarCube's default layout (via its `StoryInterface` passa
+         -ge) and custom macros. | **Chosen by the author.** Interface am
+         -bitions are kept, but achieved inside SugarCube's model. |     
+      61 -| React/Vite app | Scalable components; npm installs, build pip
+         -eline. | Not chosen — overhead without benefit at this size. | 
+      57 +**Platform: Twine 2 + SugarCube 2, with custom CSS and JavaScri
+         +pt.** Chosen by the author: proven branching, variables, and sa
+         +ves out of the box; familiar from the author's DH coursework; c
+         +ompatible with the Twine 2 visual editor. The trade-off accepte
+         +d: the distinctive desk interface requires overriding SugarCube
+         +'s default layout (via its `StoryInterface` passage) and writin
+         +g custom macros.                                               
+      58  
+      59 +(A custom-built web engine and a React app were also considered
+         + and set aside in favor of Twine.)                             
+      60 +                                                               
+      61  ## 5. Setting and history
+      62  
+      63  **Where:** CPSU Central Committee headquarters, Staraya Ploshch
+          ad (Old Square), Moscow.
+
+⏺ Update(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Added 1 line
+      155  - **Passage tags drive styling.** A passage tagged `document` 
+           renders as a typed sheet of paper; `conversation` as a charact
+           er card with index-card choices; `terminal` as a green-phospho
+           r screen; `phone` as a call transcript; `bulletin` as a full-s
+           creen act transition. SugarCube exposes tags as CSS classes, s
+           o styling is per tag.
+      156  - **Documents:** off-white paper texture, typewriter font, Cyr
+           illic headers (*СЕКРЕТНО*, *СОВ. СЕКРЕТНО*, *ЦК КПСС*), red an
+           d violet stamps, routing slips, handwritten margin notes. Engl
+           ish body text with Russian headers, stamps, and terms.
+      157  - **Rotary phone and terminal:** CSS/SVG objects in the right 
+           panel; phone shakes when a call is pending.
+      158 +- **Period plausibility of objects (required).** Nothing shoul
+          +d resemble modern technology. The registry terminal is styled 
+          +after a Soviet IBM-compatible office computer of the late 1980
+          +s (e.g., the ЕС-1841 / ES-1841 class): monochrome green screen
+          +, blocky Cyrillic system font, command-line prompts, slow type
+          +d output, an all-caps document-control program (registration n
+          +umbers, routing, access level). No windows, icons, mice, or se
+          +arch-engine behavior; failed searches return terse errors (*ЗА
+          +ПИСЬ НЕ НАЙДЕНА — record not found*; *ДОСТУП ОГРАНИЧЕН — acces
+          +s restricted*). The terminal sits alongside the paper card ind
+          +ex (*картотека*), which remains the authoritative record — com
+          +puters supplemented, not replaced, paper. Other desk objects: 
+          +rotary *вертушка* government phone, carbon copies, typewritten
+          + pages, ink stamps, wall calendar, desk lamp. A historical not
+          +e explains the level of office computerization in the late Sov
+          +iet apparatus, with a citation; if research doesn't support a 
+          +computer in this specific office, it is reframed as a terminal
+          + in the department's registry room.                           
+      159  - **Palette:** institutional greens and browns, aged paper; So
+           viet red reserved for stamps and danger. Tension shown through
+            the environment (more pending calls, bulletin overlays, the c
+           lock moving toward night).
+      160  - **Responsiveness:** laptop/desktop first; tablets supported;
+            on phones the panels stack below the passage (functional, not
+            primary).
+      161  - **Accessibility:** keyboard-navigable links, visible focus, 
+           adequate contrast, `prefers-reduced-motion` respected, no info
+           rmation conveyed by color alone.
+
+⏺ Update(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Added 1 line, removed 1 line
+      166  
+      167  ## 11. Authoring workflow and project layout
+      168  
+      169 -**Recommended workflow (needs your approval because it involve
+          -s an install):** the story is written as **Twee source files**
+          - (Twine's plain-text format) in the repository and compiled to
+          - `index.html` with **Tweego**, the standard Twee compiler, whi
+          -ch bundles SugarCube.                                         
+      169 +**Workflow (approved):** the story is written as **Twee source
+          + files** (Twine's plain-text format) in the repository and com
+          +piled to `index.html` with **Tweego**, the standard Twee compi
+          +ler, which bundles SugarCube.                                 
+      170  - Every passage, stylesheet, and script is a readable text fil
+           e, so the GitHub history shows real, reviewable progress.
+      171  - Claude can build and test the game directly.
+      172  - You can still open the story in the **Twine 2 app** at any t
+           ime: Twine 2.6+ imports Twee files (Library → Import), giving 
+           you the visual story map. Edits you make in Twine can be expor
+           ted back to Twee.
+
+⏺ Update(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Added 2 lines, removed 3 lines
+      170  - Every passage, stylesheet, and script is a readable text fil
+           e, so the GitHub history shows real, reviewable progress.
+      171  - Claude can build and test the game directly.
+      172  - You can still open the story in the **Twine 2 app** at any t
+           ime: Twine 2.6+ imports Twee files (Library → Import), giving 
+           you the visual story map. Edits you make in Twine can be expor
+           ted back to Twee.
+      173 -- Tweego is a single small program. It would be downloaded int
+          -o a `tools/` folder inside this project (not installed system-
+          -wide), **only with your permission**.                         
+      173 +- Tweego is a single small program, downloaded into a `tools/`
+          + folder inside this project (not installed system-wide; exclud
+          +ed from git). Approved by the author. No other software or dep
+          +endencies are installed without asking.                       
+      174 +- Source files stay compatible with the Twine 2 editor: standa
+          +rd Twee 3 syntax, a `StoryData` passage with the SugarCube 2 f
+          +ormat, and no Tweego-only features.                           
+      175  
+      175 -*Fallback if you'd rather not install Tweego:* Claude writes t
+          -he Twee files; you import them into Twine 2 and use "Publish t
+          -o File" to produce `index.html`. This works but slows every te
+          -st cycle, since each change has to pass through you.          
+      176 -                                                              
+      176  **Layout (builder may refine):**
+      177  
+      178  ```
+
+⏺ Update(docs/superpowers/specs/2026-11-18-kremlin-files-design.md)
+  ⎿  Added 7 lines, removed 4 lines
+      249  - Exposure threshold and ending-condition tuning.
+      250  - The exact set of glossary terms and historical notes.
+      251  
+      252 -## 15. Decisions needed from the author                       
+      252 +## 15. Decisions recorded                                     
+      253  
+      254 -- **Tweego:** approve downloading it into `tools/` (recommende
+          -d), or use the Twine-app import/publish fallback (§11).       
+      255 -- Review the fictional characters' names and roles (§6).      
+      256 -- Confirm the GitHub account/repository name when it's time to
+          - publish.                                                     
+      254 +- Twine 2 / SugarCube 2 platform — approved.                  
+      255 +- Tweego downloaded into `tools/` — approved; nothing else ins
+          +talled without asking.                                        
+      256 +- Characters in §6 — approved; motivations must stay complex a
+          +nd historically plausible.                                    
+      257 +- Interactive objects must be period-plausible (§10); document
+          +ed history and fiction stay clearly distinguished (§5, §10).  
+      258 +                                                              
+      259 +**Still to confirm later:** the GitHub account/repository name
+          +, and permission to push and enable GitHub Pages.             
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The design document is finalized. Next is the implementation plan, using the
+  writing-plans skill.
+
+⏺ Skill(superpowers:writing-plans)
+  ⎿  Successfully loaded skill
+
+⏺ I'm using the writing-plans skill to create the implementation plan. First
+  I'll check which tools are already on this machine, so the plan doesn't assume
+  anything that would need installing.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Write(docs/superpowers/plans/2026-11-18-kremlin-files-prototype.md)
+  ⎿  Wrote 314 lines to
+     docs/superpowers/plans/2026-11-18-kremlin-files-prototype.md
+      1 # The Kremlin Files — Monday Prototype Implementation Plan
+      2 
+      3 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:su
+        bagent-driven-development (recommended) or superpowers:executing-
+        plans to implement this plan task-by-task. Steps use checkbox (`-
+         [ ]`) syntax for tracking.
+      4 
+      5 **Goal:** Build the 23 November 2026 prototype of *The Kremlin Fi
+        les*: a Twine 2 / SugarCube 2 game with a custom Soviet-office de
+        sk interface, a fully playable Prologue, a branching Act I, one c
+     … +310 lines (~37 KB) (ctrl+o to expand)
+
+⏺ Now I'll check the plan against the spec and fix the problems I find.
+
+  Searched for 1 pattern, ran 2 shell commands (ctrl+o to expand)
+
+⏺ I've cleaned up the design document and written the implementation plan.
+
+  Design document: docs/superpowers/specs/2026-11-18-kremlin-files-design.md
+  The duplicated sections you saw were in our chat history, not in the file. The
+  file itself didn't have them, because I'd rewritten it from scratch when you
+  chose Twine. I've now:
+  - cut the platform comparison down to a single note,
+  - recorded your approvals in §15,
+  - added a requirement that the terminal and other desk objects be believable
+    for 1991 (§10, details below),
+  - marked the document approved.
+
+  Implementation plan:
+  docs/superpowers/plans/2026-11-18-kremlin-files-prototype.md
+
+  The plan has twelve tasks, in this order:
+
+  1. Project setup. Create the git repository, download Tweego into tools/,
+     write a build script, and add an automated check that every story link
+     leads to a real passage and nothing dead-ends.
+  2. Game state rules. Trust from −3 to +3 with each colleague, the
+     loyalty/reform/survival scores, exposure (5 or more leads to the Scapegoat
+     ending), clues, and how the ending is decided.
+  3. Registry search logic. Typing 7/c with a Latin "c" matches the Cyrillic
+     7/С.
+  4. Content data. About 28 Russian terms, the 14 sources, about 15 cited
+     historical notes, and the documents and clues.
+  5. SugarCube setup and custom commands. The Russian tooltips, historical-note
+     stamps and clickable clues. The browser back button is turned off, so
+     players can't undo a choice and take it again.
+  6. The desk interface: calendar, in-tray, rotary phone, notebook, dictionary,
+     and phone-width layout.
+  7. Styling for documents, conversations, phone calls and act bulletins, plus
+     the title screen with a statement on what's fact and what's fiction.
+  8. The registry terminal, styled as a late-1980s Soviet ES-1841-class office
+     computer. It has a green screen, typed commands, and short Russian error
+     messages like ДОСТУП ОГРАНИЧЕН ("access restricted").
+  9. The Prologue (12 August): Packet 7/С, Zaitsev, Belova, and Rudin's evening
+     phone call.
+  10. Act I (19 August): the State Emergency Committee (GKChP) announcement, a
+      draft telegram dated five days before the coup, two separate ways to
+      obtain the hidden list, Belova's and Markova's calls, and the decision
+      about the file.
+  11. The Survivor route through 23 August to the December ending. The other
+      three endings show a clearly marked "in development" card that sends you
+      back to the decision you just made.
+  12. The About, Bibliography and Credits pages, plus the README, then a full
+      test playthrough. After that I stop and ask before touching GitHub.
+
+  Each task's choices and their effects are written out in tables, so you can
+  check the story logic before I write any prose.
+
+  Two things to be aware of:
+  - Tweego runs through Rosetta. It only exists as an Intel Mac version. I
+    checked that Rosetta is already on your Mac, so nothing extra needs
+    installing. The SugarCube version bundled with Tweego is older than the one
+    in the current Twine app, but the files will still open in Twine 2.
+  - Your sources need verifying. The bibliography marks every entry "awaiting
+    verification" until you've checked it against UT's library catalog. The
+    historical note about the office computer says openly that it's a plausible
+    reconstruction.
+
+  How should I carry it out?
+  - One session (my recommendation): I do every task myself in this session,
+    then one fresh reviewer checks the finished work. The tasks build closely on
+    each other and the deadline is Monday, so this is the fastest and cheapest
+    route.
+  - Separate helper agents: a fresh agent builds each task and another reviews
+    it before the next starts. It's more thorough, but slower and more
+    expensive.
+
+  Does the plan capture what you want, and which way should I carry it out?
+
+✻ Worked for 5m 30s · done 12:52 PM
+
+❯ I approve the implementation plan and want to proceed with the one-session    
+  approach.                                                                     
+                                                                                
+  Please implement the twelve tasks sequentially, following the approved design 
+  document and maintaining Twine 2 and SugarCube 2 as the project’s             
+  foundation.                                                                   
+                                                                                
+  A few important instructions:                                                 
+                                                                                
+  1. Prioritize a working, playable prototype before spending excessive time on 
+  advanced visual details. I still want the Soviet-era interface to be          
+  polished and immersive.                                                       
+  2. Keep the project compatible with the Twine visual editor. Preserve the     
+  Twee source files so I can continue developing and editing the story myself.  
+  3. Make sure the Prologue and Act I are fully playable, with meaningful       
+  branching decisions and functioning investigation mechanics.                  
+  4. Implement The Survivor ending as planned. Clearly identify the other three 
+  endings as future development rather than presenting them as finished.        
+  5. Ensure historical claims are supported by credible sources. Do not invent  
+  citations or present unverified historical details as established facts.      
+  6. Test the game thoroughly, including navigation, saving, document           
+  interactions, dialogue choices, and branching paths.                          
+  7. Keep all development within the project directory. Do not modify unrelated 
+  files or projects.                                                            
+  8. Do not publish the project, push to GitHub, or make other external changes 
+  without my explicit approval.                                                 
+                                                                                
+  Please begin implementation now. You may use a reviewer after completing the  
+  tasks, but prioritize finishing a stable, demonstrable prototype.             
+                                                                                
+  When finished, provide a summary of what works, what remains incomplete, how  
+  to launch the game, and how to import the source into Twine.                  
+
+⏺ Skill(superpowers:executing-plans)
+  ⎿  Successfully loaded skill
+
+⏺ Skill(superpowers:test-driven-development)
+  ⎿  Successfully loaded skill
+
+⏺ Setting up the repository: an initial commit of the docs on main, then a
+  prototype branch for the work.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The sandbox blocked creating the .git folder. I'll retry outside the sandbox.
+  This only touches the project folder. You can use /sandbox to adjust these
+  restrictions.
+
+  Ran 3 shell commands (ctrl+o to expand)
+
+⏺ Downloading Tweego (approved).
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Tweego works and bundles SugarCube 2.30.0. Next: the scaffold and the failing
+  story-graph tests.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Write(tests/story.test.mjs)
+  ⎿  Wrote 52 lines to tests/story.test.mjs
+      1 // Story-graph and cross-reference checks over the Twee source in
+         src/.
+      2 import { test } from 'node:test';
+      3 import assert from 'node:assert/strict';
+      4 import { fileURLToPath } from 'node:url';
+      5 import path from 'node:path';
+      6 import { parseTwee, linksOf } from './helpers/twee.mjs';
+      7 
+      8 const SRC = path.join(path.dirname(fileURLToPath(import.meta.url)
+        ), '..', 'src');
+     … +44 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The tests fail as expected because the parser doesn't exist yet. Writing it
+  now.
+
+⏺ Write(tests/helpers/twee.mjs)
+  ⎿  Wrote 65 lines to tests/helpers/twee.mjs
+       1 // Minimal Twee 3 reader for story checks. Static links only: dy
+         namic targets
+       2 // (variables, expressions) are invisible here by design.
+       3 import fs from 'node:fs';
+       4 import path from 'node:path';
+       5 
+       6 const SPECIAL_NAMES = new Set([
+       7   'StoryTitle', 'StoryData', 'StoryInit', 'StoryInterface', 'Sto
+         ryCaption',
+       8   'StoryMenu', 'StoryBanner', 'StorySubtitle', 'StoryAuthor', 'P
+     … +58 lines (~2 KB) (ctrl+o to expand)
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Checking that the graph test actually catches a broken link, then checking the
+  build in the browser.
+
+  Called plugin:playwright:playwright 2 times, ran 2 shell commands (ctrl+o to expand)
+
+⏺ Background command "Serve project locally for browser testing" failed with
+exit code 1
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ The sandbox blocks local servers, so I'm restarting the test server outside
+  it. It only listens on localhost. You can allow this permanently with
+  sandbox.network.allowLocalBinding: true.
+
+  Read 1 file, called plugin:playwright:playwright, ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 1 works: the build runs and the page title shows. The only console error
+  is a missing favicon. Now the README, development log, and the commit.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Task 2: game-state rules. Writing the failing tests first.
+
+⏺ Write(tests/helpers/load-setup.mjs)
+  ⎿  Wrote 20 lines to tests/helpers/load-setup.mjs
+       1 // Loads the Node-safe story scripts (logic + data) into a sandb
+         ox whose only
+       2 // global is SugarCube's `setup` object, mirroring how they run 
+         in the browser.
+       3 import fs from 'node:fs';
+       4 import path from 'node:path';
+       5 import vm from 'node:vm';
+       6 import { fileURLToPath } from 'node:url';
+       7 
+       8 const SCRIPTS = path.join(path.dirname(fileURLToPath(import.meta
+     … +13 lines (ctrl+o to expand)
+
+⏺ Write(tests/logic.test.mjs)
+  ⎿  Wrote 67 lines to tests/logic.test.mjs
+       1 // Unit tests for game rules in src/scripts/logic/.
+       2 import { test } from 'node:test';
+       3 import assert from 'node:assert/strict';
+       4 import { loadSetup } from './helpers/load-setup.mjs';
+       5 
+       6 const setup = loadSetup();
+       7 // vm objects come from another realm; normalize before deep-equ
+         al.
+       8 const plain = (x) => JSON.parse(JSON.stringify(x));
+       9 
+     … +58 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ I want you to continue developing The Kremlin Files with fewer interruptions  
+  while I work on other assignments.                                            
+                                                                                
+  Please help me configure project-specific permissions so routine development  
+  commands, tests, local builds, and local Git commits can run without          
+  repeatedly requesting approval.                                               
+                                                                                
+  Keep explicit approval requirements for destructive operations, software      
+  installations, modifications outside the project directory, and GitHub        
+  publishing or pushing.                                                        
+                                                                                
+  Do not disable security protections globally or use unrestricted              
+  permission-bypass mode.                                                       
+                                                                                
+  Show me the proposed permission configuration before applying it.             
+
+⏺ I'll pause the build to set up the permissions, starting with the settings
+  skill so the configuration format is right.
+
+⏺ Skill(update-config)
+  ⎿  Successfully loaded skill · 1 tool allowed
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ I've drafted the permission settings but haven't applied them. Development is
+  paused mid-Task 2: the game-rule tests are written and failing as expected,
+  and the code that makes them pass comes next.
+
+  Proposed file: .claude/settings.local.json
+  - It applies only to this project, only on your machine, and is never
+    committed to git (.claude/ is already git-ignored).
+  - No settings file exists yet, so nothing gets overwritten.
+
+  {
+    "permissions": {
+      "allow": [
+        "Bash(scripts/build.sh)",
+        "Bash(tools/tweego/tweego *)",
+        "Bash(node --test)",
+        "Bash(node --test *)",
+        "Bash(python3 -m http.server 8765 --bind 127.0.0.1)",
+        "Bash(git status*)",
+        "Bash(git diff*)",
+        "Bash(git log*)",
+        "Bash(git show*)",
+        "Bash(git rev-parse *)",
+        "Bash(git add *)",
+        "Bash(git commit *)",
+        "Edit(src/**)",
+        "Edit(tests/**)",
+        "Edit(scripts/**)",
+        "Edit(docs/**)",
+        "Edit(assets/**)",
+        "Edit(README.md)",
+        "Edit(index.html)",
+        "Edit(.gitignore)",
+        "mcp__plugin_playwright_playwright__browser_navigate",
+        "mcp__plugin_playwright_playwright__browser_snapshot",
+        "mcp__plugin_playwright_playwright__browser_click",
+        "mcp__plugin_playwright_playwright__browser_evaluate",
+        "mcp__plugin_playwright_playwright__browser_press_key",
+        "mcp__plugin_playwright_playwright__browser_resize",
+        "mcp__plugin_playwright_playwright__browser_take_screenshot",
+        "mcp__plugin_playwright_playwright__browser_console_messages",
+        "mcp__plugin_playwright_playwright__browser_emulate_media"
+      ],
+      "ask": [
+        "Bash(rm *)",
+        "Bash(git push*)",
+        "Bash(git remote *)",
+        "Bash(git reset *)",
+        "Bash(git clean *)",
+        "Bash(git checkout *)",
+        "Bash(git restore *)",
+        "Bash(git rebase *)",
+        "Bash(git merge *)",
+        "Bash(git branch -D *)",
+        "Bash(gh *)",
+        "Bash(curl *)",
+        "Bash(npm *)",
+        "Bash(npx *)",
+        "Bash(brew *)",
+        "Bash(pip *)",
+        "Bash(pip3 *)"
+      ],
+      "deny": [
+        "Bash(git push --force*)",
+        "Bash(git push -f*)"
+      ]
+    },
+    "sandbox": {
+      "excludedCommands": ["git add *", "git commit *"],
+      "network": { "allowLocalBinding": true }
+    }
+  }
+
+  What runs without asking
+  - Building and testing: the build script, Tweego, the test suite, and the
+    local preview server on 127.0.0.1:8765.
+  - Reading git history and making local commits: status, diff, log, add,
+    commit.
+  - Editing only inside the project's own folders: src/, tests/, scripts/,
+    docs/, assets/, plus the README, index.html and .gitignore.
+  - Browser testing with the Playwright tools.
+
+  What still asks you first
+  - Deleting files.
+  - Anything touching GitHub: pushing, adding remotes, or the gh command.
+  - Git commands that discard or rewrite work: reset, clean, checkout, restore,
+    rebase, merge, and force-deleting branches.
+  - All downloads and installs: curl, npm, npx, brew, pip.
+  - Editing any file not listed above, and anything outside the project.
+
+  What's blocked outright: force-pushing to GitHub.
+
+  About the sandbox section: the sandbox stays on for everything else.
+  - git add and git commit need to run outside it, because the sandbox protects
+    the .git folder. That's why I had to ask you about each commit so far.
+  - allowLocalBinding lets the preview server run inside the sandbox instead of
+    outside it, so the setting tightens security rather than loosening it.
+
+  Two trade-offs to be aware of
+  1. Browser navigation is allowed to any address, not only localhost. The
+     browser tool can't be restricted by address. I'll only use it on the local
+     preview, but if you'd rather approve each navigation, I'll move it to the
+     "ask" list. That would mean a prompt on most test runs.
+  2. The sandbox exception for git commit only works when the command is run on 
+     its own. If I chain it after something like cd or a heredoc, it stays in
+     the sandbox and fails. I'll write commit commands to fit.
+
+  Should I apply this as written, or change anything first? Once it's in place
+  I'll go back to Task 2 and carry on through the remaining tasks without
+  stopping.
+
+✻ Crunched for 2m 40s · done 12:59 PM
+
+❯ I approve the proposed permission configuration as written.                   
+                                                                                
+  Please apply these settings specifically to The Kremlin Files project.        
+                                                                                
+  Keep the sandbox enabled and maintain all the approval requirements for       
+  destructive operations, external installations, GitHub activity, and          
+  modifications outside the project.                                            
+                                                                                
+  You may use Playwright for local browser testing as described.                
+                                                                                
+  Once the configuration is applied, resume Task 2 and continue through the     
+  remaining implementation tasks without unnecessary interruptions.             
+                                                                                
+  Prioritize completing a stable, playable Twine/SugarCube prototype.           
+                                                                                
+  Do not publish or push anything to GitHub without my explicit approval.       
+                                                                                
+  When the prototype is ready, provide a summary of completed features,         
+  remaining work, test results, and instructions for opening the game.          
+
+⏺ Write(.claude/settings.local.json)
+  ⎿  Error: /Users/aidensmith/Documents/dh_class/the-kremlin-files/.claude/setti
+     ngs.local.json: Writes to Claude Code settings files are blocked while 
+     permissions.blockWritesOutsideWorkingDirectories is on, because a settings 
+     file can lift that block. While a managed settings folder cannot be 
+     resolved, any .json file counts as one.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ I couldn't apply the settings. Claude Code won't let me write to its own
+  settings files, because a settings file could be used to loosen those same
+  protections. So the last step has to come from you.
+
+  I've saved the approved configuration, exactly as written and checked as valid
+  JSON, to:
+  /private/tmp/claude-501/-Users-aidensmith-Documents-dh-class-the-kremlin-files
+  /d4a9610b-cfbd-4cf5-9457-196c626bf814/scratchpad/settings.local.json
+
+  To apply it, type this into the prompt (the ! runs it in this session):
+
+  ! cp /private/tmp/claude-501/-Users-aidensmith-Documents-dh-class-the-kremlin-
+  files/d4a9610b-cfbd-4cf5-9457-196c626bf814/scratchpad/settings.local.json /Use
+  rs/aidensmith/Documents/dh_class/the-kremlin-files/.claude/settings.local.json
+
+  Then reply "continue". I'll pick up at Task 2 (the failing game-rule tests are
+  already written) and work through Task 12 without stopping, except for the
+  approvals you've chosen to keep.
+
+✻ Churned for 26s · done 1:00 PM
+
+!  cp /private/tmp/claude-501/-Users-aidensmith-Documents-dh-class-the-kremlin- 
+  files/d4a9610b-cfbd-4cf5-9457-196c626bf814/scratchpad/settings.local.json     
+  /Users/aidensmith/Documents/dh_class/the-kremlin-files/.claude/settings.local 
+  .json                                                                         
+  ⎿  (Bash completed with no output)
+
+⏺ The settings are in place. Resuming Task 2: writing the game-state code.
+
+⏺ Write(src/scripts/logic/state.js)
+  ⎿  Wrote 82 lines to src/scripts/logic/state.js
+       1 /*
+       2  * Game-state rules. Node-safe: references only the global `setu
+         p` at load time.
+       3  * Every helper takes SugarCube's variables object (State.variab
+         les) as `v`.
+       4  */
+       5 (function () {
+       6   'use strict';
+       7 
+       8   setup.TRUST_MIN = -3;
+     … +74 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ All 10 tests pass. Next: StoryInit, then a check in the browser.
+
+  Called plugin:playwright:playwright 2 times, ran 3 shell commands (ctrl+o to expand)
+
+⏺ Task 3: registry search. Failing tests first.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Write(src/scripts/logic/registry.js)
+  ⎿  Wrote 45 lines to src/scripts/logic/registry.js
+       1 /*
+       2  * Registry terminal search. Node-safe: references only `setup`.
+       3  * Data lives in setup.registry (src/scripts/data/registry.js).
+       4  */
+       5 (function () {
+       6   'use strict';
+       7 
+       8   // Latin letters that look identical to Cyrillic ones on a 199
+         1 keyboard layout.
+       9   var LOOKALIKE = { a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: '
+     … +37 lines (~1 KB) (ctrl+o to expand)
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Tests pass. Now the actual registry entries.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Task 4: content data (glossary, sources, historical notes, documents, clues).
+  Failing tests first.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Failing for the right reasons. Now the data, starting with the sources.
+
+⏺ Write(src/scripts/data/sources.js)
+  ⎿  Wrote 69 lines to src/scripts/data/sources.js
+       1 /*
+       2  * Bibliography (Chicago notes-bibliography style). `verified: f
+         alse` means the
+       3  * entry has not yet been checked against a library catalog or p
+         ublisher record;
+       4  * the Bibliography passage marks those entries visibly.
+       5  */
+       6 (function () {
+       7   'use strict';
+       8   setup.sources = {
+     … +61 lines (ctrl+o to expand)
+
+⏺ Write(src/scripts/data/notes.js)
+  ⎿  Wrote 86 lines to src/scripts/data/notes.js
+       1 /*
+       2  * Historical notes (ИСТОРИЧЕСКАЯ СПРАВКА). Each note states onl
+         y well-documented
+       3  * facts and cites keys in setup.sources. Page-level citations h
+         ave not yet been
+       4  * checked; the note dialog says so until `pagesChecked` is set 
+         to true.
+       5  * `reconstruction: true` marks a note explaining an in-game inv
+         ention instead.
+       6  */
+     … +80 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ All 21 tests pass. Committing Task 4.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 5: SugarCube configuration and the three custom commands (<<ru>>,
+  <<note>>, <<clue>>).
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Tweego names script passages by filename, so the two registry.js files
+  collide. Renaming the data file.
+
+  Called plugin:playwright:playwright 4 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ The commands render correctly. Now checking the clicks one step at a time.
+
+  Called plugin:playwright:playwright 6 times (ctrl+o to expand)
+
+⏺ The first click timed out while the dialog was closing, so I'm clicking the
+  clue again to confirm it's only recorded once. After that I'll check that Back
+  can't undo state and that reloading resumes.
+
+  Called plugin:playwright:playwright 4 times (ctrl+o to expand)
+
+⏺ The browser session reset itself. Reloading and running the remaining checks
+  again.
+
+  Called plugin:playwright:playwright 12 times (ctrl+o to expand)
+
+⏺ I'm working out why the test browser keeps going blank, so I can verify the
+  new commands.
+
+  Read 1 file, called plugin:playwright:playwright 11 times (ctrl+o to expand)
+
+⏺ Something outside the game keeps closing the test browser's tabs: even a plain
+  text file gets closed after a few seconds. To get around it, I'll run each
+  browser check as a single short script.
+
+⏺ I'll stay within the browser tools you approved and skip the unrestricted
+  script runner. The plan is to navigate, then immediately run one quick
+  combined check before the tab gets closed.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ All four checks pass: the tooltip text, the historical-note sources, single
+  recording of double-clicked clues, and the one-step Back history. A quick
+  reload test is next.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Reloading returns to the same passage with the same state. Removing the
+  temporary test passage and committing Task 5.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Tasks 6–7: the desk interface and styling. First, the layout and panel
+  passages.
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ The panels rely on three new helpers. Writing their tests first.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Helper tests pass. The remaining failure is expected: nothing links to the
+  Prologue until the title screen exists, so I'm writing the title screen and
+  the stylesheets now.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Now the stylesheets.
+  Read 1 file, ran 1 shell command (ctrl+o to expand)
+
+⏺ The build is clean. Taking screenshots of the title screen and the desk.
+
+  Read 1 file, called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ The title screen looks right. ("Continue" appears because an earlier test left
+  an autosave behind.) Next, the desk view, with documents in the tray and the
+  phone ringing.
+
+  Searched for 1 pattern, read 1 file, called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ I'll turn on SugarCube's paragraph cleanup and mark the layout passages nobr,
+  which removes the stray line breaks. I'm also correcting the tray link colour.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Now the phone-width layout check at 390 px.
+
+  Read 1 file, called plugin:playwright:playwright 4 times (ctrl+o to expand)
+
+⏺ No horizontal scroll at 390 px, and the panels stack under the passage. The
+  red tray links are expected, since their passages arrive in Task 9; I'm
+  checking reduced motion next.
+
+  Called plugin:playwright:playwright 3 times (ctrl+o to expand)
+
+⏺ With reduced motion on, the ringing animation is off, and keyboard focus shows
+  a visible outline. Committing Tasks 6 and 7.
+
+  Called plugin:playwright:playwright, ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 8: the registry terminal.
+
+  Called plugin:playwright:playwright 2 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ The "found" check failed because of a bug in my test script, not the game: it
+  held an old copy of the game variables from before the passage change. Running
+  it again with a fresh reference.
+
+  Called plugin:playwright:playwright 3 times (ctrl+o to expand)
+
+⏺ The terminal checks pass: searches without clues get "access restricted" and
+  unknown ones "record not found", while clued searches find the record even
+  with a Latin "c" and deliver the document once. I'm taking a screenshot next.
+
+  Read 1 file, called plugin:playwright:playwright (ctrl+o to expand)
+
+⏺ The terminal panel came out narrow, so I'm checking the viewport size.
+
+  Called plugin:playwright:playwright (ctrl+o to expand)
+
+⏺ SugarCube puts each passage's tags on <body> as CSS classes, which is why my
+  .terminal styling leaked across the whole page. I'm renaming the four clashing
+  classes (terminal, bulletin, academic, scene) next.
+
+  Searched for 1 pattern, read 1 file, called plugin:playwright:playwright 3 times, ran 2 shell commands (ctrl+o to expand)
+
+⏺ The terminal looks right now. Committing Task 8.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 9: writing the Prologue (12 August 1991). Every document gets a
+  "fictional document" footer, so the fact/fiction line stays clear.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The only failure is the Act I link, which arrives in Task 10. I'll add a
+  temporary placeholder and then play through the Prologue twice.
+
+  Called plugin:playwright:playwright 2 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ Run 1 (taking the first choice every time) ends with exactly the expected
+  totals. Now run 2, taking the last choice every time.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Run 2 matches too, and the Prologue terminal search is correctly restricted.
+  Taking screenshots of a document and a conversation to check how they look.
+
+  Read 2 files, called plugin:playwright:playwright 4 times (ctrl+o to expand)
+
+⏺ Both look right. Two small fixes: the circular's tray title still names its
+  old topic, and there are a few empty-paragraph gaps to hide. Then the commit.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Task 10: Act I (19 August). First I'm adding the morning's documented troop
+  movement to the State Emergency Committee (GKChP) note, since the scene
+  mentions it.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Tests pass, so I'm running three browser checks on Act I: finding the list
+  through the terminal with Zaitsev's trust at 0, getting it from Zaitsev
+  instead, and confirming Markova only calls when Belova trusts you.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Run A works end to end, and reopening a document leaves every score unchanged.
+  Now run B: Zaitsev's path, with Belova's trust high enough to trigger
+  Markova's call.
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Run B's numbers all add up: exposure is 4, Belova's trust is 2, and Markova's
+  call happened because of that trust. I'm committing Task 10 now.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ I'm writing the deferred test that checks every document has its passage,
+  which should fail for now since D5 isn't written yet. Then I'll move on to
+  Task 11: the Survivor route, the in-development cards, and the epilogue.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ A few wording fixes for historical caution: no detail I can't support, and
+  Volkov's own observations are framed as his, not as news.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Tests pass. One more accuracy fix: sources differ on the exact minute the flag
+  came down, so I'm removing "19:38". Then the full playthroughs.
+
+  Called plugin:playwright:playwright 2 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ The browser session resumed on the About page left over from an earlier run.
+  Restarting from the title screen.
+
+  Called plugin:playwright:playwright 3 times (ctrl+o to expand)
+
+⏺ A full playthrough from the title screen has reached The Survivor without
+  errors. I'm running a high-exposure playthrough next, aimed at the Scapegoat
+  card, and also checking the return-to-last-decision link from an unfinished
+  ending.
+
+  Called plugin:playwright:playwright (ctrl+o to expand)
+
+⏺ Endings, the Scapegoat card and the Markova call option all work as intended;
+  I'm checking the ending and bulletin screens next.
+
+  Read 2 files, called plugin:playwright:playwright 4 times (ctrl+o to expand)
+  ⎿  Interrupted · What should Claude do instead?
+
+⏺ Background shell command didn't finish before the previous session ended
+
+❯ Continue developing The Kremlin Files from where the previous session was     
+  interrupted.                                                                  
+                                                                                
+  We were completing Task 11 of 12, specifically testing the ending and         
+  bulletin screens.                                                             
+                                                                                
+  Please:                                                                       
+                                                                                
+  1. Review the current project state and verify what has already been          
+  completed.                                                                    
+  2. Finish the remaining Task 11 testing.                                      
+  3. Complete Task 12, including the academic pages, bibliography, README, and  
+  final testing.                                                                
+  4. Run the automated tests and verify the game builds correctly.              
+  5. Preserve all existing work and Git commits.                                
+  6. Prepare the project for GitHub Pages publication, but ask for my approval  
+  before publishing or pushing anything.                                        
+                                                                                
+  Important: I also need an AI Use Log for my Digital Humanities assignment.    
+  Please preserve our actual session history and help me export or document it  
+  after development is complete.                                                
+                                                                                
+  Continue using the approved project-specific permissions. Do not restart      
+  development or repeat completed tasks.                                        
+
+⏺ Checking the current project state first.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 11's files are on disk and all 26 tests pass, though the commit was lost
+  to the interruption. I'm fixing some empty gaps on the ending card before
+  committing.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Task 11 is committed. Now Task 12: the academic pages, starting with a test
+  for the bibliography helper.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ Now the About, Bibliography and Credits passages, which replace the
+  placeholders.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Checking the license claims on the Credits page against the license files that
+  came with Tweego.
+
+  Listed 1 directory, ran 1 shell command (ctrl+o to expand)
+
+⏺ Both are BSD 2-Clause, as the Credits page says. Now the final browser
+  verification:
+  - the academic pages and their Back links,
+  - Continue after a reload,
+  - a phone-width check,
+  - console errors.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ The preview server stopped when the previous session ended. Restarting it;
+  local binding is now allowed inside the sandbox.
+
+  Read 1 file, called plugin:playwright:playwright, ran 1 shell command (ctrl+o to expand)
+
+⏺ The server just needed a moment to start. Retrying.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Found a real bug: SugarCube 2.30 needs backticks for an expression inside
+  <<goto>>, so the Back link broke. Fixing it on all three pages.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Adding a regression test so this syntax mistake gets caught automatically next
+  time.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The test catches the broken form and passes on the fixed one. Re-running the
+  browser checks.
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ That's the old alert still blocking the page, so I'm dismissing it.
+
+  Called plugin:playwright:playwright 3 times (ctrl+o to expand)
+
+⏺ The academic pages all work, and their Back links return to the right place:
+  the title screen, or the scene you came from. Now checking that Continue
+  resumes your game from the title screen.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ Continue now resumes at the right passage with progress intact and no console
+  errors. Next I'll check the About page at phone width and add a small favicon
+  to stop the missing-file error.
+
+  Called plugin:playwright:playwright 4 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ The D4 document scrolls sideways on a phone (424 px wide versus 375
+  available). Finding which element is too wide.
+
+  Called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ The rotated stamps hang past the paper's right edge. Clipping horizontal
+  overflow on the paper fixes it without cutting off the paper clip at the top.
+
+  Called plugin:playwright:playwright 2 times, ran 1 shell command (ctrl+o to expand)
+
+⏺ Every screen now fits at phone width. Last visual check: text contrast on the
+  main surfaces.
+
+  Called plugin:playwright:playwright (ctrl+o to expand)
+
+⏺ All contrast ratios clear the 4.5:1 accessibility minimum; the lowest is 6.05.
+  Next I'll estimate playthrough length from word counts for the README and the
+  devlog.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The Survivor route comes to about 3,400 words, roughly 15–20 minutes with
+  interaction, which matches the target. Now the README and devlog, then the
+  Task 12 commit.
+
+⏺ Write(README.md)
+  ⎿  Added 61 lines, removed 6 lines
+       1 -# The Kremlin Files                                            
+       1 +# The Kremlin Files · Кремлёвские досье                        
+       2  
+       3 -An interactive historical political mystery set inside the Cent
+         -ral Committee of the Communist Party of the Soviet Union during
+         - the August Coup of 1991. Built with Twine 2 / SugarCube 2 as a
+         - final project for an undergraduate Digital Humanities course a
+         -t the University of Tennessee.                                 
+       3 +An interactive historical political mystery set inside the Cent
+         +ral Committee of the Communist Party of the Soviet Union during
+         + the August Coup of 1991. You play Andrei Volkov, a mid-level P
+         +arty official who finds evidence that "emergency measures" were
+         + prepared before the coup, and who has to decide what to do wit
+         +h it as his own institution collapses around him.              
+       4  
+       5 -## Build                                                       
+       5 +Final project for an undergraduate **Digital Humanities** cours
+         +e at the **University of Tennessee**. Built with **Twine 2 / Su
+         +garCube 2**.                                                   
+       6  
+       7 -Requires [Tweego](https://www.motoslave.net/tweego/) 2.1.1 unpa
+         -cked into `tools/tweego/` (not committed).                     
+       7 +**Play:** _GitHub Pages URL to be added on publication_        
+       8  
+       9 +## Academic purpose                                            
+      10 +                                                               
+      11 +The game argues that the Soviet collapse was not a single event
+         + but a contested political transition. Its choices pull between
+         + **loyalty** (to the Party and state), **reform** and **surviva
+         +l**. Its four endings each illustrate a political science conce
+         +pt: **political legitimacy**, **authoritarianism**, **democrati
+         +zation**, **regime change** and **institutional collapse**. The
+         + in-game *About This Project* page explains each concept and wh
+         +ere it appears.                                                
+      12 +                                                               
+      13 +**Fact and fiction.** Volkov, his colleagues and every document
+         + in the game are fictional. The events of August 1991 are real.
+         + Anything stamped **ИСТОРИЧЕСКАЯ СПРАВКА** ("historical note") 
+         +opens a note with its sources. Real historical figures appear o
+         +nly through their documented public actions.                   
+      14 +                                                               
+      15 +**Russian.** Beginner Russian vocabulary appears throughout. Ho
+         +ver over or tap a dotted word for its translation. Nothing in t
+         +he story requires knowing Russian.                             
+      16 +                                                               
+      17 +## Prototype status (November 2026)                            
+      18 +                                                               
+      19 +| Done | In development |                                      
+      20 +|---|---|                                                      
+      21 +| Soviet-office desk interface: in-tray, desk drawer, rotary ph
+         +one, ES-1841-style registry terminal, notebook, dictionary | Re
+         +maining branches of Acts II–III |                              
+      22 +| Prologue (12 Aug) and Act I (19 Aug), fully playable and bran
+         +ching | Endings: *The Witness*, *The Loyalist*, *The Scapegoat*
+         + (currently clearly marked "in development" cards) |           
+      23 +| Investigation: mark clues in documents → search the registry 
+         +terminal → unlock files | More documents, intercepts and vocabu
+         +lary (target 40–60 words) |                                    
+      24 +| Relationships (trust with four characters), loyalty/reform/su
+         +rvival tracking, cumulative exposure | Ambient sound |         
+      25 +| One complete route through 23 August to the ending ***The Sur
+         +vivor*** (~15–20 min) | Page-level verification of every citati
+         +on; expanded bibliography |                                    
+      26 +| 15 historical notes, 36-word dictionary, About, Bibliography,
+         + Credits | Playtesting and timing |                            
+      27 +                                                               
+      28 +## How to play locally                                         
+      29 +                                                               
+      30 +Open `index.html` in any modern browser. It is a single self-co
+         +ntained file; fonts load from Google Fonts when online.        
+      31 +                                                               
+      32 +## How to build                                                
+      33 +                                                               
+      34 +Requires [Tweego](https://www.motoslave.net/tweego/) 2.1.1, unp
+         +acked into `tools/tweego/` (not committed):                    
+      35 +                                                               
+      36      scripts/build.sh        # compiles src/ → index.html
+      37  
+      11 -## Test                                                        
+      38 +## How to test                                                 
+      39  
+      13 -    node --test tests/      # story-graph, data, and game-logic
+         - checks (Node 18+, no packages)                                
+      40 +    node --test tests/      # story-graph, cross-reference and 
+         +game-logic tests (Node 18+, no packages)                       
+      41 +                                                               
+      42 +The tests check that every link leads to a real passage, that n
+         +o passage is a dead end, that every Russian word, historical no
+         +te, clue and document referenced in the story exists, that ever
+         +y note cites a known source, and the game rules (trust limits, 
+         +clue recording, registry search and ending resolution).        
+      43 +                                                               
+      44 +## Editing in the Twine 2 visual editor                        
+      45 +                                                               
+      46 +The story source is standard Twee 3. To open it in Twine 2.6 or
+         + later:                                                        
+      47 +                                                               
+      48 +1. Combine the source into one file: `tools/tweego/tweego -d -o
+         + kremlin-files.twee src` (or import the individual `.twee` file
+         +s one at a time).                                              
+      49 +2. In Twine: **Library → Import**, and choose the `.twee` file.
+      50 +3. Edit visually. To bring changes back, use **Build → Export a
+         +s Twee** and copy the passages into the matching files under `s
+         +rc/`.                                                          
+      51 +                                                               
+      52 +## Project structure                                           
+      53 +                                                               
+      54 +```                                                            
+      55 +src/story/       StoryData, StoryInit, StoryInterface (desk lay
+         +out), panels, title, side pages, stubs                         
+      56 +src/prologue/    Prologue passages          src/act1/  Act I   
+      57 +src/act2/        Act II (Survivor route)    src/act3/  Act III 
+      58 +src/epilogue/    Survivor ending            src/documents/  in-
+         +game documents                                                 
+      59 +src/academic/    About, Bibliography, Credits                  
+      60 +src/scripts/     logic/ (game rules), data/ (glossary, notes, s
+         +ources, documents, clues, registry), ui/ (macros, terminal)    
+      61 +src/styles/      CSS                                           
+      62 +tests/           automated tests                               
+      63 +docs/            design document, implementation plan, developm
+         +ent log, AI use log                                            
+      64 +```                                                            
+      65 +                                                               
+      66 +## Credits                                                     
+      67 +                                                               
+      68 +Concept and design: Aiden Smith. Developed with the assistance 
+         +of Claude (Anthropic) in Claude Code; see `docs/ai-use-log.md`.
+         + SugarCube and Tweego by Thomas Michael Edwards (BSD 2-Clause).
+         + Fonts: PT Serif, PT Sans Narrow, PT Mono (ParaType) and Marck 
+         +Script (Denis Masharov), all under the SIL Open Font License. A
+         +ll visuals are original CSS/SVG.                               
+
+⏺ Checking that the Tweego export command in the README actually works.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ That works. Since you plan to edit in Twine yourself, the build will now also
+  write a ready-to-import Twine file.
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+⏺ All 12 tasks are complete and committed. You said I could bring in a reviewer
+  once the tasks were done, so I'm generating the review package and sending a
+  fresh reviewer over the whole project.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Agent(Final whole-project code review)
+  ⎿  Backgrounded agent (↓ to manage · ctrl+o to expand)
+
+⏺ While the reviewer works, I'm drafting the AI Use Log, a factual record of
+  your decisions, my generated output, and what was checked. I'll explain
+  afterwards how to capture the verbatim transcript with Claude Code's own
+  export.
+
+⏺ Write(docs/ai-use-log.md)
+  ⎿  Wrote 83 lines to docs/ai-use-log.md
+      1 # AI Use Log — The Kremlin Files
+      2 
+      3 **Student:** Aiden Smith · Digital Humanities, University of Tenn
+        essee
+      4 **AI tool:** Claude Code (Anthropic's command-line coding assista
+        nt), model Claude Opus 5.5
+      5 **Session dates:** 18 November 2026 (one working session, interru
+        pted once and resumed the same evening)
+      6 **Purpose of this log:** to document how AI was used in the proje
+        ct, what the student decided, what the AI generated, and how the 
+     … +78 lines (~8 KB) (ctrl+o to expand)
+
+⏺ The AI Use Log is written (docs/ai-use-log.md). The final reviewer is still
+  running. Once it reports, I'll fix anything serious, commit, and send you the
+  full summary.
+
+✻ Sautéed for 4m 17s · done 10:09 PM
+
+› Message from general-purpose
+  ## Final review: Kremlin Files prototype (5aca783..dcfbd62)
+
+  I reviewed everything under src/, tests/ and scripts/, and I checked the
+  uncertain SugarCube points against the bundled 2.30 `format.js`. `node --test
+  tests/` gives 28/28 passing.
+
+  ### Strengths
+  - Clue and document effects can't apply twice. `markClue` and `pushOnce`
+  record each item once, and documents only set `seen`.
+  - No choice scene can be replayed after its choice. Every effect-bearing
+  choice moves to a new `scene` passage, which updates `$returnTo`. Every link
+  that leads to a stub carries no effects, so "return to last decision" is safe.
+  - Undo is blocked. `maxStates = 1` prevents it, and autosave/Continue resume
+  consistently: autosave stores the state from before the passage's own code
+  runs, so the body re-runs on load and sets the same values again. The init
+  code in P_Desk, A1_Briefing and A2_Intercept is guarded so it runs only once.
+  - Look-alike search works: odd case, extra spaces, Latin `7/C`, `Пакет 7/C`
+  and `нaрочным` (with a Latin a) all match.
+  - The notes are careful: the reconstruction flag, the "pages pending"
+  warnings, and the D1/D4 disclaimers are all in place.
+
+  ### Issues
+
+  #### Critical
+  None.
+
+  #### Important
+  1. **The Prologue can skip Act I's investigation and break the chronology.**
+  `src/scripts/data/registry-records.js:28-38` (`r-telegram`, key `telegram`)
+  has no requirements, and `src/scripts/ui/terminal.js:42-46` puts its document
+  in the tray at any time.
+     - Scenario: on 12 Aug the player searches `telegram`, gets D3 (registered
+  14.08), marks `reg-date-14`, then searches `7/С` and gets D4.
+     - This breaks the plan's invariant (plan:158, "reg-date-14 only obtainable
+  in Act I, so the Prologue search is always restricted").
+     - Then in Act I, `A1_Desk:44-54` sees both d3 and d4 as read and goes
+  straight to the Belova call.
+     - Fix: make the record require `$act !== 'prologue'`, or require a flag set
+  in A1_Briefing. Add a test.
+  2. **Historical overstatement presented as fact.**
+  `src/prologue/prologue.twee:8` says the treaty loosens "Moscow's grip on the
+  fifteen republics". Six republics (the Baltic states, Georgia, Armenia,
+  Moldova) refused to take part, and only a few were due to sign on 20 Aug.
+  Suggested wording: "on the republics that agreed to it".
+  3. **Treaty name needs checking.** `notes.js:12`, `about.twee:12` and
+  `registry-records.js:44-45` say the August draft created a "Union of Sovereign
+  States". As I recall, the August text named the state the *Union of Soviet
+  Sovereign Republics*, and "Union of Sovereign States" was the November draft.
+  Check this against Plokhy, or rephrase neutrally.
+  4. **Citation detail needs checking.** `sources.js:50` says the GKChP appeal
+  was "Published in *Pravda* … 19 August 1991". I believe newspapers printed it
+  on 20 August. Remove the date or verify it.
+
+  #### Minor
+  - `clues.js:7,10`: the chips for `14.08.91` and `205-41-07` return RECORD NOT
+  FOUND. The restricted message ("registration date required") actively invites
+  typing the date. Add the date as a key on `r-7s` that gives a hint, or drop
+  those chips.
+  - `registry.js:9`: Rudin says "Seven-S", but `7/S`, `7S` and `7-с` don't
+  match. Consider mapping `s`→`с` and accepting those forms.
+  - `terminal.js:44`: after "File normally", searching `7/С` again puts d4 back
+  in the tray. A2_Archive then says it is in box twelve, and once retrieved it
+  shows in both the tray and the drawer. Fix: check `$docs.d4` or `a1Decision`.
+  - Unverified times of day stated as fact:
+    - `act3/survivor.twee:5`: "This morning Yeltsin signed".
+    - `act3/survivor.twee:27`: "At half past four the order comes".
+    - This conflicts with Ruling 47. Use "Today" and "Late that afternoon".
+  - `prologue.twee:38`: Zaitsev "has outlasted every General Secretary since
+  Khrushchev". Khrushchev was First Secretary, and Gorbachev is still in office.
+  - Possible horizontal scroll on phones (`base.css:72-87`). The hidden
+  `.ru::after` tooltip (up to 260px wide, centred on the word) still takes up
+  layout space. Only `.doc` clips it (`document.css:13`), so a Russian word near
+  the right edge of a scene could cause sideways scrolling. Check at 360px;
+  `overflow-x: clip` on `.scene-body` would fix it.
+  - A bulletin's "← Return to desk" (via Notebook) goes back to the previous
+  act's last scene, for example from Act1_Bulletin to P_Evening on 12 Aug. Game
+  state is unaffected; it is only odd narratively.
+  - `sources.js:42`: Remnick's *Lenin's Tomb* is journalism, but it is filed
+  under "scholarly".
+
+  ### Declined to judge
+  - Ruling 23 (clicks are lost if the page is reloaded right after them):
+  accepted. Nothing gets applied twice; the click is simply lost.
+  - The Witness and Loyalist content and the stub wording: intentionally stubs.
+  - The playthrough-length estimate (Ruling 51): needs timing by a person, not
+  code review.
+  - Whether bare `setup.x(_n)` macro arguments work: verified in 2.30
+  `format.js` (they are evaluated with `evalTwineScript`). Not a defect.
+
+  ### Assessment
+  **Ready to merge: With fixes.** The state and branching engine is sound, and
+  none of the review-focus areas fails outright. Fix Important #1 (the Prologue
+  registry bypass) and #2–4 (wording and citation corrections) before Monday.
+  Each is small.
+
+⏺ The reviewer found no critical problems and confirmed the core game logic is
+  sound. I'm treating these as must-fix:
+  - The Prologue can skip Act I's investigation. Searching "telegram" on 12
+    August unlocks the 14 August document early. This is a real logic bug.
+  - Historical wording you asked me to keep accurate:
+    - the treaty's name;
+    - "Moscow's grip on the fifteen republics" (six republics refused to take
+      part);
+    - the date of the State Emergency Committee (GKChP) appeal's publication;
+    - unverified times of day;
+    - the "General Secretary since Khrushchev" line;
+    - Remnick's book filed as scholarship rather than journalism.
+  - Packet 7/С could appear in both the tray and the drawer after "file
+    normally" followed by a second search.
+
+  Starting with the failing test for the Prologue bypass.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Agent "Final whole-project code review" finished · 4m 53s
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ I'm reverting part of the change: packet 7/С stays visible but restricted in
+  the Prologue, and only the telegram record gets gated, since it's the sole
+  source of the date clue.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Now the content fixes: the historical wording, the duplicate Packet 7/С,
+  terminal hints for the date and phone-number cards, and phone-width clipping
+  for tooltips.
+
+  Ran 1 shell command (ctrl+o to expand)
+⏺ The tests pass. Re-running the full playthrough in the browser, plus the "file
+  it, then search again" path that used to duplicate Packet 7/С.
+
+  Called plugin:playwright:playwright 3 times (ctrl+o to expand)
+
+⏺ Every fix is confirmed in the browser, and I'm committing them along with the
+  AI Use Log.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The prototype is finished and committed. All 12 tasks are done, all 30
+  automated tests pass, and nothing has been published or pushed.
+
+  What works
+
+  - The desk interface. It has a calendar and clock, the in-tray and desk
+    drawer, a rotary phone that rings, a green-screen registry terminal, a
+    notebook, a dictionary of Russian words you've met, a historical-notes
+    index, and save/load. It also fits phone screens.
+  - The Prologue (12 Aug) and Act I (19 Aug), both fully branching:
+    - Act I has two separate ways to uncover Packet 7/С: through the terminal,
+      or through Zaitsev if he trusts you.
+    - Markova's phone call only happens if Belova trusts you.
+    - The key decision is whether to file, keep, or copy the packet.
+  - The investigation loop. You mark clues in documents, which unlocks terminal
+    searches, which unlock new files.
+  - What the game tracks:
+    - trust with each of four characters;
+    - the loyalty, reform and survival pulls;
+    - your exposure, which builds up across several decisions toward the
+      Scapegoat ending.
+  - One complete route through 20–23 August to The Survivor ending
+    (December 1991). It's about 3,400 words, so roughly 15–20 minutes, though a
+    person should time a real playthrough.
+  - The other three endings appear as clearly marked "Branch in development"
+    cards that explain each one's concept.
+  - The academic pages: About This Project (with all five political science
+    concepts tied to game moments and endings), a 14-source Bibliography, and
+    Credits. There are also 15 historical notes and a 36-word dictionary.
+
+  Test results
+
+  - Automated tests: 30/30 pass. They cover the story's links and dead ends,
+    cross-references, citations and game rules.
+  - Browser checks covered:
+    - the full route from title screen to Survivor;
+    - every Prologue and Act I branch;
+    - the Scapegoat threshold;
+    - save and Continue;
+    - phone-width layout, reduced motion, and text contrast (all at least 6:1).
+  - An independent final reviewer found no critical problems. I fixed the issues
+    it did raise:
+    - a Prologue terminal search that skipped ahead to an Act I document;
+    - several historical phrasings: the treaty's name, how many republics it
+      covered, the publication date of the State Emergency Committee's appeal,
+      and times of day;
+    - a document that could appear twice;
+    - one phone-layout overflow.
+
+  Still to do
+
+  - The Witness, Loyalist and Scapegoat endings, and the remaining Act II–III
+    branches.
+  - Before you submit: check each bibliography entry against UT's catalogue, and
+    check each historical note against its source. I wrote these from memory,
+    so every one is marked "awaiting verification" in the game.
+  - Two small deferred issues: the terminal doesn't accept the "Seven-S"
+    spelling, and a notebook "Return" link can go back to the previous act's
+    last scene from an act-transition screen.
+
+  Opening the game
+
+  - Simplest: double-click index.html in the project folder.
+  - Rebuilding after edits: run scripts/build.sh.
+
+  Importing into Twine 2: every build also writes twine/the-kremlin-files.twee.
+  In Twine 2.6 or later, go to Library → Import and choose that file. The README
+  explains how to bring Twine edits back into src/.
+
+  AI Use Log
+
+  I wrote docs/ai-use-log.md. It covers:
+  - what you decided and what I generated;
+  - the session timeline, including the interruption;
+  - how the work was verified;
+  - the limits on historical accuracy.
+
+  Git commits made with me are tagged "Co-Authored-By: Claude", so the history
+  doubles as a timestamped record. For the verbatim transcript, run /export in
+  Claude Code. I recommend saving it as docs/ai-session-transcript.txt and
+  attaching it as an appendix.
+
+  Decisions I made on your behalf
+
+  Each one is logged in
+  .superpowers/sdd/2026-11-18-kremlin-files-prototype/progress.md. The ones
+  you'd most likely want to check:
+  - I replaced a planned "Party Programme" circular with a fictional procedural
+    one, to avoid an unverified historical claim.
+  - The terminal is labelled in-game as a reconstruction, with no citation.
+  - I added small "phone rings" scenes before each call.
+  - You dial the aide's number yourself instead of him calling you.
+  - An extra "phone Markova" option appears at the final decision if she's a
+    contact.
+  - The Scapegoat card offers New game rather than "return to last decision".
+  - The build also produces the Twine import file.
+
+  Publishing to GitHub Pages (needs your approval)
+
+  The work is on a local branch called prototype, and main holds only the design
+  documents. The site is a single self-contained index.html, so it's ready for
+  GitHub Pages. To publish, I'd:
+  1. merge prototype into main;
+  2. create a public GitHub repository (for example the-kremlin-files);
+  3. push to it;
+  4. turn on Pages from the main branch.
+
+  What repository name should I use, and should I go ahead?
+
+✻ Crunched for 10m 23s · done 10:15 PM
+
+❯ I approve publishing The Kremlin Files to GitHub.                             
+                                                                                
+  Use the repository name: the-kremlin-files                                    
+                                                                                
+  Please:                                                                       
+                                                                                
+  1. Merge the completed prototype branch into main.                            
+  2. Create a public GitHub repository named the-kremlin-files under my         
+  authenticated GitHub account.                                                 
+  3. Push the completed project to GitHub.                                      
+  4. Enable GitHub Pages using the main branch and root directory.              
+  5. Verify that the published website loads and the playable game functions    
+  correctly.                                                                    
+  6. Provide the GitHub repository URL and the live GitHub Pages URL.           
+                                                                                
+  Preserve the existing development history, documentation, and AI Use Log.     
+                                                                                
+  Make sure the README clearly states that this is a work-in-progress           
+  prototype, with three additional endings planned for future development.      
+                                                                                
+  Do not delete any existing files or repositories.                             
+
+⏺ I'll start by making the README's work-in-progress status prominent, then
+  check that the GitHub CLI is signed in.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The sandbox blocks the GitHub CLI from reading its own login configuration.
+  Since you've approved GitHub activity, I'll re-run the check outside the
+  sandbox.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ You're logged in as AidenS05342. Before creating anything, I'm checking that a
+  repository named the-kremlin-files doesn't already exist.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ It doesn't exist yet. Merging prototype into main; this is a fast-forward, so
+  the full history is preserved.
+
+  Merged prototype (ctrl+o to expand)
+
+⏺ The merge succeeded. Before anything goes public, I'm confirming that no local
+  tool or settings folders are tracked.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Only project files are tracked. Creating the public repository and pushing
+  both branches.
+
+  Pushed to main (ctrl+o to expand)
+
+⏺ Both branches are pushed. Now turning on GitHub Pages from main at the root.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ Pages is enabled. I'll wait for GitHub's first build to finish.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The Pages build is running. I'll verify the live site as soon as it finishes.
+
+✻ Brewed for 40s · done 10:21 PM
+
+⏺ Background command "Wait for the GitHub Pages build to finish" completed (exit
+code 0)
+
+  Read 1 file (ctrl+o to expand)
+
+⏺ The build finished. Loading the live site and playing through it.
+
+  Read 1 file, called plugin:playwright:playwright 2 times (ctrl+o to expand)
+
+⏺ The only console error is the browser's automatic favicon request at
+  github.io's root, which doesn't affect the game. I'm logging the publication
+  in the AI Use Log and pushing that update next.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+⏺ The Kremlin Files is published, and I played the live site through to The
+  Survivor ending with no errors.
+
+  - Repository: https://github.com/AidenS05342/the-kremlin-files
+  - Live game: https://aidens05342.github.io/the-kremlin-files/
+
+  What I did
+  1. Merged prototype into main as a fast-forward, so every commit is kept. Both
+     branches are pushed, and no local files or branches were deleted.
+  2. Created the public repository under your account, AidenS05342. I confirmed
+     beforehand that the name wasn't already taken.
+  3. Pushed only project files. The Tweego download, your Claude settings and
+     the test screenshots are excluded.
+  4. Turned on GitHub Pages from main, root folder. The build succeeded.
+  5. Checked the live site:
+     - It loads with its fonts.
+     - A full playthrough reaches The Survivor with no game errors, autosave
+       works, and the About page opens.
+     - The only console message is a harmless 404 for /favicon.ico at the
+       github.io root. The browser asks for it before the game adds its own
+       icon, and it doesn't affect play.
+
+  Documentation in the repository
+  - The README now opens with a work-in-progress banner. It says three more
+    endings, The Witness, The Loyalist and The Scapegoat, are planned for future
+    development.
+  - docs/ai-use-log.md is published, including a new entry for this publication
+    step.
+  - The design document, implementation plan and development log are all there
+    too.
+
+  Still for you
+  - Before you submit, check the bibliography and each historical note against
+    UT Libraries. Every entry still shows "awaiting verification" in the game.
+  - Run /export to save the verbatim session transcript for your AI Use Log
+    appendix. If you save it into docs/, I can commit and push it once you say
+    so.
+
+✻ Sautéed for 29s · done 10:23 PM
+
+※ recap: The Kremlin Files prototype is finished and live at https://aidens05342.github.io/the-kremlin-files/, and a full playthrough on the live site works. Next, run /export to save the session transcript for your AI Use Log. (disable recaps in /config)
