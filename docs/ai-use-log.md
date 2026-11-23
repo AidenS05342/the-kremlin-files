@@ -2,7 +2,7 @@
 
 **Student:** Aiden Smith · Digital Humanities, University of Tennessee
 **AI tool:** Claude Code (Anthropic's command-line coding assistant), model Claude Opus 5.5
-**Session dates:** 18 November 2026 (one working session, interrupted once and resumed the same evening)
+**Session dates:** 18 November 2026 (one working session, interrupted once and resumed the same evening); follow-up sessions on 19 and 22 November 2026
 **Purpose of this log:** to document how AI was used in the project, what the student decided, what the AI generated, and how the output was checked.
 
 > This log is a summary written by the AI at the student's request, based on the session record. The verbatim conversation is the authoritative record. Export it with Claude Code's `/export` command and attach it as an appendix (see "Exporting the full transcript" below).
@@ -37,13 +37,20 @@
 
 9. **Publication (with the student's explicit approval).** The prototype branch was merged into `main` (a fast-forward, preserving every commit). A public repository was created at https://github.com/AidenS05342/the-kremlin-files and GitHub Pages enabled from `main`. The AI then played through the live site at https://aidens05342.github.io/the-kremlin-files/ from the title screen to *The Survivor* with no errors.
 
+10. **Accessibility fix: Historical Notes contrast (22 November 2026).** The student found that the Historical Notes pop-up showed dark gray text on a dark gray background and asked the AI to fix it. The student set the requirements: warm cream or light beige text on the existing dark background, to fit the Soviet-archive look; readable headings, citations, verification labels and links; checks on desktop and mobile; no changes to historical content, game mechanics or unrelated styling; and no publishing until the student approved.
+    - **Cause.** SugarCube's built-in stylesheet paints the inside of its dialog box near-black (`#111`). That covered the game's paper background, but the note text still used the dark ink colours meant for paper. Measured contrast was **1.08:1** for body text, 1.87:1 for the "Sources" heading and verification label, and 2.5:1 for the date. WCAG requires at least 4.5:1.
+    - **CSS changes** (dialog section of `src/styles/base.css` only). The dark background was kept and declared explicitly. Body text became cream (`#efe4c8`); the "Sources" heading and links became brass (`#c6a368`); the date became a light stamp red (`#ec8a7c`); the verification label and citation locators became light beige (`#e0d3b4`, `#d9c9a3`); and the green and red bars beside verification labels were lightened. Long citation URLs now wrap on narrow screens. `index.html` and the Twine export were rebuilt. No text, history or game logic changed.
+    - **Contrast check.** Every new colour meets **WCAG AAA (at least 7:1)**: body text 14.9:1, verification label 12.7:1, locators 11.5:1, heading and links 8.0:1, date 7.6:1.
+    - **Browser testing.** On a local preview server, the AI opened a note with a body, three sources, locators and a "partly verified" label at desktop width (1280 px) and phone width (375 px), and took screenshots. On the phone, the dialog fitted the screen, URLs wrapped, and nothing scrolled sideways. The Saves dialog, which uses the same box and had the same problem, was also checked and is now readable.
+    - **Automated tests:** 31 of 31 passed before and after the change.
+
 ## 3. Software installed or downloaded
 
 - **Tweego 2.1.1** (a Twine compiler), downloaded into the project's `tools/` folder with the student's explicit approval. Nothing else was installed.
 
 ## 4. How AI output was verified
 
-- **Automated tests (30)**, run with `node --test tests/`. They check that every story link leads to an existing passage, that there are no dead ends, and that every Russian word, historical note, clue and document referenced in the story exists. They check that every historical note cites a source in the bibliography, and they test the game rules: trust limits, clue recording, terminal search and ending selection.
+- **Automated tests (31 as of 22 November 2026)**, run with `node --test tests/`. They check that every story link leads to an existing passage, that there are no dead ends, and that every Russian word, historical note, clue and document referenced in the story exists. They check that every historical note cites a source in the bibliography, and they test the game rules: trust limits, clue recording, terminal search and ending selection.
 - **Browser playthroughs** on a local preview server, including:
   - the full route from the title screen to *The Survivor*;
   - two Prologue runs (first choice and last choice everywhere), with all scores checked against the plan;
