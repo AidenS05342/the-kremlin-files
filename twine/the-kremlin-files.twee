@@ -1882,16 +1882,21 @@ a, .link-internal, button {
 	text-transform: none;
 }
 #ui-dialog-close { color: var(--ink); }
-#ui-dialog-body { color: var(--ink); font-family: var(--serif); }
-#ui-dialog-body h3 { font: 700 13px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 0.3em; }
-.note-date { font: 700 14px var(--narrow); color: var(--red); letter-spacing: 0.05em; margin-top: 0; }
-.note-sources { padding-left: 1.2em; font-size: 15px; }
+/* The body keeps SugarCube's dark background (#111, set explicitly here so it
+   cannot drift); all text inside uses light archival tones for contrast. */
+#ui-dialog-body { background-color: #111; color: var(--cream); font-family: var(--serif); }
+#ui-dialog-body h3 { font: 700 13px var(--narrow); letter-spacing: 0.1em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.3em; }
+#ui-dialog-body em { color: inherit; }
+.note-date { font: 700 14px var(--narrow); color: #ec8a7c; letter-spacing: 0.05em; margin-top: 0; }
+.note-sources { padding-left: 1.2em; font-size: 15px; overflow-wrap: anywhere; }
 .note-sources li { margin-bottom: 0.4em; }
-.note-flag { font: italic 14px var(--serif); color: var(--ink-soft); border-left: 3px solid var(--brass-dim); padding-left: 0.6em; }
-.note-flag--verified { border-left-color: #3f7a4a; }
-.note-flag--partial { border-left-color: var(--red); }
-.note-loc { color: var(--ink-soft); font-style: italic; }
-#ui-dialog-body button, #ui-dialog-body .link-internal { color: var(--ink); }
+.note-flag { font: italic 14px var(--serif); color: #e0d3b4; border-left: 3px solid var(--brass); padding-left: 0.6em; }
+.note-flag--verified { border-left-color: #6fb07c; }
+.note-flag--partial { border-left-color: #ec8a7c; }
+.note-loc { color: #d9c9a3; font-style: italic; }
+#ui-dialog-body a, #ui-dialog-body .link-internal { color: var(--brass); text-decoration: underline; }
+#ui-dialog-body a:hover, #ui-dialog-body .link-internal:hover { color: var(--cream); }
+#ui-dialog-body button { color: var(--ink); }
 #ui-dialog .saves button, #ui-dialog-body button {
 	background: var(--paper-shade);
 	border: 1px solid var(--ink-soft);
